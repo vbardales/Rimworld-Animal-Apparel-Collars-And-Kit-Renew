@@ -1,14 +1,13 @@
-# The monorepo's own .gitignore covers all of this, but `git subtree split` exports this
-# folder alone: the root's rules do not travel with it.
-#
-# And Steam does not read .gitignore at all. SteamUGC.SetItemContent takes the junction's
-# target directory exactly as it stands on disk, with no filtering, so anything sitting in
-# the published folder is published. That is what `Mod/` is for: the junction points there,
-# and the docs and this file stay out of reach by construction.
+# Steam does not read .gitignore at all. SteamUGC.SetItemContent takes the junction's target
+# directory exactly as it stands on disk, with no filtering, so anything sitting in the published
+# folder is published. That is what `Mod/` is for: the junction points there, and the docs and
+# this file stay out of reach by construction.
 
-# Claude Code session worktrees and local settings: each worktree is a full copy of the
-# monorepo, hundreds of megabytes, and they are never shared.
+# Claude Code session worktrees and local settings.
 .claude/
+
+# Showcase briefs: working notes in French, written to be deleted once the two images exist.
+PROMPT_*.md
 
 # Development environments.
 .vs/
