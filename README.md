@@ -1,4 +1,4 @@
-# Animal Apparel: Collars and Kit 1.6
+# Animal Apparel: Collars and Kit Renew
 
 Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on
 [Animal Apparel: Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850).

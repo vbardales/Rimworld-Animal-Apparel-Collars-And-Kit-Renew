@@ -153,17 +153,33 @@ repository. Owlchemist never added the tag to go with the horse art; it is added
 
 ## Still on the old framework
 
-Three living mods depend on `Dylan.AnimalGear` and will break the same way the day the switch is
-made. **None of them has migrated yet**, checked on 2026-09-07 — none mentions Ingendum anywhere:
+Two living mods depend on `Dylan.AnimalGear` and will break the same way the day the switch is
+made. Checked on 2026-09-11:
 
 | Mod | ID | Declares |
 | --- | --- | --- |
 | AA Animal Gear for Fancy Rats, by ArmoredAmpharos | 3142386946 | 1.4 1.5 1.6 |
 | AA Animal Gear for Super Rats, by ArmoredAmpharos | 3142211574 | 1.4 1.5 1.6 |
-| pphhyy's Demigryphs Continued | 3540496928 | 1.6 |
 
-They are their authors' to move, and all three are alive, so nothing here touches them. If they
-never do move, the same recipe applies.
+Both still name `Dylan.AnimalGear` under `<modDependencies>`, and neither mentions Ingendum
+anywhere.
+
+**pphhyy's Demigryphs Continued** ([3540496928](https://steamcommunity.com/sharedfiles/filedetails/?id=3540496928))
+was on this list on 2026-09-07 and has since moved. It is the worked example of the recipe in the
+[README](README.md): it ships both sets of defs and lets `LoadFolders.xml` choose, so the same
+download serves either framework.
+
+```xml
+<li IfModActive="ingendum.animalapparelframework" IfModNotActive="Dylan.AnimalGear">1.6/Mods/Animal Armor Framework</li>
+<li IfModActive="Dylan.AnimalGear" IfModNotActive="ingendum.animalapparelframework">1.6/Mods/Animal Gear</li>
+```
+
+The part that makes the fork legal is elsewhere: its `<modDependencies>` block, `Dylan.AnimalGear`
+included, is commented out rather than kept. A mod that still declares the old framework as a hard
+dependency cannot sit beside the new one, since the new one refuses to load with it.
+
+The two that remain are their authors' to move, and both are alive, so nothing here touches them.
+If they never do move, the same recipe applies.
 
 ## Removal
 
