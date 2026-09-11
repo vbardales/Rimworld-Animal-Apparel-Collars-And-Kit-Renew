@@ -7,7 +7,13 @@ This mod has never been loaded by RimWorld. Everything below is what the first r
 other people's `packageId`s, and each of those is a branch that either fires or does not depending
 on the modlist. A run with everything enabled exercises the art and hides the guards; a run with
 nothing enabled exercises the guards and hides the art. Neither run alone says much. The two ends
-plus four narrow cases in between cover it.
+plus four narrow cases in between cover that axis, as A to F.
+
+**The other four are not about the modlist at all.** G to J test what a player does with the mod
+rather than what loads: a restart with the gear on, adding and removing the mod on a live save,
+the French text, and whether the armour numbers mean anything when something actually gets hit. A
+to F are largely a smoke pass read out of the log; G to J are the functional half, and the only
+place the mod is judged on what it does rather than on what it fails to break.
 
 The one fault class that cannot be reasoned about offline is the render path. `wornGraphicPath` is
 a **folder** under this framework, not a file, and every one of the ~1400 sprites was restructured
@@ -51,7 +57,7 @@ identifier**. Lines naming other mods are not ours to fix, and are worth leaving
 
 ---
 
-## The six scenarios
+## The ten scenarios
 
 ### A — the bare run: framework + this mod, nothing else
 
@@ -136,6 +142,92 @@ The run that exercises the 27 art folders and the ~1400 restructured sprites.
 - With Combat Extended: the armour values on the animal's gear tab should be CE's, not vanilla's.
 
 ---
+
+### G — save, quit, reload, with the gear still on
+
+Nothing in A to F survives a restart, because none of them does one. This mod has no assembly and
+no save data of its own, so the question is not whether it saves state but whether what the *game*
+saved about its things comes back intact.
+
+- Dress several animals across several def files at once: a collar and a body piece on a dog, the
+  full horse set, a turret pack on something large, a scarf on a cow.
+- Note the **material and the quality** of each piece before saving. Eight of the ten def files use
+  `stuffCategories`, so every one of those is a stuffed item whose identity is base def plus stuff.
+- Save, quit **to the desktop**, relaunch, load. Quitting to the main menu is not the same test:
+  the def database is not rebuilt.
+- Every piece must still be worn, by the same animal, in the same material and quality. Nothing
+  dropped to the floor.
+- The turret pack must still fire after the reload. Verbs are rebuilt from the comp on load, and
+  that is where a verb quietly goes missing.
+- The collar must still draw above the body piece. The `drawData` override is read at render time,
+  so this re-tests it against a freshly built render tree.
+- In the log, on load: no `Could not resolve cross-reference` naming one of this mod's defs. That
+  is the shape a renamed def makes, and this mod renamed one — `Apparel_Saddle` became
+  `Apparel_MedievalHorseSaddle`.
+
+### H — adding and removing the mod on an existing save
+
+The `About.xml` makes two claims to a subscriber. Both are testable and neither has been tested.
+
+*Adding.* Take a colony saved without this mod, enable it, load.
+
+- The save must load. The mod is content-only, so there is nothing to migrate.
+- The four research projects appear, unresearched, in the right tab.
+- Existing animals are unaffected until something is crafted and put on them.
+
+*Removing.* From the G save, with gear worn and more of it in a stockpile, disable **only this
+mod** and load.
+
+- RimWorld's missing-def dialog must list this mod's defs and let the save open anyway.
+- The worn and stored pieces are gone. That is the documented behaviour of any content mod, and
+  the description says so.
+- What matters is what comes **after** the dialog: the colony runs, the animals are fine, and the
+  log does not fill with errors about the vanished items. A content mod that leaves a wound on
+  removal is a content mod that should not be removed, and the description would then be wrong.
+
+### I — French, and specifically French on the Steam Deck
+
+Six `DefInjected` files, 83 keys. Switch the game language to French and walk the same ground as
+B, D and E.
+
+- The four research projects and the research tab read in French.
+- The apparel labels and descriptions read in French, on the item, in the gear tab and in the bill
+  list at the workbench.
+- The `AnimalNeck` group shows as **cou** in the coverage tooltip, not as `neck` and not as
+  `AnimalNeck`.
+- The turret packs read in French.
+- An untranslated string shows in **English**. A string that shows as a raw key, or as the
+  `defName`, means the injection path or the handle is wrong — a different fault, and the one to
+  look for.
+
+**Run this one on the Steam Deck, not only on Windows.** The path
+`Languages/French/DefInjected/<DefType>/` is matched case-sensitively on Linux and not on NTFS. A
+wrong capital is invisible on the desktop and silently drops the whole translation on the Deck.
+This has bitten the collection before, and this mod has never run on either machine.
+
+### J — the numbers, and one real hit
+
+A tooltip is not a test. This scenario is in two halves and the second is the one that counts.
+
+*What the tab says.* Craft the same piece in two very different materials — a leather collar and a
+plasteel collar — and compare. Eight of the ten def files carry `stuffCategories`, so the
+displayed value is the def's `statBases` multiplied by the material, and two identical numbers
+mean the stuff is not being applied.
+
+- Seven defs carry `ArmorRating_Sharp`, `_Blunt` and `_Heat`; check one of each tier against the
+  def.
+- The power armour takes `Insulation_Cold` 34 and `Insulation_Heat` 10 from its abstract base, the
+  helmet 4 and 2 from its own. Those are the only insulating pieces; a scarf carries `Mass` alone
+  and no insulation, which is deliberate and worth confirming rather than rediscovering.
+- All 24 pieces carry a `Mass` and a `WorkToMake`. None should read zero.
+
+*What actually happens.* Put armour on one animal and nothing on an identical one, and let both
+take a hit from the same source.
+
+- The armoured one must take measurably less. If the numbers show in the tab but the damage is
+  identical, the apparel is not being counted as worn — which is exactly what the `AnimalNeck`
+  group and the render tag could get wrong without any error line.
+- With Combat Extended loaded, the values shown must be CE's, not vanilla's.
 
 ## Known and accepted
 

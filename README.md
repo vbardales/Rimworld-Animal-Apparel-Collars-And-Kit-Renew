@@ -206,7 +206,7 @@ Mod/
 
 Beside it, and never published: `Art/` holds the two generated images at full resolution,
 `_tools/` the page and the script that cut them down to the sizes the game and the Workshop
-actually draw, and `TESTING.md` the six scenarios the first run has to settle.
+actually draw, and `TESTING.md` the ten scenarios the first run has to settle.
 
 `LoadFolders.xml` must keep that exact capitalisation. RimWorld looks for the literal string and
 does not case-fold it; on Windows NTFS hides the mistake, on Linux and the Steam Deck the file is
