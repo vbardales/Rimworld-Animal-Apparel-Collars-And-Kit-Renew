@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Migrated from "Dog Collars" by Shenanigans (Workshop 2644644983, last supported 1.4),
+       with "Patch Collar Malinois" by Annabelesca (3062026756) folded in - that mod was a
+       verbatim copy of this one carrying a single extra animal, and shipped the same
+       defNames, so installing both silently overwrote one with the other.
+
+       Four things changed in the move from Animal Gear to Animal Apparel: Framework.
+
+       1. bodyPartGroups: Neck -> AnimalNeck. The old framework grafted the HUMAN Neck group
+          onto animal bodies; the new one knows only AnimalHead/AnimalBody/AnimalLegs.
+          AnimalNeck is ours - see Defs/Bodies/BodyPartGroups_AnimalNeck.xml.
+
+       2. tags: the marker <li>Animal</li> became <li>AnimalApparel</li> + <li>AnimalOnly</li>,
+          and every bare animal name became <li>defNameXxx</li>, which is how the new
+          framework restricts a wearable to particular animals.
+
+       3. Every modded animal is now gated with MayRequire. This is not tidiness: the new
+          framework resolves those tags through DefDatabase<ThingDef>.GetNamed(name, true),
+          which logs an error for each name it cannot find - and it runs that on every
+          apparel-optimisation check, for every pawn. Ungated, the 69 modded names in this
+          file would have produced a continuous stream of errors for anyone not running all
+          21 source mods.
+
+       4. AnimalFallbackInvisible: the new framework logs an error when an animal is allowed
+          to wear a piece for which no per-animal sprite exists. Of the 78 animals listed
+          here, 77 have art; only SCCaucasianshepherd (Spidercamp's Dog Pack) does not, and
+          it had none in the original either. This tag makes that case draw nothing instead
+          of complaining, which is what the original did.
+
+       drawData sets an explicit layer of 71. The framework hands every piece of animal
+       apparel the same baseLayer, 70, taken from the single AnimalApparel node in the render
+       tree, so without this a collar and a flak jacket would stack in whatever order the
+       animal happened to put them on. 71 is one step above; PawnRenderNodeWorker.LayerFor
+       treats drawData's layer as a replacement for baseLayer, not an offset. -->
+
+	<ThingDef Name="DogBowBase" ParentName="ApparelMakeableBase" Abstract="True">
+		<techLevel>Neolithic</techLevel>
+		<recipeMaker>
+			<researchPrerequisite />
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>1000</WorkToMake>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>0.1</Mass>
+			<Flammability>0.9</Flammability>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.02</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>0.1</EquipDelay>
+		</statBases>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<graphicData>
+			<texPath>Things/Pawn/Animal/Apparel/Accessories/DogBow/dogbow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Animal_Apparel</li>
+		</thingCategories>
+		<generateAllowChance>0</generateAllowChance>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<bodyPartGroups>
+				<li>AnimalNeck</li>
+			</bodyPartGroups>
+			<!-- A directory, not a file stem: the framework looks for
+			     <wornGraphicPath>/<AnimalDefName>/<AnimalDefName>_[north|east|south].png -->
+			<wornGraphicPath>Things/Pawn/Animal/Apparel/Accessories/DogBow</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<drawData>
+				<defaultData>
+					<layer>71</layer>
+				</defaultData>
+			</drawData>
+			<defaultOutfitTags>
+				<li>Anything</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+		<modExtensions>
+			<li Class="AnimalGear.AnimalApparelDefExtension">
+				<showCoverageForBodyType>QuadrupedAnimalWithPaws</showCoverageForBodyType>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="DogBowBase">
+		<defName>Apparel_dogbow</defName>
+		<label>dog neck bow</label>
+		<description>A pretty little neck bow for dogs and other canines. It doesn't provide much protection, but it's a bit better than nothing at all. Plus, it's cute!</description>
+		<descriptionHyperlinks>
+			<ThingDef>Fox_Arctic</ThingDef>
+			<ThingDef>Fox_Fennec</ThingDef>
+			<ThingDef>Fox_Red</ThingDef>
+			<ThingDef>Husky</ThingDef>
+			<ThingDef>Wolf_Arctic</ThingDef>
+			<ThingDef>Wolf_Timber</ThingDef>
+			<ThingDef>LabradorRetriever</ThingDef>
+			<ThingDef>Warg</ThingDef>
+			<ThingDef>YorkshireTerrier</ThingDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<WorkToMake>1000</WorkToMake>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>0.1</Mass>
+		</statBases>
+		<costStuffCount>25</costStuffCount>
+		<apparel>
+			<tags>
+				<li>AnimalApparel</li>
+				<li>AnimalOnly</li>
+				<li>AnimalFallbackInvisible</li>
+
+				<li>defNameFox_Arctic</li>
+				<li>defNameFox_Fennec</li>
+				<li>defNameFox_Red</li>
+				<li>defNameHusky</li>
+				<li>defNameWolf_Arctic</li>
+				<li>defNameWolf_Timber</li>
+				<li>defNameLabradorRetriever</li>
+				<li>defNameWarg</li>
+				<li>defNameYorkshireTerrier</li>
+
+				<!-- Vanilla Animals Expanded - Cats and Dogs -->
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Beagle</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Chihuahua</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Corgi</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_FrenchBulldog</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_GermanShepherd</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_GreatDane</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Poodle</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Pug</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Rottweiler</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Shih-Tzu</li>
+				<li MayRequireAnyOf="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_WelshTerrier</li>
+
+				<!-- Vanilla Factions Expanded - Vikings -->
+				<li MayRequire="OskarPotocki.VFE.Vikings">defNameVFEV_Wolfhound</li>
+				<li MayRequire="OskarPotocki.VFE.Vikings">defNameVFEV_Fenrir</li>
+
+				<!-- Vanilla Animals Expanded - Endangered -->
+				<li MayRequire="VanillaExpanded.VAEEndAndExt">defNameAEXP_Thylacine</li>
+				<li MayRequire="VanillaExpanded.VAEEndAndExt">defNameAEXP_AfricanWildDog</li>
+
+				<!-- Vanilla Animals Expanded - Arid Shrubland -->
+				<li MayRequireAnyOf="VanillaExpanded.VAEAS,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Coyote</li>
+
+				<!-- Vanilla Animals Expanded - Desert -->
+				<li MayRequireAnyOf="VanillaExpanded.VAED,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Hyena</li>
+
+				<!-- Vanilla Animals Expanded - Boreal Forest -->
+				<li MayRequireAnyOf="VanillaExpanded.VAEBF,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_ArcticCoyote</li>
+
+				<!-- Spidercamp's Dog Pack -->
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCMiniatureDachshund</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCSchnauzer</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCWelshCorgi</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCPug</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCAfghanHound</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCBorderCollie</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCBullTerrier</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCChowchow</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCCollie</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCDoberman</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCGoldenRetriever</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCGreyhound</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCOldEnglishSheepdog</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCStandardPoodle</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCBorzoi</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCCaucasianshepherd</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCSaintbernard</li>
+				<li MayRequire="mlie.spidercampsdogpack">defNameSCNewFoundland</li>
+				<li MayRequireAnyOf="mlie.spidercampsdogpack,Qux.stray.dogs">defNameSCBullmastiff</li>
+
+				<!-- Poeticdragon's Japanese Dogs -->
+				<li MayRequire="Poetik.JapaneseDogs">defNamePoetik_Shiba</li>
+				<li MayRequire="Poetik.JapaneseDogs">defNamePoetik_Kai</li>
+				<li MayRequire="Poetik.JapaneseDogs">defNamePoetik_Hokkaido</li>
+				<li MayRequire="Poetik.JapaneseDogs">defNamePoetik_Kishu</li>
+				<li MayRequire="Poetik.JapaneseDogs">defNamePoetik_Shikoku</li>
+				<li MayRequire="Poetik.JapaneseDogs">defNamePoetik_AkitaJapanese</li>
+
+				<!-- Android Tiers -->
+				<li MayRequire="Atlas.AndroidTiers">defNameAndroidDog</li>
+
+				<!-- Rebel Rabbit's Legendary Wolves -->
+				<li MayRequireAnyOf="RebelRabbit.DireWolves,zal.wolvesden">defNameDW_Garmr</li>
+
+				<!-- Erin's Lizard Doggo -->
+				<li MayRequire="Erin.LizzardDoggo">defNameERN_lizarddoggo</li>
+
+				<!-- Rim Effect -->
+				<li MayRequireAnyOf="RimEffect.Core,RimEffectRenegade.Core">defNameRE_Varren</li>
+
+				<!-- Forsakens -->
+				<li MayRequireAnyOf="kikohi.forsakens,zal.forsakens">defNameNightlingF</li>
+
+				<!-- Alpha Animals -->
+				<li MayRequire="sarg.alphaanimals">defNameAA_Nightling</li>
+				<li MayRequire="sarg.alphaanimals">defNameAA_Skiphound</li>
+				<li MayRequire="sarg.alphaanimals">defNameAA_RipperHound</li>
+				<li MayRequire="sarg.alphaanimals">defNameAA_AnimusVox</li>
+				<li MayRequire="sarg.alphaanimals">defNameAA_RayHound</li>
+				<li MayRequire="sarg.alphaanimals">defNameAA_Razorjack</li>
+				<li MayRequire="sarg.alphaanimals">defNameAA_Erin</li>
+				<li MayRequire="sarg.alphaanimals">defNameAA_OcularNightling</li>
+
+				<!-- Magical Menagerie -->
+				<li MayRequire="sarg.magicalmenagerie">defNameMM_Cerberus</li>
+				<li MayRequire="sarg.magicalmenagerie">defNameMM_Kitsune</li>
+
+				<!-- Save Our Ship 2 -->
+				<li MayRequire="kentington.saveourship2">defNameArchomutt</li>
+
+				<!-- Dumbs' Dachshunds -->
+				<li MayRequireAnyOf="Dumbs.Dumbs'Dachshunds,zal.dumbsdachshunds">defNameERN_DachshundShorthair</li>
+				<li MayRequireAnyOf="Dumbs.Dumbs'Dachshunds,zal.dumbsdachshunds">defNameERN_DachshundLonghair</li>
+				<li MayRequireAnyOf="Dumbs.Dumbs'Dachshunds,zal.dumbsdachshunds">defNameERN_DachshundWirehair</li>
+
+				<!-- Erin's Palamutes -->
+				<li MayRequire="Erin.Palamutes">defNameERN_Palamute</li>
+
+				<!-- RTP's Rhodesian Ridgebacks -->
+				<li MayRequire="rtp.rhodesianridgebacks">defNamertp_RhodesianRidgeback</li>
+
+				<!-- RTP's Border Collies -->
+				<li MayRequire="rtp.bordercollies">defNamertp_BorderCollie</li>
+
+				<!-- Erin's Great Pyrenean Mountain Dogs -->
+				<li MayRequire="Erin.MountainDog">defNameERN_MountainDog</li>
+
+				<!-- Yorkshire Terrors -->
+				<li MayRequire="kagypoo.YorkshireTerrors">defNameYorkshireTerror</li>
+
+				<!-- Bun Dog -->
+				<li MayRequireAnyOf="SpankyH.BunRace.bundogs,SpankyH.BunRace.core">defNameCynobun</li>
+
+				<!-- Belgian Malinois -->
+				<li MayRequire="Annabelesca.Malinois">defNameBelgian_Malinois</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+</Defs>

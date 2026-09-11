@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- From "Animal Equipment" by Owlchemist (MIT), trimmed. His original also added these
+       hyperlinks to Apparel_SmallAnimalFlakArmor, Apparel_LargeAnimalFlakArmor,
+       Apparel_SmallAnimalPlateArmor, Apparel_LargeAnimalPlateArmor,
+       Apparel_LargeAnimalPlateHelmet and Apparel_LargeAnimalAdvancedHelmet. None of those is
+       migrated - Animal Apparel: Basic Armor provides the flak and plate tiers - so the
+       operations that named them are removed rather than left to match nothing. -->
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Apparel_SmallAnimalScarf"]/descriptionHyperlinks</xpath>
+        <value>
+          <ThingDef>SCMiniatureDachshund</ThingDef>
+          <ThingDef>SCSchnauzer</ThingDef>
+          <ThingDef>SCWelshCorgi</ThingDef>
+          <ThingDef>SCPug</ThingDef>
+          <ThingDef>SCAfghanHound</ThingDef>
+          <ThingDef>SCBorderCollie</ThingDef>
+          <ThingDef>SCBullTerrier</ThingDef>
+          <ThingDef>SCChowchow</ThingDef>
+          <ThingDef>SCCollie</ThingDef>
+          <ThingDef>SCDoberman</ThingDef>
+          <ThingDef>SCGoldenRetriever</ThingDef>
+          <ThingDef>SCGreyhound</ThingDef>
+          <ThingDef>SCOldEnglishSheepdog</ThingDef>
+          <ThingDef>SCStandardPoodle</ThingDef>
+          <ThingDef>SCBorzoi</ThingDef>
+          <ThingDef>SCCaucasianshepherd</ThingDef>
+          <ThingDef>SCSaintbernard</ThingDef>
+          <ThingDef>SCBullmastiff</ThingDef>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
+</Patch>

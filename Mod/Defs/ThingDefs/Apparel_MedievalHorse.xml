@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- From "Medieval Horse Plate Armour" by Riful (Workshop 2586212684, last supported 1.3).
+
+       This one could not be migrated as written. Of its four defs only the saddle was its
+       own, and even that inherited ParentName="AnimalRidingBase" from Owlchemist's Animal
+       Equipment; the plate and the helmet were PatchOperationAdd operations bolting a Horse
+       tag onto Owlchemist's Apparel_LargeAnimalPlateArmor and Apparel_LargeAnimalPlateHelmet.
+       Animal Apparel: Basic Armor does not define those - it merged the small and large
+       plate into one Apparel_PlateArmor_Animal - so the patches had no target left.
+
+       They are rewritten here as three defs of their own, keeping Riful's art. Stats are
+       Owlchemist's for the large plate and helmet (MIT), which is what Riful's mod was
+       patching, so the numbers are the ones his armour actually had.
+
+       Riful also shipped Patches/Plate_Amor_Layers.xml, which did
+         PatchOperationRemove on Defs/ThingDef[@Name="AnimalPlateArmorBase"]/apparel/layers/li[2]
+       - stripping the Shell layer off Owlchemist's shared base so that a saddle could be worn
+       over the armour. That reached every plate armour in the game to fix one horse. Here the
+       armour simply declares Middle and the saddle declares Shell, which gets the same result
+       without touching anyone else's def.
+
+       Note this deliberately does NOT overwrite Basic Armor's Horse plate textures. Basic
+       Armor ships Horse_eastm/northm/southm mask files next to its sprites; dropping Riful's
+       unmasked art onto those paths would leave the masks behind and recolour it wrongly.
+       Two separate items also leaves the choice with the player: vanilla-looking animal
+       plate, or medieval barding.
+
+       defNames are new. Riful called the saddle Apparel_Saddle, which two other (dead, 1.0)
+       Animal Gear add-ons also declare - "Animal Gear Horse" by Dylan and "RS Horse Armor and
+       Saddles" by Radley Sustaire. RimWorld says nothing when two mods declare the same
+       defName; the last one loaded simply wins. Nothing has a live 1.6 save with any of these,
+       so renaming costs nothing and removes the trap. -->
+
+  <ThingDef Name="MedievalHorseGearBase" ParentName="ArmorMachineableBase" Abstract="True">
+    <techLevel>Medieval</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>PlateArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Animal_Apparel</li>
+    </thingCategories>
+    <generateAllowChance>0</generateAllowChance>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <defaultOutfitTags>
+        <li>Anything</li>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <modExtensions>
+      <li Class="AnimalGear.AnimalApparelDefExtension">
+        <showCoverageForBodyType>QuadrupedAnimalWithHooves</showCoverageForBodyType>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MedievalHorseGearBase">
+    <defName>Apparel_MedievalHorsePlate</defName>
+    <label>horse barding</label>
+    <description>Medieval plate barding shaped for a horse. Cumbersome, but it turns aside blades and blunts a charge.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Horse</ThingDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <!-- Riful drew no inventory icon; the south-facing sprite stands in for one. -->
+      <texPath>Things/Pawn/Animal/Apparel/Body/MedievalHorsePlate/Horse/Horse_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>68000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <StuffEffectMultiplierArmor>0.73</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.8</MoveSpeed>
+    </equippedStatOffsets>
+    <costStuffCount>200</costStuffCount>
+    <apparel>
+      <bodyPartGroups>
+        <li>AnimalBody</li>
+        <li>AnimalNeck</li>
+        <li>AnimalLegs</li>
+      </bodyPartGroups>
+      <!-- A directory, not a file stem. -->
+      <wornGraphicPath>Things/Pawn/Animal/Apparel/Body/MedievalHorsePlate</wornGraphicPath>
+      <!-- Middle only: the saddle takes Shell, so the two can be worn together. -->
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+        <li>defNameHorse</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="MedievalHorseGearBase">
+    <defName>Apparel_MedievalHorseHelmet</defName>
+    <label>horse chanfron</label>
+    <description>A plate faceguard shaped for a horse's head. Moderate protection against sharp attacks, little against blunt ones.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Horse</ThingDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Apparel/Head/MedievalHorsePlate/Horse/Horse_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>6000</WorkToMake>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>5</Mass>
+      <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+    <costStuffCount>70</costStuffCount>
+    <apparel>
+      <bodyPartGroups>
+        <li>AnimalHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Animal/Apparel/Head/MedievalHorsePlate</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+        <li>defNameHorse</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalRidingBase">
+    <defName>Apparel_MedievalHorseSaddle</defName>
+    <label>saddle</label>
+    <description>A saddle for riding a horse, comfortably.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Horse</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Apparel/Riding/Saddle/saddle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>35000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>5</Mass>
+      <Flammability>0.7</Flammability>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.2</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <Insulation_Heat>1</Insulation_Heat>
+      <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.40</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.55</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>8</EquipDelay>
+    </statBases>
+    <stuffProps>
+      <allowColorGenerators>true</allowColorGenerators>
+    </stuffProps>
+    <costList>
+      <Steel>10</Steel>
+      <Cloth>10</Cloth>
+    </costList>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>AnimalBody</li>
+      </bodyPartGroups>
+      <!-- A directory, not a file stem. -->
+      <wornGraphicPath>Things/Pawn/Animal/Apparel/Riding/Saddle</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+        <li>defNameHorse</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- ===== Dog Collars, by Shenanigans ===== -->
+
+  <!-- EN: leather dog collar -->
+  <Apparel_leatherdogcollar.label>collier de cuir</Apparel_leatherdogcollar.label>
+  <!-- EN: A simple leather collar for dogs and other canines. It provides some protection for the neck. -->
+  <Apparel_leatherdogcollar.description>Un simple collier de cuir pour les chiens et autres canidés. Il protège un peu le cou.</Apparel_leatherdogcollar.description>
+
+  <!-- EN: studded dog collar -->
+  <Apparel_studdeddogcollar.label>collier clouté</Apparel_studdeddogcollar.label>
+  <!-- EN: A leather dog collar reinforced with metal studs for added protection. -->
+  <Apparel_studdeddogcollar.description>Un collier de cuir renforcé de clous métalliques, pour une meilleure protection.</Apparel_studdeddogcollar.description>
+
+  <!-- EN: dog neck bow -->
+  <Apparel_dogbow.label>nœud de cou</Apparel_dogbow.label>
+  <!-- EN: A pretty little neck bow for dogs and other canines. It doesn't provide much protection, but it's a bit better than nothing at all. Plus, it's cute! -->
+  <Apparel_dogbow.description>Un joli petit nœud pour les chiens et autres canidés. Il ne protège pas grand-chose, mais c'est toujours mieux que rien. Et puis, c'est mignon !</Apparel_dogbow.description>
+
+  <!-- EN: shield dog collar -->
+  <Apparel_shielddogcollar.label>collier à bouclier</Apparel_shielddogcollar.label>
+  <!-- EN: A projectile-repulsion collar. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. -->
+  <Apparel_shielddogcollar.description>Un collier répulseur de projectiles. Il tente d'arrêter les tirs et les éclats, mais ne fait rien contre les attaques de mêlée ni contre la chaleur.</Apparel_shielddogcollar.description>
+
+  <!-- ===== Animal Diapers, by Dipsy ===== -->
+
+  <!-- EN: diaper -->
+  <diaper.label>couche</diaper.label>
+  <!-- EN: A Diaper animals can wear to eliminate filth production for a short time. -->
+  <diaper.description>Une couche que les animaux peuvent porter : elle supprime les saletés qu'ils répandent, pour un temps.</diaper.description>
+
+  <!-- ===== [CSM]RealisticAwesomeGoat, by CSM ===== -->
+
+  <!-- EN: goat mail -->
+  <Apparel_GoatMail.label>cotte de mailles de chèvre</Apparel_GoatMail.label>
+  <!-- EN: Armor plates covering the body. Protects against gunfire and melee attacks. -->
+  <Apparel_GoatMail.description>Des plaques d'armure couvrant le corps. Protège des tirs et des attaques de mêlée.</Apparel_GoatMail.description>
+
+  <!-- ===== Medieval Horse Plate Armour, by Riful ===== -->
+
+  <!-- EN: horse barding -->
+  <Apparel_MedievalHorsePlate.label>barde de cheval</Apparel_MedievalHorsePlate.label>
+  <!-- EN: Medieval plate barding shaped for a horse. Cumbersome, but it turns aside blades and blunts a charge. -->
+  <Apparel_MedievalHorsePlate.description>Une barde de plates médiévale taillée pour un cheval. Encombrante, mais elle dévie les lames et amortit les chocs.</Apparel_MedievalHorsePlate.description>
+
+  <!-- EN: horse chanfron -->
+  <Apparel_MedievalHorseHelmet.label>chanfrein</Apparel_MedievalHorseHelmet.label>
+  <!-- EN: A plate faceguard shaped for a horse's head. Moderate protection against sharp attacks, little against blunt ones. -->
+  <Apparel_MedievalHorseHelmet.description>Une plaque faciale taillée pour la tête d'un cheval. Protection correcte contre le tranchant, faible contre le contondant.</Apparel_MedievalHorseHelmet.description>
+
+  <!-- EN: saddle -->
+  <Apparel_MedievalHorseSaddle.label>selle</Apparel_MedievalHorseSaddle.label>
+  <!-- EN: A saddle for riding a horse, comfortably. -->
+  <Apparel_MedievalHorseSaddle.description>Une selle pour monter un cheval, confortablement.</Apparel_MedievalHorseSaddle.description>
+
+  <!-- ===== Animal Equipment, by Owlchemist (after jptrrs) ===== -->
+
+  <!-- EN: animal clothes -->
+  <Apparel_SmallAnimalClothes.label>vêtements pour animal</Apparel_SmallAnimalClothes.label>
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_SmallAnimalClothes.description>Des vêtements robustes pour animaux. Protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_SmallAnimalClothes.description>
+
+  <!-- EN: large animal clothes -->
+  <Apparel_LargeAnimalClothes.label>vêtements pour grand animal</Apparel_LargeAnimalClothes.label>
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_LargeAnimalClothes.description>Des vêtements robustes pour animaux. Protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_LargeAnimalClothes.description>
+
+  <!-- EN: animal headwear -->
+  <Apparel_SmallAnimalScarf.label>coiffe pour animal</Apparel_SmallAnimalScarf.label>
+  <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit an animal. -->
+  <Apparel_SmallAnimalScarf.description>Une coiffe en tissu ou en cuir, taillée pour la tête d'un animal.</Apparel_SmallAnimalScarf.description>
+
+  <!-- EN: large animal headwear -->
+  <Apparel_LargeAnimalScarf.label>coiffe pour grand animal</Apparel_LargeAnimalScarf.label>
+  <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit a large animal. -->
+  <Apparel_LargeAnimalScarf.description>Une coiffe en tissu ou en cuir, taillée pour la tête d'un grand animal.</Apparel_LargeAnimalScarf.description>
+
+  <!-- EN: riding gear -->
+  <Apparel_bridle.label>harnais de monte</Apparel_bridle.label>
+  <!-- EN: Provides protection and a harness for riding. -->
+  <Apparel_bridle.description>Offre une protection et une prise pour monter la bête.</Apparel_bridle.description>
+
+  <!-- EN: animal power armor -->
+  <Apparel_SmallAnimalPowerArmor.label>armure assistée pour animal</Apparel_SmallAnimalPowerArmor.label>
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
+  <Apparel_SmallAnimalPowerArmor.description>Une armure assistée légère conçue pour les animaux de combat. Ses plaques en tissage de plastacier arrêtent très efficacement les attaques et laissent peu d'articulations vulnérables. Des assistances neuro-mémétiques permettent à l'animal de la porter sans perdre sa mobilité.</Apparel_SmallAnimalPowerArmor.description>
+
+  <!-- EN: large animal power armor -->
+  <Apparel_LargeAnimalPowerArmor.label>armure assistée pour grand animal</Apparel_LargeAnimalPowerArmor.label>
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a large animal to wear the armor and still move easily. -->
+  <Apparel_LargeAnimalPowerArmor.description>Une armure assistée légère conçue pour les animaux de combat. Ses plaques en tissage de plastacier arrêtent très efficacement les attaques et laissent peu d'articulations vulnérables. Des assistances neuro-mémétiques permettent à une grande bête de la porter sans perdre sa mobilité.</Apparel_LargeAnimalPowerArmor.description>
+
+  <!-- EN: animal power helmet -->
+  <Apparel_SmallAnimalPowerArmorHelmet.label>casque assisté pour animal</Apparel_SmallAnimalPowerArmorHelmet.label>
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
+  <Apparel_SmallAnimalPowerArmorHelmet.description>Un casque assisté en tissage de plastacier, conçu pour les animaux.</Apparel_SmallAnimalPowerArmorHelmet.description>
+
+  <!-- EN: large animal power helmet -->
+  <Apparel_LargeAnimalPowerArmorHelmet.label>casque assisté pour grand animal</Apparel_LargeAnimalPowerArmorHelmet.label>
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for large animals. -->
+  <Apparel_LargeAnimalPowerArmorHelmet.description>Un casque assisté en tissage de plastacier, conçu pour les grandes bêtes.</Apparel_LargeAnimalPowerArmorHelmet.description>
+
+</LanguageData>

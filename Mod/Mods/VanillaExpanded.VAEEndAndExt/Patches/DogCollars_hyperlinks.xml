@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- From "Dog Collars" by Shenanigans, corrected.
+
+       Shenanigans' original aimed these three operations at DogCollarBase, DogBowBase and
+       StuddedDogCollarBase using defName= - but those are abstract defs, identified by a Name
+       attribute, and have no defName at all. The xpath therefore never matched anything, and
+       the thylacine and the African wild dog have been missing from the collars' "works with"
+       list since the mod shipped. PatchOperationSequence with success Always meant it failed
+       silently.
+
+       Rewritten to target the four concrete defs the way every other compat file in this mod
+       does. The shield collar is included, which the original omitted. -->
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Apparel_leatherdogcollar" or
+          defName="Apparel_dogbow" or
+          defName="Apparel_studdeddogcollar" or
+          defName="Apparel_shielddogcollar"]/descriptionHyperlinks</xpath>
+        <value>
+          <ThingDef>AEXP_Thylacine</ThingDef>
+          <ThingDef>AEXP_AfricanWildDog</ThingDef>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
+</Patch>

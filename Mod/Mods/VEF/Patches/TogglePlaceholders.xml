@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- From "Animal Equipment" by Owlchemist (MIT). VEF.PatchOperationToggableSequence
+       puts a checkbox in Vanilla Expanded Framework's mod settings, which is why this file
+       and the universal pieces it governs are gated on VEF in LoadFolders.xml.
+
+       Owlchemist's version also listed Apparel_AnimalFlakArmor, Apparel_AnimalPlateArmor,
+       Apparel_AnimalPlateHelmet and Apparel_AnimalAdvancedHelmet. Those are not migrated -
+       Animal Apparel: Basic Armor covers the flak and plate tiers - so they are dropped from
+       the xpath rather than left to match nothing. -->
+
+  <Operation Class="VEF.PatchOperationToggableSequence">
+    <enabled>False</enabled>
+    <mods>
+      <li>Core</li>
+    </mods>
+    <label>Disable universal animal apparel (placeholder art):</label>
+    <operations>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Apparel_AnimalClothes" or
+          defName="Apparel_AnimalScarf" or
+          defName="Apparel_AnimalReins" or
+          defName="Apparel_AnimalPowerArmor" or
+          defName="Apparel_AnimalPowerArmorHelmet"]</xpath>
+      </li>
+    </operations>
+  </Operation>
+
+  <!-- Owlchemist's second operation, kept as written: animal gear should not be rolled as an
+       ideoligion relic. AnimalFlakBase and AnimalPlateBase are gone from the list for the
+       same reason as above; MedievalHorseGearBase and the collar bases are added, since they
+       are new here and want the same treatment. -->
+  <Operation Class="VEF.PatchOperationToggableSequence">
+    <enabled>True</enabled>
+    <mods>
+      <li>Vanilla Ideology Expanded - Relics and Artifacts</li>
+    </mods>
+    <label>Animal apparel cannot be a relic:</label>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[@Name="AnimalScarfBase" or
+          @Name="AnimalSpacerBase" or
+          @Name="AnimalClothesBase" or
+          @Name="AnimalRidingBase" or
+          @Name="MedievalHorseGearBase" or
+          @Name="DogCollarBase" or
+          @Name="StuddedDogCollarBase" or
+          @Name="DogBowBase" or
+          @Name="ShieldDogCollarBase"]</xpath>
+        <value>
+          <relicChance>0</relicChance>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
+</Patch>

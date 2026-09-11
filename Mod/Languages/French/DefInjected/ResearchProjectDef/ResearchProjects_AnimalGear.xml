@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- EN: riding gear -->
+  <AnimalRidingGear.label>harnachement</AnimalRidingGear.label>
+  <!-- EN: Craft new equipment designs aimed to improve animal riding. -->
+  <AnimalRidingGear.description>Concevoir un équipement destiné à faciliter la monte des animaux.</AnimalRidingGear.description>
+
+  <!-- EN: animal clothing -->
+  <ComplexAnimalClothing.label>vêtements pour animaux</ComplexAnimalClothing.label>
+  <!-- EN: Adapt complex clothing to fit onto a variety of domestic animals. -->
+  <ComplexAnimalClothing.description>Adapter les vêtements complexes à la morphologie de divers animaux domestiques.</ComplexAnimalClothing.description>
+
+  <!-- EN: power armored animals -->
+  <PoweredAnimalArmor.label>animaux en armure assistée</PoweredAnimalArmor.label>
+  <!-- EN: Craft high tech power armor made to fit onto domestic animals. -->
+  <PoweredAnimalArmor.description>Fabriquer une armure assistée de haute technologie taillée pour les animaux domestiques.</PoweredAnimalArmor.description>
+
+  <!-- The two below only exist when Vanilla Expanded Framework is active
+       (Mods/VEF/Defs/ResearchDefs/ResearchProjects_ATP.xml). -->
+
+  <!-- EN: weaponized animals -->
+  <ATP_Weapons.label>animaux armés</ATP_Weapons.label>
+  <!-- EN: Adapt existing weapon designs into turret packs specially made for animals. -->
+  <ATP_Weapons.description>Adapter les armes existantes en sacs-tourelles conçus pour les animaux.</ATP_Weapons.description>
+
+  <!-- EN: animal charge weapons -->
+  <ATP_Charge.label>armes à charge pour animaux</ATP_Charge.label>
+  <!-- EN: Craft high tech charge weapons made to fit onto domestic animals. -->
+  <ATP_Charge.description>Fabriquer des armes à charge de haute technologie montables sur des animaux domestiques.</ATP_Charge.description>
+
+</LanguageData>

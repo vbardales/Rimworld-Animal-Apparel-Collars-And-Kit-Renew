@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- From "Medieval Horse Plate Armour" by Riful. Combat Extended replaces the armour and
+       carry model wholesale, so the saddle needs Bulk and WornBulk to exist in its economy at
+       all, and CarryBulk is what makes a saddled horse worth having as a pack animal.
+
+       Riful gated this with PatchOperationFindMod on the display name "Combat Extended";
+       the folder is gated on the packageId CETeam.CombatExtended in LoadFolders.xml instead.
+       The target defName follows the rename to Apparel_MedievalHorseSaddle. -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Apparel_MedievalHorseSaddle"]</xpath>
+    <value>
+      <equippedStatOffsets>
+        <CarryBulk>25</CarryBulk>
+      </equippedStatOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Apparel_MedievalHorseSaddle"]/statBases</xpath>
+    <value>
+      <Bulk>6</Bulk>
+      <WornBulk>4</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Apparel_MedievalHorseSaddle"]/statBases/StuffEffectMultiplierArmor</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>3</StuffEffectMultiplierArmor>
+    </value>
+  </Operation>
+
+</Patch>

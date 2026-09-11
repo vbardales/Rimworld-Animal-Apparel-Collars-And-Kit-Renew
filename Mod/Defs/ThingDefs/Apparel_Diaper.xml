@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Migrated from "Animal Diapers" by Dipsy (Workshop 2817510684, last supported 1.3).
+
+       AnimalFallbackInvisible matters more here than anywhere else in this mod. Dipsy listed
+       57 animals but drew art for four - Grizzly Bear, Polar Bear, Giraffe and Gorilla - and
+       said so plainly on the Workshop page: "not all of them have art". The old framework
+       let the other 53 wear an invisible diaper; the new one logs an error for every
+       animal it cannot find a sprite for, on every apparel check. This tag restores the old
+       behaviour: the diaper works, it just does not show.
+
+       thingCategories moved from Apparel to Animal_Apparel so the diaper files with the rest
+       of the animal gear instead of with colonist clothing.
+
+       bodyPartGroups: Legs -> AnimalLegs. -->
+
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>diaper</defName>
+    <label>diaper</label>
+    <description>A Diaper animals can wear to eliminate filth production for a short time.</description>
+    <techLevel>Neolithic</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Apparel/Body/Diaper/diaper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MaxHitPoints>1</MaxHitPoints>
+      <MarketValue>50</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0.9</Flammability>
+      <StuffEffectMultiplierInsulation_Cold>0.07</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.03</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <costStuffCount>10</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Animal_Apparel</li>
+    </thingCategories>
+    <generateAllowChance>0</generateAllowChance>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>AnimalLegs</li>
+      </bodyPartGroups>
+      <!-- A directory, not a file stem. -->
+      <wornGraphicPath>Things/Pawn/Animal/Apparel/Body/Diaper</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+        <li>AnimalFallbackInvisible</li>
+
+        <li>defNameAlpaca</li>
+        <li>defNameAlphabeaver</li>
+        <li>defNameBear_Grizzly</li>
+        <li>defNameBear_Polar</li>
+        <li>defNameBison</li>
+        <li>defNameBoomalope</li>
+        <li>defNameBoomrat</li>
+        <li>defNameCapybara</li>
+        <li>defNameCaribou</li>
+        <li>defNameCassowary</li>
+        <li>defNameCat</li>
+        <li>defNameChicken</li>
+        <li>defNameChinchilla</li>
+        <li>defNameCougar</li>
+        <li>defNameCow</li>
+        <li>defNameDeer</li>
+        <li>defNameDonkey</li>
+        <li>defNameDromedary</li>
+        <li>defNameDuck</li>
+        <li>defNameElephant</li>
+        <li>defNameElk</li>
+        <li>defNameEmu</li>
+        <li>defNameFox_Arctic</li>
+        <li>defNameFox_Fennec</li>
+        <li>defNameFox_Red</li>
+        <li>defNameGazelle</li>
+        <li>defNameGoat</li>
+        <li>defNameGoose</li>
+        <li>defNameGuineaPig</li>
+        <li>defNameHare</li>
+        <li>defNameHorse</li>
+        <li>defNameHusky</li>
+        <li>defNameIbex</li>
+        <li>defNameIguana</li>
+        <li>defNameLabradorRetriever</li>
+        <li>defNameLynx</li>
+        <li>defNameMegasloth</li>
+        <li>defNameMonkey</li>
+        <li>defNameMuffalo</li>
+        <li>defNameOstrich</li>
+        <li>defNamePanther</li>
+        <li>defNamePig</li>
+        <li>defNameRaccoon</li>
+        <li>defNameRat</li>
+        <li>defNameRhinoceros</li>
+        <li>defNameSheep</li>
+        <li>defNameSnowhare</li>
+        <li>defNameSquirrel</li>
+        <li>defNameThrumbo</li>
+        <li>defNameTortoise</li>
+        <li>defNameTurkey</li>
+        <li>defNameWarg</li>
+        <li>defNameWildBoar</li>
+        <li>defNameWolf_Arctic</li>
+        <li>defNameWolf_Timber</li>
+        <li>defNameYak</li>
+        <li>defNameYorkshireTerrier</li>
+
+        <!-- Vanilla Animals Expanded - Arid Shrubland -->
+        <li MayRequireAnyOf="VanillaExpanded.VAEAS,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Giraffe</li>
+
+        <!-- Vanilla Animals Expanded - Tropical Rainforest -->
+        <li MayRequireAnyOf="VanillaExpanded.VAETR,VanillaExpanded.VanillaAnimalsExpanded">defNameAEXP_Gorilla</li>
+      </tags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <equippedStatOffsets>
+      <FilthRate>-50.0</FilthRate>
+    </equippedStatOffsets>
+    <modExtensions>
+      <li Class="AnimalGear.AnimalApparelDefExtension">
+        <showCoverageForBodyType>QuadrupedAnimalWithPaws</showCoverageForBodyType>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- From "Animal Equipment" by Owlchemist (MIT). His "placeholder" tier: one universal
+       version of each garment that any animal can wear, drawn with the generic sprite rather
+       than a per-animal one.
+
+       They live behind Vanilla Expanded Framework because Owlchemist put them there in the
+       released version, so that his TogglePlaceholders patch could switch them off from VEF's
+       settings UI. Patches/TogglePlaceholders.xml carries that over.
+
+       Under the old framework "any animal" was the AnimalALL tag. The new framework has no
+       such tag and does not need one: a piece with AnimalApparel and AnimalOnly but no
+       defName tag is wearable by every animal, and TryGetGraphicApparelForAnimal falls
+       straight through to the plain wornGraphicPath - which is exactly the generic sprite
+       these were drawn against.
+
+       devNote keeps Owlchemist's legacy[...] markers, which record which specific pieces each
+       universal one stands in for. -->
+
+  <ThingDef ParentName="AnimalClothesBase">
+    <defName>Apparel_AnimalClothes</defName>
+    <label>universal animal clothes</label>
+    <description>Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>2700</WorkToMake>
+      <Mass>0.3</Mass>
+    </statBases>
+    <costStuffCount>45</costStuffCount>
+    <apparel>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+      </tags>
+    </apparel>
+    <devNote>legacy[Apparel_SmallAnimalClothes,Apparel_LargeAnimalClothes]</devNote>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalScarfBase">
+    <defName>Apparel_AnimalScarf</defName>
+    <label>universal pet scarf</label>
+    <description>A stylish accessory for cool, laid back animals.</description>
+    <statBases>
+      <WorkToMake>1800</WorkToMake>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>50</MarketValue>
+      <Mass>0.1</Mass>
+    </statBases>
+    <costStuffCount>50</costStuffCount>
+    <apparel>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+      </tags>
+    </apparel>
+    <devNote>legacy[Apparel_SmallAnimalScarf,Apparel_LargeAnimalScarf]</devNote>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalRidingBase">
+    <defName>Apparel_AnimalReins</defName>
+    <label>universal riding gear</label>
+    <description>Provides protection and a harness for riding.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Apparel/Riding/RidingGear/ridinggear</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>110</MaxHitPoints>
+      <WorkToMake>15000</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.40</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.55</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <apparel>
+      <wornGraphicPath>Things/Pawn/Animal/Apparel/Riding/RidingGear</wornGraphicPath>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+      </tags>
+    </apparel>
+    <devNote>legacy[Apparel_bridle]</devNote>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalSpacerArmorBase">
+    <defName>Apparel_AnimalPowerArmor</defName>
+    <label>universal animal power armor</label>
+    <description>A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Apparel/Body/Power/power</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <MaxHitPoints>340</MaxHitPoints>
+      <Mass>15</Mass>
+    </statBases>
+    <costList>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>100</Plasteel>
+      <Uranium>20</Uranium>
+    </costList>
+    <apparel>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+      </tags>
+    </apparel>
+    <thingSetMakerTags Inherit="False" />
+    <devNote>legacy[Apparel_SmallAnimalPowerArmor,Apparel_LargeAnimalPowerArmor]</devNote>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalSpacerHelmBase">
+    <defName>Apparel_AnimalPowerArmorHelmet</defName>
+    <label>universal animal power helmet</label>
+    <description>A powered helmet with layered plasteel-weave plates, designed specifically for animals.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Apparel/Head/Power/power</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>21000</WorkToMake>
+      <MaxHitPoints>160</MaxHitPoints>
+      <Mass>2.7</Mass>
+    </statBases>
+    <costList>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>40</Plasteel>
+    </costList>
+    <apparel>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+      </tags>
+    </apparel>
+    <thingSetMakerTags Inherit="False" />
+    <devNote>legacy[Apparel_SmallAnimalPowerArmorHelmet,Apparel_LargeAnimalPowerArmorHelmet]</devNote>
+  </ThingDef>
+
+</Defs>

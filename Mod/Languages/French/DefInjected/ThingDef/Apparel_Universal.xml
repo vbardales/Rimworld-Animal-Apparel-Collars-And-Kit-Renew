@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- The universal pieces only exist when Vanilla Expanded Framework is active
+       (Mods/VEF/Defs/ThingDefs/Apparel_Universal.xml). A DefInjected key whose def is absent
+       is silently ignored, so keeping them in this same folder costs nothing. -->
+
+  <!-- EN: universal animal clothes -->
+  <Apparel_AnimalClothes.label>vêtements universels pour animal</Apparel_AnimalClothes.label>
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_AnimalClothes.description>Des vêtements robustes pour animaux. Protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_AnimalClothes.description>
+
+  <!-- EN: universal pet scarf -->
+  <Apparel_AnimalScarf.label>écharpe universelle</Apparel_AnimalScarf.label>
+  <!-- EN: A stylish accessory for cool, laid back animals. -->
+  <Apparel_AnimalScarf.description>Un accessoire élégant pour les bêtes décontractées.</Apparel_AnimalScarf.description>
+
+  <!-- EN: universal riding gear -->
+  <Apparel_AnimalReins.label>harnais de monte universel</Apparel_AnimalReins.label>
+  <!-- EN: Provides protection and a harness for riding. -->
+  <Apparel_AnimalReins.description>Offre une protection et une prise pour monter la bête.</Apparel_AnimalReins.description>
+
+  <!-- EN: universal animal power armor -->
+  <Apparel_AnimalPowerArmor.label>armure assistée universelle</Apparel_AnimalPowerArmor.label>
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
+  <Apparel_AnimalPowerArmor.description>Une armure assistée légère conçue pour les animaux de combat. Ses plaques en tissage de plastacier arrêtent très efficacement les attaques et laissent peu d'articulations vulnérables. Des assistances neuro-mémétiques permettent à l'animal de la porter sans perdre sa mobilité.</Apparel_AnimalPowerArmor.description>
+
+  <!-- EN: universal animal power helmet -->
+  <Apparel_AnimalPowerArmorHelmet.label>casque assisté universel</Apparel_AnimalPowerArmorHelmet.label>
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
+  <Apparel_AnimalPowerArmorHelmet.description>Un casque assisté en tissage de plastacier, conçu pour les animaux.</Apparel_AnimalPowerArmorHelmet.description>
+
+</LanguageData>

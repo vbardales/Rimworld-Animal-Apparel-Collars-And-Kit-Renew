@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- From "Medieval Horse Plate Armour" by Riful. Riful drew seven saddled-horse overlays
+       for Giddy-Up so that a ridden horse shows tack under its rider; this points Giddy-Up at
+       them.
+
+       Two things had to change or it would silently do nothing:
+
+       1. The class moved. Riful wrote GiddyUpCore.CompProperties_Overlay. In Giddy-Up 2 the
+          type is GiddyUp.CompProperties_Overlay - same assembly name, GiddyUpCore.dll, but a
+          different namespace. An unresolvable Class= on a <li> makes RimWorld discard the
+          whole def it appears in, so this is not a cosmetic detail.
+
+       2. The gate moved. Riful used PatchOperationFindMod with <li>Giddy-Up! Core</li>, which
+          matches on a mod's DISPLAY NAME. The living mod is called "Giddy-Up 2 - Continued",
+          so that test can never pass again. The folder is gated on the packageId
+          MemeGoddess.GiddyUp in LoadFolders.xml instead, which does not depend on what the
+          author calls the mod this month.
+
+       The PatchOperationRemove is kept and still carries success Always: Giddy-Up may or may
+       not already have given the horse an overlay comp, and either is fine.
+
+       offsetDefault was (0,0,0,0) in the original. The field is a Vector3, so a four-component
+       value does not parse; it is (0,0,0) here. -->
+
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="Horse"]/comps/li[@Class="GiddyUp.CompProperties_Overlay"]</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Horse"]/comps</xpath>
+    <value>
+      <li Class="GiddyUp.CompProperties_Overlay">
+        <overlayFront>
+          <graphicDataDefault>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>2.1</drawSize>
+            <drawRotated>false</drawRotated>
+          </graphicDataDefault>
+          <allVariants>
+            <li>
+              <texPath>Things/Pawn/Animal/Apparel/Overlay/Horse_overlay_south</texPath>
+            </li>
+            <li>
+              <texPath>Things/Pawn/Animal/Apparel/Overlay/Horse1_overlay_south</texPath>
+            </li>
+            <li>
+              <texPath>Things/Pawn/Animal/Apparel/Overlay/Horse2_overlay_south</texPath>
+            </li>
+            <li>
+              <texPath>Things/Pawn/Animal/Apparel/Overlay/Horse3_overlay_south</texPath>
+            </li>
+            <li>
+              <texPath>Things/Pawn/Animal/Apparel/Overlay/Horse4_overlay_south</texPath>
+            </li>
+            <li>
+              <texPath>Things/Pawn/Animal/Apparel/Overlay/Horse5_overlay_south</texPath>
+            </li>
+            <li>
+              <texPath>Things/Pawn/Animal/Apparel/Overlay/Horse6_overlay_south</texPath>
+            </li>
+          </allVariants>
+          <offsetDefault>(0,0,0)</offsetDefault>
+        </overlayFront>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

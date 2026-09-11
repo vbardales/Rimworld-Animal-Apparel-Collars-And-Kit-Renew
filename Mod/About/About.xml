@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Animal Apparel: Collars and Kit 1.6</name>
+  <author>Shenanigans, Annabelesca, Dipsy, flangopink, ogam, Riful, CSM, Owlchemist, jptrrs - migration to 1.6: nelim</author>
+  <packageId>nelim.animalapparelcollarsandkit</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <url>https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew</url>
+  <description>Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on Ingendum's Animal Apparel: Framework.
+
+Dylan's Animal Gear is being retired, and its successor declares itself incompatible with it. The day you switch frameworks, everything built on the old one stops. This mod carries that content across.
+
+WHAT IS IN IT
+
+- Four dog collars - a neck bow, a leather collar, a studded collar and a shield collar - fitting 78 canines across 21 animal mods. From "Dog Collars" by Shenanigans, with "Patch Collar Malinois" by Annabelesca folded in.
+- A diaper that stops an animal spreading filth. From "Animal Diapers" by Dipsy.
+- Six turret packs and two grenade belts, strapped to any animal. From "Animal Turret Packs" by flangopink and ogam. Needs Vanilla Expanded Framework; without it the rest still works.
+- Medieval barding, a chanfron and a saddle for horses, plus riding tack for Giddy-Up. From "Medieval Horse Plate Armour" by Riful.
+- Goat mail. From "[CSM]RealisticAwesomeGoat" by CSM - the armour only, not that mod's goat rebalance.
+- Animal clothing, headwear, riding gear and power armour. From "Animal Equipment" by Owlchemist, itself a continuation of "Animal Armor: Vanilla" by jptrrs. Animal Apparel: Basic Armor rewrote the flak and plate half of that mod and still ships the art for the rest of it, unused; these are the defs that art was drawn for.
+
+COLLARS HAVE THEIR OWN SLOT
+
+The framework gives animals three body part groups - head, body and legs - so a collar would otherwise share a slot with body armour. This mod adds a fourth, AnimalNeck, patched onto the neck of every non-human body (and onto the head for the bodies that have no neck, such as insects and snakes, which could never wear a collar under the old framework either). Collars also draw one layer above armour instead of stacking in whatever order the animal happened to put things on.
+
+COMPATIBILITY
+
+Cannot run with Dylan's Animal Gear - that is the framework's restriction, not this mod's. Cannot run with any of the six source mods either, since it declares the same defNames. Disable them.
+
+Works with, and adds per-animal art for: Vanilla Animals Expanded (Cats and Dogs, Endangered, Arid Shrubland, Desert, Boreal Forest), Vanilla Factions Expanded Vikings, Alpha Animals, Magical Menagerie, Spidercamp's Dog Pack, Poeticdragon's Japanese Dogs, Android Tiers, Rim Effect, Forsakens, Save Our Ship 2, Bun Dog, Erin's Lizard Doggo, Palamutes and Mountain Dogs, Dumbs' Dachshunds, RTP's Border Collies and Rhodesian Ridgebacks, Yorkshire Terrors, Rebel Rabbit's Legendary Wolves, and Ann's Belgian Malinois. Each is optional; nothing errors when one is absent.
+
+No assembly, no save data of its own. Removing it mid-game deletes anything crafted from it, like any content mod.
+
+The original authors are credited above and in ATTRIBUTION.md. If any of them would rather this were not published, say so and it comes down.
+
+Source, changelog and attribution: https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew</description>
+  <modDependencies>
+    <li>
+      <packageId>Ingendum.AnimalApparelFramework</packageId>
+      <displayName>Animal Apparel: Framework</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3513825850</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ingendum.AnimalApparelFramework</li>
+    <li>Ingendum.AnimalArmorBasic</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>MemeGoddess.GiddyUp</li>
+    <li>CETeam.CombatExtended</li>
+  </loadAfter>
+  <incompatibleWith>
+    <!-- The framework this mod is built on refuses to run alongside the old one. -->
+    <li>Dylan.AnimalGear</li>
+    <!-- The six source mods, plus Animal Equipment: this mod declares their defNames.
+         RimWorld says nothing when two mods declare the same defName - the last one loaded
+         simply wins - so these have to be declared rather than left to chance. -->
+    <li>Shenanigans.DogCollars</li>
+    <li>Annabelesca.PatchCollarMalinois</li>
+    <li>Dipsy.Diapers</li>
+    <li>flangopink.animalturretpacks</li>
+    <li>Horse_Plate_Armour</li>
+    <li>CSM.RealisticAwesomeGoat</li>
+    <li>Owlchemist.AnimalGear.Equipment</li>
+  </incompatibleWith>
+</ModMetaData>

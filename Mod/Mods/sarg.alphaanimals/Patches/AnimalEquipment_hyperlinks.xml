@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- From "Animal Equipment" by Owlchemist (MIT), trimmed. His original also added these
+       hyperlinks to Apparel_SmallAnimalFlakArmor, Apparel_LargeAnimalFlakArmor,
+       Apparel_SmallAnimalPlateArmor, Apparel_LargeAnimalPlateArmor,
+       Apparel_LargeAnimalPlateHelmet and Apparel_LargeAnimalAdvancedHelmet. None of those is
+       migrated - Animal Apparel: Basic Armor provides the flak and plate tiers - so the
+       operations that named them are removed rather than left to match nothing. -->
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Apparel_SmallAnimalPowerArmor"]/descriptionHyperlinks</xpath>
+        <value>
+          <ThingDef>AA_Animalisk</ThingDef>
+          <ThingDef>AA_Feralisk</ThingDef>
+          <ThingDef>AA_Junglelisk</ThingDef>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Apparel_LargeAnimalPowerArmor"]/descriptionHyperlinks</xpath>
+        <value>
+          <ThingDef>AA_Blizzarisk</ThingDef>
+          <ThingDef>AA_Cinderlisk</ThingDef>
+          <ThingDef>AA_Dunealisk</ThingDef>
+          <ThingDef>AA_MeadowAve</ThingDef>
+          <ThingDef>AA_DesertAve</ThingDef>
+          <ThingDef>AA_FrostAve</ThingDef>
+          <ThingDef>AA_NightAve</ThingDef>
+          <ThingDef>AA_RoyalAve</ThingDef>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Apparel_LargeAnimalPowerArmorHelmet"]/descriptionHyperlinks</xpath>
+        <value>
+          <ThingDef>AA_MeadowAve</ThingDef>
+          <ThingDef>AA_DesertAve</ThingDef>
+          <ThingDef>AA_FrostAve</ThingDef>
+          <ThingDef>AA_NightAve</ThingDef>
+          <ThingDef>AA_RoyalAve</ThingDef>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
+</Patch>

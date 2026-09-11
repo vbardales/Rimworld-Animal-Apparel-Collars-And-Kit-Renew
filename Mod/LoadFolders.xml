@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- The filename must be exactly "LoadFolders.xml". RimWorld looks for that literal string,
+     capitals included - it appears once in Assembly-CSharp.dll and is not case-folded. On
+     Windows NTFS ignores case and "loadFolders.xml" is found anyway; on Linux and on the
+     Steam Deck it is not, the game falls back to its default loading, and every conditional
+     branch below vanishes with no error message at all.
+
+     The same trap applies to the folder names in the <li> elements: they must match what is
+     on disk exactly. IfModActive compares packageIds case-insensitively, so the attribute
+     values are forgiving; the paths are not.
+
+     IfModActive takes a COMMA-SEPARATED LIST and means ANY of them - it fills
+     LoadFolder.requiredAnyOfPackageIds, tested with ModLister.AnyModActiveNoSuffix.
+     (IfModActiveAll is the one that means all of them.) That is what lets one folder cover a
+     mod that has been republished under a new packageId: several of these have been, and the
+     ids Shenanigans wrote in 2022 no longer match what is on the Workshop today.
+
+     Folder names keep the packageId the source mod was written against, which is also the
+     name of the mod a reader will recognise. The gate is what had to be brought up to date. -->
+<loadFolders>
+  <v1.6>
+    <li>/</li>
+
+    <!-- Vanilla Expanded Framework. Two separate things live here: the animal turret packs,
+         which are built on VEF's MVCF verb system and cannot work without it, and
+         Owlchemist's universal "placeholder" apparel with its VEF toggle patch, which is
+         where he put it in the released version of Animal Equipment. -->
+    <li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/VEF</li>
+
+    <!-- Riding tack for a ridden horse, and Combat Extended's bulk figures for the saddle. -->
+    <li IfModActive="MemeGoddess.GiddyUp">Mods/MemeGoddess.GiddyUp</li>
+    <li IfModActive="CETeam.CombatExtended">Mods/CETeam.CombatExtended</li>
+
+    <!-- Per-animal sprites and "works with" hyperlinks, one folder per source mod. Each holds
+         only art and descriptionHyperlinks; the tags that decide who may wear what live in
+         the main defs, gated with the same packageIds. -->
+
+    <!-- Republished since the source mods were written, so both ids are listed. Without the
+         second one none of these folders would load at all any more. -->
+    <li IfModActive="mlie.spidercampsdogpack,Qux.stray.dogs">Mods/mlie.spidercampsdogpack</li>
+    <li IfModActive="Dumbs.Dumbs'Dachshunds,zal.dumbsdachshunds">Mods/Dumbs.Dumbs'Dachshunds</li>
+    <li IfModActive="RebelRabbit.DireWolves,zal.wolvesden">Mods/RebelRabbit.DireWolves</li>
+    <li IfModActive="kikohi.forsakens,zal.forsakens">Mods/kikohi.forsakens</li>
+    <li IfModActive="RimEffect.Core,RimEffectRenegade.Core">Mods/RimEffect.Core</li>
+    <li IfModActive="SpankyH.BunRace.core,SpankyH.BunRace.bundogs">Mods/SpankyH.BunRace.core</li>
+
+    <!-- The Vanilla Animals Expanded packs are also sold as one merged mod, which declares the
+         same animals under its own packageId. -->
+    <li IfModActive="VanillaExpanded.VAEAS,VanillaExpanded.VanillaAnimalsExpanded">Mods/VanillaExpanded.VAEAS</li>
+    <li IfModActive="VanillaExpanded.VAEBF,VanillaExpanded.VanillaAnimalsExpanded">Mods/VanillaExpanded.VAEBF</li>
+    <li IfModActive="VanillaExpanded.VAECD,VanillaExpanded.VanillaAnimalsExpanded">Mods/VanillaExpanded.VAECD</li>
+    <li IfModActive="VanillaExpanded.VAED,VanillaExpanded.VanillaAnimalsExpanded">Mods/vanillaexpanded.vaed</li>
+    <li IfModActive="VanillaExpanded.VAEEndAndExt">Mods/VanillaExpanded.VAEEndAndExt</li>
+
+    <!-- Still published under the id they always had. -->
+    <li IfModActive="Annabelesca.Malinois">Mods/Annabelesca.Malinois</li>
+    <li IfModActive="Atlas.AndroidTiers">Mods/Atlas.AndroidTiers</li>
+    <li IfModActive="Erin.LizzardDoggo">Mods/Erin.LizzardDoggo</li>
+    <li IfModActive="Erin.MountainDog">Mods/Erin.MountainDog</li>
+    <li IfModActive="Erin.Palamutes">Mods/Erin.Palamutes</li>
+    <li IfModActive="kagypoo.YorkshireTerrors">Mods/kagypoo.YorkshireTerrors</li>
+    <li IfModActive="kentington.saveourship2">Mods/kentington.saveourship2</li>
+    <li IfModActive="OskarPotocki.VFE.Vikings">Mods/OskarPotocki.VFE.Vikings</li>
+    <li IfModActive="Poetik.JapaneseDogs">Mods/Poetik.JapaneseDogs</li>
+    <li IfModActive="rtp.bordercollies">Mods/rtp.bordercollies</li>
+    <li IfModActive="rtp.rhodesianridgebacks">Mods/rtp.rhodesianridgebacks</li>
+    <li IfModActive="sarg.alphaanimals">Mods/sarg.alphaanimals</li>
+    <li IfModActive="sarg.magicalmenagerie">Mods/sarg.magicalmenagerie</li>
+  </v1.6>
+</loadFolders>

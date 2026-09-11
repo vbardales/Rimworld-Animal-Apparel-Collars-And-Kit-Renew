@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- The turret packs only exist when Vanilla Expanded Framework is active
+       (Mods/VEF/Defs/ThingDefs/ThingDefs_AnimalTurretPacks.xml). A DefInjected key whose def
+       is absent is silently ignored, so these live in the ordinary Languages tree.
+
+       Only labels and descriptions are translated. The verb labels nested inside the MVCF
+       comps are left in English on purpose: a DefInjected path into a comp is keyed by the
+       COMP class rather than by the properties class, and MVCF's verbProps list has no
+       [TranslationHandle] field to key its elements by, so any path written for them would
+       resolve to nothing and fail silently. -->
+
+  <!-- EN: small animal mini-turret pack -->
+  <ATP_Apparel_SmallTurret.label>petit sac-tourelle</ATP_Apparel_SmallTurret.label>
+  <!-- EN: A small pack of ammunition and components that control a mounted mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurret.description>Un petit sac de munitions et de composants pilotant une mini-tourelle, conçu pour être porté par un petit animal.</ATP_Apparel_SmallTurret.description>
+
+  <!-- EN: small animal shotgun turret pack -->
+  <ATP_Apparel_SmallTurretShotgun.label>petit sac-tourelle à fusil</ATP_Apparel_SmallTurretShotgun.label>
+  <!-- EN: A small pack of ammunition and components that control a mounted shotgun mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretShotgun.description>Un petit sac de munitions et de composants pilotant une mini-tourelle à fusil à pompe, conçu pour être porté par un petit animal.</ATP_Apparel_SmallTurretShotgun.description>
+
+  <!-- EN: small animal blaster turret pack -->
+  <ATP_Apparel_SmallTurretCharge.label>petit sac-tourelle à charge</ATP_Apparel_SmallTurretCharge.label>
+  <!-- EN: A small pack of ammunition and components that control a mounted blaster mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretCharge.description>Un petit sac de munitions et de composants pilotant une mini-tourelle à charge, conçu pour être porté par un petit animal.</ATP_Apparel_SmallTurretCharge.description>
+
+  <!-- EN: large animal mini-turret pack -->
+  <ATP_Apparel_LargeTurret.label>grand sac-tourelle</ATP_Apparel_LargeTurret.label>
+  <!-- EN: A small pack of ammunition and components that control a mounted mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurret.description>Un sac de munitions et de composants pilotant une mini-tourelle, conçu pour être porté par une grande bête.</ATP_Apparel_LargeTurret.description>
+
+  <!-- EN: large animal shotgun turret pack -->
+  <ATP_Apparel_LargeTurretShotgun.label>grand sac-tourelle à fusil</ATP_Apparel_LargeTurretShotgun.label>
+  <!-- EN: A small pack of ammunition and components that control a mounted shotgun mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretShotgun.description>Un sac de munitions et de composants pilotant une mini-tourelle à fusil à pompe, conçu pour être porté par une grande bête.</ATP_Apparel_LargeTurretShotgun.description>
+
+  <!-- EN: large animal blaster turret pack -->
+  <ATP_Apparel_LargeTurretCharge.label>grand sac-tourelle à charge</ATP_Apparel_LargeTurretCharge.label>
+  <!-- EN: A small pack of ammunition and components that control a mounted blaster mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretCharge.description>Un sac de munitions et de composants pilotant une mini-tourelle à charge, conçu pour être porté par une grande bête.</ATP_Apparel_LargeTurretCharge.description>
+
+  <!-- EN: small animal grenade belt -->
+  <ATP_Apparel_SmallGrenades.label>petite ceinture de grenades</ATP_Apparel_SmallGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by small animals. -->
+  <ATP_Apparel_SmallGrenades.description>Une ceinture de grenades conçue pour être portée par un petit animal.</ATP_Apparel_SmallGrenades.description>
+
+  <!-- EN: large animal grenade belt -->
+  <ATP_Apparel_LargeGrenades.label>grande ceinture de grenades</ATP_Apparel_LargeGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by large animals. -->
+  <ATP_Apparel_LargeGrenades.description>Une ceinture de grenades conçue pour être portée par une grande bête.</ATP_Apparel_LargeGrenades.description>
+
+  <!-- EN: mini-turret bullet -->
+  <ATP_Bullet_SmallTurret.label>balle de mini-tourelle</ATP_Bullet_SmallTurret.label>
+
+  <!-- EN: mini-shotgun blast -->
+  <ATP_Bullet_ShotgunTurret.label>gerbe de mini-fusil</ATP_Bullet_ShotgunTurret.label>
+
+  <!-- EN: mini-turret blaster shot -->
+  <ATP_Bullet_SpacerTurret.label>tir de mini-tourelle à charge</ATP_Bullet_SpacerTurret.label>
+
+</LanguageData>

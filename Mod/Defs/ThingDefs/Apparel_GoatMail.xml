@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Migrated from "[CSM]RealisticAwesomeGoat" by CSM (Workshop 2122692229, last supported
+       1.1). Only the armour came across.
+
+       That mod is two unrelated things in one package. One is this piece of goat mail, an
+       Animal Gear add-on. The other is 1.1/Patches/Goat.xml, a joke rebalance that gives the
+       vanilla goat baseBodySize 7, baseHealthScale 10, MoveSpeed 6.5, Flammability 0,
+       ComfyTemperatureMin -275, combatPower 500 and a 2000-silver market value - the mod's
+       description calls this "more realistic". That patch has nothing to do with animal
+       apparel and would quietly overwrite any other goat balancing, so it is not migrated.
+       The goat retexture that goes with it (GoatMale/GoatFemale and the pack variants) is
+       left behind for the same reason: without the patch nothing points at it.
+
+       The armour itself needed only the usual four changes:
+         bodyPartGroups  Torso/Neck/UpperHead/Legs -> AnimalBody/AnimalNeck/AnimalHead/AnimalLegs
+         tags            Animal -> AnimalApparel + AnimalOnly, Goat -> defNameGoat
+         AnimalCUTOUTCOMPLEX dropped: the new framework picks CutoutComplex by itself when it
+                         finds a mask beside the sprite, and goatmail_Goat_eastm/southm are
+                         exactly that. They are now Goat/Goat_eastm.png and Goat_southm.png.
+         wornGraphicPath is a directory now.
+
+       ParentName was ArmorHelmetMakeableBase in the original, which is odd for a body
+       covering but gives the right recipe and stat scaffolding, so it is kept: changing it
+       would silently move every stat. -->
+
+  <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>Apparel_GoatMail</defName>
+    <label>goat mail</label>
+    <description>Armor plates covering the body. Protects against gunfire and melee attacks.</description>
+    <techLevel>Medieval</techLevel>
+    <descriptionHyperlinks>
+      <ThingDef>Goat</ThingDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <researchPrerequisite>PlateArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Apparel/Body/GoatMail/goatmail</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Mass>19</Mass>
+      <StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>17</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <costStuffCount>560</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Animal_Apparel</li>
+    </thingCategories>
+    <generateAllowChance>0</generateAllowChance>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>AnimalBody</li>
+        <li>AnimalNeck</li>
+        <li>AnimalHead</li>
+        <li>AnimalLegs</li>
+      </bodyPartGroups>
+      <!-- A directory, not a file stem. -->
+      <wornGraphicPath>Things/Pawn/Animal/Apparel/Body/GoatMail</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>AnimalApparel</li>
+        <li>AnimalOnly</li>
+        <li>defNameGoat</li>
+      </tags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <modExtensions>
+      <li Class="AnimalGear.AnimalApparelDefExtension">
+        <showCoverageForBodyType>QuadrupedAnimalWithHoovesAndHorn</showCoverageForBodyType>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>
