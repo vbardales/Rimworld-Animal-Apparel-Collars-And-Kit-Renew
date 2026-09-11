@@ -1,0 +1,73 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Preview</title>
+<style>
+  /* The page IS the banner: 896 x 504, no margin, no scrollbar. Chrome headless
+     screenshots it at exactly this size, so the text is composed at its final
+     size and the glyphs are never resampled. The background image is the
+     full-resolution source, scaled here rather than beforehand. */
+  html, body { margin: 0; padding: 0; }
+  body { width: 896px; height: 504px; overflow: hidden; }
+
+  /* The source is 1374 x 1145, far squarer than 16:9, so `cover` scales it to
+     the full width and crops 372 rows off the vertical. They all come off the
+     BOTTOM - hence `top left`, not `center`. The bottom third of the source is
+     bare unlit floor, while the top band carries the lamp, the rail and the
+     spare tack hanging on pegs, which is half of what the mod is about. The
+     horse's hooves, the lowest thing that matters, land 70 source rows above
+     the cut. */
+  .frame {
+    position: relative;
+    width: 896px; height: 504px;
+    background: url("../Art/Preview-source.png") top left / cover no-repeat;
+  }
+
+  /* Radial darkening from the top-left corner, so the title sits on a calm
+     ground without a visible rectangle. Values from STYLE_RIMWORLD.md. */
+  .frame::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 0% 0%,
+                rgba(6, 5, 4, .86) 0%,
+                rgba(6, 5, 4, 0) 74%);
+  }
+
+  .text {
+    position: absolute; z-index: 1;
+    left: 50px; top: 52px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: #ECE2CD;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, .75);
+  }
+
+  /* 40px, not the usual 46: the second line runs to three words and the empty
+     floor that the title sits on stops where the husky starts. */
+  h1 {
+    margin: 0;
+    font-size: 40px; font-weight: 600; line-height: 1.1;
+    letter-spacing: .2px;
+  }
+
+  .rule {
+    width: 58px; height: 3px;
+    background: #D68F2C;
+    margin: 20px 0 16px;
+  }
+
+  /* 330px rather than the guide's 430: past that the line would reach the
+     husky, which stands further left in this composition than in most. */
+  p {
+    margin: 0;
+    width: 330px;
+    font-size: 21px; font-weight: 400; line-height: 1.45;
+    color: rgba(236, 226, 205, .88);
+  }
+</style>
+
+<div class="frame">
+  <div class="text">
+    <h1>Animal Apparel:<br>Collars and Kit Renew</h1>
+    <div class="rule"></div>
+    <p>Collars, barding, clothing and turret packs for animals, carried over from Animal Gear to the framework that replaces it.</p>
+  </div>
+</div>
