@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Animal Apparel preview</title>
+<style>
+* { box-sizing: border-box; }
+html, body, h1, p { margin: 0; padding: 0; }
+body { width:896px; height:504px; overflow:hidden; font-family:"Segoe UI",system-ui,sans-serif; }
+.frame { position:relative; width:896px; height:504px; background:var(--veil); }
+.frame::before { content:''; position:absolute; top:0; right:0; width:720px; height:600px; background:url('Preview.png') top right / 720px auto no-repeat; mask-image:linear-gradient(to right,transparent 0%,black 25%); }
+.veil { position:absolute; inset:0; background:radial-gradient(ellipse 760px 650px at top left, rgb(var(--veil-rgb) / .94) 0%, rgb(var(--veil-rgb) / .90) 50%, rgb(var(--veil-rgb) / 0) 100%); }
+.text { position:absolute; left:50px; top:54px; color:var(--inkPrimary); text-shadow:0 3px 10px rgb(0 0 0 / .75); }
+h1 { font-size:46px; font-weight:600; line-height:1.1; letter-spacing:0; }
+h1 .link, h1 .suffix { font-size:.65em; }
+h1 .suffix { color:var(--inkSecondary); }
+.tag { margin-top:8px; font-size:24px; font-weight:400; line-height:1.1; letter-spacing:.2px; color:var(--inkSecondary); }
+.rule { width:58px; height:3px; background:var(--accent); margin:20px 0 16px; }
+p { width:430px; font-size:21px; font-weight:400; line-height:1.45; letter-spacing:0; }
+.badge { position:absolute; right:0; top:0; width:80px; height:80px; background:var(--accent); clip-path:polygon(0 0,100% 0,100% 100%); }
+.version { position:absolute; left:869px; top:27px; transform:translate(-50%,-50%) rotate(45deg); font-size:26px; font-weight:700; line-height:1; color:var(--badgeInk); }
+</style>
+<div class="frame"><div class="veil"></div><div class="text">
+<h1 id="title"></h1><div class="tag" id="tag"></div><div class="rule"></div>
+<p id="summary">Collars, barding, clothing and turret packs for animals, carried over from Animal Gear to the framework that replaces it.</p>
+</div><div class="badge"></div><div class="version" id="version"></div></div>
+<script>
+window.ready = (async () => {
+ const palette = await (await fetch('preview-palette.json')).json();
+ for (const [key,value] of Object.entries(palette)) document.documentElement.style.setProperty('--'+key,value);
+ document.documentElement.style.setProperty('--veil-rgb',palette.veil.match(/\w\w/g).map(x=>parseInt(x,16)).join(' '));
+ const metadata = new DOMParser().parseFromString(await (await fetch('../Mod/About/About.xml')).text(),'application/xml');
+ const name = metadata.querySelector('name').textContent;
+ const tag = name.match(/\((unofficial|prohibited)\)$/)?.[0] || '';
+ const title = name.replace(/\s*\((unofficial|prohibited)\)$/, '');
+ const heading = document.querySelector('#title');
+ for (const token of title.split(/(\s+)/)) {
+  if (token === 'and' || token === 'Renew') {
+   const span = document.createElement('span');
+   span.className = token === 'Renew' ? 'suffix' : 'link';
+   span.id = token === 'Renew' ? 'suffix' : 'link';
+   span.textContent = token; heading.append(span);
+  } else { heading.append(document.createTextNode(token)); }
+  if (token.endsWith(':')) heading.append(document.createElement('br'));
+ }
+ document.querySelector('#tag').textContent=tag;
+ if (!tag) document.querySelector('#tag').style.display='none';
+ const versions = [...metadata.querySelectorAll('supportedVersions > li')].map(x=>x.textContent.trim()).filter(x=>/^\d+\.\d+(\.\d+)?$/.test(x));
+ versions.sort((a,b)=>{ const aa=a.split('.').map(Number),bb=b.split('.').map(Number); for(let i=0;i<Math.max(aa.length,bb.length);i++){const d=(bb[i]||0)-(aa[i]||0);if(d)return d;}return 0;});
+ if (!versions.length) throw new Error('No stable supported version declared');
+ document.querySelector('#version').textContent=versions[0];
+ await document.fonts.ready;
+ const img = new Image(); img.src='Preview.png'; await img.decode();
+})();
+</script></html>

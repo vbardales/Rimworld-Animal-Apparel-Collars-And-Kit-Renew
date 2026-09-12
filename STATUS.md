@@ -67,6 +67,25 @@ these cards are meant to be committed at all.
 
 ## Checked here, and therefore not in `remaining`
 
+- **Preview recomposed on 2026-09-12 using the current shared style guide.**
+  Final: `Mod/About/Preview.png` (896 × 504, 576404 bytes). Unlettered source:
+  `Art/Preview.png`, copied unchanged from the retained `Art/Preview-source.png`;
+  no replacement illustration was generated. Composition: `Art/preview.html`;
+  sole palette: `Art/preview-palette.json`; renderer: `Art/build-preview.cjs`.
+  The veil follows the dark stone/wood surface. The vivid accent comes from the
+  red saddle cloth and straps, with increased saturation and lightness; it contrasts
+  with the dominant ochre family rather than repeating the lamp gold. The secondary ink
+  follows the dominant ochre family of the floor and wood, lightened for the dark veil.
+  Source positioning and a feathered left edge leave the existing summary unobstructed.
+  Chrome confirmed Segoe UI Semibold for the title, Segoe UI for tag/summary and
+  Segoe UI Bold for the badge, after `document.fonts.ready`. Badge version 1.6 is read
+  from the shipped supportedVersions. Full-box minimum contrasts on the rendered
+  text-free background: title 8.87:1, reduced liaison 11.63:1, Renew 7.2:1, tag 5.48:1,
+  summary 5.18:1; badge 5.46:1. Title uses 46 px, with direct 0.65em spans
+  for and (primary ink) and Renew (secondary ink), all at weight 600.
+  Visual checks at 896 × 504 and 268 px wide passed: no clipped text or overlapping
+  text elements; subjects remain visible; title/version identifiable and rule visible.
+  Evidence: `Art/preview-qa.json`, `Art/preview-background.png`, `Art/preview-268.png`.
 - **Offline XML suite passed on 2026-09-12:** 55 XML files and 917 assertions using
   `pwsh -NoProfile -File _tools/test-xml.ps1`. Includes patch fixtures, conditional folders,
   translation targets and local texture paths. A GitHub Actions workflow is provided;
@@ -75,8 +94,8 @@ these cards are meant to be committed at all.
 - **The `About.xml` description claims no in-game testing.** `PUBLISHING_STATE.md` asked for every
   description to be audited on that point before a first upload, because a Steam description never
   reprints. This one is clean: no *tested*, *testing*, *review* or *human direction*.
-- **The showcase is at the sizes actually drawn**: 896x504 for 574 KB, 128x128 for 27 KB, the
-  full-resolution sources under `Art/`, the build chain in `_tools/`.
+- **The showcase is at the sizes actually drawn**: preview dimensions and weight above;
+  unchanged icon 128x128 for 27 KB. Sources and preview build chain are under `Art/`.
 - **The repository is pushed and current.** The local tree and `origin/main` carry the same object.
 
 ## What is left, plainly
