@@ -26,7 +26,7 @@ SCOPE OF THE ABOVE
 
 The notice above covers the work done here: the migration to Animal Apparel:
 Framework, the AnimalNeck body part group and its body patch, the rewritten
-horse gear defs, and the French translation.
+horse gear defs, the localized settings adapter and tests, and the French translation.
 
 It does NOT relicense the content that came from other people's mods. Their
 status is set out one by one in ATTRIBUTION.md. In short:

@@ -23,8 +23,8 @@
 
     <!-- Vanilla Expanded Framework. Two separate things live here: the animal turret packs,
          which are built on VEF's MVCF verb system and cannot work without it, and
-         Owlchemist's universal "placeholder" apparel with its VEF toggle patch, which is
-         where he put it in the released version of Animal Equipment. -->
+         Owlchemist's universal "placeholder" apparel with its localized settings adapter.
+         The settings assembly and hidden shortcut are loaded only with VEF. -->
     <li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/VEF</li>
 
     <!-- Riding tack for a ridden horse, and Combat Extended's bulk figures for the saddle. -->

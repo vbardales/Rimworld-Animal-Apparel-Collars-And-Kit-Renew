@@ -14,14 +14,41 @@ The same command runs on Linux in `.github/workflows/xml-tests.yml` for pushes a
 Failures return a nonzero exit code. The suite checks all XML parses and roots, metadata,
 case-sensitive load folder paths, conditional package aliases, duplicate definitions,
 French translation targets and duplicate keys, XPath syntax, and local apparel texture paths.
+It also checks coverage of 95 authored Def text fields, the matching MVCF verb
+identifiers, seven English/French settings keys and the VEF-gated hidden shortcut.
 It applies the actual neck patch to bodies with/without a neck and existing groups, preserving
 human and unmatched bodies; tests CE saddle edits; tests Giddy-Up with/without an existing overlay;
 and exercises universal-apparel removal, relic exclusions, and compatibility hyperlink patches.
 Only the inherited `descriptionHyperlinks` field is materialized for the hyperlink checks.
 
-These tests do not run RimWorld's loader, full inheritance, VEF settings, or rendering.
+These XML tests do not run RimWorld's loader, full inheritance, VEF settings, or rendering.
 Texture existence does not establish per-species coverage, direction completeness, or appearance.
 External def references, class resolution, and real modlist integration remain game checks.
+
+### Settings tests with installed assemblies
+
+On Windows with RimWorld 1.6, VEF and .NET SDK installed:
+
+```powershell
+dotnet build Tests/Settings.Tests.csproj -c Release
+& ./.build/tests/Settings.Tests.exe
+```
+
+Override RimWorldManaged/VefAssembly for the mod build and RimWorldManaged/VefDir
+for the test build when installations differ. The executable accepts the game Managed
+directory and VEF Assemblies directory as its first and second arguments.
+
+The 30 assertions exercise defaults, all four existing Boolean combinations, exact
+legacy keys, shared dictionary updates, reset without touching unrelated settings,
+partial legacy data, the actual VEF adapter, native visibility inheritance, real
+PatchOperation dispatch/removal/failure, and VEF's actual ExposeData/Scribe save/load
+round-trip. They write a disposable file under .build/tests, never the user's Config.
+DeepProfiler is disabled only in the test process because no game preferences exist.
+
+The real MainButtonWorker.Visible/ModLister paths require Unity's ModsConfig startup;
+attempting them in the console produced an engine ECall initialization error. No shim
+is used to claim those interactions passed. The XML suite checks their flags/gates;
+scenario K below covers actual game behavior. Remote CI currently runs XML checks only.
 
 ## Manual scenarios
 
@@ -72,7 +99,7 @@ the seven source mods, which declare the same `defName`s and are listed in this 
 | `Adding duplicate` | `DefDatabase.Add` | A `defName` collision — with Basic Armor, or with one of the seven source mods left enabled. Must never appear. |
 | `Patch operation` … `failed` | `PatchOperation.Complete` | The `AnimalNeck` body patch matched nothing. Expected count from this mod: **zero**. Both of its operations carry `<success>Always</success>`, so a genuine failure here means the framework changed shape. |
 | `Could not resolve cross-reference` | `DirectXmlCrossRefLoader` | A `defName` pointing at nothing — a research prerequisite, a stuff category, or a tag naming a modded animal that a `MayRequire` failed to guard. |
-| `Could not find type named` | `DirectXmlToObject.ClassTypeOf` | A `Class="..."` that does not exist: the three renamed namespaces are `VEF.PatchOperationToggableSequence`, `GiddyUp.CompProperties_Overlay`, and MVCF's two. |
+| `Could not find type named` | `DirectXmlToObject.ClassTypeOf` | An unresolved type, including `AnimalApparelCollarsAndKit.PatchOperation_ApparelSetting`, `GiddyUp.CompProperties_Overlay`, or MVCF's comps. |
 | `Failed to find any textures at` | `Graphic_Multi.Init` | A `texPath` with nothing behind it — the item's own icon, as opposed to its worn graphic. |
 
 A clean run means **none of those naming an `Apparel_`, `diaper`, `AnimalNeck` or `AnimalGear`
@@ -170,8 +197,8 @@ The run that exercises the 27 art folders and the ~1400 restructured sprites.
 
 ### G — save, quit, reload, with the gear still on
 
-Nothing in A to F survives a restart, because none of them does one. This mod has no assembly and
-no save data of its own, so the question is not whether it saves state but whether what the *game*
+Nothing in A to F survives a restart, because none of them does one. This mod has no per-save
+data of its own, so the question is not whether it saves state but whether what the *game*
 saved about its things comes back intact.
 
 - Dress several animals across several def files at once: a collar and a body piece on a dog, the
@@ -210,17 +237,24 @@ mod** and load.
   log does not fill with errors about the vanished items. A content mod that leaves a wound on
   removal is a content mod that should not be removed, and the description would then be wrong.
 
-### I — French, and specifically French on the Steam Deck
+### I — English and French, including French on the Steam Deck
 
-Six `DefInjected` files, 83 keys. Switch the game language to French and walk the same ground as
-B, D and E.
+Seven French `DefInjected` files, 95 keys, and seven settings keys per language.
+Run B, D and E in English, then repeat in French,
+with VEF absent and present, and with the universal-apparel toggle in both states.
 
-- The four research projects and the research tab read in French.
+- The five research projects (including two optional VEF projects) and the research tab read in French.
 - The apparel labels and descriptions read in French, on the item, in the gear tab and in the bill
   list at the workbench.
 - The `AnimalNeck` group shows as **cou** in the coverage tooltip, not as `neck` and not as
   `AnimalNeck`.
-- The turret packs read in French.
+- The turret packs, their eight MVCF command labels and tooltips read in French. Exercise
+  both charge packs to verify the corrected `Blaster` identifier pairing.
+- Check generated crafting bills, combat text, shield and equipment commands for English
+  fallback, raw keys, formatting errors and clipping in both languages.
+- Inspect both options under this mod's name, including help and disabled-state text.
+  The controls are checkboxes; no English True/False or raw keys should appear. Check
+  that VEF's own settings page no longer adds duplicate controls for this mod.
 - An untranslated string shows in **English**. A string that shows as a raw key, or as the
   `defName`, means the injection path or the handle is wrong — a different fault, and the one to
   look for.
@@ -264,3 +298,40 @@ take a hit from the same source.
   theirs to move, and `ATTRIBUTION.md` carries the recipe.
 - **`Apparel_Saddle` is gone by that name**, renamed `Apparel_MedievalHorseSaddle`. A save that
   carried the old def from a source mod will lose the item, like any content mod removal.
+
+### K — settings access, legacy persistence and optional shortcut
+
+Status: unexecuted in game. Run on a disposable configuration/save in English and French.
+Use the same built DLL as the technical tests and record its SHA-256, active packageIds,
+versions, language, save and log path in the result. Keep the existing scenarios' results.
+
+1. With Framework and this mod but **without VEF**, start a new colony. Expect no settings
+   page under this mod's name, no shortcut Def, and no missing-assembly or patch errors.
+2. Add VEF, with no customization mod. Open Mod options -> this mod's name. Expect the
+   universal option off and relic exclusion on for missing saved keys. With legacy VEF
+   settings, expect their exact previous values. Do not edit the user's real XML to test:
+   prepare the choices using the old VEF UI on a disposable pre-update installation.
+3. Toggle universal apparel on; close/reopen settings through the primary route. Expect
+   the choice retained and help explicitly requiring restart. Restart the game: the five
+   universal pieces should be absent while species-specific gear remains. Switch back and
+   restart: the five pieces return. Verify both a new colony and a backed-up existing save;
+   missing existing disabled items are expected, not a save-preserving conversion.
+4. Without Relics and Artifacts, expect its option disabled with a translated explanation,
+   retaining the stored choice. Add that integration and restart: option becomes usable.
+   Test both values with a restart and new relic selection. Excluded bases must have
+   relicChance zero when on, and their original values when off; existing relics stay intact.
+5. Restore defaults; close, restart and reload. Expect off/on, with other VEF settings
+   untouched. Repeat once with only one legacy key present in the disposable fixture.
+6. Verify neither a visible nor a greyed-out shortcut exists on a clean configuration.
+   Enable RIMMSQOL, record its exact version, reveal AA_CK_Settings, and open it. Expect the
+   same native dialog, labels and values as Mod options. Edit through either route and
+   reopen the other. Hide the shortcut, restart and check the customization choice remains.
+   Any other customization mod requires a separate recorded run; none is implied tested.
+7. At normal and narrow/Steam Deck resolutions, inspect both languages for clipping,
+   scrolling, raw keys, English fallback and disabled-control behavior. Confirm changes
+   cannot be made to the disabled relic checkbox. Check VEF's own panel for duplicates.
+8. Inspect Player.log throughout startup, access, editing, saving, restart and reload.
+   Expect no new exceptions, unresolved types or repeated errors attributable to this mod.
+
+The technical Scribe test verifies serialization outside Unity. It does not certify
+steps 1-8 or RIMMSQOL UI compatibility; record actual expected/observed outcomes here.

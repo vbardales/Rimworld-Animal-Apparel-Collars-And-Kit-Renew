@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-  <!-- From "Animal Equipment" by Owlchemist (MIT). VEF.PatchOperationToggableSequence
-       puts a checkbox in Vanilla Expanded Framework's mod settings, which is why this file
-       and the universal pieces it governs are gated on VEF in LoadFolders.xml.
+  <!-- From "Animal Equipment" by Owlchemist (MIT). The localized settings adapter
+       retains VEF's original saved keys; these operations do not add controls to VEF.
+       This file, its settings assembly and universal pieces are gated on VEF.
 
        Owlchemist's version also listed Apparel_AnimalFlakArmor, Apparel_AnimalPlateArmor,
        Apparel_AnimalPlateHelmet and Apparel_AnimalAdvancedHelmet. Those are not migrated -
        Animal Apparel: Basic Armor covers the flak and plate tiers - so they are dropped from
        the xpath rather than left to match nothing. -->
 
-  <Operation Class="VEF.PatchOperationToggableSequence">
-    <enabled>False</enabled>
+  <Operation Class="AnimalApparelCollarsAndKit.PatchOperation_ApparelSetting">
+    <option>DisableUniversalApparel</option>
     <mods>
       <li>Core</li>
     </mods>
-    <label>Disable universal animal apparel (placeholder art):</label>
     <operations>
       <li Class="PatchOperationRemove">
         <xpath>/Defs/ThingDef[defName="Apparel_AnimalClothes" or
@@ -31,12 +30,11 @@
        ideoligion relic. AnimalFlakBase and AnimalPlateBase are gone from the list for the
        same reason as above; MedievalHorseGearBase and the collar bases are added, since they
        are new here and want the same treatment. -->
-  <Operation Class="VEF.PatchOperationToggableSequence">
-    <enabled>True</enabled>
+  <Operation Class="AnimalApparelCollarsAndKit.PatchOperation_ApparelSetting">
+    <option>ExcludeRelics</option>
     <mods>
       <li>Vanilla Ideology Expanded - Relics and Artifacts</li>
     </mods>
-    <label>Animal apparel cannot be a relic:</label>
     <operations>
       <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[@Name="AnimalScarfBase" or

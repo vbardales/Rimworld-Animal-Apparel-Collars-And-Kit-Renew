@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <LangVersion>latest</LangVersion>
+    <OutputPath>../.build/tests/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <RimWorldManaged Condition="'$(RimWorldManaged)' == ''">C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Managed</RimWorldManaged>
+    <VefDir Condition="'$(VefDir)' == ''">C:/Program Files (x86)/Steam/steamapps/workshop/content/294100/2023507013/1.6/Assemblies</VefDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Source/AnimalApparelSettings.csproj" />
+    <Reference Include="Assembly-CSharp"><HintPath>$(RimWorldManaged)/Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(RimWorldManaged)/UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VEF"><HintPath>$(VefDir)/VEF.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

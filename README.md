@@ -1,6 +1,12 @@
 # Animal Apparel: Collars and Kit Renew (unofficial)
 
-UNOFFICIAL. Original contributions to this migration and Animal Equipment are licensed under MIT, within the scope stated in LICENSE. No licence has been identified for the other six source mods in the materials checked, and no permission for their reuse in this project has been established. Their abandonment has not been established in every case. The authors are credited, and I will promptly remove their content on request.
+UNOFFICIAL. This mod is published without the original author's explicit consent.
+If the original author contacts me to request its removal, I undertake to take it down promptly.
+
+Original contributions to this migration and Animal Equipment are licensed under MIT,
+within the scope stated in LICENSE. No licence or applicable reuse permission has been
+identified for the other six sources. The maintenance assessment and its limits are
+documented in ATTRIBUTION.md.
 
 Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on
 [Animal Apparel: Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850).
@@ -182,8 +188,8 @@ Eight things were already broken in the sources, six of them silently:
   display name `Giddy-Up! Core`. The living mod is called "Giddy-Up 2 - Continued", so that test can
   never pass again. Gated on the packageId here.
 - **Medieval Horse Plate Armour**: `offsetDefault` was `(0,0,0,0)` for a `Vector3`.
-- **Animal Equipment**: its toggle patch used `VFECore.PatchOperationToggableSequence`. VEF 1.6
-  renamed the namespace to `VEF`.
+- **Animal Equipment**: its toggle patch used `VFECore.PatchOperationToggableSequence`.
+  The localized adapter now applies the same branches using VEF's original saved keys.
 
 And one that was only a missed opportunity: Owlchemist shipped horse riding-gear sprites in the
 released mod without ever adding `Horse` to the bridle's tag list, so nothing could wear them.
@@ -191,6 +197,26 @@ released mod without ever adding `Horse` to the bridle's tag list, so nothing co
 ---
 
 ## Layout
+
+With VEF active, open **Mod options -> Animal Apparel: Collars and Kit Renew (unofficial)**.
+The two options disable universal placeholder apparel (default off) and exclude apparel
+from new relic selection (default on, requires Vanilla Ideology Expanded - Relics and Artifacts).
+Changes apply to all saves **after restarting RimWorld**. Disabling pieces already present
+in a save produces missing items on reload; back up that save first. Existing relics are
+not converted. Restore defaults changes only these two choices.
+
+Existing VEF values and their serialized keys remain in VEF's settings file. No migration
+or separate settings file is introduced. The optional MainButtons shortcut uses the same
+native settings dialog and starts hidden, with `buttonVisible=false`; compatible tools
+can reveal it. RIMMSQOL interaction has not yet been tested in game. Without VEF, neither
+the settings assembly nor the shortcut loads, so there is no empty options page.
+
+Build on a machine with RimWorld 1.6 and VEF installed:
+`dotnet build Source/AnimalApparelSettings.csproj -c Release`.
+Override `RimWorldManaged` and `VefAssembly` MSBuild properties for other locations.
+The only output shipped is `Mod/Mods/VEF/Assemblies/AnimalApparelCollarsAndKit.Settings.dll`;
+game/framework reference assemblies are not copied. Sources, tests and intermediates
+stay outside Mod. The remaining payload is XML and textures.
 
 Offline validation: run `pwsh -NoProfile -File _tools/test-xml.ps1` with PowerShell 7.
 GitHub Actions runs the same suite on pushes and pull requests. See [TESTING.md](TESTING.md)
@@ -205,9 +231,9 @@ Mod/
   Defs/ResearchDefs/    the shared "animal gear" research tab
   Patches/              the AnimalNeck body patch
   Textures/             1400 sprites, restructured into the new per-animal layout
-  Languages/French/
+  Languages/            French DefInjected and English/French settings keys
   Mods/<packageId>/     per-mod art and hyperlinks, gated in LoadFolders.xml
-  Mods/VEF/             turret packs and the universal pieces, gated on Vanilla Expanded Framework
+  Mods/VEF/             turret packs, universal pieces, settings assembly and hidden shortcut
 ```
 
 Beside it, and never published: `Art/` holds the two generated images at full resolution,

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MainButtonDef>
+    <defName>AA_CK_Settings</defName>
+    <label>animal apparel</label>
+    <description>Open the Collars and Kit mod settings.</description>
+    <workerClass>AnimalApparelCollarsAndKit.MainButtonWorker_ApparelSettings</workerClass>
+    <buttonVisible>false</buttonVisible>
+    <validWithoutMap>true</validWithoutMap>
+    <order>990</order>
+  </MainButtonDef>
+</Defs>

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <!-- The turret packs only exist when Vanilla Expanded Framework is active
-       (Mods/VEF/Defs/ThingDefs/ThingDefs_AnimalTurretPacks.xml). A DefInjected key whose def
-       is absent is silently ignored, so these live in the ordinary Languages tree.
-
-       Only labels and descriptions are translated. The verb labels nested inside the MVCF
-       comps are left in English on purpose: a DefInjected path into a comp is keyed by the
-       COMP class rather than by the properties class, and MVCF's verbProps list has no
-       [TranslationHandle] field to key its elements by, so any path written for them would
-       resolve to nothing and fail silently. -->
+  <!-- VEF-only definitions. MVCF visualLabel and description use numeric list indices
+       because AdditionalVerbProps has no TranslationHandle. Keep the matching verb
+       labels unchanged: MVCF uses them as internal identifiers. -->
 
   <!-- EN: small animal mini-turret pack -->
   <ATP_Apparel_SmallTurret.label>petit sac-tourelle</ATP_Apparel_SmallTurret.label>
@@ -59,5 +53,23 @@
 
   <!-- EN: mini-turret blaster shot -->
   <ATP_Bullet_SpacerTurret.label>tir de mini-tourelle à charge</ATP_Bullet_SpacerTurret.label>
+
+  <!-- MVCF command labels and tooltips. -->
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>canon de mini-tourelle</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>Un canon automatique simple conçu pour être fixé sur un animal.</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>fusil à pompe de mini-tourelle</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>Un fusil à pompe automatique simple conçu pour être fixé sur un animal.</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>canon à charge de mini-tourelle</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>Un canon à charge automatique simple conçu pour être fixé sur un animal.</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>canon de mini-tourelle</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>Un canon automatique simple conçu pour être fixé sur un animal.</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>fusil à pompe de mini-tourelle</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>Un fusil à pompe automatique simple conçu pour être fixé sur un animal.</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>canon à charge de mini-tourelle</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>Un canon à charge automatique simple conçu pour être fixé sur un animal.</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>grenades</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>Une ceinture de grenades fixée sur un animal.</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>grenades</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>Une ceinture de grenades fixée sur un animal.</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>
 
 </LanguageData>

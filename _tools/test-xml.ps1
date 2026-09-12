@@ -82,7 +82,7 @@ foreach ($doc in $docs.Values | Where-Object { $_.DocumentElement.LocalName -eq 
 }
 # Translation targets and duplicate keys, scoped by Def type.
 $keys = @{}
-foreach ($file in Get-ChildItem (Join-Path $root 'Languages') -Recurse -Filter '*.xml') {
+foreach ($file in Get-ChildItem (Join-Path $root 'Languages') -Recurse -Filter '*.xml' | Where-Object { $_.FullName -match '[\\/]DefInjected[\\/]' }) {
     $type = $file.Directory.Name
     foreach ($node in $docs[$file.FullName].SelectNodes('/LanguageData/*')) {
         $key = $type + ':' + $node.Name
@@ -93,6 +93,50 @@ foreach ($file in Get-ChildItem (Join-Path $root 'Languages') -Recurse -Filter '
         Assert (-not [string]::IsNullOrWhiteSpace($node.InnerText)) "Empty translation: $key"
     }
 }
+# Coverage is checked against authored text, not just existing translation keys.
+# MVCF label pairs are identifiers; visualLabel and description are displayed text.
+$textCount = 0
+foreach ($def in $defs.SelectNodes('/Defs/*[defName]')) {
+    foreach ($field in $def.SelectNodes('label | description')) {
+        $key = $def.LocalName + ':' + $def.defName + '.' + $field.Name
+        Assert ($keys.ContainsKey($key)) "Missing French text: $key"
+        Assert (-not [string]::IsNullOrWhiteSpace($field.InnerText)) "Empty English text: $key"
+        $textCount++
+    }
+    foreach ($prop in $def.SelectNodes('comps/li[@Class="MVCF.Comps.CompProperties_VerbGiver"]/verbProps/li')) {
+        Assert ($def.SelectNodes('verbs/li').Count -eq 1) "Review MVCF verb mapping: $($def.defName)"
+        Assert ($def.SelectSingleNode('verbs/li/label').InnerText -ceq $prop.label) "MVCF identifier mismatch: $($def.defName)"
+        Assert ($prop.ParentNode.SelectNodes('li').Count -eq 1) "Review MVCF translation index: $($def.defName)"
+        foreach ($field in @('visualLabel', 'description')) {
+            $key = 'ThingDef:' + $def.defName + '.comps.Comp_VerbGiver.verbProps.0.' + $field
+            Assert ($keys.ContainsKey($key)) "Missing French MVCF text: $key"
+            Assert (-not [string]::IsNullOrWhiteSpace($prop.SelectSingleNode($field).InnerText)) "Empty English MVCF text: $key"
+            $textCount++
+        }
+    }
+}
+Write-Host "Covered $textCount authored Def text fields in English and French."
+# Keyed settings text is inventoried from the actual literal keys in the source.
+$sourceRoot = Join-Path $PSScriptRoot '../Source'
+$usedKeys = @([regex]::Matches((Get-Content (Join-Path $sourceRoot 'ApparelSettingsMod.cs') -Raw), '"(AA_CK_[A-Za-z]+)"') | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique)
+foreach ($language in @('English','French')) {
+    $languageKeys = @{}
+    foreach ($file in Get-ChildItem (Join-Path $root "Languages/$language/Keyed") -Filter '*.xml') {
+        foreach ($node in (Read-Xml $file.FullName).SelectNodes('/LanguageData/*')) {
+            Assert (-not $languageKeys.ContainsKey($node.Name)) "Duplicate $language Keyed key: $($node.Name)"
+            Assert (-not [string]::IsNullOrWhiteSpace($node.InnerText)) "Empty $language key: $($node.Name)"
+            Assert ($node.InnerText -notmatch '\{[^}]*\}|<[^>]+>') "Review parameters/rich text: $($node.Name)"
+            $languageKeys[$node.Name] = $node.InnerText
+        }
+    }
+    foreach ($key in $usedKeys) { Assert ($languageKeys.ContainsKey($key)) "Missing $language UI key: $key" }
+    Assert ($languageKeys.Count -eq $usedKeys.Count) "Unused $language UI keys"
+}
+$button = $defs.SelectSingleNode('/Defs/MainButtonDef[defName="AA_CK_Settings"]')
+Assert ($button.buttonVisible -ceq 'false') 'Shortcut is hidden by default'
+Assert ($button.validWithoutMap -ceq 'true') 'Shortcut supports world view'
+Assert ($button.workerClass -eq 'AnimalApparelCollarsAndKit.MainButtonWorker_ApparelSettings') 'Shortcut worker'
+Assert ($paths.Contains('Mods/VEF/Defs/MainButtonDefs/ApparelSettings.xml')) 'Shortcut gated with VEF'
 # All authored XPath expressions must compile, even in disabled optional branches.
 foreach ($doc in $docs.Values) {
     foreach ($xpath in $doc.SelectNodes('//xpath')) { [void][System.Xml.XPath.XPathExpression]::Compile($xpath.InnerText); $script:checks++ }
@@ -144,6 +188,9 @@ foreach ($file in Get-ChildItem (Join-Path $root 'Mods') -Recurse -Filter '*hype
     Apply-Operations $links $docs[$file.FullName].SelectNodes('/Patch/Operation')
 }
 $toggle = Read-Xml (Join-Path $root 'Mods/VEF/Patches/TogglePlaceholders.xml')
+Assert ($toggle.SelectNodes('//Operation[@Class="VEF.PatchOperationToggableSequence"] | //label | //enabled').Count -eq 0) 'No duplicate VEF controls or hardcoded UI labels'
+Assert ($toggle.SelectNodes('/Patch/Operation[@Class="AnimalApparelCollarsAndKit.PatchOperation_ApparelSetting"]').Count -eq 2) 'Both settings use the localized adapter'
+Assert ($toggle.SelectSingleNode('/Patch/Operation[option="ExcludeRelics"]/mods/li').InnerText -eq 'Vanilla Ideology Expanded - Relics and Artifacts') 'Relic integration gate'
 $toggled = $defs.CloneNode($true)
 $remove = $toggle.SelectSingleNode('/Patch/Operation/operations/li[@Class="PatchOperationRemove"]')
 Assert ($toggled.SelectNodes($remove.xpath).Count -eq 5) 'Five universal pieces before toggle'

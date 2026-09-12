@@ -39,6 +39,53 @@ No permission is inferred from public availability or a lack of updates.
 
 ## Sources, one by one
 
+### Visibility decision — 2026-09-13
+
+**Decision: retain public visibility and the project's `silent` classification, with
+the `(unofficial)` marking.** This is a reasoned application of PUBLISHING.md's
+inactive-source policy, not a licence grant or a claim of author approval.
+The earlier audit required stronger evidence of abandonment than the protocol
+actually specifies. It does not require an explicit retirement announcement.
+
+Here, abandonment is an **inference about maintenance of these particular mods**:
+their published releases remain on old game versions, years have passed without a
+new release visible on their source pages, and no concrete ongoing port was found in
+the material reviewed. An author's online presence or work on other projects does
+not itself establish maintenance of this mod. The inference is revisable; it is not
+proof that an author will never return. The statement above that abandonment is not
+established in every case remains true for explicit, definitive author confirmation.
+
+| Source | Evidence checked on 2026-09-13 | Assessment for this workflow |
+| --- | --- | --- |
+| [Dog Collars](https://steamcommunity.com/sharedfiles/filedetails/?id=2644644983) | Latest displayed update 2022-11-06; supports 1.3/1.4. Installed package contains no licence notice found by filename/content searches. Description and paginated comments reviewed for reuse/maintenance statements. | Long inactive release; `silent` by inference. No general reuse grant or prohibition found in the reviewed material. |
+| [Patch Collar Malinois](https://steamcommunity.com/sharedfiles/filedetails/?id=3062026756) | Latest displayed update 2023-10-29; supports 1.3/1.4. Description credits permission from Shenanigans to Annabelesca; three comments inspected. | Long inactive release; `silent` by inference. That permission concerns her patch and cannot be extended to this project. |
+| [Animal Diapers](https://steamcommunity.com/sharedfiles/filedetails/?id=2817510684) | Latest displayed update 2022-06-06; supports 1.3. On 2025-06-14 Dipsy wrote: "I don't actually play RimWorld at all" and "If people want I can try and fix it." No subsequent release is displayed. | Inactive release, with a contrary signal: a conditional offer to return. More than a year later, the inspected page still shows the old release. `silent` is a maintenance inference, not a finding that the author renounced the mod. Reassess if development resumes. |
+| [Animal Turret Packs](https://steamcommunity.com/sharedfiles/filedetails/?id=3053702877) | Latest displayed update 2023-10-18; supports 1.4. Public [source repository](https://github.com/flangopink/AnimalTurretPacks) is not archived, has no detected licence, and its latest commit is c1c9852a6e6ddf283691d60b17c3064261e28a4a, dated 2023-10-18. Its recursive main tree contains 20 entries, no LICENSE/README/COPYING/NOTICE. | Long inactive release and repository; `silent` by inference. Being unarchived does not establish active maintenance. Both XML and art remain without an identified grant. |
+| [Medieval Horse Plate Armour](https://steamcommunity.com/sharedfiles/filedetails/?id=2586212684) | Published 2021-08-27, one change note, supports 1.3; visible comments request later-version updates. Description contains credits but no reuse terms. | Long inactive release; `silent` by inference. Credits include a texture contribution by boldizsar; no permission from that contributor is inferred either. |
+| [[CSM] RealisticAwesomeGoat](https://steamcommunity.com/sharedfiles/filedetails/?id=2122692229) | Published 2020-06-07, one change note, supports 1.1. Description and all six displayed comments inspected; the author's visible reply is from June 2020. | Long inactive release; `silent` by inference. No reuse terms found in the inspected page or installed package. |
+
+Animal Equipment remains **open/MIT**, reverified through its public GitHub
+[licence endpoint](https://api.github.com/repos/Owlchemist/animal-equipment/license)
+and [licence text](https://github.com/Owlchemist/animal-equipment/blob/master/LICENSE).
+The copyright notice remains jptrrs, 2020. This does not cover the other six sources.
+
+Verification scope: the six installed Workshop packages' About files and text files;
+all six public descriptions; available comments; and the Animal Turret Packs repository.
+The paginated scan retrieved 82 distinct Dog Collars comments, 24 Animal Diapers
+comments and 76 distinct Animal Turret Packs comments (77 displayed by Steam).
+The automated Horse comment extraction returned no comments; only the comments
+visible through the web reader were reviewed. Thus this is not a claim to have searched
+every historic comment, private conversation, profile or external licence statement.
+Several pages initially failed through the web reader but were accessible using direct
+public HTTP requests. Searches did not produce an additional applicable permission.
+
+The public choice follows the project's `silent` policy because the evidence supports
+inactive maintenance and no prohibition was found within that scope. It does **not**
+follow from MIT on the migration, credit, public availability, or a removal promise.
+Those do not supply the missing third-party permissions. A new restriction, licence
+or actual resumed maintenance requires reassessment. No author was contacted, no
+visibility was changed, and no publication was performed during this verification.
+
 ### Dog Collars — Shenanigans
 
 [2644644983](https://steamcommunity.com/sharedfiles/filedetails/?id=2644644983), last supported 1.4.

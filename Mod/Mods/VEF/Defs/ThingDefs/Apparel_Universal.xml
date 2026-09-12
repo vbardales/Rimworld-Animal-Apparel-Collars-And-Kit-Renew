@@ -7,7 +7,8 @@
 
        They live behind Vanilla Expanded Framework because Owlchemist put them there in the
        released version, so that his TogglePlaceholders patch could switch them off from VEF's
-       settings UI. Patches/TogglePlaceholders.xml carries that over.
+       settings UI. Patches/TogglePlaceholders.xml now uses this mod's localized
+       settings adapter while preserving the original VEF storage.
 
        Under the old framework "any animal" was the AnimalALL tag. The new framework has no
        such tag and does not need one: a piece with AnimalApparel and AnimalOnly but no

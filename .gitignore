@@ -10,6 +10,11 @@
 PROMPT_*.md
 
 # Development environments.
+.build/
+Source/obj/
+Source/bin/
+Tests/obj/
+Tests/bin/
 .vs/
 .vscode/
 .idea/

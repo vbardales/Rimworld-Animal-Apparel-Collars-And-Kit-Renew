@@ -7,7 +7,10 @@
     <li>1.6</li>
   </supportedVersions>
   <url>https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew</url>
-  <description>UNOFFICIAL. Original contributions to this migration and Animal Equipment are licensed under MIT, within the scope stated in LICENSE. No licence has been identified for the other six source mods in the materials checked, and no permission for their reuse in this project has been established. Their abandonment has not been established in every case. The authors are credited, and I will promptly remove their content on request.
+  <description>UNOFFICIAL. This mod is published without the original author's explicit consent.
+If the original author contacts me to request its removal, I undertake to take it down promptly.
+
+Original contributions to this migration and Animal Equipment are licensed under MIT, within the scope stated in LICENSE. No licence has been identified for the other six source mods in the materials checked, and no permission for their reuse in this project has been established. Their abandonment is a maintenance assessment, not an author declaration. See ATTRIBUTION.md.
 
 Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on Ingendum's Animal Apparel: Framework.
 
@@ -32,11 +35,13 @@ Cannot run with Dylan's Animal Gear - that is the framework's restriction, not t
 
 Works with, and adds per-animal art for: Vanilla Animals Expanded (Cats and Dogs, Endangered, Arid Shrubland, Desert, Boreal Forest), Vanilla Factions Expanded Vikings, Alpha Animals, Magical Menagerie, Spidercamp's Dog Pack, Poeticdragon's Japanese Dogs, Android Tiers, Rim Effect, Forsakens, Save Our Ship 2, Bun Dog, Erin's Lizard Doggo, Palamutes and Mountain Dogs, Dumbs' Dachshunds, RTP's Border Collies and Rhodesian Ridgebacks, Yorkshire Terrors, Rebel Rabbit's Legendary Wolves, and Ann's Belgian Malinois. Each is optional; nothing errors when one is absent.
 
-No assembly, no save data of its own. Removing it mid-game deletes anything crafted from it, like any content mod.
+A small settings assembly loads only with Vanilla Expanded Framework. Open Mod options, then this mod's name, to configure universal apparel and relic eligibility. Existing VEF choices are preserved. Changes apply after restarting RimWorld. An optional MainButtons shortcut is hidden by default and can be revealed by compatible customization tools.
+
+No per-save data of its own. Removing it mid-game deletes anything crafted from it, like any content mod.
 
 The original authors are credited above and in ATTRIBUTION.md. If any of them would rather this were not published, say so and it comes down.
 
-Source, changelog and attribution: https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew</description>
+[url=https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew]Source code on GitHub[/url]</description>
   <modDependencies>
     <li>
       <packageId>Ingendum.AnimalApparelFramework</packageId>

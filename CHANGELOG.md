@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — 2026-09-13
+
+- Add a localized settings page under this mod's name when VEF is active, with a hidden,
+  revealable MainButtons shortcut opening the same native dialog.
+- Preserve both historical VEF setting keys and stored values. Changes apply after restart;
+  reset affects only this mod's two options. Show the relic integration requirement.
+- Replace the two English-only VEF toggle controls with English/French labels and help.
+- Add settings behavior and real VEF/Scribe persistence tests; extend XML localization checks.
+- Align the About/README notice and the About source link with the publication convention.
+
 ## 1.0.0 — 2026-09-07
 
 First release. Six abandoned Animal Gear add-ons, plus the unfinished half of Animal Equipment,
