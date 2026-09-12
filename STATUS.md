@@ -1,12 +1,12 @@
 ---
-mod:          Animal Apparel: Collars and Kit Renew
+mod:          Animal Apparel: Collars and Kit Renew (unofficial)
 packageId:    nelim.animalapparelcollarsandkitrenew
 repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 visibility:   public
 detached:     yes
 stage:        preTest
 licence:      silent
-licence_at:   six of the seven sources declare nothing and are dead; only Animal Equipment (Owlchemist) is MIT
+licence_at:   own contributions and Animal Equipment are MIT; no licence identified for six other sources in checked materials; abandonment not established for all
 dependencies: declared
 showcase:     complete
 tested_on:
@@ -36,7 +36,7 @@ own.
 - **`remaining`** — what is left, in three kinds: `feature` for something missing from a first
   release, `defect` for a known fault left unfixed, `unverified` for what could not be checked.
 
-`licence` vocabulary: `open` an explicit licence, `silent` no licence and a dead source,
+`licence` vocabulary: `open` an explicit licence, `silent` no licence identified in checked materials (not proof of abandonment),
 `alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
 to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
 
@@ -46,12 +46,13 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
 group and needed confirming. The port is finished and the showcase is built, but the mod has
 never run. That is exactly where Nelim's Animal Ark stands, and it carries `preTest`.
 
-**`licence` was `open`, it is `silent`.** The mod mixes two regimes. Animal Equipment
-(Owlchemist, after jptrrs) is MIT and asks nothing. The six other sources — Shenanigans,
-Annabelesca, Dipsy, flangopink, Riful, CSM — declare no licence and are dead. What carries the
-publication is therefore the usual practice: named credit and removal on request, which the
-`About.xml` states outright. `open` would announce a freedom six sevenths of the content does not
-have.
+**`licence: silent` is an internal status, not a licence for the whole mod.**
+Original contributions and Animal Equipment (Owlchemist, after jptrrs) are declared MIT,
+within the scopes stated in `LICENSE`; the notices must be retained. No licence has been
+identified for the six other sources in the checked materials, and no permission for their
+reuse in this project has been established. Abandonment is not established for all six:
+Dipsy offered to update Animal Diapers on 2025-06-14. See `ATTRIBUTION.md` for sources and
+verification limits. Credit and removal on request are not licence grants from the authors.
 
 **`workshop` read `reste:`.** The English rewrite folded the old French `reste:` key onto the
 `workshop` value instead of renaming it to `remaining`. Repaired here; the other 115 cards are

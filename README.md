@@ -1,9 +1,11 @@
-# Animal Apparel: Collars and Kit Renew
+# Animal Apparel: Collars and Kit Renew (unofficial)
+
+UNOFFICIAL. Original contributions to this migration and Animal Equipment are licensed under MIT, within the scope stated in LICENSE. No licence has been identified for the other six source mods in the materials checked, and no permission for their reuse in this project has been established. Their abandonment has not been established in every case. The authors are credited, and I will promptly remove their content on request.
 
 Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on
 [Animal Apparel: Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850).
 
-Six abandoned **Animal Gear** add-ons, plus the half of a seventh that nobody had finished, moved
+Six **Animal Gear** add-ons, plus the half of a seventh that nobody had finished, moved
 onto the framework that replaces it. Who wrote what, and under which licence, is in
 [ATTRIBUTION.md](ATTRIBUTION.md).
 

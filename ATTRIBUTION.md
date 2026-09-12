@@ -1,6 +1,6 @@
 # Animal Apparel: Collars and Kit — attribution
 
-A migration of six abandoned **Animal Gear** add-ons, plus the unfinished half of a seventh mod,
+A migration of six **Animal Gear** add-ons, plus the unfinished half of a seventh mod,
 onto **[Animal Apparel: Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850)**
 by **Ingendum**.
 
@@ -21,15 +21,29 @@ The new framework is not a rival project: its assembly is literally named `Anima
 namespace is `AnimalGear`, and its README credits Dylan and Owlchemist. It is a rewrite of the same
 mod against RimWorld 1.6's render tree.
 
+## Licence verification — 2026-09-12
+
+Original contributions to this migration and Animal Equipment are declared MIT,
+within the scopes stated in `LICENSE`. The upstream MIT notice is reproduced there.
+
+For the other six sources, no licence or permission for reuse in this project was
+identified in the materials checked. All six installed Workshop packages were inspected.
+Public descriptions were accessible for Dog Collars, Animal Diapers, Animal Turret Packs
+and Medieval Horse Plate Armour. Patch Collar Malinois and RealisticAwesomeGoat could
+not be reverified online, nor could Animal Turret Packs' current upstream repository.
+
+Abandonment has not been established for every source. In particular,
+[Dipsy offered to update Animal Diapers on 2025-06-14](https://steamcommunity.com/sharedfiles/filedetails/?id=2817510684).
+Credit and removal on request are project commitments, not licence grants from the authors.
+No permission is inferred from public availability or a lack of updates.
+
 ## Sources, one by one
 
 ### Dog Collars — Shenanigans
 
 [2644644983](https://steamcommunity.com/sharedfiles/filedetails/?id=2644644983), last supported 1.4.
 
-**Status: public.** No `LICENSE` file, no licence clause in `About.xml`, no linked repository, and
-nothing in the body of the Steam description. Dead plus silent, so the ordinary Workshop convention
-applies: republished with credit by name and removal on request, without argument.
+**Status: no licence identified** in the installed files or accessible Workshop description.
 
 Everything came across: the four collars, all 924 sprites, all 24 per-mod compatibility folders,
 and the `defName`s unchanged (`Apparel_leatherdogcollar`, `Apparel_studdeddogcollar`,
@@ -39,8 +53,9 @@ and the `defName`s unchanged (`Apparel_leatherdogcollar`, `Apparel_studdeddogcol
 
 [3062026756](https://steamcommunity.com/sharedfiles/filedetails/?id=3062026756), last supported 1.4.
 
-**Status: public**, same reasoning. Annabelesca credits Shenanigans in the description and says the
-art and code were reused with permission.
+**Status: no licence identified** in the installed files. Annabelesca credits Shenanigans
+for permission to reuse art and code in her mod. This does not establish permission for
+reuse in this project. The public Workshop page could not be reverified.
 
 **Folded into Dog Collars rather than kept separate.** Its `Content/` folder was a verbatim copy of
 Shenanigans' — the same four defs, the same abstract `Name=` handles, the same 112 core sprites —
@@ -60,7 +75,7 @@ written.
 
 [2817510684](https://steamcommunity.com/sharedfiles/filedetails/?id=2817510684), last supported 1.3.
 
-**Status: public.** No licence anywhere.
+**Status: no licence identified** in the installed files or accessible Workshop description.
 
 The diaper, its `FilthRate` offset and its 13 sprites. Dipsy listed 57 animals and drew four of
 them, and said so on the Workshop page. See "AnimalFallbackInvisible" below for what that meant for
@@ -70,8 +85,8 @@ the migration.
 
 [3053702877](https://steamcommunity.com/sharedfiles/filedetails/?id=3053702877), last supported 1.4.
 
-**Status: public.** No licence file, none in `About.xml`, and the git repository the mod ships
-inside itself has no licence either.
+**Status: no licence identified** in the installed files, including the bundled repository,
+or accessible Workshop description. The current upstream repository could not be reverified.
 
 All eight packs, three projectiles and two research projects. They need Vanilla Expanded Framework
 (MVCF), so they live in a gated folder; the rest of the mod does not.
@@ -80,7 +95,7 @@ All eight packs, three projectiles and two research projects. They need Vanilla 
 
 [2586212684](https://steamcommunity.com/sharedfiles/filedetails/?id=2586212684), last supported 1.3.
 
-**Status: public.** No licence anywhere.
+**Status: no licence identified** in the installed files or accessible Workshop description.
 
 Rewritten rather than migrated — see "What could not be carried across as written" below. Riful's
 19 textures are all here.
@@ -89,7 +104,7 @@ Rewritten rather than migrated — see "What could not be carried across as writ
 
 [2122692229](https://steamcommunity.com/sharedfiles/filedetails/?id=2122692229), last supported 1.1.
 
-**Status: public.** No licence anywhere.
+**Status: no licence identified** in the installed files. The public page could not be reverified.
 
 **The armour only.** That mod is two unrelated things: an Animal Gear add-on (goat mail) and
 `Patches/Goat.xml`, a rebalance that gives the vanilla goat `baseBodySize` 7, `baseHealthScale` 10,
@@ -104,7 +119,7 @@ not here, and neither is the goat retexture that only the patch referred to.
 last commit March 2023, source at
 [github.com/Owlchemist/animal-equipment](https://github.com/Owlchemist/animal-equipment).
 
-**Status: public, and this one has a real licence — MIT.** The copyright line is
+**Status: MIT, confirmed in the upstream GitHub repository.** The copyright line is
 `Copyright (c) 2020 jptrrs`: Animal Equipment is Owlchemist's continuation of jptrrs's
 *Animal Armor: Vanilla*, and the licence file travelled with it. Reproduced in `LICENSE`, as the MIT
 terms require.

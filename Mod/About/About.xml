@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Animal Apparel: Collars and Kit Renew</name>
+  <name>Animal Apparel: Collars and Kit Renew (unofficial)</name>
   <author>Shenanigans, Annabelesca, Dipsy, flangopink, ogam, Riful, CSM, Owlchemist, jptrrs - migration to 1.6: nelim</author>
   <packageId>nelim.animalapparelcollarsandkitrenew</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
   <url>https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew</url>
-  <description>Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on Ingendum's Animal Apparel: Framework.
+  <description>UNOFFICIAL. Original contributions to this migration and Animal Equipment are licensed under MIT, within the scope stated in LICENSE. No licence has been identified for the other six source mods in the materials checked, and no permission for their reuse in this project has been established. Their abandonment has not been established in every case. The authors are credited, and I will promptly remove their content on request.
+
+Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on Ingendum's Animal Apparel: Framework.
 
 Dylan's Animal Gear is being retired, and its successor declares itself incompatible with it. The day you switch frameworks, everything built on the old one stops. This mod carries that content across.
 
@@ -26,7 +28,7 @@ The framework gives animals three body part groups - head, body and legs - so a 
 
 COMPATIBILITY
 
-Cannot run with Dylan's Animal Gear - that is the framework's restriction, not this mod's. Cannot run with any of the six source mods either, since it declares the same defNames. Disable them.
+Cannot run with Dylan's Animal Gear - that is the framework's restriction, not this mod's. Cannot run with any of the seven source mods either, since it declares the same defNames. Disable them.
 
 Works with, and adds per-animal art for: Vanilla Animals Expanded (Cats and Dogs, Endangered, Arid Shrubland, Desert, Boreal Forest), Vanilla Factions Expanded Vikings, Alpha Animals, Magical Menagerie, Spidercamp's Dog Pack, Poeticdragon's Japanese Dogs, Android Tiers, Rim Effect, Forsakens, Save Our Ship 2, Bun Dog, Erin's Lizard Doggo, Palamutes and Mountain Dogs, Dumbs' Dachshunds, RTP's Border Collies and Rhodesian Ridgebacks, Yorkshire Terrors, Rebel Rabbit's Legendary Wolves, and Ann's Belgian Malinois. Each is optional; nothing errors when one is absent.
 
