@@ -1,6 +1,29 @@
 # Test scenarios
 
-This mod has never been loaded by RimWorld. Everything below is what the first run has to settle.
+This mod has never been loaded by RimWorld. The manual scenarios below remain unexecuted.
+
+## Automated offline checks
+
+Run from the repository root with PowerShell 7 (no game installation or extra modules needed):
+
+```powershell
+pwsh -NoProfile -File _tools/test-xml.ps1
+```
+
+The same command runs on Linux in `.github/workflows/xml-tests.yml` for pushes and pull requests.
+Failures return a nonzero exit code. The suite checks all XML parses and roots, metadata,
+case-sensitive load folder paths, conditional package aliases, duplicate definitions,
+French translation targets and duplicate keys, XPath syntax, and local apparel texture paths.
+It applies the actual neck patch to bodies with/without a neck and existing groups, preserving
+human and unmatched bodies; tests CE saddle edits; tests Giddy-Up with/without an existing overlay;
+and exercises universal-apparel removal, relic exclusions, and compatibility hyperlink patches.
+Only the inherited `descriptionHyperlinks` field is materialized for the hyperlink checks.
+
+These tests do not run RimWorld's loader, full inheritance, VEF settings, or rendering.
+Texture existence does not establish per-species coverage, direction completeness, or appearance.
+External def references, class resolution, and real modlist integration remain game checks.
+
+## Manual scenarios
 
 **Why this is a matrix and not a checklist.** Almost nothing here is unconditional. The mod ships
 **138 `MayRequire` guards**, **27 per-mod art folders** and **29 `LoadFolders` entries** gated on
@@ -102,8 +125,10 @@ one slot.
 part group the wearer's body does not carry. The patch's second half puts `AnimalNeck` on the
 **head** for those.
 
-- Tame or spawn a megaspider, a tortoise and a snake, and equip a collar on each.
-- Each must accept it. Under the old framework this silently could not happen at all.
+- On a disposable development setup, use a test-only collar def that permits the chosen
+  megaspider, tortoise and snake. The shipped dog collars restrict species and are not a valid
+  way to test this body-group fallback. Do not ship the test def.
+- Each must accept the test collar. Verify that shipped dog collars still reject these species.
 - Then equip a helmet on the same animal: it must **also** fit. The fallback deliberately avoids
   `AnimalHead` so that a collar and a helmet do not exclude each other.
 - Watch for `ANG_WrongBodyType` in the message log, the framework's own refusal string.

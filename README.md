@@ -192,6 +192,10 @@ released mod without ever adding `Horse` to the bridle's tag list, so nothing co
 
 ## Layout
 
+Offline validation: run `pwsh -NoProfile -File _tools/test-xml.ps1` with PowerShell 7.
+GitHub Actions runs the same suite on pushes and pull requests. See [TESTING.md](TESTING.md)
+for coverage, limitations and the manual game scenarios.
+
 ```
 Mod/
   About/About.xml

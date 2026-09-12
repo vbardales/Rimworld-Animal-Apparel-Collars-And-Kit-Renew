@@ -67,6 +67,11 @@ these cards are meant to be committed at all.
 
 ## Checked here, and therefore not in `remaining`
 
+- **Offline XML suite passed on 2026-09-12:** 55 XML files and 917 assertions using
+  `pwsh -NoProfile -File _tools/test-xml.ps1`. Includes patch fixtures, conditional folders,
+  translation targets and local texture paths. A GitHub Actions workflow is provided;
+  its remote execution has not yet been verified. This does not change `stage: preTest`:
+  game rendering, external references and full loader integration remain unverified.
 - **The `About.xml` description claims no in-game testing.** `PUBLISHING_STATE.md` asked for every
   description to be audited on that point before a first upload, because a Steam description never
   reprints. This one is clean: no *tested*, *testing*, *review* or *human direction*.
