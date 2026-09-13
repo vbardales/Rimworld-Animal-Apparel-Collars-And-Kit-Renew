@@ -19,11 +19,14 @@ identifiers, seven English/French settings keys and the VEF-gated hidden shortcu
 It applies the actual neck patch to bodies with/without a neck and existing groups, preserving
 human and unmatched bodies; tests CE saddle edits; tests Giddy-Up with/without an existing overlay;
 and exercises universal-apparel removal, relic exclusions, and compatibility hyperlink patches.
+It also checks the legacy gorilla diaper tag with the animal Def and tag independently
+present/absent, preserving unrelated restrictions.
 Only the inherited `descriptionHyperlinks` field is materialized for the hyperlink checks.
 
 These XML tests do not run RimWorld's loader, full inheritance, VEF settings, or rendering.
 Texture existence does not establish per-species coverage, direction completeness, or appearance.
-External def references, class resolution, and real modlist integration remain game checks.
+External reference and assembly inspection is recorded in DEPENDENCIES.md. Real
+modlist loading and integration behavior remain game checks.
 
 ### Settings tests with installed assemblies
 
@@ -192,6 +195,12 @@ The run that exercises the 27 art folders and the ~1400 restructured sprites.
 - Spot-check the species whose art came from the *installed* version of Animal Equipment rather
   than its repository: the horse's six harness sprites and the redrawn cow scarf.
 - With Combat Extended: the armour values on the animal's gear tab should be CE's, not vanilla's.
+- For the gorilla regression, use merged VAE 1.6, the framework and this mod. First run
+  without Odyssey: spawn AEXP_Gorilla and verify the diaper remains eligible. Repeat
+  with Odyssey: let animals evaluate apparel and inspect the log; there must be no
+  missing AEXP_Gorilla reference. This patch does not add eligibility for Odyssey's
+  separate Gorilla Def. Repeat with a legacy provider supplying AEXP_Gorilla, if used,
+  to verify that its existing eligibility is preserved.
 
 ---
 

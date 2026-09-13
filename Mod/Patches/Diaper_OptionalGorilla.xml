@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- VAE 1.6 omits AEXP_Gorilla when Odyssey is active. Keep the legacy
+       restriction only if its actual ThingDef exists (including standalone VAE).
+       An unresolved defName tag causes Animal Apparel Framework lookup errors. -->
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>/Defs/ThingDef[defName="diaper" and not(/Defs/ThingDef[defName="AEXP_Gorilla"])]/apparel/tags/li[text()="defNameAEXP_Gorilla"]</xpath>
+  </Operation>
+</Patch>

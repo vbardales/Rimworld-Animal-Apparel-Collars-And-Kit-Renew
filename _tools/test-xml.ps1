@@ -155,6 +155,19 @@ foreach ($neck in @($true,$false)) {
         if ($groups) { Assert ($fixture.SelectNodes('//li[text()="Existing"]').Count -eq 1) 'Existing groups preserved' }
     }
 }
+# VAE omits its gorilla when Odyssey is active. Check actual Def presence,
+# including an already-filtered tag and a legacy provider alongside Odyssey.
+$gorillaPatch = Read-Xml (Join-Path $root 'Patches/Diaper_OptionalGorilla.xml')
+foreach ($present in @($true,$false)) {
+    foreach ($tagPresent in @($true,$false)) {
+        $animal = if ($present) { '<ThingDef><defName>AEXP_Gorilla</defName></ThingDef>' } else { '<ThingDef><defName>Gorilla</defName></ThingDef>' }
+        $tag = if ($tagPresent) { '<li>defNameAEXP_Gorilla</li>' } else { '' }
+        $fixture = [xml]"<Defs>$animal<ThingDef><defName>diaper</defName><apparel><tags><li>AnimalApparel</li><li>defNameBear_Grizzly</li>$tag</tags></apparel></ThingDef></Defs>"
+        Apply-Operations $fixture $gorillaPatch.SelectNodes('/Patch/Operation')
+        Assert ($fixture.SelectNodes('//tags/li[text()="defNameAEXP_Gorilla"]').Count -eq [int]($present -and $tagPresent)) "Gorilla tag: def=$present tag=$tagPresent"
+        Assert ($fixture.SelectNodes('//tags/li[text()="AnimalApparel" or text()="defNameBear_Grizzly"]').Count -eq 2) 'Other diaper restrictions preserved'
+    }
+}
 $ce = $defs.CloneNode($true)
 Apply-Operations $ce (Read-Xml (Join-Path $root 'Mods/CETeam.CombatExtended/Patches/Saddle_CE.xml')).SelectNodes('/Patch/Operation')
 Assert ($ce.SelectSingleNode('//ThingDef[defName="Apparel_MedievalHorseSaddle"]/equippedStatOffsets/CarryBulk').InnerText -eq '25') 'CE saddle capacity'

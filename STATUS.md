@@ -13,7 +13,7 @@ packageId:    nelim.animalapparelcollarsandkitrenew
 repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 visibility:   public
 detached:     yes
-stage:        l10n
+stage:        done
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
 dependencies: declared
@@ -21,14 +21,13 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - unverified: finish current external Def/type/version matching across optional integrations before certifying preTest
   - unverified: in-game primary settings access, restart effects and persistence, hidden shortcut and RIMMSQOL interaction (scenario K)
   - unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, and Steam Deck layout
   - unverified: never loaded by RimWorld; scenarios A-K in TESTING.md are still waiting
   - unverified: in-game rendering of the restructured textures; offline local-path checks passed
   - unverified: French text and Steam Deck behavior in game; offline translation-target checks passed
 session:      local_eb08411e-6348-4f15-aa6b-91964bb77df6
-updated:      2026-09-13, localized settings implemented and technically verified
+updated:      2026-09-13, dependency audit complete and Odyssey gorilla regression corrected; ready for game validation
 ---
 
 # Animal Apparel: Collars and Kit Renew — status
@@ -56,10 +55,11 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
 
 ## Current development status
 
-**`stage: l10n`.** The user accepted the existing icon; the settings access contract,
-localized controls, successful build and applicable offline tests are now established.
-The latest implementation section supersedes earlier blockers below; they remain as
-history. The next gate requires completing external dependency/reference verification.
+**`stage: done`.** The icon is accepted; settings, localization, the shipped build,
+dependency declarations and applicable offline tests are established. The dependency
+audit found and corrected the missing VAE gorilla tag with Odyssey. See DEPENDENCIES.md
+and the latest audit section below. Earlier blockers remain as history.
+The next gate is execution of the functional game scenarios, not more offline preparation.
 `rights_audit: complete` certifies the protocol assessment, not third-party permission.
 No missing game run is used to block `options` or `done`.
 `tested_on` stays empty; no Workshop publication or successful game run is claimed.
@@ -387,3 +387,46 @@ primary/shortcut access, legacy choices, dependency present/absent, actual resta
 new/existing saves, reset, FR/EN layout and logs. A-K remain unexecuted in game. RIMMSQOL
 and other customization tools have **not** been tested interactively. CI currently runs
 the XML suite only; the assembly-dependent tests run locally with the installed game.
+
+## Dependency gate and readiness — 2026-09-13
+
+The user requested a commit, then continuation. Commit
+`7060c628a586c55551a8c9130ab9feb1a80ad657` records the localized settings and all
+previous local work. The working tree was clean immediately afterward. No push.
+This audit then added the gorilla patch, its XML regression tests, DEPENDENCIES.md,
+and updates to CHANGELOG, TESTING and this status. These follow-up changes are local.
+
+**l10n -> preTest -> done is established.** Mandatory versus optional dependencies,
+identifiers, applicable version selection, loadAfter, conditional folders and types
+were checked against installed metadata/assemblies and pinned upstream sources for
+the two integrations absent locally. Evidence, binary hashes, provider versions and
+limits are in DEPENDENCIES.md. No mandatory dependency was missing from About.
+Old optional versions and unexecuted game combinations are not certified as runtime
+compatible; they are not silently converted into required dependencies either.
+
+The expanded reference check found one actual defect: VAE stops defining AEXP_Gorilla
+with Odyssey, but the diaper retained its defName tag. The new native remove operation
+tests actual ThingDef presence, removes only an unresolved legacy tag, and preserves
+it when the old animal exists. Four fixtures exercise both Def and tag presence.
+
+Checks on the resulting payload:
+
+- XML suite: **60 XML files, 95 authored Def fields, 1273 assertions passed**, exit 0.
+- Check-DefInjected: **95 keys, 0 errors, 11628 indexed Defs, 69 applied operations**,
+  exit 0, no UNVERIFIED findings. Its unsupported settings operation warning remains
+  covered separately by the previously successful real-assembly tests.
+- All **61 unconditional animal tags** resolve in actual installed Core ThingDefs.
+  Scoped optional-provider inspection covers 27 folder/provider combinations, with
+  and without Odyssey. The gorilla correction addresses the missing reference found.
+- The owned C# sources and DLL did not change after their successful build and 30
+  settings assertions. The shipped DLL hash was rechecked and still equals
+  E436B4CA9ADD781EB44F47391C40410F96BFDC97046556D9F2ACEEEDC9BAFA2B.
+- No texture, displayed text, settings behavior or other compiled artifact changed;
+  their independent prior validations remain applicable.
+
+Tests A-K are written; scenario F now explicitly includes the Odyssey gorilla
+regression. No game scenario was executed and no game log establishes a successful
+run. The available automation does not provide native game UI control in this session.
+`tested_on` remains empty. To reach tested, execute the scenarios in RimWorld,
+including FR/EN, settings/shortcut/persistence, new/existing saves and relevant
+optional integrations, then inspect logs and fix any observed failures.

@@ -2,6 +2,8 @@
 
 ## Unreleased — 2026-09-13
 
+- Remove the diaper's legacy VAE gorilla restriction when that animal Def is absent,
+  including VAE with Odyssey; preserve it when a legacy provider supplies the animal.
 - Add a localized settings page under this mod's name when VEF is active, with a hidden,
   revealable MainButtons shortcut opening the same native dialog.
 - Preserve both historical VEF setting keys and stored values. Changes apply after restart;
