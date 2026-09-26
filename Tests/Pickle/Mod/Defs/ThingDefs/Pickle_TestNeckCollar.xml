@@ -6,7 +6,7 @@
   <ThingDef ParentName="DogCollarBase">
     <defName>Pickle_TestNeckCollar</defName>
     <label>pickle test neck collar</label>
-    <description>Test-only. Fits a snake and a megaspider to check the AnimalNeck fallback.</description>
+    <description>Test-only. Fits a snake, a megaspider and a tortoise to check the AnimalNeck fallback.</description>
     <statBases>
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>50</MaxHitPoints>
@@ -20,6 +20,7 @@
         <li>AnimalFallbackInvisible</li>
         <li>defNameCobra</li>
         <li>defNameMegaspider</li>
+        <li>defNameTortoise</li>
       </tags>
       <bodyPartGroups>
         <li>AnimalNeck</li>
