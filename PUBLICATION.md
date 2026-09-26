@@ -177,3 +177,29 @@ The goat mail is the only part I took, the strongest goat stays yours ^^ Thanks 
 
 Animal Apparel: Framework (s_m_w) and the three unanswered authors (Shenanigans, flango/Ogam, Riful):
 no draft yet, to write after reading their latest comments live.
+
+### More drafts (2026-09-26, not posted, to rewrite in her voice)
+
+Animal Apparel: Framework (s_m_w), register row to add. The page shows the author replying, including
+about a forgotten debug line; keep it light and true.
+```
+Your framework made this whole rebuild possible, and the neck slot only exists because you left the three body groups so clean to extend. Thank you for answering people so patiently :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806765840]Animal Apparel: Collars and Kit Renew[/url]
+```
+
+Dog Collars (Shenanigans), register row to add. No replies from the author on the page.
+```
+Four collars, 924 sprites and 24 patch folders, all of it carried over as you drew it, still credited to you. Thank you for the Newfoundland with the capital F that never worked, it works now xD [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806765840]Animal Apparel: Collars and Kit Renew[/url]
+```
+
+Animal Turret Packs (flango and Ogam), register row to add. 2101 subscribers on the page, update requests unanswered.
+```
+The turret packs are still here on the new framework, art by Ogam and XML by flango, credited. Still one of the funniest things you can strap on a muffalo :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806765840]Animal Apparel: Collars and Kit Renew[/url]
+```
+
+Medieval Horse Plate Armour (Riful), register row to add. Its description thanks Owlchemist and Dylan; the page has update requests, no replies.
+```
+Your barding and 19 sprites are here for 1.6, rewritten a bit so the saddle sits over the plate. Thanks for thanking Owlchemist and Dylan on your page, I did the same :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806765840]Animal Apparel: Collars and Kit Renew[/url]
+```
+
+Check before posting: each claim above (924 sprites, 19 sprites, "still credited") against ATTRIBUTION.md;
+no draft claims an in-game test, and none may until the game has run.

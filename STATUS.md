@@ -489,3 +489,22 @@ Stage stays `horsMonoRepo` only because of the missing Pickle suite and the unru
   eight `incompatibleWith` mods; the strings to assert are unverified until a first run shows the log.
 - Not done: thank-you research (item 2) and upstream repository research (item 5) - Steam answered HTTP 429
   to eight parallel page reads; to redo one page at a time.
+
+## What separates this mod from `done` and `tested` — 2026-09-26
+
+Current stage `horsMonoRepo` (AUDIT.md chain; the ModIcon override is recorded above).
+
+To reach `done` (preTest -> done): Pickle tests written with their scope justified (done in `Tests/Pickle/`:
+features 01-06 and 20+ pass maps, all unrun); offline suites green (XML 1273 assertions: green 2026-09-26; settings
+assertions `Settings.Tests` not re-run). Still open: the Odyssey gorilla pass, a neckless-body scenario (offline patch
+tests exist), firing and combat scenarios (not automatable with existing steps). The `l10n -> preTest` and earlier
+gates were kept from the 2026-09-13 audit.
+
+To reach `tested`: play every pass in English and French (`unverified`: nothing has run); no `@wip`; every
+`@requires` scenario played by the pass that mounts its mod; no manual test left (E, G, H, J need steps that do not
+exist yet); `@review` captures opened; logs read.
+
+Files changed after the first request was filed (so it was cancelled and refiled): About description migrated to
+the publication source (3614 bytes, plain text of the Markdown block), the framework credited to s_m_w, Magical
+Menagerie renamed Alpha Mythology, `Mod/ATTRIBUTION.md` synced (hash identical to the root copy). The request now
+in the queue is `20260926-172355-617-ddc3` on `838c88e`.
