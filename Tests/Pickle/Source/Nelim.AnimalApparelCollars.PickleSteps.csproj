@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Pickle steps of this mod's test companion: a tame, named animal, and what it wears.
+       Pickle's own dress/wear steps look up colonists by nickname; an animal is not one. -->
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>AnimalApparelCollars.PickleSteps</AssemblyName>
+    <RootNamespace>AnimalApparelCollars.PickleSteps</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <Deterministic>true</Deterministic>
+    <DebugType>none</DebugType>
+    <OutputPath>..\Mod\Pickle\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*-*" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="RimWorks.Pickle.Ref" Version="4.*" ExcludeAssets="runtime" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

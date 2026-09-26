@@ -7,24 +7,24 @@ Feature: Animal Apparel Collars and Kit Renew, bodies without a neck
   @review
   Scenario: Animal Apparel Collars: a snake wears the test collar
     Given the save "test-colony" is loaded
-    And I spawn a "Cobra" pawn at (60, 60)
-    When I dress "Cobra" in "Pickle_TestNeckCollar"
-    Then "Cobra" is wearing "Pickle_TestNeckCollar"
-    And "Cobra" apparel covers "AnimalNeck"
+    And Animal Apparel Collars: a tame "Cobra" named "Cobra" exists at (60, 60)
+    When Animal Apparel Collars: "Cobra" is dressed in "Pickle_TestNeckCollar"
+    Then Animal Apparel Collars: "Cobra" is wearing "Pickle_TestNeckCollar"
+    And Animal Apparel Collars: "Cobra" apparel covers "AnimalNeck"
     And no errors were logged
 
   Scenario: Animal Apparel Collars: a megaspider wears the test collar
     Given the save "test-colony" is loaded
-    And I spawn a "Megaspider" pawn at (60, 60)
-    When I dress "Megaspider" in "Pickle_TestNeckCollar"
-    Then "Megaspider" is wearing "Pickle_TestNeckCollar"
-    And "Megaspider" apparel covers "AnimalNeck"
+    And Animal Apparel Collars: a tame "Megaspider" named "Megaspider" exists at (60, 60)
+    When Animal Apparel Collars: "Megaspider" is dressed in "Pickle_TestNeckCollar"
+    Then Animal Apparel Collars: "Megaspider" is wearing "Pickle_TestNeckCollar"
+    And Animal Apparel Collars: "Megaspider" apparel covers "AnimalNeck"
     And no errors were logged
 
   Scenario: Animal Apparel Collars: a tortoise wears the test collar
     Given the save "test-colony" is loaded
-    And I spawn a "Tortoise" pawn at (60, 60)
-    When I dress "Tortoise" in "Pickle_TestNeckCollar"
-    Then "Tortoise" is wearing "Pickle_TestNeckCollar"
-    And "Tortoise" apparel covers "AnimalNeck"
+    And Animal Apparel Collars: a tame "Tortoise" named "Tortoise" exists at (60, 60)
+    When Animal Apparel Collars: "Tortoise" is dressed in "Pickle_TestNeckCollar"
+    Then Animal Apparel Collars: "Tortoise" is wearing "Pickle_TestNeckCollar"
+    And Animal Apparel Collars: "Tortoise" apparel covers "AnimalNeck"
     And no errors were logged

@@ -64,3 +64,14 @@ Not written: the Odyssey gorilla pass (`!ludeon.rimworld.odyssey` vs with).
 - Feature 07: bodies without a Neck part, with a test-only collar (`Mod/Defs/ThingDefs/Pickle_TestNeckCollar.xml`).
 - Feature 08 and the pass `avec-animaux-sans-odyssey`: the VAE gorilla with and without Odyssey. Play
   `avec-animaux` with the filter `'Animal Apparel: Collars and Kit Renew - Pickle tests,!@sans-odyssey'`.
+
+## First run, 2026-09-26 (0dc8f18): red, and why
+
+One scenario (husky collar), English, no pass map: `exitReason: failed`, 1 of 1 played. Message: "no pawn
+nicknamed 'Husky'. player pawns present: Jet, Larson, Morrison". Pickle's `I dress` and `is wearing` resolve
+player colonists by nickname; a spawned animal is neither a colonist nor named. This is a suite defect, not a mod
+defect. Fix: `Source/AnimalSteps.cs` (built to `Mod/Pickle/Assemblies/AnimalApparelCollars.PickleSteps.dll`) adds
+`Animal Apparel Collars: a tame "<kind>" named "<name>" exists at (x, z)`, `... "<name>" is dressed in "<def>"`,
+`... "<name>" is wearing "<def>"` and `... "<name>" apparel covers "<group>"`, which find the animal on the map;
+the features use them. Not yet run: whether the framework gives an animal an apparel tracker (the spawn step
+fails saying so if not), and whether `Wear` accepts the pieces.

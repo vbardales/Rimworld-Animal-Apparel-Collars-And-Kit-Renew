@@ -8,7 +8,7 @@ Feature: Animal Apparel Collars and Kit Renew, with Vanilla Expanded Framework
   @review
   Scenario: Animal Apparel Collars: a muffalo carries a turret pack
     Given the save "test-colony" is loaded
-    And I spawn a "Muffalo" pawn at (60, 60)
-    When I dress "Muffalo" in "ATP_Apparel_LargeTurret"
-    Then "Muffalo" is wearing "ATP_Apparel_LargeTurret"
+    And Animal Apparel Collars: a tame "Muffalo" named "Muffalo" exists at (60, 60)
+    When Animal Apparel Collars: "Muffalo" is dressed in "ATP_Apparel_LargeTurret"
+    Then Animal Apparel Collars: "Muffalo" is wearing "ATP_Apparel_LargeTurret"
     And no errors were logged

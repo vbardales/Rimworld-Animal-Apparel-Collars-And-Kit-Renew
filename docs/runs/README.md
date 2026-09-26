@@ -1,0 +1,1 @@
+2026-09-26 0dc8f18 sans-facultatifs English, 1 scenario (husky collar): FAILED, exitReason failed, 1/1 played. "no pawn nicknamed 'Husky'. player pawns present: Jet, Larson, Morrison": suite defect (Pickle's dress step resolves colonists only). Fixed by local steps in Tests/Pickle/Source; rerun pending. Kept: summary.json, junit.xml.
