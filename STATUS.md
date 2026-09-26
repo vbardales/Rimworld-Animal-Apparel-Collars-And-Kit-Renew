@@ -13,7 +13,7 @@ packageId:    nelim.animalapparelcollarsandkitrenew
 repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 visibility:   public
 detached:     yes
-stage:        horsMonoRepo
+stage:        preTest
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
 dependencies: declared
@@ -508,3 +508,11 @@ Files changed after the first request was filed (so it was cancelled and refiled
 the publication source (3614 bytes, plain text of the Markdown block), the framework credited to s_m_w, Magical
 Menagerie renamed Alpha Mythology, `Mod/ATTRIBUTION.md` synced (hash identical to the root copy). The request now
 in the queue is `20260926-172355-617-ddc3` on `838c88e`.
+
+## Stage correction — 2026-09-26
+
+`stage: preTest` (was `horsMonoRepo`). The two reasons given above no longer hold: the icon is delivered at
+128 px with the owner's override, and unrun game tests are a `done -> tested` criterion, not a `preTest -> done`
+one (AUDIT.md, 2026-09-21 clarification). Open for `done`: re-run `Settings.Tests` on the installed assemblies
+(last run 2026-09-13; a rebuild rewrites the shipped DLL, so it waits for the pending Pickle request), and write
+the Odyssey gorilla pass. Nothing here claims a game run.
