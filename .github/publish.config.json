@@ -1,0 +1,18 @@
+{
+  "templateStamp": "2eb77eba5a7c",
+  "workshopId": "3806765840",
+  "packageId": "nelim.animalapparelcollarsandkitrenew",
+  "releaseTitle": "Animal Apparel: Collars and Kit Renew (unofficial) {version}",
+  "requirePaths": [
+    "Mods/VEF/Assemblies/AnimalApparelCollarsAndKit.Settings.dll",
+    "Defs"
+  ],
+  "forbidPaths": [],
+  "previewFile": "About/Preview.png",
+  "aboutFromDescription": true,
+  "description": {
+    "file": "PUBLICATION.md",
+    "format": "markdown",
+    "heading": "^## Steam description$"
+  }
+}
