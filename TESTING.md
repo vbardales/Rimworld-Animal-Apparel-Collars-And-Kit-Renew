@@ -360,3 +360,10 @@ the latest `summary.json` and `junit.xml` for the revision now in the repository
 prove a claim, and `Player.log` if it is the sole proof of a check. Delete the rest as soon as a newer report
 replaces it (never `report.html`, `messages.ndjson` or a superseded build). One text line per run goes in
 `docs/runs/`. No evidence exists yet: no game run has taken place.
+
+## Pickle suite (2026-09-26)
+
+Written in `Tests/Pickle/` (see its README): four features, passes minimal EN/FR, avec-vef,
+avec-rimmsqol. Never run. It covers the render path, the AnimalNeck slot, the horse set, a turret pack
+worn, and the hidden shortcut. Scenarios E (firing), G (restart), H (removal) and J (a real hit) are
+not automated yet and remain `unverified`; A-K therefore still count as manual tests to close before `tested`.
