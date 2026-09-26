@@ -50,7 +50,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## AI-generated
 
-Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with an AI image tool (tool name to be confirmed by the owner before publication).
+Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI).
 
 ## Thanks
 
