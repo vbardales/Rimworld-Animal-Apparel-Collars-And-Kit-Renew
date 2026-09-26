@@ -43,3 +43,18 @@ bodies in the XML suite; a Pickle version would need a test-only collar def).
 `I dress` / `is wearing` / `apparel covers` are documented for pawns by name; that they resolve an
 animal spawned with `I spawn a "<kind>" pawn` under the name `Husky` is **not established**. The
 first run decides; a failure there is a suite defect, not a mod defect.
+
+## Passes added 2026-09-26 (all unrun, maps in this folder)
+
+| Pass (`-DepMap wsl-deps.<name>.map`) | Mounts | Notes |
+| --- | --- | --- |
+| avec-animaux | VEF, Basic Armor, Giddy-Up 2, merged VAE and 16 animal mods, LoadAudit | dependencies of the animal mods not resolved: read the staged list |
+| avec-animaux-vae-separes | same with the four separate VAE packs | exclusive with the merged pack |
+| avec-ce | VEF, Combat Extended, LoadAudit | armour values would be CE's |
+| avec-rimeffect, avec-rimeffect-renegade | Rim-Effect Core / Renegade | exclusive; packageIds unverified |
+| avec-sos2, avec-androidtiers, avec-bunrace-core | one mod each | packageIds unverified, dependencies not resolved |
+| incompat-\<name\> (8) | one declared-incompatible mod each | feature 05, symptom strings unverified |
+
+Feature 06 (LoadAudit) plays in every pass whose map stages the tool. Run each pass in English and in French.
+Skipped by requirement is not passed: check the counts.
+Not written: the Odyssey gorilla pass (`!ludeon.rimworld.odyssey` vs with).
