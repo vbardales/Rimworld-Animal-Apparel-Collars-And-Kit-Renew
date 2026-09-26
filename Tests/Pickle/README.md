@@ -58,3 +58,9 @@ first run decides; a failure there is a suite defect, not a mod defect.
 Feature 06 (LoadAudit) plays in every pass whose map stages the tool. Run each pass in English and in French.
 Skipped by requirement is not passed: check the counts.
 Not written: the Odyssey gorilla pass (`!ludeon.rimworld.odyssey` vs with).
+
+## Added later on 2026-09-26
+
+- Feature 07: bodies without a Neck part, with a test-only collar (`Mod/Defs/ThingDefs/Pickle_TestNeckCollar.xml`).
+- Feature 08 and the pass `avec-animaux-sans-odyssey`: the VAE gorilla with and without Odyssey. Play
+  `avec-animaux` with the filter `'Animal Apparel: Collars and Kit Renew - Pickle tests,!@sans-odyssey'`.
