@@ -1,7 +1,7 @@
 ---
 settings_audit: complete
 rights_audit: complete
-modicon_audit: partial
+modicon_audit: complete
 preview_audit: complete
 automated_tests: complete
 xml_tests: complete
@@ -21,7 +21,6 @@ showcase:     complete
 tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 remaining:
-  - unverified: ModIcon.png in the working tree is 1254x1254, 1235608 bytes (was 128x128, 27708); not committed, owner to decide; modicon_audit needs recheck
   - unverified: in-game primary settings access, restart effects and persistence, hidden shortcut and RIMMSQOL interaction (scenario K)
   - unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, and Steam Deck layout
   - unverified: never loaded by RimWorld; scenarios A-K in TESTING.md are still waiting
@@ -455,3 +454,14 @@ Local change left in place: Mod/About/ModIcon.png (not committed).
   last push 2023-03-01). No repository was found for Dog Collars, Patch Collar Malinois, Animal Diapers,
   Medieval Horse Plate Armour or [CSM]RealisticAwesomeGoat (installed files searched for a GitHub link: none;
   Steam pages not re-read). A pull request to the two repositories would be public: only with the owner's word.
+
+## ModIcon decision — 2026-09-26
+
+The owner kept the 1254x1254 mascot icon (collar, tag, lead, waving paw: more than the one or two
+accompanying objects of the style guide) and asked for a lighter file. Her decision is an override of
+that point. The shipped `Mod/About/ModIcon.png` is the same image scaled to 128x128 (bicubic, PNG,
+24096 bytes; was 1235608). The full-resolution source is `Art/ModIcon-source-1254.png`. Not redrawn,
+not regenerated. Inspected at 128 px; the 32 px rendering was not separately checked. The Workshop
+item 3806765840 still carries the heavy icon until the next upload.
+`modicon_audit: complete` (dimensions, format, weight; crowding overridden by the owner).
+Stage stays `horsMonoRepo` only because of the missing Pickle suite and the unrun tests.
