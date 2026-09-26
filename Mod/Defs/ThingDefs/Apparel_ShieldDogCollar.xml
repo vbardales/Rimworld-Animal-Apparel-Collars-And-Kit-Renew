@@ -251,7 +251,7 @@
 				<li MayRequire="sarg.alphaanimals">defNameAA_Erin</li>
 				<li MayRequire="sarg.alphaanimals">defNameAA_OcularNightling</li>
 
-				<!-- Magical Menagerie -->
+				<!-- Alpha Mythology (formerly Magical Menagerie) -->
 				<li MayRequire="sarg.magicalmenagerie">defNameMM_Cerberus</li>
 				<li MayRequire="sarg.magicalmenagerie">defNameMM_Kitsune</li>
 

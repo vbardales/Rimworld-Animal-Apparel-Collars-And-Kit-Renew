@@ -10,38 +10,48 @@
   <description>UNOFFICIAL. This mod is published without the original author's explicit consent.
 If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-Original contributions to this migration and Animal Equipment are licensed under MIT, within the scope stated in LICENSE. No licence has been identified for the other six source mods in the materials checked, and no permission for their reuse in this project has been established. Their abandonment is a maintenance assessment, not an author declaration. See ATTRIBUTION.md.
-
-Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on Ingendum's Animal Apparel: Framework.
+Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on Animal Apparel: Framework (https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850).
 
 Dylan's Animal Gear is being retired, and its successor declares itself incompatible with it. The day you switch frameworks, everything built on the old one stops. This mod carries that content across.
 
-WHAT IS IN IT
+What is in it
 
-- Four dog collars - a neck bow, a leather collar, a studded collar and a shield collar - fitting 78 canines across 21 animal mods. From "Dog Collars" by Shenanigans, with "Patch Collar Malinois" by Annabelesca folded in.
+- Four dog collars (a neck bow, a leather collar, a studded collar and a shield collar) fitting 78 canines across 21 animal mods. From "Dog Collars" by Shenanigans, with "Patch Collar Malinois" by Annabelesca folded in.
 - A diaper that stops an animal spreading filth. From "Animal Diapers" by Dipsy.
-- Six turret packs and two grenade belts, strapped to any animal. From "Animal Turret Packs" by flangopink and ogam. Needs Vanilla Expanded Framework; without it the rest still works.
+- Six turret packs and two grenade belts. From "Animal Turret Packs" by flangopink and ogam. Needs Vanilla Expanded Framework; without it the rest still loads.
 - Medieval barding, a chanfron and a saddle for horses, plus riding tack for Giddy-Up. From "Medieval Horse Plate Armour" by Riful.
-- Goat mail. From "[CSM]RealisticAwesomeGoat" by CSM - the armour only, not that mod's goat rebalance.
-- Animal clothing, headwear, riding gear and power armour. From "Animal Equipment" by Owlchemist, itself a continuation of "Animal Armor: Vanilla" by jptrrs. Animal Apparel: Basic Armor rewrote the flak and plate half of that mod and still ships the art for the rest of it, unused; these are the defs that art was drawn for.
+- Goat mail, from "[CSM]RealisticAwesomeGoat" by CSM (the armour only, not that mod's goat rebalance).
+- Animal clothing, headwear, riding gear and power armour, from "Animal Equipment" by Owlchemist, a continuation of "Animal Armor: Vanilla" by jptrrs.
 
-COLLARS HAVE THEIR OWN SLOT
+Collars have their own slot
 
-The framework gives animals three body part groups - head, body and legs - so a collar would otherwise share a slot with body armour. This mod adds a fourth, AnimalNeck, patched onto the neck of every non-human body (and onto the head for the bodies that have no neck, such as insects and snakes, which could never wear a collar under the old framework either). Collars also draw one layer above armour instead of stacking in whatever order the animal happened to put things on.
+The framework gives animals three body part groups, so a collar would share a slot with body armour. This mod adds a fourth, AnimalNeck, on the neck of every non-human body (and on the head for bodies without a neck, such as insects and snakes). Collars also draw one layer above armour.
 
-COMPATIBILITY
+Settings
 
-Cannot run with Dylan's Animal Gear - that is the framework's restriction, not this mod's. Cannot run with any of the seven source mods either, since it declares the same defNames. Disable them.
+With Vanilla Expanded Framework active, open Mod options, then this mod's name: disable universal placeholder apparel, and exclude animal apparel from new relics. Existing VEF choices are kept. Changes apply after restarting RimWorld. An optional main-bar shortcut is hidden by default for customization mods to reveal.
 
-Works with, and adds per-animal art for: Vanilla Animals Expanded (Cats and Dogs, Endangered, Arid Shrubland, Desert, Boreal Forest), Vanilla Factions Expanded Vikings, Alpha Animals, Magical Menagerie, Spidercamp's Dog Pack, Poeticdragon's Japanese Dogs, Android Tiers, Rim Effect, Forsakens, Save Our Ship 2, Bun Dog, Erin's Lizard Doggo, Palamutes and Mountain Dogs, Dumbs' Dachshunds, RTP's Border Collies and Rhodesian Ridgebacks, Yorkshire Terrors, Rebel Rabbit's Legendary Wolves, and Ann's Belgian Malinois. Each is optional; nothing errors when one is absent.
+Compatibility
 
-A small settings assembly loads only with Vanilla Expanded Framework. Open Mod options, then this mod's name, to configure universal apparel and relic eligibility. Existing VEF choices are preserved. Changes apply after restarting RimWorld. An optional MainButtons shortcut is hidden by default and can be revealed by compatible customization tools.
+Requires Animal Apparel: Framework. Cannot run with Dylan's Animal Gear (the framework's own restriction), nor with any of the seven source mods, which declare the same defNames: disable them. Optional, with per-animal art or patches: Vanilla Animals Expanded, Vanilla Factions Expanded, Alpha Animals, Alpha Mythology (formerly Magical Menagerie), Spidercamp's Dog Pack, Rim Effect, Giddy-Up 2, Combat Extended, and about a dozen other animal mods listed in the repository README. Nothing errors when one is absent.
 
 No per-save data of its own. Removing it mid-game deletes anything crafted from it, like any content mod.
 
-The original authors are credited above and in ATTRIBUTION.md. If any of them would rather this were not published, say so and it comes down.
+If I go quiet
 
-[url=https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew]Source code on GitHub[/url]</description>
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+AI-generated
+
+Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI).
+
+Thanks
+
+The six authors above and jptrrs; s_m_w, for Animal Apparel: Framework and Basic Armor; Owlchemist; Dylan, for the original Animal Gear. Harmony, and the development-only test tools Pickle and RimLogging, never a dependency of this mod.
+
+Credits, licence scope and the source-by-source assessment are in ATTRIBUTION.md and LICENSE (MIT for original contributions and Animal Equipment only).
+
+Source code on GitHub (https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew)</description>
   <modDependencies>
     <li>
       <packageId>Ingendum.AnimalApparelFramework</packageId>
