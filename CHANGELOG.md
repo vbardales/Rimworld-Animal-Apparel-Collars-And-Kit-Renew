@@ -12,6 +12,12 @@
 - Add settings behavior and real VEF/Scribe persistence tests; extend XML localization checks.
 - Align the About/README notice and the About source link with the publication convention.
 
+## [0.1.0] — 2026-09-23
+
+Creation of a publishIdFile: private Workshop item 3806765840, created from the game's upload
+button. It carried `Mod/` as it stood at commit 8183a2b, with nothing changed since, including
+the `.dds` files the game generated during the upload. Private and untested: not a release.
+
 ## 1.0.0 — 2026-09-07
 
 First release. Six abandoned Animal Gear add-ons, plus the unfinished half of Animal Equipment,

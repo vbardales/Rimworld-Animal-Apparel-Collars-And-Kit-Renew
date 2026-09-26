@@ -19,8 +19,9 @@ licence_at:   MIT limited to own contributions and Animal Equipment; six other s
 dependencies: declared
 showcase:     complete
 tested_on:
-workshop:
+workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 remaining:
+  - unverified: ModIcon.png in the working tree is 1254x1254, 1235608 bytes (was 128x128, 27708); not committed, owner to decide; modicon_audit needs recheck
   - unverified: in-game primary settings access, restart effects and persistence, hidden shortcut and RIMMSQOL interaction (scenario K)
   - unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, and Steam Deck layout
   - unverified: never loaded by RimWorld; scenarios A-K in TESTING.md are still waiting
