@@ -516,3 +516,15 @@ in the queue is `20260926-172355-617-ddc3` on `838c88e`.
 one (AUDIT.md, 2026-09-21 clarification). Open for `done`: re-run `Settings.Tests` on the installed assemblies
 (last run 2026-09-13; a rebuild rewrites the shipped DLL, so it waits for the pending Pickle request), and write
 the Odyssey gorilla pass. Nothing here claims a game run.
+
+## Settings tests and suite additions — 2026-09-26 (evening)
+
+- `Settings.Tests` re-run on the installed RimWorld 1.6 and VEF assemblies: **30 assertions passed**, exit 0
+  (`dotnet build Tests/Settings.Tests.csproj -c Release`, then `.build/tests/Settings.Tests.exe`). The rebuild
+  produced a DLL with another hash (`443D2788...`) from unchanged sources: the build is not deterministic. The
+  committed DLL (`E436B4CA...`, the one on the Workshop item) was restored and stays the shipped one.
+- Pickle suite: features 07 (bodies without a neck, with a test-only collar in the companion) and 08 (the VAE gorilla
+  with and without Odyssey), and the pass `avec-animaux-sans-odyssey`. Never run.
+- The queue request was refiled on `c7e099b`: `20260926-215415-438-bb85` (the earlier one, `ddc3`, was cancelled).
+- What remains for `done`: nothing written is missing; Settings.Tests and XML are green on the shipped payload.
+  Combat and restart scenarios (E, G, H, J) stay unautomated: recorded as `unverified` for `tested`, not hidden.
