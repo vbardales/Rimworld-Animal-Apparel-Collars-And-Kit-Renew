@@ -75,3 +75,9 @@ defect. Fix: `Source/AnimalSteps.cs` (built to `Mod/Pickle/Assemblies/AnimalAppa
 `... "<name>" is wearing "<def>"` and `... "<name>" apparel covers "<group>"`, which find the animal on the map;
 the features use them. Not yet run: whether the framework gives an animal an apparel tracker (the spawn step
 fails saying so if not), and whether `Wear` accepts the pieces.
+
+Later on 2026-09-26: `EnsureTrackers` now calls the framework's own `AnimalGearHelper.EnsureInitApparelTrackers`
+(read in the decompiled `AnimalGear.dll`: the trackers are created for a player animal, and lazily), and feature 09
+compares the damage two identical huskies take from repeated cuts (`ArmorUtility.GetPostArmorDamage`), one in
+`Apparel_SmallAnimalPowerArmor`. Whether the core body part carries the `AnimalBody` group the armour covers is not
+established; if the numbers are equal the scenario says so and the armour is not counted for that part.

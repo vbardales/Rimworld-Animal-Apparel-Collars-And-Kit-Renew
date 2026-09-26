@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Reflection;
 using RimWorks.Pickle;
 using RimWorld;
 using Verse;
@@ -33,6 +34,36 @@ namespace AnimalApparelCollars.PickleSteps
             throw new InvalidOperationException($"no pawn named '{nickname}' on the map; the pawns are {known}");
         }
 
+        // The framework creates the outfit, equipment and apparel trackers of a player animal with this helper.
+        private static void EnsureTrackers(Pawn pawn)
+        {
+            Type helper = GenTypes.AllTypes.FirstOrDefault(t => t.Name == "AnimalGearHelper");
+            MethodInfo method = helper?.GetMethod("EnsureInitApparelTrackers", BindingFlags.Public | BindingFlags.Static);
+            method?.Invoke(null, new object[] { pawn });
+        }
+
+        private static float AverageDamage(Pawn pawn, int hits, float damage)
+        {
+            float sum = 0f;
+            for (int i = 0; i < hits; i++)
+            {
+                DamageDef def = DamageDefOf.Cut;
+                sum += ArmorUtility.GetPostArmorDamage(pawn, damage, 0f, pawn.RaceProps.body.corePart, ref def, out bool _, out bool _);
+            }
+
+            return sum / hits;
+        }
+
+        [Then("Animal Apparel Collars: {string} takes less damage than {string} over {int} cuts of {int} damage")]
+        public void TakesLess(PickleContext ctx, string armoured, string bare, int hits, int damage)
+        {
+            Pawn a = Require(ctx, armoured);
+            Pawn b = Require(ctx, bare);
+            float avgA = AverageDamage(a, hits, damage);
+            float avgB = AverageDamage(b, hits, damage);
+            ctx.Require(avgA < avgB, $"'{armoured}' takes {avgA:F2} on average and '{bare}' takes {avgB:F2} from {hits} cuts of {damage}: the armour is not counted");
+        }
+
         [Given("Animal Apparel Collars: a tame {string} named {string} exists at ({int}, {int})")]
         public void TameAnimalExists(PickleContext ctx, string kindDefName, string nickname, int x, int z)
         {
@@ -51,7 +82,8 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(cell.InBounds(map), $"cell ({x}, {z}) is outside the map");
             GenSpawn.Spawn(pawn, cell, map);
             ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn at ({x}, {z})");
-            ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker: the framework did not give animals one");
+            EnsureTrackers(pawn);
+            ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker even after the framework's EnsureInitApparelTrackers");
         }
 
         [When("Animal Apparel Collars: {string} is dressed in {string}")]
