@@ -131,3 +131,49 @@ hidden `[url=]` link to this mod, 150 to 350 characters, at most three a day.
 Commit nothing new for the ID (already in `da1df6e`). Remove the 1400 generated `.dds` from `Mod/` first.
 Then `PUBLISHING.md`: dry-run of the exact SHA, `dispatch-publish.sh`, Virginie approves `steam-production`.
 Visibility, comment subscription and "Watch all activity" (this mod and Ingendum's framework) are hers, by hand.
+
+## Research notes, 2026-09-26 (Workshop pages read one at a time)
+
+Read through a page-to-text tool, so every line below is a summary to double-check on the page before
+posting. **Every old page carries a "removed from the community ... incompatible" banner in the summary:
+it appears on all of them, including ones that are plainly live; treat it as an artefact to look at, not a fact.**
+
+| Page | Author on the page | Last update | Replies to comments | Source link |
+|---|---|---|---|---|
+| Animal Apparel: Framework (3513825850) | s_m_w (credited here as Ingendum: check which name the author wants) | 2024-08-23 as summarised, to check | yes | none |
+| Animal Equipment (2568865984) | Owlchemist | 2023-03-06 | inactive; commenters say it "works just fine in 1.6" and mention Basic Armor as a successor | `ohgodspidersno/ohgodspidersno-rimworld-vanilla-animal-armor` |
+| Dog Collars (2644644983) | Shenanigans | 2022-11-06 | no | none |
+| Animal Diapers (2817510684) | Dipsy | 2022-06-06 | limited (2025 offer to fix it) | none |
+| Animal Turret Packs (3053702877) | flango (XML), Ogam (art) | 2023-10-18 | no | none on the page (repo `flangopink/AnimalTurretPacks` exists) |
+| Medieval Horse Plate Armour (2586212684) | Riful | 2021-08-27 | no | none |
+| [CSM]RealisticAwesomeGoat (2122692229) | CSM | 2020 | yes, playful | none |
+| Patch Collar Malinois (3062026756) | Annabelesca | 2023-10-29 | yes, playful | none |
+
+Upstream repositories for a pull request (nothing contacted, a PR is public and needs the owner's word):
+`Owlchemist/animal-equipment` is a fork of `ohgodspidersno/ohgodspidersno-rimworld-vanilla-animal-armor`
+(both MIT, last push 2023-03-01, issues disabled on the fork); `flangopink/AnimalTurretPacks` (no licence,
+last push 2023-10-18). No repository for the other five sources.
+
+### Drafts (BBCode, not posted; the item is private)
+
+Not sent before the item is public, at most three a day, one per page (`WORKSHOP_COMMENTS.md`). Each is
+a starting point in her voice to rewrite, not a final text; check the last comments of the page first.
+Nothing here claims an in-game test.
+
+Animal Equipment (Owlchemist), register row to add:
+```
+Your animal riding gear and power armour art was sitting there with no defs to use it, so I wrote the defs. Only the MIT half of Animal Equipment, kept as you had it. Thank you :) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806765840]Animal Apparel: Collars and Kit Renew[/url]
+```
+
+Patch Collar Malinois (Annabelesca), register row to add:
+```
+Your Malinois patch turned out to be Dog Collars plus one animal, so it is now one folder among the others, still credited to you. Explosive detonation collar not included xD [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806765840]Animal Apparel: Collars and Kit Renew[/url]
+```
+
+[CSM]RealisticAwesomeGoat (CSM), register row to add:
+```
+The goat mail is the only part I took, the strongest goat stays yours ^^ Thanks for the armour art. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806765840]Animal Apparel: Collars and Kit Renew[/url]
+```
+
+Animal Apparel: Framework (s_m_w / Ingendum) and the three unanswered authors (Shenanigans, flango/Ogam, Riful):
+no draft yet, to write after reading their latest comments live.
