@@ -40,7 +40,7 @@ With Vanilla Expanded Framework active, open Mod options, then this mod's name: 
 
 ## Compatibility
 
-Requires Animal Apparel: Framework. Cannot run with Dylan's Animal Gear (the framework's own restriction), nor with any of the seven source mods, which declare the same defNames: disable them. Optional, with per-animal art or patches: Vanilla Animals Expanded, Vanilla Factions Expanded, Alpha Animals, Magical Menagerie, Spidercamp's Dog Pack, Rim Effect, Giddy-Up 2, Combat Extended, and about a dozen other animal mods listed in the repository README. Nothing errors when one is absent.
+Requires Animal Apparel: Framework. Cannot run with Dylan's Animal Gear (the framework's own restriction), nor with any of the seven source mods, which declare the same defNames: disable them. Optional, with per-animal art or patches: Vanilla Animals Expanded, Vanilla Factions Expanded, Alpha Animals, Alpha Mythology (formerly Magical Menagerie), Spidercamp's Dog Pack, Rim Effect, Giddy-Up 2, Combat Extended, and about a dozen other animal mods listed in the repository README. Nothing errors when one is absent.
 
 No per-save data of its own. Removing it mid-game deletes anything crafted from it, like any content mod.
 

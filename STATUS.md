@@ -465,3 +465,27 @@ not regenerated. Inspected at 128 px; the 32 px rendering was not separately che
 item 3806765840 still carries the heavy icon until the next upload.
 `modicon_audit: complete` (dimensions, format, weight; crowding overridden by the owner).
 Stage stays `horsMonoRepo` only because of the missing Pickle suite and the unrun tests.
+
+## Session log — 2026-09-26 (afternoon)
+
+- XML suite re-run with PowerShell 7 (`pwsh`, installed with winget): 60 XML files, 95 Def text
+  fields, **1273 assertions passed**, exit 0, on HEAD `a132c1b`. The 2026-09-13 `unverified` on the
+  current tree is lifted for the XML suite only; settings assertions (`Settings.Tests`) were not re-run.
+- The 1400 generated `.dds` (146 MB) were deleted from `Mod/`; `*.dds` is in `.gitignore`. The Workshop
+  item 3806765840 still carries them until the next upload.
+- Pickle suite written (`Tests/Pickle/`, commit `a132c1b`), never run. First request filed:
+  `20260926-121916-986-df75`, one scenario, English, no pass map (pending in the queue).
+- Workshop ids resolved for the pass maps (not yet written, tree frozen until the run): Basic Armor
+  3513849448, Giddy-Up 2 3674332861, Combat Extended 2890901044 (owner confirmed), the four VAE packs,
+  Alpha Mythology 1821617793 (= `sarg.magicalmenagerie`, the former Magical Menagerie), Save Our Ship 2
+  1909914131, Android Tiers 3711019495, Rim-Effect Core 2479560240, Rim-Effect Renegade 3473370247,
+  Bun Race 2108324996, Spidercamp's Dog Pack (Continued, deprecated) 2453077534. Ids taken from the owner's
+  links or Workshop pages rather than an installed `About.xml` are unverified as packageIds. Originals of
+  Forsakens, Dumbs' Dachshunds, Dire Wolves and Vanilla Animals Expanded - Desert are skipped (replaced or gone in 1.6).
+- Adult-content check: the Preview and three sprites (Dromedary power armour, Warg leather collar,
+  Chicken helmet) were opened; nothing adult. Not every one of the 1400 sprites was opened.
+  Note: the Warg leather collar south view is blank (transparent or empty); to look at in game.
+- Incompatibility passes: eight maps and one draft feature prepared outside the repository, for the
+  eight `incompatibleWith` mods; the strings to assert are unverified until a first run shows the log.
+- Not done: thank-you research (item 2) and upstream repository research (item 5) - Steam answered HTTP 429
+  to eight parallel page reads; to redo one page at a time.
