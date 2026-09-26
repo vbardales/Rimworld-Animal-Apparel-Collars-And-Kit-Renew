@@ -17,7 +17,7 @@ generator's `--about-from-description`, read the diff, before the first CI publi
 UNOFFICIAL. This mod is published without the original author's explicit consent.
 If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on [Animal Apparel: Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850) by Ingendum.
+Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on [Animal Apparel: Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850).
 
 Dylan's Animal Gear is being retired, and its successor declares itself incompatible with it. The day you switch frameworks, everything built on the old one stops. This mod carries that content across.
 
@@ -54,7 +54,7 @@ Code, XML patches, tests and documentation were written with Claude (Anthropic) 
 
 ## Thanks
 
-The six authors above and jptrrs; Ingendum, for Animal Apparel: Framework and Basic Armor; Owlchemist; Dylan, for the original Animal Gear. Harmony, and the development-only test tools Pickle and RimLogging, never a dependency of this mod.
+The six authors above and jptrrs; s_m_w, for Animal Apparel: Framework and Basic Armor; Owlchemist; Dylan, for the original Animal Gear. Harmony, and the development-only test tools Pickle and RimLogging, never a dependency of this mod.
 
 Credits, licence scope and the source-by-source assessment are in ATTRIBUTION.md and LICENSE (MIT for original contributions and Animal Equipment only).
 
@@ -112,7 +112,7 @@ item is public. Recipients still to resolve by reading their pages (Continued pa
 
 | Recipient | Workshop ID | Register state |
 |---|---:|---|
-| Animal Apparel: Framework (Ingendum) | 3513825850 | absent: add a `drafted` row |
+| Animal Apparel: Framework (s_m_w) | 3513825850 | absent: add a `drafted` row |
 | Dog Collars (Shenanigans) | 2644644983 | absent |
 | Animal Diapers (Dipsy) | 2817510684 | absent (Dipsy offered to fix it on 2025-06-14: read the page first) |
 | Animal Turret Packs | 3053702877 | absent |
@@ -130,7 +130,7 @@ hidden `[url=]` link to this mod, 150 to 350 characters, at most three a day.
 
 Commit nothing new for the ID (already in `da1df6e`). Remove the 1400 generated `.dds` from `Mod/` first.
 Then `PUBLISHING.md`: dry-run of the exact SHA, `dispatch-publish.sh`, Virginie approves `steam-production`.
-Visibility, comment subscription and "Watch all activity" (this mod and Ingendum's framework) are hers, by hand.
+Visibility, comment subscription and "Watch all activity" (this mod and s_m_w's framework) are hers, by hand.
 
 ## Research notes, 2026-09-26 (Workshop pages read one at a time)
 
@@ -140,7 +140,7 @@ it appears on all of them, including ones that are plainly live; treat it as an 
 
 | Page | Author on the page | Last update | Replies to comments | Source link |
 |---|---|---|---|---|
-| Animal Apparel: Framework (3513825850) | s_m_w (credited here as Ingendum: check which name the author wants) | 2024-08-23 as summarised, to check | yes | none |
+| Animal Apparel: Framework (3513825850) | s_m_w (confirmed by the owner, 2026-09-26; the packageId prefix is Ingendum) | 2024-08-23 as summarised, to check | yes | none |
 | Animal Equipment (2568865984) | Owlchemist | 2023-03-06 | inactive; commenters say it "works just fine in 1.6" and mention Basic Armor as a successor | `ohgodspidersno/ohgodspidersno-rimworld-vanilla-animal-armor` |
 | Dog Collars (2644644983) | Shenanigans | 2022-11-06 | no | none |
 | Animal Diapers (2817510684) | Dipsy | 2022-06-06 | limited (2025 offer to fix it) | none |
@@ -175,5 +175,5 @@ Your Malinois patch turned out to be Dog Collars plus one animal, so it is now o
 The goat mail is the only part I took, the strongest goat stays yours ^^ Thanks for the armour art. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806765840]Animal Apparel: Collars and Kit Renew[/url]
 ```
 
-Animal Apparel: Framework (s_m_w / Ingendum) and the three unanswered authors (Shenanigans, flango/Ogam, Riful):
+Animal Apparel: Framework (s_m_w) and the three unanswered authors (Shenanigans, flango/Ogam, Riful):
 no draft yet, to write after reading their latest comments live.

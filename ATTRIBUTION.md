@@ -2,13 +2,13 @@
 
 A migration of six **Animal Gear** add-ons, plus the unfinished half of a seventh mod,
 onto **[Animal Apparel: Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850)**
-by **Ingendum**.
+by **s_m_w**.
 
 ## Why this exists
 
 Dylan's **Animal Gear** ([1541438907](https://steamcommunity.com/sharedfiles/filedetails/?id=1541438907))
 still declares 1.0 through 1.6 and still works, but its author is retiring it. Its successor,
-Ingendum's Animal Apparel: Framework, declares
+s_m_w's Animal Apparel: Framework, declares
 
 ```xml
 <incompatibleWith><li>Dylan.AnimalGear</li></incompatibleWith>
@@ -171,7 +171,7 @@ last commit March 2023, source at
 *Animal Armor: Vanilla*, and the licence file travelled with it. Reproduced in `LICENSE`, as the MIT
 terms require.
 
-**Only the half that Ingendum has not redone.** Animal Apparel: Basic Armor rewrote Owlchemist's
+**Only the half that s_m_w has not redone.** Animal Apparel: Basic Armor rewrote Owlchemist's
 flak and plate tiers for the new framework and stopped there — but it still ships his art for
 everything else, sitting unreferenced by any def in the game:
 
@@ -199,8 +199,8 @@ repository. Owlchemist never added the tag to go with the horse art; it is added
 
 ## Also credited
 
-- **Ingendum**, for Animal Apparel: Framework and Basic Armor, which this is built on.
-- **Owlchemist** again, whose fork of Dylan's Animal Gear was Ingendum's starting point.
+- **s_m_w** (whose packageId prefix is Ingendum), for Animal Apparel: Framework and Basic Armor, which this is built on.
+- **Owlchemist** again, whose fork of Dylan's Animal Gear was s_m_w's starting point.
 
 ## Not migrated, and why
 
@@ -223,7 +223,7 @@ made. Checked on 2026-09-11:
 | AA Animal Gear for Fancy Rats, by ArmoredAmpharos | 3142386946 | 1.4 1.5 1.6 |
 | AA Animal Gear for Super Rats, by ArmoredAmpharos | 3142211574 | 1.4 1.5 1.6 |
 
-Both still name `Dylan.AnimalGear` under `<modDependencies>`, and neither mentions Ingendum
+Both still name `Dylan.AnimalGear` under `<modDependencies>`, and neither mentions s_m_w
 anywhere.
 
 **pphhyy's Demigryphs Continued** ([3540496928](https://steamcommunity.com/sharedfiles/filedetails/?id=3540496928))
@@ -247,3 +247,10 @@ If they never do move, the same recipe applies.
 
 If any of the authors named above would rather their work were not republished, say so and it comes
 down, without argument. The `<author>` field and this file name every one of them.
+
+The framework page (Workshop 3513825850) shows its author as **s_m_w**; the packageIds of both
+frameworks keep the prefix `Ingendum`. Its credits, as displayed on the page: Dylan, the creator of Animal
+Gear, said he does not mind someone continuing his mod, and the framework is a from-scratch implementation;
+Owlchemist allowed the framework's author to use the sprites of Animal Equipment in Animal Apparel: Basic
+Armor. That permission was given to Basic Armor's author; this project relies on Animal Equipment's own
+MIT licence for the same art, not on that permission.
