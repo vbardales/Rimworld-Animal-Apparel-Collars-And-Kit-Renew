@@ -344,3 +344,19 @@ versions, language, save and log path in the result. Keep the existing scenarios
 
 The technical Scribe test verifies serialization outside Unity. It does not certify
 steps 1-8 or RIMMSQOL UI compatibility; record actual expected/observed outcomes here.
+
+## Criteria for `tested` (AUDIT.md, 2026-09-26)
+
+- No scenario left `@wip`: repaired and replayed, or deleted with its reason.
+- Every conditional scenario (`@requires:<packageId>`) has run, with a pass map that mounts that mod;
+  a skipped scenario is not a passed one.
+- No manual test left to validate: each of A-K is automated and green, or listed as not applicable with its reason.
+- Pickle suites run and green, `@review` captures opened, `exitReason` read before the numbers.
+
+## Evidence to keep
+
+Evidence lives on disk (`Tests/Pickle/Evidence/`, `evidence/`), ignored by git. Keep only, per scenario,
+the latest `summary.json` and `junit.xml` for the revision now in the repository, the `@review` captures that
+prove a claim, and `Player.log` if it is the sole proof of a check. Delete the rest as soon as a newer report
+replaces it (never `report.html`, `messages.ndjson` or a superseded build). One text line per run goes in
+`docs/runs/`. No evidence exists yet: no game run has taken place.
