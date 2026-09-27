@@ -31,3 +31,6 @@ desktop.ini
 # Test evidence stays on disk, never in git (see TESTING.md, "Evidence to keep").
 Tests/Pickle/Evidence/
 evidence/
+
+# Folder display icons (Windows), not part of the mod.
+*.ico
