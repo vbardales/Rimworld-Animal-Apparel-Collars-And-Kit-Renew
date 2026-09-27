@@ -641,3 +641,16 @@ to a named animal. Fixed: two more local steps, `Animal Apparel Collars: the cam
 "<name>"` (`Find.CameraDriver.JumpToCurrentMapLoc`) and `... the camera can see "<name>"`
 (`CameraDriver.CurrentViewRect.Contains`), both looking the pawn up on the map like the rest of this file;
 `I zoom all the way in` stays Pickle's own, since it takes no name. All four features updated.
+
+## The captures were empty because the spawn point was fogged — 2026-09-27 (ab10)
+
+`ab10` passed 11/11 real scenarios, 13 skipped by requirement, but opening all 7 `@review` captures
+(AUDIT: a green `@review` proves the trip, not the image) showed the same blank, unlit ground reading
+"Undiscovered" as before the camera fix. The camera fix was not wrong, but it could not fix this: RimWorld
+never draws terrain or pawns in a cell the player has never uncovered, and (60, 60) had no reason to sit
+inside the "test-colony" fixture's small revealed home area. "the camera can see" only checks that a cell
+coordinate lies inside the view rect - a tautology once the camera is centred on that same coordinate, not
+proof anything is rendered there. Fixed at the source: a new step, `a tame "<kind>" named "<name>" exists
+near the colony`, spawns the animal at `CellFinder.RandomClosewalkCellNear` a free colonist's position
+instead of a fixed cell, guaranteeing a revealed, walkable spot. All nine features updated; none of the
+prior captures are usable and must be replaced.

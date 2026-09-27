@@ -64,8 +64,14 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(avgA < avgB, $"'{armoured}' takes {avgA:F2} on average and '{bare}' takes {avgB:F2} from {hits} cuts of {damage}: the armour is not counted");
         }
 
-        [Given("Animal Apparel Collars: a tame {string} named {string} exists at \\({int}, {int}\\)")]
-        public void TameAnimalExists(PickleContext ctx, string kindDefName, string nickname, int x, int z)
+        // Found on 2026-09-27 (ab10): every @review capture showed a blank, unlit patch of ground reading
+        // "Undiscovered", although the camera really was centred on the spawned pawn (the "can see" check
+        // is a coordinate check, not proof of rendering). A fixed cell such as (60, 60) has no reason to sit
+        // inside the small fixture's revealed home area, and RimWorld does not draw anything - terrain or
+        // pawns - in a cell the player has never uncovered. Spawning next to an existing colonist instead
+        // guarantees a revealed, walkable cell.
+        [Given("Animal Apparel Collars: a tame {string} named {string} exists near the colony")]
+        public void TameAnimalExistsNearColony(PickleContext ctx, string kindDefName, string nickname)
         {
             Map map = Find_.Map();
             ctx.Require(map != null, "there is no current map: load a save first");
@@ -76,12 +82,15 @@ namespace AnimalApparelCollars.PickleSteps
                 return;
             }
 
+            Pawn anchor = map.mapPawns.FreeColonists.FirstOrDefault();
+            ctx.Require(anchor != null, "no free colonist on the map to spawn the animal near");
+            IntVec3 cell = CellFinder.RandomClosewalkCellNear(anchor.Position, map, 5);
+            ctx.Require(cell.IsValid, $"could not find a walkable cell near {anchor.Position}");
+
             Pawn pawn = PawnGenerator.GeneratePawn(kind, Faction.OfPlayer);
             pawn.Name = new NameSingle(nickname);
-            IntVec3 cell = new IntVec3(x, 0, z);
-            ctx.Require(cell.InBounds(map), $"cell ({x}, {z}) is outside the map");
             GenSpawn.Spawn(pawn, cell, map);
-            ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn at ({x}, {z})");
+            ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn near {anchor.Position}");
             EnsureTrackers(pawn);
             ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker even after the framework's EnsureInitApparelTrackers");
         }

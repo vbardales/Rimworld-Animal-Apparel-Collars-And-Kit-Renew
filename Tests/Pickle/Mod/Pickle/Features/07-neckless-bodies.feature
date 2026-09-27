@@ -7,7 +7,7 @@ Feature: Animal Apparel Collars and Kit Renew, bodies without a neck
   @review
   Scenario: Animal Apparel Collars: a snake wears the test collar
     Given the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "Cobra" named "Cobra" exists at (60, 60)
+    And Animal Apparel Collars: a tame "Cobra" named "Cobra" exists near the colony
     When Animal Apparel Collars: "Cobra" is dressed in "Pickle_TestNeckCollar"
     Then Animal Apparel Collars: "Cobra" is wearing "Pickle_TestNeckCollar"
     And Animal Apparel Collars: "Cobra" apparel covers "AnimalNeck"
@@ -19,7 +19,7 @@ Feature: Animal Apparel Collars and Kit Renew, bodies without a neck
 
   Scenario: Animal Apparel Collars: a megaspider wears the test collar
     Given the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "Megaspider" named "Megaspider" exists at (60, 60)
+    And Animal Apparel Collars: a tame "Megaspider" named "Megaspider" exists near the colony
     When Animal Apparel Collars: "Megaspider" is dressed in "Pickle_TestNeckCollar"
     Then Animal Apparel Collars: "Megaspider" is wearing "Pickle_TestNeckCollar"
     And Animal Apparel Collars: "Megaspider" apparel covers "AnimalNeck"
@@ -27,7 +27,7 @@ Feature: Animal Apparel Collars and Kit Renew, bodies without a neck
 
   Scenario: Animal Apparel Collars: a tortoise wears the test collar
     Given the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "Tortoise" named "Tortoise" exists at (60, 60)
+    And Animal Apparel Collars: a tame "Tortoise" named "Tortoise" exists near the colony
     When Animal Apparel Collars: "Tortoise" is dressed in "Pickle_TestNeckCollar"
     Then Animal Apparel Collars: "Tortoise" is wearing "Pickle_TestNeckCollar"
     And Animal Apparel Collars: "Tortoise" apparel covers "AnimalNeck"

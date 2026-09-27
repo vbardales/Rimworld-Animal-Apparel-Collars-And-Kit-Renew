@@ -9,7 +9,7 @@ Feature: Animal Apparel Collars and Kit Renew, the VAE gorilla and Odyssey
   Scenario: Animal Apparel Collars: without Odyssey the VAE gorilla exists and wears the diaper
     Given mod "ludeon.rimworld.odyssey" is not loaded
     And the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "AEXP_Gorilla" named "AEXP_Gorilla" exists at (60, 60)
+    And Animal Apparel Collars: a tame "AEXP_Gorilla" named "AEXP_Gorilla" exists near the colony
     When Animal Apparel Collars: "AEXP_Gorilla" is dressed in "diaper"
     Then Animal Apparel Collars: "AEXP_Gorilla" is wearing "diaper"
     And no errors were logged

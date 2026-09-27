@@ -23,7 +23,7 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
   @review
   Scenario: Animal Apparel Collars: a fox wears a collar and a helmet at once
     Given the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "Fox_Arctic" named "Fox_Arctic" exists at (60, 60)
+    And Animal Apparel Collars: a tame "Fox_Arctic" named "Fox_Arctic" exists near the colony
     When Animal Apparel Collars: "Fox_Arctic" is dressed in "Apparel_leatherdogcollar"
     And Animal Apparel Collars: "Fox_Arctic" is dressed in "Apparel_SmallAnimalPowerArmorHelmet"
     Then Animal Apparel Collars: "Fox_Arctic" is wearing "Apparel_leatherdogcollar"
@@ -46,7 +46,7 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
   # the collar is really gone rather than trusting an automatic drop to have worked.
   Scenario: Animal Apparel Collars: a full-body suit does not coexist with the collar
     Given the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "Fox_Arctic" named "SuitedFox" exists at (60, 60)
+    And Animal Apparel Collars: a tame "Fox_Arctic" named "SuitedFox" exists near the colony
     When Animal Apparel Collars: "SuitedFox" is dressed in "Apparel_leatherdogcollar"
     Then Animal Apparel Collars: "SuitedFox" is wearing "Apparel_leatherdogcollar"
     When Animal Apparel Collars: "SuitedFox" is stripped of its apparel
@@ -61,7 +61,7 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
   @review
   Scenario: Animal Apparel Collars: every dog collar is drawn without a missing graphic
     Given the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "Husky" named "Husky" exists at (60, 60)
+    And Animal Apparel Collars: a tame "Husky" named "Husky" exists near the colony
     When Animal Apparel Collars: the camera is centered on "Husky"
     And I zoom all the way in
     Then Animal Apparel Collars: the camera can see "Husky"
@@ -80,7 +80,7 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
 
   Scenario: Animal Apparel Collars: the diaper is worn and drawn
     Given the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "Husky" named "Husky" exists at (60, 60)
+    And Animal Apparel Collars: a tame "Husky" named "Husky" exists near the colony
     When Animal Apparel Collars: "Husky" is dressed in "diaper"
     Then Animal Apparel Collars: "Husky" is wearing "diaper"
     And no errors were logged

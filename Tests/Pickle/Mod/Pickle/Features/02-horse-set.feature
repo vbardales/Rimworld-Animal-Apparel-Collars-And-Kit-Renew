@@ -4,7 +4,7 @@ Feature: Animal Apparel Collars and Kit Renew, horse set
   @review
   Scenario: Animal Apparel Collars: a horse wears barding, chanfron and saddle together
     Given the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "Horse" named "Horse" exists at (60, 60)
+    And Animal Apparel Collars: a tame "Horse" named "Horse" exists near the colony
     When Animal Apparel Collars: "Horse" is dressed in "Apparel_MedievalHorsePlate"
     And Animal Apparel Collars: "Horse" is dressed in "Apparel_MedievalHorseHelmet"
     And Animal Apparel Collars: "Horse" is dressed in "Apparel_MedievalHorseSaddle"
@@ -20,7 +20,7 @@ Feature: Animal Apparel Collars and Kit Renew, horse set
   @review
   Scenario: Animal Apparel Collars: universal clothing and a scarf are drawn on a cow
     Given the save "test-colony" is loaded
-    And Animal Apparel Collars: a tame "Cow" named "Cow" exists at (60, 60)
+    And Animal Apparel Collars: a tame "Cow" named "Cow" exists near the colony
     When Animal Apparel Collars: "Cow" is dressed in "Apparel_LargeAnimalScarf"
     And Animal Apparel Collars: the camera is centered on "Cow"
     And I zoom all the way in
