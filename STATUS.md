@@ -562,3 +562,14 @@ power-armour helmet on `Fox_Arctic` (the only kind both defs' tags share), and k
 that asserts the suit **does** replace the collar, as documented behaviour. `TESTING.md` scenario B's
 "body piece" wording is best read as the VEF turret pack (scenario 03, `AnimalBody` only) or an
 external Basic Armor piece, not this mod's own full-body clothing.
+
+## Audit of the remaining features, 2026-09-27 (while 6b5c was queued)
+
+Checked every pairing in features 02, 03 and 07 against the real `<tags>` (not `descriptionHyperlinks`,
+which is a curated subset) and `<bodyPartGroups>`/`<layers>` of the defs used: Cow accepts
+`Apparel_LargeAnimalScarf` (AnimalHead only, single item, no combo); Muffalo carries
+`ATP_Apparel_LargeTurret`, which has no species tag at all (any animal); the horse set's three pieces
+(plate: AnimalBody+Neck+Legs/Middle, helmet: AnimalHead/Shell, saddle: AnimalBody/Shell) pairwise
+share no (bodyPartGroup, layer) combination, so vanilla `ApparelUtility.CanWearTogether` keeps all three
+- confirmed from the def data, not from a run. No further "silently replaced" pairing found. Features 08
+and 09 use one apparel item per pawn, so the conflict class found in 01 does not apply to them.
