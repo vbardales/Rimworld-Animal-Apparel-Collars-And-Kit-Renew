@@ -546,3 +546,19 @@ Two runs, both `infrastructure-error`/`failed`, zero scenarios validating anythi
    stuffCategories`, logged by `Verse.DefDatabase.ErrorCheckAllDefs` at startup, in **every run so far**, offline
    XML tests included (they do not run `ErrorCheckAllDefs`). Removed the dead `costStuffCount`. XML suite still
    green (1273 assertions) after the fix. This was never caught before because only a running game checks it.
+
+## Second run failure explained — 2026-09-27 (3a5c, c624c9d)
+
+`3a5c` played its scenario this time (no infrastructure error): "'Husky' is not wearing
+'Apparel_LargeAnimalClothes'; it wears Apparel_leatherdogcollar". Read the defs: `AnimalClothesBase`
+and the power-armour bases (Animal Equipment) declare `bodyPartGroups` of `AnimalBody`, `AnimalNeck`
+**and** `AnimalLegs` - full-body suits that legitimately include the neck. `Pawn_ApparelTracker.Wear`
+correctly dropped the older, conflicting collar; this is vanilla behaviour for overlapping body-part
+groups, not a mod defect. Checked with a script over every `<bodyPartGroups>` block in `Mod/Defs/ThingDefs`:
+no shipped body-covering piece from Animal Equipment (clothes, power armour) excludes AnimalNeck; the
+only unconditional pairing that both ships without VEF and genuinely does not conflict with a collar is
+a helmet (`AnimalHead` only). Fixed the suite, not the mod: scenario 01 now pairs a collar with the
+power-armour helmet on `Fox_Arctic` (the only kind both defs' tags share), and keeps a second scenario
+that asserts the suit **does** replace the collar, as documented behaviour. `TESTING.md` scenario B's
+"body piece" wording is best read as the VEF turret pack (scenario 03, `AnimalBody` only) or an
+external Basic Armor piece, not this mod's own full-body clothing.
