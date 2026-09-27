@@ -121,6 +121,23 @@ namespace AnimalApparelCollars.PickleSteps
             }
         }
 
+        // Pickle's own "I move the camera to {string}" and "the camera can see {string}" resolve a player
+        // colonist by nickname, the same restriction that failed on "I dress" before this file existed.
+        [When("Animal Apparel Collars: the camera is centered on {string}")]
+        public void CenterCameraOn(PickleContext ctx, string nickname)
+        {
+            Pawn pawn = Require(ctx, nickname);
+            Verse.Find.CameraDriver.JumpToCurrentMapLoc(pawn.Position);
+        }
+
+        [Then("Animal Apparel Collars: the camera can see {string}")]
+        public void CameraCanSee(PickleContext ctx, string nickname)
+        {
+            Pawn pawn = Require(ctx, nickname);
+            ctx.Require(Verse.Find.CameraDriver.CurrentViewRect.Contains(pawn.Position),
+                $"the camera does not see '{nickname}' at {pawn.Position}; the view rect is {Verse.Find.CameraDriver.CurrentViewRect}");
+        }
+
         [Then("Animal Apparel Collars: {string} apparel covers {string}")]
         public void Covers(PickleContext ctx, string nickname, string groupDefName)
         {

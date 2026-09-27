@@ -11,8 +11,8 @@ Feature: Animal Apparel Collars and Kit Renew, with Vanilla Expanded Framework
     And Animal Apparel Collars: a tame "Muffalo" named "Muffalo" exists at (60, 60)
     When Animal Apparel Collars: "Muffalo" is dressed in "ATP_Apparel_LargeTurret"
     Then Animal Apparel Collars: "Muffalo" is wearing "ATP_Apparel_LargeTurret"
-    When I move the camera to "Muffalo"
+    When Animal Apparel Collars: the camera is centered on "Muffalo"
     And I zoom all the way in
-    Then the camera can see "Muffalo"
+    Then Animal Apparel Collars: the camera can see "Muffalo"
     When I take a screenshot "muffalo-turret-pack"
     Then no errors were logged

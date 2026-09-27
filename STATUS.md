@@ -628,3 +628,16 @@ to move the camera to the pawn by name (`I move the camera to "<name>"`), zoom a
 pack and the snake collar scenarios, both tagged `@review` but never actually capturing anything, and
 promoted the cow scarf scenario to `@review` since it also draws a texture. None of the four earlier
 captures have been re-opened yet; they are worthless and must be replaced by the next run's.
+
+## Third camera lesson, same family — 2026-09-27 (23d5)
+
+Full pass, 24 scenarios, 6 green, 5 red, 13 skipped by requirement. All 5 failures: "no pawn nicknamed
+'<X>'" (Fox_Arctic, Husky, Horse, Cow, Cobra), players present Jet/Larson/Morrison. Cause: my own fix for
+the empty captures (4e9e) replaced the bare-cell camera jump with Pickle's own `I move the camera to
+{string}` and `the camera can see {string}` - both of which resolve a player COLONIST by nickname, the
+exact restriction that made "I dress"/"is wearing" fail on `ae0c`/`cccf`, now hitting the camera steps
+instead. Third time this collection of native Pickle steps has turned out to be colonist-only when applied
+to a named animal. Fixed: two more local steps, `Animal Apparel Collars: the camera is centered on
+"<name>"` (`Find.CameraDriver.JumpToCurrentMapLoc`) and `... the camera can see "<name>"`
+(`CameraDriver.CurrentViewRect.Contains`), both looking the pawn up on the map like the rest of this file;
+`I zoom all the way in` stays Pickle's own, since it takes no name. All four features updated.

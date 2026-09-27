@@ -11,9 +11,9 @@ Feature: Animal Apparel Collars and Kit Renew, bodies without a neck
     When Animal Apparel Collars: "Cobra" is dressed in "Pickle_TestNeckCollar"
     Then Animal Apparel Collars: "Cobra" is wearing "Pickle_TestNeckCollar"
     And Animal Apparel Collars: "Cobra" apparel covers "AnimalNeck"
-    When I move the camera to "Cobra"
+    When Animal Apparel Collars: the camera is centered on "Cobra"
     And I zoom all the way in
-    Then the camera can see "Cobra"
+    Then Animal Apparel Collars: the camera can see "Cobra"
     When I take a screenshot "cobra-test-collar"
     Then no errors were logged
 
