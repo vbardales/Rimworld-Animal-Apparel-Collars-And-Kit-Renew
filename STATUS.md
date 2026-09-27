@@ -613,3 +613,18 @@ dropped apparel needing a claimable/reachable cell that a bare spawn point does 
 of spawning outside normal map generation is `unverified`, and chasing it further was not this scenario's
 job. Scenario rewritten to strip explicitly (`pawn.apparel.Remove`, which places nothing) instead of relying
 on `Wear`'s automatic drop, and to check the collar is actually gone before dressing the suit.
+
+## Green run, worthless captures — 2026-09-27 (4e9e)
+
+`4e9e` passed 5/5, `exitReason: passed`. Opened the four `@review` captures before crediting anything
+(AUDIT.md: a green `@review` scenario proves the trip happened, not that the image shows anything). All
+four showed the same thing: an empty brown patch of ground, the colonist bar, and "Undiscovered" in the
+bottom-left corner - no animal, no apparel, nothing the scenario claimed to prove. `I move the camera to
+(60, 60)` had jumped to a map cell, not to the spawned pawn, and the default zoom was far enough out (or
+the cell far enough from the pawn) that nothing readable was in frame. This is exactly the failure mode
+`AUDIT.md` names: a vert here would have certified nothing. Fixed every `@review` scenario (01, 02, 03, 07)
+to move the camera to the pawn by name (`I move the camera to "<name>"`), zoom all the way in, and assert
+`the camera can see "<name>"` before the screenshot - also added a missing screenshot to the muffalo turret
+pack and the snake collar scenarios, both tagged `@review` but never actually capturing anything, and
+promoted the cow scarf scenario to `@review` since it also draws a texture. None of the four earlier
+captures have been re-opened yet; they are worthless and must be replaced by the next run's.

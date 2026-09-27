@@ -30,8 +30,10 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     And Animal Apparel Collars: "Fox_Arctic" is wearing "Apparel_SmallAnimalPowerArmorHelmet"
     And Animal Apparel Collars: "Fox_Arctic" apparel covers "AnimalNeck"
     And Animal Apparel Collars: "Fox_Arctic" apparel covers "AnimalHead"
-    When I move the camera to (60, 60)
-    And I take a screenshot "fox-collar-and-helmet"
+    When I move the camera to "Fox_Arctic"
+    And I zoom all the way in
+    Then the camera can see "Fox_Arctic"
+    When I take a screenshot "fox-collar-and-helmet"
     Then no errors were logged
 
   # Found on 2026-09-27 (beea): letting Wear() drop the conflicting collar on its own
@@ -60,8 +62,10 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
   Scenario: Animal Apparel Collars: every dog collar is drawn without a missing graphic
     Given the save "test-colony" is loaded
     And Animal Apparel Collars: a tame "Husky" named "Husky" exists at (60, 60)
-    When I move the camera to (60, 60)
-    And Animal Apparel Collars: "Husky" is dressed in "Apparel_dogbow"
+    When I move the camera to "Husky"
+    And I zoom all the way in
+    Then the camera can see "Husky"
+    When Animal Apparel Collars: "Husky" is dressed in "Apparel_dogbow"
     Then Animal Apparel Collars: "Husky" is wearing "Apparel_dogbow"
     When I take a screenshot "husky-dogbow"
     And Animal Apparel Collars: "Husky" is stripped of its apparel
