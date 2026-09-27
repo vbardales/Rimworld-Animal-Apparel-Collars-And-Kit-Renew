@@ -2,14 +2,14 @@
 <ModMetaData>
   <name>Animal Apparel: Collars and Kit Renew - Pickle tests</name>
   <author>Nelim</author>
-  <packageId>nelim.animalapparelcollarsandkitrenew.pickletests</packageId>
+  <packageId>nelim.animalapparelcollarsandkit.pickletests</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
   <description>In-game functional tests for Animal Apparel: Collars and Kit Renew, run by Pickle. Development only: never published.</description>
   <modDependencies>
     <li>
-      <packageId>nelim.animalapparelcollarsandkitrenew</packageId>
+      <packageId>nelim.animalapparelcollarsandkit</packageId>
       <displayName>Animal Apparel: Collars and Kit Renew (unofficial)</displayName>
     </li>
     <li>
@@ -19,7 +19,7 @@
     </li>
   </modDependencies>
   <loadAfter>
-    <li>nelim.animalapparelcollarsandkitrenew</li>
+    <li>nelim.animalapparelcollarsandkit</li>
     <li>rimworks.pickle</li>
   </loadAfter>
 </ModMetaData>

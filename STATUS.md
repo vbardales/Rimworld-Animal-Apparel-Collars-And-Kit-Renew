@@ -9,7 +9,7 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 mod:          Animal Apparel: Collars and Kit Renew (unofficial)
-packageId:    nelim.animalapparelcollarsandkitrenew
+packageId:    nelim.animalapparelcollarsandkit
 repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 visibility:   public
 detached:     yes
@@ -589,3 +589,15 @@ vanilla, and the earlier explanation just stopped reading `Wear` one check too e
 uses `Fox_Arctic` (in both the collar's and `Apparel_SmallAnimalClothes`' species lists) to show a genuine
 body-group replacement. The collar+helmet scenario (also on `Fox_Arctic`) already passed at `6b5c`, consistent
 with this reading: same species gate, no conflict, both stay on.
+
+## packageId changed — 2026-09-27
+
+`nelim.animalapparelcollarsandkitrenew` -> `nelim.animalapparelcollarsandkit` (owner's decision: drop
+"renew"). Safe now because the 0.1.0 prepublication (item 3806765840) is private and untested; per
+PUBLISHING.md a packageId is "UN SEUL COUP" only once real subscribers exist. Updated everywhere it
+appeared: `Mod/About/About.xml`, `.github/publish.config.json`, `Tests/Pickle/Mod/About/About.xml` (and
+its own `.pickletests` suffix), the two Pickle features that name the packageId, `Tests/Pickle/README.md`,
+`PUBLICATION.md`, `TESTING.md`. Display name, folder name and repository name are unchanged. `About.xml`
+description re-synced from `PUBLICATION.md` (unchanged, no packageId in the prose); XML suite still green
+(1273 assertions). The next Steam upload will carry the new packageId to the same item id (3806765840);
+nothing currently depends on the old one.

@@ -7,4 +7,4 @@ Feature: Animal Apparel Collars and Kit Renew, clean load
 
   Scenario: Animal Apparel Collars: the load of the mod is clean
     Given the save "test-colony" is loaded
-    Then Nelim's Pickle Tools: the load of the mod "nelim.animalapparelcollarsandkitrenew" is clean
+    Then Nelim's Pickle Tools: the load of the mod "nelim.animalapparelcollarsandkit" is clean

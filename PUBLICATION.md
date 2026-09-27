@@ -1,7 +1,7 @@
 # Publication: Animal Apparel: Collars and Kit Renew (unofficial)
 
 Workshop item `3806765840` (private, created by the 0.1.0 prepublication of 2026-09-23). Package
-`nelim.animalapparelcollarsandkitrenew`. Repository
+`nelim.animalapparelcollarsandkit`. Repository
 `vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew`. Status: not publishable yet, see
 STATUS.md (`stage: preTest`; the Pickle suite is written, `steam-production` exists, no game run yet).
 

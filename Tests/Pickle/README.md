@@ -1,7 +1,7 @@
 # Pickle suite: Animal Apparel: Collars and Kit Renew
 
 Written, **never run**. Nothing here is a pass until a report says so (`exitReason` first).
-Companion `nelim.animalapparelcollarsandkitrenew.pickletests`. Launch only by filing a request
+Companion `nelim.animalapparelcollarsandkit.pickletests`. Launch only by filing a request
 (`Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1`); never start RimWorld directly.
 Put the tested SHA in `-Label`, and give a fresh `-EvidenceDir` under `Tests/Pickle/Evidence/`.
 

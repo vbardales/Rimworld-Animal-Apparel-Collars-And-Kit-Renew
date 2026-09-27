@@ -83,7 +83,7 @@ Ingendum.AnimalArmorBasic          Animal Apparel: Basic Armor               (sc
 OskarPotocki.VanillaFactionsExpanded.Core   Vanilla Expanded Framework       (scenario E)
 MemeGoddess.GiddyUp                Giddy-Up 2                               (scenario D)
 CETeam.CombatExtended              Combat Extended                          (scenario F)
-nelim.animalapparelcollarsandkitrenew       this mod                        always last
+nelim.animalapparelcollarsandkit       this mod                        always last
 ```
 
 **Dylan's Animal Gear must be OFF in every scenario.** The framework itself declares

@@ -75,4 +75,4 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     Given the save "test-colony" is loaded
     When I wait 1800 ticks
     Then no errors were logged
-    And no warnings from mod "nelim.animalapparelcollarsandkitrenew"
+    And no warnings from mod "nelim.animalapparelcollarsandkit"
