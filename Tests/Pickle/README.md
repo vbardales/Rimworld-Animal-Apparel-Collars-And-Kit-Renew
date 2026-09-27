@@ -81,3 +81,13 @@ Later on 2026-09-26: `EnsureTrackers` now calls the framework's own `AnimalGearH
 compares the damage two identical huskies take from repeated cuts (`ArmorUtility.GetPostArmorDamage`), one in
 `Apparel_SmallAnimalPowerArmor`. Whether the core body part carries the `AnimalBody` group the armour covers is not
 established; if the numbers are equal the scenario says so and the armour is not counted for that part.
+
+## Second finding while waiting, 2026-09-27 (before 3d91's report): the three-collar scenario proved nothing
+
+The dogbow/studded/shield scenario dressed all three in a row without checking or stripping between them.
+All three declare `AnimalNeck` on the `OnSkin` layer, the same slot: each `Dress` silently replaced the
+previous one, so only the last collar (shield) was ever worn, and its screenshot was the only real graphic
+check. The other two were dressed, immediately dropped, and never verified. Not caught by any prior run.
+Fixed: a new local step, `Animal Apparel Collars: "<name>" is stripped of its apparel` (Pickle's own "I strip"
+resolves a player colonist only, the same lookup that failed on an animal before this file existed), used
+between each dress so all three are actually worn and screenshotted in turn.

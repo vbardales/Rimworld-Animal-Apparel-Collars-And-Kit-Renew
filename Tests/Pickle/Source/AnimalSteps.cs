@@ -108,6 +108,19 @@ namespace AnimalApparelCollars.PickleSteps
                 string.Join(", ", pawn.apparel.WornApparel.Select(a => a.def.defName)));
         }
 
+        [When("Animal Apparel Collars: {string} is stripped of its apparel")]
+        public void Strip(PickleContext ctx, string nickname)
+        {
+            // Pickle's own "I strip" resolves a player colonist by nickname (the same lookup that failed on an
+            // animal before this file existed): this one uses the same animal-aware lookup as the rest here.
+            Pawn pawn = Require(ctx, nickname);
+            ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
+            foreach (Apparel apparel in pawn.apparel.WornApparel.ToList())
+            {
+                pawn.apparel.Remove(apparel);
+            }
+        }
+
         [Then("Animal Apparel Collars: {string} apparel covers {string}")]
         public void Covers(PickleContext ctx, string nickname, string groupDefName)
         {

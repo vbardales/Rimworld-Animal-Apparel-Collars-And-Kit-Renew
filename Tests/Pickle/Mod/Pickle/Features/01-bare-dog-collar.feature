@@ -36,13 +36,26 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     Then Animal Apparel Collars: "Husky" is wearing "Apparel_LargeAnimalClothes"
     And no errors were logged
 
+  # The three collars below all claim AnimalNeck on the OnSkin layer, like the leather one: they
+  # are mutually exclusive by design (one neck, one collar), so dressing them one after another
+  # without stripping between each would silently leave only the last one worn and only its
+  # graphic checked - the other two would never be drawn or asserted. Strip between each.
+  @review
   Scenario: Animal Apparel Collars: every dog collar is drawn without a missing graphic
     Given the save "test-colony" is loaded
     And Animal Apparel Collars: a tame "Husky" named "Husky" exists at (60, 60)
-    When Animal Apparel Collars: "Husky" is dressed in "Apparel_dogbow"
+    When I move the camera to (60, 60)
+    And Animal Apparel Collars: "Husky" is dressed in "Apparel_dogbow"
+    Then Animal Apparel Collars: "Husky" is wearing "Apparel_dogbow"
+    When I take a screenshot "husky-dogbow"
+    And Animal Apparel Collars: "Husky" is stripped of its apparel
     And Animal Apparel Collars: "Husky" is dressed in "Apparel_studdeddogcollar"
+    Then Animal Apparel Collars: "Husky" is wearing "Apparel_studdeddogcollar"
+    When I take a screenshot "husky-studdedcollar"
+    And Animal Apparel Collars: "Husky" is stripped of its apparel
     And Animal Apparel Collars: "Husky" is dressed in "Apparel_shielddogcollar"
-    And I take a screenshot "husky-all-collars"
+    Then Animal Apparel Collars: "Husky" is wearing "Apparel_shielddogcollar"
+    When I take a screenshot "husky-shieldcollar"
     Then no errors were logged
 
   Scenario: Animal Apparel Collars: the diaper is worn and drawn
