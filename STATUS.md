@@ -654,3 +654,25 @@ proof anything is rendered there. Fixed at the source: a new step, `a tame "<kin
 near the colony`, spawns the animal at `CellFinder.RandomClosewalkCellNear` a free colonist's position
 instead of a fixed cell, guaranteeing a revealed, walkable spot. All nine features updated; none of the
 prior captures are usable and must be replaced.
+
+## First captures actually opened and read — 2026-09-27 (b186a01)
+
+`b186a01` passed 11/11 real scenarios, 13 skipped by requirement. All 7 `@review` captures opened and
+cropped/zoomed with ffmpeg (nearest-neighbour, to inspect 32px sprites without blurring):
+
+- **Confirmed drawn, clearly**: the leather collar on the fox and on the husky (a distinct band around the
+  neck); the studded collar on the husky; the horse's full barding set (a dark plate visibly covering the
+  body, drawn over the saddle); the teal scarf on the cow's head. These are real, positive evidence that the
+  restructured per-animal texture paths resolve for these species and pieces - not just "no error was logged."
+- **Inconclusive, not claimed as a defect**: the power-armour helmet on the fox and the test collar on the
+  cobra are not clearly distinguishable from the animal's own sprite at this resolution/zoom, though both
+  scenarios' own assertions (`is wearing`, `apparel covers`) passed and no error was logged. Whether this is
+  a rendering gap for those two specific pieces or just too small to see by eye is unresolved; worth a second
+  look with `-pickle-max-film-seconds` or a tighter in-game zoom later, not blocking anything now.
+- Shield collar capture (husky) not individually cropped; same visual family as the other two collars, no
+  reason to doubt it separately.
+
+This is the first time in this mod's history that a rendered per-animal texture has actually been looked at
+and confirmed, rather than inferred from "no error was logged." Scenarios A (framework alone) and B (collar +
+body piece) of TESTING.md now have real, if partial, visual evidence; C (neckless bodies) remains
+`unverified` for the visual half specifically because of the cobra ambiguity above.
