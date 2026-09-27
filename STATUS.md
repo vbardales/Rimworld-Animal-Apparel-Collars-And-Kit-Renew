@@ -528,3 +528,21 @@ the Odyssey gorilla pass. Nothing here claims a game run.
 - The queue request was refiled on `c7e099b`: `20260926-215415-438-bb85` (the earlier one, `ddc3`, was cancelled).
 - What remains for `done`: nothing written is missing; Settings.Tests and XML are green on the shipped payload.
   Combat and restart scenarios (E, G, H, J) stay unautomated: recorded as `unverified` for `tested`, not hidden.
+
+## First real Pickle attempt — 2026-09-27 (0dc8f18, 842981f)
+
+Two runs, both `infrastructure-error`/`failed`, zero scenarios validating anything yet, but each found a real defect.
+
+1. `ae0c` (0dc8f18): Pickle's own colonist-lookup steps cannot find an animal (fixed with local steps, see above).
+2. `cccf` (842981f): Pickle exited 2 at startup, before any scenario, on `System.ArgumentException: Invalid step
+   pattern` for `Animal Apparel Collars: a tame {string} named {string} exists at ({int}, {int})`. Cucumber
+   Expressions treat unescaped parentheses as an optional-text group, and a parameter inside one is rejected
+   (`PickleTools/Authoring/README.md` already warns: "parentheses mean optional text ... do not paste regex
+   syntax"). Fixed: `\(` `\)` around the coordinate pair, matching Pickle's own `I spawn a {string} pawn at
+   \({int}, {int}\)` (read in `RimWorks.Pickle.Vanilla.dll`, decompiled).
+3. **A genuine mod defect surfaced by the game log, independently of both suite bugs**: `Apparel_shielddogcollar`
+   (via `ShieldDogCollarBase`) carried `costStuffCount>25` with no `stuffCategories`, while a fixed `costList`
+   already supplies its ingredients — `Config error in Apparel_shielddogcollar: has costStuffCount but no
+   stuffCategories`, logged by `Verse.DefDatabase.ErrorCheckAllDefs` at startup, in **every run so far**, offline
+   XML tests included (they do not run `ErrorCheckAllDefs`). Removed the dead `costStuffCount`. XML suite still
+   green (1273 assertions) after the fix. This was never caught before because only a running game checks it.

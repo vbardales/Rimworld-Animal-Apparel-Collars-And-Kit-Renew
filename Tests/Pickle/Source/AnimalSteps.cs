@@ -64,7 +64,7 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(avgA < avgB, $"'{armoured}' takes {avgA:F2} on average and '{bare}' takes {avgB:F2} from {hits} cuts of {damage}: the armour is not counted");
         }
 
-        [Given("Animal Apparel Collars: a tame {string} named {string} exists at ({int}, {int})")]
+        [Given("Animal Apparel Collars: a tame {string} named {string} exists at \\({int}, {int}\\)")]
         public void TameAnimalExists(PickleContext ctx, string kindDefName, string nickname, int x, int z)
         {
             Map map = Find_.Map();

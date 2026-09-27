@@ -64,7 +64,6 @@
 			<EnergyShieldEnergyMax>1.1</EnergyShieldEnergyMax>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
-		<costStuffCount>25</costStuffCount>
 		<costList>
 			<ComponentIndustrial>2</ComponentIndustrial>
 			<Steel>45</Steel>
