@@ -601,3 +601,15 @@ its own `.pickletests` suffix), the two Pickle features that name the packageId,
 description re-synced from `PUBLICATION.md` (unchanged, no packageId in the prose); XML suite still green
 (1273 assertions). The next Steam upload will carry the new packageId to the same item id (3806765840);
 nothing currently depends on the old one.
+
+## Third attempt at the same scenario — 2026-09-27 (beea)
+
+Progress from `6b5c`: `PawnCanWear` now passes (Fox_Arctic is valid for `Apparel_SmallAnimalClothes`) and
+the conflict with the collar is correctly detected, but `Wear`'s own drop-on-conflict path failed:
+`Pawn_ApparelTracker.TryDrop` -> `ThingOwner.TryDrop` -> `GenPlace.TryPlaceThing` logged
+`Log.Error("... could not drop Apparel_leatherdogcollar...")` on a pawn freshly spawned at (60, 60) with
+nothing else nearby. Not diagnosed further: whether this is a real constraint (an unforbidden animal pawn's
+dropped apparel needing a claimable/reachable cell that a bare spawn point does not satisfy) or an artefact
+of spawning outside normal map generation is `unverified`, and chasing it further was not this scenario's
+job. Scenario rewritten to strip explicitly (`pawn.apparel.Remove`, which places nothing) instead of relying
+on `Wear`'s automatic drop, and to check the collar is actually gone before dressing the suit.
