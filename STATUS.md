@@ -676,3 +676,14 @@ This is the first time in this mod's history that a rendered per-animal texture 
 and confirmed, rather than inferred from "no error was logged." Scenarios A (framework alone) and B (collar +
 body piece) of TESTING.md now have real, if partial, visual evidence; C (neckless bodies) remains
 `unverified` for the visual half specifically because of the cobra ambiguity above.
+
+## VEF pass crashed at startup (SIGSEGV) — 2026-09-28 (bc8c)
+
+`bc8c` (avec-vef, VEF + LoadAudit staged) never wrote a report: the game crashed with signal 11 during
+early startup, right after `RimWorld 1.6.4871 rev600` and two "Fallback handler could not load library
+.../MonoBleedingEdge/x86_64/data-0x...so" lines, before any Def or patch of this mod loaded. This matches
+the signature AUDIT.md already recorded for two unrelated mods on 2026-09-25: a native crash in early
+engine/Mono startup, not inside gameplay code, cause not established as a mod fault. A harmless warning
+("needs <downloadUrl> and/or <steamWorkshopUrl>", about this mod's own test companion referencing itself)
+appears just before the crash and is unrelated to it. Not blamed on the mod or the suite; retrying once,
+per AUDIT's own reading of the same signature.
