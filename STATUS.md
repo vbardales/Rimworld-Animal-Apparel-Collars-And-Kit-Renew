@@ -573,3 +573,19 @@ which is a curated subset) and `<bodyPartGroups>`/`<layers>` of the defs used: C
 share no (bodyPartGroup, layer) combination, so vanilla `ApparelUtility.CanWearTogether` keeps all three
 - confirmed from the def data, not from a run. No further "silently replaced" pairing found. Features 08
 and 09 use one apparel item per pawn, so the conflict class found in 01 does not apply to them.
+
+## Correction of the previous entry — 2026-09-27 (6b5c)
+
+The "Second run failure explained" entry above was itself wrong on the mechanism, caught by the next run
+(`6b5c`): the fixed scenario still failed with the identical message, on a def (`Apparel_LargeAnimalClothes`)
+this time deliberately chosen to demonstrate a "legitimate replacement". Decompiling
+`RimWorld.Pawn_ApparelTracker.Wear` (Assembly-CSharp) settles it: `Wear` calls
+`newApparel.PawnCanWear(pawn, ignoreGender: true)` first, and returns immediately (logging a warning, not an
+error) if it is false, **before** ever checking body-group conflicts. `Apparel_LargeAnimalClothes` restricts by
+defName to large animals only (Cougar, Cow, Elephant, Horse, Megaspider, Megasloth, Muffalo, Panther, Thrumbo);
+a husky is not one, so the collar was never touched - it is a species refusal, not the body-group replacement the
+previous entry described. Nothing here was ever a mod defect: `PawnCanWear` and `CanWearTogether` are both
+vanilla, and the earlier explanation just stopped reading `Wear` one check too early. Fixed: the scenario now
+uses `Fox_Arctic` (in both the collar's and `Apparel_SmallAnimalClothes`' species lists) to show a genuine
+body-group replacement. The collar+helmet scenario (also on `Fox_Arctic`) already passed at `6b5c`, consistent
+with this reading: same species gate, no conflict, both stay on.
