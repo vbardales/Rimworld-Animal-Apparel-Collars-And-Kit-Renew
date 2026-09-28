@@ -769,3 +769,17 @@ loaded, which is why the scenario is green. Read this way, the claim of About/PU
 anything crafted from it, like any content mod") holds, and the property TESTING.md scenario H asks for holds: the game
 runs and re-saves cleanly afterwards. Not asserted (headless, no dialog): RimWorld's missing-def dialog itself. Also logged,
 harmless: "Pickle removal check did not load any content" (the companion has no Defs by design).
+
+## sans-facultatifs 27 scenarios, all red on "off main thread" — 2026-09-28 (7055, 245178a)
+
+0 passed, 13 failed, 14 skipped. Every failure is "Accessing map pawns off main thread" (`MapPawns.AssertMainThread`),
+12 of them as the scenario's own failure and one as a `Log.Error` from `Pickle.Vanilla` `SimSteps:53`
+(`ThoughtWorker_YoungstersMoodBase` recalculating a thought off the main thread). Read from `messages.ndjson`: in the
+first scenario the first step (`the save is loaded`) passes and the second step - the spawn step of this suite's own
+`AnimalSteps`, which reads `map.mapPawns` - fails with that message. Not attributed to the mod or to the suite:
+the very same spawn step ran green at 10:19 the same morning in `bb88` (removal chain, seq1) and in every earlier
+run since 09-27, and the TicketDispatcher reports the identical error the same day on other mods (A Certain Series
+French/Chinese, Ancient Chinese Beast) while the machine was paging under 12.9 GB of paged pool held by two orphaned
+`find /` processes (none of them this session's: `Get-Process find,grep,rg` is empty). Treated as infrastructure
+until a run on a quiet machine says otherwise. The render-tree step added in this revision therefore has NOT been
+exercised yet: no scenario got past its spawn step. To refile once the queue shows the machine healthy.
