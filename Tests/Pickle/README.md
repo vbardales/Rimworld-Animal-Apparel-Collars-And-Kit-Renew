@@ -11,7 +11,7 @@ Put the tested SHA in `-Label`, and give a fresh `-EvidenceDir` under `Tests/Pic
 | --- | --- |
 | 01 bare dog collar | AnimalNeck slot accepts collar + body piece; render path (`Failed to find graphic for` appears at draw time only); `@review` capture of layer order |
 | 02 horse set | Three pieces at once, Giddy-Up-free render path, cow scarf art from the released Animal Equipment |
-| 03 turret packs (VEF) | Pack def loads and is wearable with VEF present |
+| 03 turret packs (VEF) | Pack def loads, is wearable, and its verb deals real damage to a hostile target (MVCF Comp_VerbGiver called directly) |
 | 04 settings shortcut | Hidden by default, revealed by RIMMSQOL, opens the settings; a clean bar never draws it |
 
 Offline, not in Gherkin: XML patches and their branches, translation paths, settings values and
@@ -24,19 +24,17 @@ bodies in the XML suite; a Pickle version would need a test-only collar def).
 | --- | --- | --- |
 | minimal, English | none | 01, 02 (03, 04 skip by requirement) |
 | minimal, French | `-Language French` | 01, 02, `@review` captures read in French |
-| avec-vef | `-DepMap wsl-deps.avec-vef.map` | 01-03 |
-| avec-rimmsqol | `-DepMap wsl-deps.avec-rimmsqol.map` | 04 |
-| incompatible | not written | `incompatibleWith` (Dylan.AnimalGear and the seven sources): one pass each, asserting the symptom, still to write |
+| avec-vef | `-DepMap wsl-deps.avec-vef.map` | 01-03, 06 |
+| avec-rimmsqol | `-DepMap wsl-deps.avec-rimmsqol.map` | 04, 06 |
+| avec-animaux(-vae-separes/-sans-odyssey), avec-ce, avec-rimeffect(-renegade), avec-sos2, avec-androidtiers, avec-bunrace-core | see table below | 01, 02, 06-09 as applicable |
+| incompat-\<name\> (7) | `-DepMap wsl-deps.incompat-<name>.map` | feature 05, one scenario each |
 
 ## Not yet written or not automatable, all `unverified`
 
-- A pack actually firing, and the armour reducing a real hit (scenarios E and J of TESTING.md): needs
-  hostile/combat steps that do not exist yet.
 - Restart with gear worn (G) and removal of the mod from a save (H): needs a save handed between
   launches (`-Then`, `-ThenWithout`), not designed yet.
 - Combat Extended, Giddy-Up 2, Basic Armor, and the 21 animal mods: Workshop ids not yet resolved in
   a map. Nothing is invented; add them to `wsl-deps.*.map` once read from the installed About files.
-- The Odyssey gorilla regression (F): pass without `!ludeon.rimworld.odyssey`, not written.
 
 ## Assumptions to confirm on the first run
 
@@ -53,7 +51,7 @@ first run decides; a failure there is a suite defect, not a mod defect.
 | avec-ce | VEF, Combat Extended, LoadAudit | armour values would be CE's |
 | avec-rimeffect, avec-rimeffect-renegade | Rim-Effect Core / Renegade | exclusive; packageIds unverified |
 | avec-sos2, avec-androidtiers, avec-bunrace-core | one mod each | packageIds unverified, dependencies not resolved |
-| incompat-\<name\> (8) | one declared-incompatible mod each | feature 05, symptom strings unverified |
+| incompat-\<name\> (7) | one declared-incompatible source mod each | feature 05, "Adding duplicate" symptom confirmed by decompile (`Verse.DefDatabase<T>.Add`), not yet run |
 
 Feature 06 (LoadAudit) plays in every pass whose map stages the tool. Run each pass in English and in French.
 Skipped by requirement is not passed: check the counts.
@@ -91,3 +89,14 @@ check. The other two were dressed, immediately dropped, and never verified. Not 
 Fixed: a new local step, `Animal Apparel Collars: "<name>" is stripped of its apparel` (Pickle's own "I strip"
 resolves a player colonist only, the same lookup that failed on an animal before this file existed), used
 between each dress so all three are actually worn and screenshotted in turn.
+
+## Added 2026-09-28: confirmed incompatibility symptom, real turret fire, Dylan dropped from the suite
+
+Decompiled `Verse.DefDatabase<T>.Add`: the exact duplicate-def log line is `"Adding duplicate " +
+typeof(T) + " name: " + def.defName`, confirming feature 05's seven defName-collision scenarios (the
+strings chosen on 2026-09-26 already matched this). Dropped the eighth (Dylan's Animal Gear): neither
+RimWorld's own handling of `<incompatibleWith>` nor the framework's code (checked by decompile) gives
+this mod anything to assert in a running game - see AUDIT.md, "on ne teste pas le jeu". Feature 03 gained
+a second scenario that fires a turret pack's real verb (MVCF's `Comp_VerbGiver`/`VerbTracker`, found by
+name since MVCF is not a compile reference) at a hostile Thrumbo and checks its health actually drops,
+closing scenario E of TESTING.md. None of this has been run yet.

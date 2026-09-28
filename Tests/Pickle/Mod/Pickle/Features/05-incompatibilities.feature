@@ -1,9 +1,19 @@
 Feature: Animal Apparel Collars and Kit Renew, declared incompatibilities
 
   # One pass per incompatible mod (wsl-deps.incompat-<name>.map). Green means the documented symptom
-  # still occurs. UNVERIFIED DRAFT: the exact log text has never been observed. Run one pass, read its
-  # Player.log, then correct the matched strings. The seven source mods declare the same defNames,
-  # so a duplicate-def message is the expected symptom; Dylan's Animal Gear is refused by the framework.
+  # still occurs: the seven source mods declare the same defNames as this one, so loading either
+  # alongside it makes RimWorld's own def loader log a duplicate. Confirmed 2026-09-28 by decompiling
+  # Verse.DefDatabase<T>.Add (Assembly-CSharp): the exact line is
+  # `Log.Error("Adding duplicate " + typeof(T) + " name: " + def.defName)`, so "Adding duplicate" plus
+  # the shared defName is the real, not guessed, symptom. Still unrun: these scenarios need the source
+  # mod itself staged, and none of the seven is installed locally to verify against yet.
+  #
+  # Dylan's Animal Gear is NOT covered here. AUDIT.md's "on ne teste pas le jeu": whether RimWorld
+  # actually refuses, warns about, or silently loads two mods marked <incompatibleWith> is the engine's
+  # behaviour, not this mod's declaration - and nothing in the framework's own AnimalGear.dll (checked by
+  # decompile) runs a check against Dylan.AnimalGear either, so there is no in-game symptom of ours to
+  # assert. What this mod answers for is the declaration itself, in About.xml, which is a source-reading
+  # check, not a game scenario; not added to _tools/test-xml.ps1 without being asked.
 
   @allow-errors @requires:Shenanigans.DogCollars
   Scenario: Animal Apparel Collars: Dog Collars still declares the same defNames
@@ -39,8 +49,3 @@ Feature: Animal Apparel Collars and Kit Renew, declared incompatibilities
   Scenario: Animal Apparel Collars: Animal Equipment still declares the same defNames
     Given mod "Owlchemist.AnimalGear.Equipment" is loaded
     Then an error matching "Apparel_" was logged
-
-  @allow-errors @requires:Dylan.AnimalGear
-  Scenario: Animal Apparel Collars: Dylan's Animal Gear is still mounted next to the framework
-    Given mod "Dylan.AnimalGear" is loaded
-    Then mod "Ingendum.AnimalApparelFramework" is loaded

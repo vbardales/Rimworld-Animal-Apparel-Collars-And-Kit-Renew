@@ -699,3 +699,25 @@ CHANGELOG "Fixed, from the sources": the turret is drawn by MVCF's own renderer,
 LoadAudit passed, meaning no error/warning/unresolved reference attributable to this mod's packageId was
 found from game start to that point, and its Keyed translations matched the active (English) language.
 Scenario E of TESTING.md (a turret pack actually firing) remains unautomated and `unverified`.
+
+## Automating what was still manual — 2026-09-28
+
+Decompiled `Verse.DefDatabase<T>.Add`: the exact duplicate-def message is `"Adding duplicate " +
+typeof(T) + " name: " + def.defName`. The seven source-mod scenarios in feature 05 (strings chosen
+2026-09-26) already match it; not a guess anymore. Dropped Dylan's Animal Gear from the suite: neither
+RimWorld's handling of `<incompatibleWith>` nor the framework's own code (decompiled, no check found)
+gives this mod anything to assert in a running game - AUDIT.md's "on ne teste pas le jeu" applies
+directly. Its unused pass map was removed.
+
+Automated scenario E (a turret pack actually firing): two new local steps, a hostile pawn spawned on
+`Find.FactionManager.OfPirates` near the colony, and firing the pack's real verb by finding MVCF's
+`Comp_VerbGiver` on the worn apparel (by type name, MVCF is not a compile reference) and calling
+`VerbTracker.AllVerbs[0].TryStartCastOn(target)` directly - the same objects the game's own AI would
+use, without staging a real fight or drafting (which "on ne teste pas le jeu" also excludes: the
+decision to open fire is the engine's, the verb dealing damage once given a target is the mod's own
+apparel working as intended). A local `"<name>" health is below <int> percent` step fills the one gap
+in Pickle's own catalogue (`... is above ...` exists, the other direction does not). Compiled, 0
+errors. Never run.
+
+Still open, unautomated: restart with gear worn (G), removal on an existing save (H) - both need a
+save handed between two launches (`-Then`/`-ThenWithout`), not designed yet.

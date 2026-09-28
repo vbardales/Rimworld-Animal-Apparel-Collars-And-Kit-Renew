@@ -147,6 +147,68 @@ namespace AnimalApparelCollars.PickleSteps
                 $"the camera does not see '{nickname}' at {pawn.Position}; the view rect is {Verse.Find.CameraDriver.CurrentViewRect}");
         }
 
+        [Given("Animal Apparel Collars: a hostile {string} named {string} exists near the colony")]
+        public void HostileAnimalExistsNearColony(PickleContext ctx, string kindDefName, string nickname)
+        {
+            Map map = Find_.Map();
+            ctx.Require(map != null, "there is no current map: load a save first");
+            PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
+            ctx.Require(kind != null, $"no PawnKindDef '{kindDefName}'");
+            if (Find(nickname) != null)
+            {
+                return;
+            }
+
+            Pawn anchor = map.mapPawns.FreeColonists.FirstOrDefault();
+            ctx.Require(anchor != null, "no free colonist on the map to spawn the target near");
+            IntVec3 cell = CellFinder.RandomClosewalkCellNear(anchor.Position, map, 5);
+            ctx.Require(cell.IsValid, $"could not find a walkable cell near {anchor.Position}");
+
+            Faction pirates = Verse.Find.FactionManager.OfPirates;
+            ctx.Require(pirates != null, "no pirate faction in this game to make the target hostile");
+            Pawn pawn = PawnGenerator.GeneratePawn(kind, pirates);
+            pawn.Name = new NameSingle(nickname);
+            GenSpawn.Spawn(pawn, cell, map);
+            ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn near {anchor.Position}");
+        }
+
+        // Scenario E of TESTING.md: a turret pack must actually fire, not just draw. MVCF's own
+        // Comp_VerbGiver (a ThingComp on the worn apparel, not on the pawn) is not a compile-time reference
+        // of this companion, so it is found by name; VerbTracker and Verb are core Verse types once found.
+        // Notify_Worn(pawn) sets verb.caster when the apparel is worn through the patched path; setting it
+        // again here makes the assertion independent of whether that hook fired for a pawn dressed directly
+        // by this file's Wear() call.
+        [When("Animal Apparel Collars: {string} fires its turret pack at {string}")]
+        public void FireTurretPackAt(PickleContext ctx, string wearerNickname, string targetNickname)
+        {
+            Pawn wearer = Require(ctx, wearerNickname);
+            Pawn target = Require(ctx, targetNickname);
+            Apparel pack = wearer.apparel?.WornApparel.FirstOrDefault(
+                a => a.AllComps.Any(c => c.GetType().Name == "Comp_VerbGiver"));
+            ctx.Require(pack != null, $"'{wearerNickname}' wears no apparel with a Comp_VerbGiver (no turret pack)");
+
+            ThingComp comp = pack.AllComps.First(c => c.GetType().Name == "Comp_VerbGiver");
+            object trackerObj = comp.GetType().GetProperty("VerbTracker")?.GetValue(comp);
+            VerbTracker tracker = trackerObj as VerbTracker;
+            ctx.Require(tracker != null, "Comp_VerbGiver has no readable VerbTracker");
+            Verb verb = tracker.AllVerbs?.FirstOrDefault();
+            ctx.Require(verb != null, "the turret pack's VerbTracker has no verb");
+
+            verb.caster = wearer;
+            bool started = verb.TryStartCastOn(target, surpriseAttack: true);
+            ctx.Require(started, $"the turret pack's verb refused to fire at '{targetNickname}'");
+        }
+
+        // Pickle's own catalogue only has "{string} health is above {int} percent"; proving real damage
+        // needs the other direction.
+        [Then("Animal Apparel Collars: {string} health is below {int} percent")]
+        public void HealthIsBelow(PickleContext ctx, string nickname, int percent)
+        {
+            Pawn pawn = Require(ctx, nickname);
+            float actual = pawn.health.summaryHealth.SummaryHealthPercent * 100f;
+            ctx.Require(actual < percent, $"'{nickname}' health is {actual:F1}%, not below {percent}%");
+        }
+
         [Then("Animal Apparel Collars: {string} apparel covers {string}")]
         public void Covers(PickleContext ctx, string nickname, string groupDefName)
         {
