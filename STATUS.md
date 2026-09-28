@@ -753,3 +753,19 @@ rock. Not diagnosed further by guessing: the step now moves the target to a cell
 wearer (`GenSight.LineOfSight`) before asking, and a refusal reports the verb type, `CanHitTarget`, state, range,
 positions, distance, line of sight and hostility. Compiled, 0 errors. Refiled: the next report names the cause
 if this was not it.
+
+## Removal chain green — 2026-09-28 (bb88, 24dc240)
+
+Both launches passed (`exitReason: passed`, 1/1 each): launch 1 dressed a fox, a cow and a horse, saved and handed the
+save to the removal companion; launch 2, with the mod and its test companion out of the list, loaded it, ran 232 ticks
+and saved and reloaded with no error logged after the load. **The load itself is not clean, and that is expected**:
+`seq2/Player.log` holds 33 `[ERROR]` lines written by RimWorld while reading the save - `Could not load reference to
+Verse.ThingDef named Apparel_leatherdogcollar` (and the four other worn pieces, plus three research projects),
+`Exception registering RimWorld.Apparel ... in loaded object directory` (9), `Null key while loading dictionary of
+ResearchProjectDef` (3), and 7 `Could not resolve cross refs` whose stack is `Pawn_ApparelTracker.SortWornApparelIntoDrawOrder`
+hitting a null apparel. That stack is entirely vanilla code reacting to worn apparel whose def is missing, the same
+noise any removed apparel mod produces; Pickle's "no errors were logged" only counts what happens after the fixture is
+loaded, which is why the scenario is green. Read this way, the claim of About/PUBLICATION ("removing it mid-game deletes
+anything crafted from it, like any content mod") holds, and the property TESTING.md scenario H asks for holds: the game
+runs and re-saves cleanly afterwards. Not asserted (headless, no dialog): RimWorld's missing-def dialog itself. Also logged,
+harmless: "Pickle removal check did not load any content" (the companion has no Defs by design).
