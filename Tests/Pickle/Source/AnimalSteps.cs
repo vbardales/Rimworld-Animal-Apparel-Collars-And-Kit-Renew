@@ -215,8 +215,39 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(verb != null, "the turret pack's VerbTracker has no verb");
 
             verb.caster = wearer;
-            bool started = verb.TryStartCastOn(target, surpriseAttack: true);
-            ctx.Require(started, $"the turret pack's verb refused to fire at '{targetNickname}'");
+
+            // 8474 (2026-09-28): TryStartCastOn returned false with nothing logged. Its silent refusals are
+            // CanHitTarget (range, then a clear shoot line) and the verb's own state. A target spawned at random
+            // within five cells of a colonist may sit behind rock, so the target is first moved to a cell in
+            // clear line of sight of the wearer, then the verb is asked, and a refusal explains itself.
+            Map map = wearer.Map;
+            IntVec3 from = wearer.Position;
+            IntVec3 clear = IntVec3.Invalid;
+            for (int radius = 4; radius <= 12 && !clear.IsValid; radius++)
+            {
+                foreach (IntVec3 c in GenRadial.RadialCellsAround(from, radius, radius))
+                {
+                    if (c.InBounds(map) && c.Standable(map) && c.GetFirstPawn(map) == null
+                        && c.DistanceTo(from) >= 3f && GenSight.LineOfSight(from, c, map))
+                    {
+                        clear = c;
+                        break;
+                    }
+                }
+            }
+
+            ctx.Require(clear.IsValid, $"no cell in line of sight of '{wearerNickname}' at {from} to place the target on");
+            target.Position = clear;
+            target.Notify_Teleported(false, true);
+
+            bool canHit = verb.CanHitTarget(target);
+            bool started = canHit && verb.TryStartCastOn(target, surpriseAttack: true);
+            ctx.Require(started,
+                $"the turret pack's verb refused to fire at '{targetNickname}': verb {verb.GetType().FullName}, "
+                + $"CanHitTarget={canHit}, state={verb.state}, range={verb.verbProps.range}, "
+                + $"wearer {from} spawned={wearer.Spawned}, target {target.Position} distance={from.DistanceTo(target.Position):F1}, "
+                + $"lineOfSight={GenSight.LineOfSight(from, target.Position, map)}, "
+                + $"targetHostile={target.HostileTo(wearer)}, verbs on the pack={tracker.AllVerbs.Count}");
         }
 
         // Two-launch removal chain (scenario H), after Housebroken's TF-18 (same mechanism, read there): the game

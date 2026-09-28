@@ -741,3 +741,15 @@ packs are excluded on purpose (`AnimalInvisible`, no node by design). The APIs w
 `Verse.PawnRenderTree`/`PawnRenderNode`; the step compiles (0 errors) but has never run, so whether the framework's
 dynamic animal nodes populate `apparel` the way the vanilla ones do is unverified: the failure message lists the
 apparel nodes it did find.
+
+## Turret fire, second result — 2026-09-28 (8474, 2a831cc)
+
+The hostile-target fix worked: the wearing scenario passed and the firing scenario got as far as the verb,
+which returned false with nothing logged ("the turret pack's verb refused to fire at 'Target'"). Reading
+`Verse.Verb.TryStartCastOn`: its silent refusals are `!caster.Spawned`, `state == Bursting` and
+`!CanHitTarget(target)` (range 28.9, then a clear shoot line); `WarmupTime > 0` adds a second
+`TryFindShootLineFromTo`. The target had been spawned at random within five cells of a colonist, possibly behind
+rock. Not diagnosed further by guessing: the step now moves the target to a cell in clear line of sight of the
+wearer (`GenSight.LineOfSight`) before asking, and a refusal reports the verb type, `CanHitTarget`, state, range,
+positions, distance, line of sight and hostility. Compiled, 0 errors. Refiled: the next report names the cause
+if this was not it.
