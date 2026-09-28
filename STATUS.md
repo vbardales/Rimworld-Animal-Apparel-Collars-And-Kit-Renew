@@ -729,3 +729,15 @@ faction in this game to make the target hostile". A limit of the `test-colony` f
 of the mod. Fixed in the step: use any faction already hostile to the player, else generate one with
 `FactionGenerator.NewGeneratedFaction(new FactionGeneratorParms(FactionDefOf.Pirate))` and add it to the
 faction manager. Compiled, 0 errors. Refiled.
+
+## Render tree assertion — 2026-09-28
+
+The fox helmet and the cobra test collar could not be judged by eye at 32 px (2026-09-27). New local step
+`the render tree of "<name>" draws "<apparel def>"`: after five frames, `PawnRenderTree.EnsureInitialized`, walk
+the tree from `rootNode` through `children`, find the `PawnRenderNode` whose `apparel.def.defName` matches, and
+require `GraphicFor(pawn)` to be neither null nor `BaseContent.BadGraphic`. Added to every visual scenario (fox
+collar+helmet, the three collars, the diaper, the horse set, the cow scarf, the three neckless bodies). The turret
+packs are excluded on purpose (`AnimalInvisible`, no node by design). The APIs were read by decompiling
+`Verse.PawnRenderTree`/`PawnRenderNode`; the step compiles (0 errors) but has never run, so whether the framework's
+dynamic animal nodes populate `apparel` the way the vanilla ones do is unverified: the failure message lists the
+apparel nodes it did find.

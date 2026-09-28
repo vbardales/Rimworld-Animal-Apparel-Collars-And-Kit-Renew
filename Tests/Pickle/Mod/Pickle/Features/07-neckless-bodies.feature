@@ -11,6 +11,7 @@ Feature: Animal Apparel Collars and Kit Renew, bodies without a neck
     When Animal Apparel Collars: "Cobra" is dressed in "Pickle_TestNeckCollar"
     Then Animal Apparel Collars: "Cobra" is wearing "Pickle_TestNeckCollar"
     And Animal Apparel Collars: "Cobra" apparel covers "AnimalNeck"
+    And Animal Apparel Collars: the render tree of "Cobra" draws "Pickle_TestNeckCollar"
     When Animal Apparel Collars: the camera is centered on "Cobra"
     And I zoom all the way in
     Then Animal Apparel Collars: the camera can see "Cobra"
@@ -23,6 +24,7 @@ Feature: Animal Apparel Collars and Kit Renew, bodies without a neck
     When Animal Apparel Collars: "Megaspider" is dressed in "Pickle_TestNeckCollar"
     Then Animal Apparel Collars: "Megaspider" is wearing "Pickle_TestNeckCollar"
     And Animal Apparel Collars: "Megaspider" apparel covers "AnimalNeck"
+    And Animal Apparel Collars: the render tree of "Megaspider" draws "Pickle_TestNeckCollar"
     And no errors were logged
 
   Scenario: Animal Apparel Collars: a tortoise wears the test collar
@@ -31,4 +33,5 @@ Feature: Animal Apparel Collars and Kit Renew, bodies without a neck
     When Animal Apparel Collars: "Tortoise" is dressed in "Pickle_TestNeckCollar"
     Then Animal Apparel Collars: "Tortoise" is wearing "Pickle_TestNeckCollar"
     And Animal Apparel Collars: "Tortoise" apparel covers "AnimalNeck"
+    And Animal Apparel Collars: the render tree of "Tortoise" draws "Pickle_TestNeckCollar"
     And no errors were logged

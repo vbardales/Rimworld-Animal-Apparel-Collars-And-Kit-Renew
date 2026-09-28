@@ -9,8 +9,11 @@ Feature: Animal Apparel Collars and Kit Renew, horse set
     And Animal Apparel Collars: "Horse" is dressed in "Apparel_MedievalHorseHelmet"
     And Animal Apparel Collars: "Horse" is dressed in "Apparel_MedievalHorseSaddle"
     Then Animal Apparel Collars: "Horse" is wearing "Apparel_MedievalHorsePlate"
+    And Animal Apparel Collars: the render tree of "Horse" draws "Apparel_MedievalHorsePlate"
     And Animal Apparel Collars: "Horse" is wearing "Apparel_MedievalHorseHelmet"
+    And Animal Apparel Collars: the render tree of "Horse" draws "Apparel_MedievalHorseHelmet"
     And Animal Apparel Collars: "Horse" is wearing "Apparel_MedievalHorseSaddle"
+    And Animal Apparel Collars: the render tree of "Horse" draws "Apparel_MedievalHorseSaddle"
     When Animal Apparel Collars: the camera is centered on "Horse"
     And I zoom all the way in
     Then Animal Apparel Collars: the camera can see "Horse"
@@ -27,4 +30,5 @@ Feature: Animal Apparel Collars and Kit Renew, horse set
     Then Animal Apparel Collars: the camera can see "Cow"
     When I take a screenshot "cow-scarf"
     Then Animal Apparel Collars: "Cow" is wearing "Apparel_LargeAnimalScarf"
+    And Animal Apparel Collars: the render tree of "Cow" draws "Apparel_LargeAnimalScarf"
     And no errors were logged

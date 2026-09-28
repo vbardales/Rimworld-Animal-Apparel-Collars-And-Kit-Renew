@@ -30,6 +30,8 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     And Animal Apparel Collars: "Fox_Arctic" is wearing "Apparel_SmallAnimalPowerArmorHelmet"
     And Animal Apparel Collars: "Fox_Arctic" apparel covers "AnimalNeck"
     And Animal Apparel Collars: "Fox_Arctic" apparel covers "AnimalHead"
+    And Animal Apparel Collars: the render tree of "Fox_Arctic" draws "Apparel_leatherdogcollar"
+    And Animal Apparel Collars: the render tree of "Fox_Arctic" draws "Apparel_SmallAnimalPowerArmorHelmet"
     When Animal Apparel Collars: the camera is centered on "Fox_Arctic"
     And I zoom all the way in
     Then Animal Apparel Collars: the camera can see "Fox_Arctic"
@@ -67,14 +69,17 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     Then Animal Apparel Collars: the camera can see "Husky"
     When Animal Apparel Collars: "Husky" is dressed in "Apparel_dogbow"
     Then Animal Apparel Collars: "Husky" is wearing "Apparel_dogbow"
+    And Animal Apparel Collars: the render tree of "Husky" draws "Apparel_dogbow"
     When I take a screenshot "husky-dogbow"
     And Animal Apparel Collars: "Husky" is stripped of its apparel
     And Animal Apparel Collars: "Husky" is dressed in "Apparel_studdeddogcollar"
     Then Animal Apparel Collars: "Husky" is wearing "Apparel_studdeddogcollar"
+    And Animal Apparel Collars: the render tree of "Husky" draws "Apparel_studdeddogcollar"
     When I take a screenshot "husky-studdedcollar"
     And Animal Apparel Collars: "Husky" is stripped of its apparel
     And Animal Apparel Collars: "Husky" is dressed in "Apparel_shielddogcollar"
     Then Animal Apparel Collars: "Husky" is wearing "Apparel_shielddogcollar"
+    And Animal Apparel Collars: the render tree of "Husky" draws "Apparel_shielddogcollar"
     When I take a screenshot "husky-shieldcollar"
     Then no errors were logged
 
@@ -83,6 +88,7 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     And Animal Apparel Collars: a tame "Husky" named "Husky" exists near the colony
     When Animal Apparel Collars: "Husky" is dressed in "diaper"
     Then Animal Apparel Collars: "Husky" is wearing "diaper"
+    And Animal Apparel Collars: the render tree of "Husky" draws "diaper"
     And no errors were logged
 
   Scenario: Animal Apparel Collars: an idle bare colony raises no error from this mod

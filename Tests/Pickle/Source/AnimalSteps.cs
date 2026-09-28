@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 using System.Reflection;
+using System.Threading.Tasks;
 using RimWorks.Pickle;
 using RimWorld;
 using Verse;
@@ -248,6 +250,53 @@ namespace AnimalApparelCollars.PickleSteps
             Pawn pawn = Require(ctx, nickname);
             float actual = pawn.health.summaryHealth.SummaryHealthPercent * 100f;
             ctx.Require(actual < percent, $"'{nickname}' health is {actual:F1}%, not below {percent}%");
+        }
+
+        // The inconclusive captures of 2026-09-27 (fox helmet, cobra collar) could not be settled by eye at 32 px.
+        // Ask the game instead: after a few frames the pawn's render tree must hold a node for this apparel, and
+        // that node must resolve a real graphic (not null, not the game's BadGraphic placeholder). Pieces tagged
+        // AnimalInvisible (the turret packs) have no node by design and must not be asked.
+        [Then("Animal Apparel Collars: the render tree of {string} draws {string}", TimeoutSeconds = 20f)]
+        public async Task RenderTreeDraws(PickleContext ctx, string nickname, string apparelDefName)
+        {
+            Pawn pawn = Require(ctx, nickname);
+            await ctx.WaitFrames(5);
+            PawnRenderTree tree = pawn.Drawer.renderer.renderTree;
+            tree.EnsureInitialized(PawnRenderFlags.None);
+            ctx.Require(tree.rootNode != null, $"'{nickname}' has no render tree root");
+
+            List<PawnRenderNode> found = new List<PawnRenderNode>();
+            List<string> seen = new List<string>();
+            Stack<PawnRenderNode> todo = new Stack<PawnRenderNode>();
+            todo.Push(tree.rootNode);
+            while (todo.Count > 0)
+            {
+                PawnRenderNode node = todo.Pop();
+                if (node.apparel != null)
+                {
+                    seen.Add(node.apparel.def.defName);
+                    if (node.apparel.def.defName == apparelDefName)
+                    {
+                        found.Add(node);
+                    }
+                }
+
+                if (node.children != null)
+                {
+                    foreach (PawnRenderNode child in node.children)
+                    {
+                        todo.Push(child);
+                    }
+                }
+            }
+
+            ctx.Require(found.Count > 0, $"'{nickname}' has no render node for '{apparelDefName}'; apparel nodes present: {string.Join(", ", seen)}");
+            foreach (PawnRenderNode node in found)
+            {
+                Graphic graphic = node.GraphicFor(pawn);
+                ctx.Require(graphic != null && graphic != BaseContent.BadGraphic,
+                    $"the render node of '{apparelDefName}' on '{nickname}' resolves no graphic ({(graphic == null ? "null" : "BadGraphic")})");
+            }
         }
 
         [Then("Animal Apparel Collars: {string} apparel covers {string}")]
