@@ -16,6 +16,14 @@ detached:     yes
 stage:        preTest
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
+upstream_mod_remotes:
+  - Dog Collars, Shenanigans: N/A (no <url> in the installed About.xml, checked 2026-09-28)
+  - Patch Collar Malinois, Annabelesca: N/A (no <url> in the installed About.xml, checked 2026-09-28)
+  - Animal Diapers, Dipsy: N/A (no repository named in ATTRIBUTION.md; package no longer installed to recheck About.xml)
+  - Animal Turret Packs, flangopink and ogam: https://github.com/flangopink/AnimalTurretPacks (per ATTRIBUTION.md, not archived, no licence detected, last commit c1c9852 2023-10-18; could not be reverified online 2026-09-13)
+  - Medieval Horse Plate Armour, Riful: N/A (no <url> in the installed About.xml, checked 2026-09-28)
+  - RealisticAwesomeGoat, CSM: N/A (no <url> in the installed About.xml, checked 2026-09-28)
+  - Animal Equipment, Owlchemist (after jptrrs): https://github.com/Owlchemist/animal-equipment
 dependencies: declared
 showcase:     complete
 tested_on:
@@ -52,6 +60,9 @@ This file is tracked in Git and kept outside the shipped Mod/ folder.
 `licence` vocabulary: `open` an explicit licence, `silent` no licence identified in checked materials (not proof of abandonment),
 `alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
 to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
+- **`upstream_mod_remotes`** — the git repository URL of each source mod this one ports, one list
+  entry per source; `N/A` with the reason when none is found. Distinct from `repo` (this mod's own
+  repository) and `origin` (its git remote).
 
 ## Current development status
 
