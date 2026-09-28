@@ -1,15 +1,11 @@
-# Optional animals, merged Vanilla Animals Expanded. Dependencies of these mods are NOT resolved here: read the staged list of the first run.
+# Optional animals, merged Vanilla Animals Expanded. Dependencies of these mods are NOT resolved here: read the staged list of the first run. Dropped (no 1.6 build; VFE Vikings 1.4 DLL raised MissingMethodException in run c488): Vikings, JapaneseDogs, YorkshireTerrors, sarg.magicalmenagerie.
 OskarPotocki.VanillaFactionsExpanded.Core   2023507013
 Ingendum.AnimalArmorBasic   3513849448
 MemeGoddess.GiddyUp   3674332861
 VanillaExpanded.VanillaAnimalsExpanded   2871933948
 sarg.alphaanimals   1541721856
-sarg.magicalmenagerie   1821617793
-OskarPotocki.VFE.Vikings   2231295285
 rtp.rhodesianridgebacks   2076237940
 rtp.bordercollies   2261957667
-Poetik.JapaneseDogs   2192937058
-kagypoo.YorkshireTerrors   2275850226
 Erin.Palamutes   2485624026
 Erin.LizzardDoggo   2527471245
 Erin.MountainDog   2761001056

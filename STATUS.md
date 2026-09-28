@@ -783,3 +783,5 @@ French/Chinese, Ancient Chinese Beast) while the machine was paging under 12.9 G
 `find /` processes (none of them this session's: `Get-Process find,grep,rg` is empty). Treated as infrastructure
 until a run on a quiet machine says otherwise. The render-tree step added in this revision therefore has NOT been
 exercised yet: no scenario got past its spawn step. To refile once the queue shows the machine healthy.
+
+- 2026-09-28 run c488 (avec-animaux, 245178a): 7/7 red, exit 6. Real finding: `OskarPotocki.VFE.Vikings` (2231295285, 1.4 DLL only) is loaded as "incompatible version" and its world component raises `MissingMethodException: QuestUtility.SendLetterQuestAvailable`; a second `GenPlace.TryPlaceThing` MissingMethodException from a map component is not yet attributed. Vikings, JapaneseDogs, YorkshireTerrors and sarg.magicalmenagerie removed from the three animal pass maps (no 1.6 build). Exit 6 also = WSL lost for a moment (infrastructure). Pass refiled.
