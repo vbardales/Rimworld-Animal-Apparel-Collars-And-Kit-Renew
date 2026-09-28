@@ -785,3 +785,5 @@ until a run on a quiet machine says otherwise. The render-tree step added in thi
 exercised yet: no scenario got past its spawn step. To refile once the queue shows the machine healthy.
 
 - 2026-09-28 run c488 (avec-animaux, 245178a): 7/7 red, exit 6. Real finding: `OskarPotocki.VFE.Vikings` (2231295285, 1.4 DLL only) is loaded as "incompatible version" and its world component raises `MissingMethodException: QuestUtility.SendLetterQuestAvailable`; a second `GenPlace.TryPlaceThing` MissingMethodException from a map component is not yet attributed. Vikings, JapaneseDogs, YorkshireTerrors and sarg.magicalmenagerie removed from the three animal pass maps (no 1.6 build). Exit 6 also = WSL lost for a moment (infrastructure). Pass refiled.
+
+- 2026-09-28 run 37ea (avec-animaux-sans-odyssey, 245178a): 27 scenarios, 0 passed, 17 failed ("PickleDriver.WaitUntil timed out after 175s"), 10 skipped. Same mod list as c488 (Vikings 1.4 DLL among them), so read as the same defect, not scenario failures. Refiled after map fix (0b71430); result of avec-animaux 4c3b decides.
