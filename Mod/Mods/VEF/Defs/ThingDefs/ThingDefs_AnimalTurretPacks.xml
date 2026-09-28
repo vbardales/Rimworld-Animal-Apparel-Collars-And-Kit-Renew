@@ -130,6 +130,7 @@
 						<visualLabel>mini-turret gun</visualLabel>
 						<description>A simple automatic gun made to be strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
+						<separateToggle>true</separateToggle>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
 								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
@@ -192,6 +193,7 @@
 						<visualLabel>mini-turret shotgun</visualLabel>
 						<description>A simple automatic shotgun made to be strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
+						<separateToggle>true</separateToggle>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
 								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
@@ -265,6 +267,7 @@
 						<visualLabel>mini-turret charge blaster</visualLabel>
 						<description>A simple automatic charge blaster made to be strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
+						<separateToggle>true</separateToggle>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
 								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
@@ -328,6 +331,7 @@
 						<visualLabel>mini-turret gun</visualLabel>
 						<description>A simple automatic gun made to be strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
+						<separateToggle>true</separateToggle>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
 								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
@@ -390,6 +394,7 @@
 						<visualLabel>mini-turret shotgun</visualLabel>
 						<description>A simple automatic shotgun made to be strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
+						<separateToggle>true</separateToggle>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
 								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
@@ -463,6 +468,7 @@
 						<visualLabel>mini-turret charge blaster</visualLabel>
 						<description>A simple automatic charge blaster made to be strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
+						<separateToggle>true</separateToggle>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
 								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
@@ -521,6 +527,7 @@
 						<visualLabel>grenades</visualLabel>
 						<description>A grenade belt strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
+						<separateToggle>true</separateToggle>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
 								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
@@ -584,6 +591,7 @@
 						<visualLabel>grenades</visualLabel>
 						<description>A grenade belt strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
+						<separateToggle>true</separateToggle>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
 								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
