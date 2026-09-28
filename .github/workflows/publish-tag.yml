@@ -124,11 +124,33 @@ jobs:
           echo "Workflow file $file blob $blob"
 
       - name: Check the release notes exist
-        run: bash release/.github/scripts/changelog-section.sh release/CHANGELOG.md "$VERSION" | head -5
+        # Captured before the pipe: the default shell has no pipefail, so a failing changelog-section.sh would leave the
+        # exit status of head and the dry-run green, then fail after the Steam upload.
+        run: |
+          set -euo pipefail
+          notes="$(bash release/.github/scripts/changelog-section.sh release/CHANGELOG.md "$VERSION")"
+          printf '%s\n' "$notes" | head -5
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22.x'
+
+      # A version can only go up: above every existing tag. A tag that already exists on this commit is the re-run of a
+      # dry-run and is judged by the step that resolved the commit.
+      - name: Check the version follows the last tag
+        working-directory: release
+        run: |
+          if git rev-parse -q --verify "refs/tags/v$VERSION" >/dev/null; then
+            echo "tag v$VERSION already exists (on this commit, checked above): the order is not judged again."
+          else
+            node .github/scripts/version-order.mjs "$VERSION"
+          fi
+
+      # Only when publish.config.json names a build project: rebuilds it, reports any difference with the tracked Mod/,
+      # ships the tracked files. A project that does not compile stops the run.
+      - name: Rebuild and compare the tracked Mod/ (optional)
+        working-directory: release
+        run: bash .github/scripts/build-check.sh
 
       - name: Install the Steam upload library
         working-directory: release
