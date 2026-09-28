@@ -324,7 +324,10 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(found.Count > 0, $"'{nickname}' has no render node for '{apparelDefName}'; apparel nodes present: {string.Join(", ", seen)}");
             foreach (PawnRenderNode node in found)
             {
-                Graphic graphic = node.GraphicFor(pawn);
+                // Ask for what the tree resolved (EnsureInitialized above), not node.GraphicFor(pawn): the base
+                // GraphicFor reads props.texPath, which an apparel node leaves empty, so it is null for every
+                // apparel. PawnRenderNode_Apparel supplies its graphic through GraphicsFor, stored here.
+                Graphic graphic = node.PrimaryGraphic;
                 ctx.Require(graphic != null && graphic != BaseContent.BadGraphic,
                     $"the render node of '{apparelDefName}' on '{nickname}' resolves no graphic ({(graphic == null ? "null" : "BadGraphic")})");
             }
