@@ -100,3 +100,16 @@ this mod anything to assert in a running game - see AUDIT.md, "on ne teste pas l
 a second scenario that fires a turret pack's real verb (MVCF's `Comp_VerbGiver`/`VerbTracker`, found by
 name since MVCF is not a compile reference) at a hostile Thrumbo and checks its health actually drops,
 closing scenario E of TESTING.md. None of this has been run yet.
+
+## Added 2026-09-28: scenario G (in-process) and scenario H (removal)
+
+- Feature 10: `I save and reload` (Pickle's own step, one process) after dressing animals; worn pieces must
+  survive and no error may be logged. Not a restart: the def database is not rebuilt.
+- Feature 11 + `Removal/Mod` (companion `nelim.animalapparelcollarsandkit.pickleremoval`, no dependency on the
+  mod) + pass map `wsl-deps.removal.map`: the two-launch removal chain, after Housebroken's TF-18. Launch 1 dresses
+  a fox, a cow and a horse, saves as `aack-removal-with-mod` and copies the save into the companion's
+  `Pickle/Fixtures`; launch 2 runs with the mod and its test companion taken out of the list and loads it.
+  Submit it as ONE request:
+  `-DepMap wsl-deps.removal.map -Filter '11-removal-write' -Then 'removal-check' -ThenWithout nelim.animalapparelcollarsandkit,nelim.animalapparelcollarsandkit.pickletests`.
+  Two new local steps do the save and the hand-over (`GameDataSaveLoader.SaveGame`, a copy into the companion's
+  folder). Never run. A restart with the mod kept (a save read by a fresh process) is still not designed.

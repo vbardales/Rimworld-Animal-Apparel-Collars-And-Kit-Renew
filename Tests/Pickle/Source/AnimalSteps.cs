@@ -217,6 +217,29 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(started, $"the turret pack's verb refused to fire at '{targetNickname}'");
         }
 
+        // Two-launch removal chain (scenario H), after Housebroken's TF-18 (same mechanism, read there): the game
+        // saved in launch 1 is copied into the Pickle/Fixtures folder of a companion that does not depend on this
+        // mod, where launch 2 finds it as a fixture once this mod has been taken out of the mod list.
+        [When("Animal Apparel Collars: the game is saved as {string}")]
+        public void SaveGameAs(PickleContext ctx, string file)
+        {
+            GameDataSaveLoader.SaveGame(file);
+            ctx.Require(System.IO.File.Exists(GenFilePaths.FilePathForSavedGame(file)), $"no save file was written for {file}");
+        }
+
+        [When("Animal Apparel Collars: the saved game {string} is handed to the mod {string}")]
+        public void HandSavedGameTo(PickleContext ctx, string file, string packageId)
+        {
+            ModContentPack target = LoadedModManager.RunningModsListForReading.FirstOrDefault(
+                m => string.Equals(m.PackageIdPlayerFacing, packageId, StringComparison.OrdinalIgnoreCase));
+            ctx.Require(target != null, $"no active mod has the packageId {packageId}");
+            string folder = System.IO.Path.Combine(target.RootDir, "Pickle", "Fixtures");
+            System.IO.Directory.CreateDirectory(folder);
+            string destination = System.IO.Path.Combine(folder, file + ".rws");
+            System.IO.File.Copy(GenFilePaths.FilePathForSavedGame(file), destination, true);
+            ctx.Require(System.IO.File.Exists(destination), $"the saved game was not copied to {destination}");
+        }
+
         // Pickle's own catalogue only has "{string} health is above {int} percent"; proving real damage
         // needs the other direction.
         [Then("Animal Apparel Collars: {string} health is below {int} percent")]
