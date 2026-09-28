@@ -147,6 +147,25 @@ namespace AnimalApparelCollars.PickleSteps
                 $"the camera does not see '{nickname}' at {pawn.Position}; the view rect is {Verse.Find.CameraDriver.CurrentViewRect}");
         }
 
+        // The "test-colony" fixture has no pirate faction (found on 2026-09-28, e22f): use any faction that is
+        // already hostile to the player, and only make one when the save has none.
+        private static Faction HostileFaction(PickleContext ctx)
+        {
+            Faction player = Faction.OfPlayer;
+            Faction existing = Verse.Find.FactionManager.AllFactionsListForReading
+                .FirstOrDefault(f => f != player && !f.defeated && f.HostileTo(player));
+            if (existing != null)
+            {
+                return existing;
+            }
+
+            Faction made = FactionGenerator.NewGeneratedFaction(new FactionGeneratorParms(FactionDefOf.Pirate));
+            ctx.Require(made != null, "could not generate a pirate faction for the hostile target");
+            Verse.Find.FactionManager.Add(made);
+            ctx.Require(made.HostileTo(player), $"the generated faction '{made.Name}' is not hostile to the player");
+            return made;
+        }
+
         [Given("Animal Apparel Collars: a hostile {string} named {string} exists near the colony")]
         public void HostileAnimalExistsNearColony(PickleContext ctx, string kindDefName, string nickname)
         {
@@ -164,9 +183,8 @@ namespace AnimalApparelCollars.PickleSteps
             IntVec3 cell = CellFinder.RandomClosewalkCellNear(anchor.Position, map, 5);
             ctx.Require(cell.IsValid, $"could not find a walkable cell near {anchor.Position}");
 
-            Faction pirates = Verse.Find.FactionManager.OfPirates;
-            ctx.Require(pirates != null, "no pirate faction in this game to make the target hostile");
-            Pawn pawn = PawnGenerator.GeneratePawn(kind, pirates);
+            Faction hostile = HostileFaction(ctx);
+            Pawn pawn = PawnGenerator.GeneratePawn(kind, hostile);
             pawn.Name = new NameSingle(nickname);
             GenSpawn.Spawn(pawn, cell, map);
             ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn near {anchor.Position}");

@@ -721,3 +721,11 @@ errors. Never run.
 
 Still open, unautomated: restart with gear worn (G), removal on an existing save (H) - both need a
 save handed between two launches (`-Then`/`-ThenWithout`), not designed yet.
+
+## Turret fire run, first result — 2026-09-28 (e22f, 44003ef)
+
+2 scenarios in feature 03 under avec-vef: the wearing scenario green, the firing scenario red with "no pirate
+faction in this game to make the target hostile". A limit of the `test-colony` fixture (no pirate faction), not
+of the mod. Fixed in the step: use any faction already hostile to the player, else generate one with
+`FactionGenerator.NewGeneratedFaction(new FactionGeneratorParms(FactionDefOf.Pirate))` and add it to the
+faction manager. Compiled, 0 errors. Refiled.
