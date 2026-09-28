@@ -687,3 +687,15 @@ engine/Mono startup, not inside gameplay code, cause not established as a mod fa
 ("needs <downloadUrl> and/or <steamWorkshopUrl>", about this mod's own test companion referencing itself)
 appears just before the crash and is unrelated to it. Not blamed on the mod or the suite; retrying once,
 per AUDIT's own reading of the same signature.
+
+## avec-vef pass green after retry — 2026-09-28 (bae1, 0631456)
+
+13/13 real scenarios green, 11 skipped by requirement (RIMMSQOL absent, the eight incompatibilities absent,
+Odyssey not removed by this map). Confirms `bc8c`'s crash was transient/environment: same tree, same map,
+green this time. New captures over the previous pass: `muffalo-turret-pack` and the LoadAudit scenario
+(no screenshot, asserts a clean load). Opened the muffalo capture: the pack itself is not visible on its
+back, which is **expected**, not a defect - the turret packs carry `AnimalInvisible` by design (see
+CHANGELOG "Fixed, from the sources": the turret is drawn by MVCF's own renderer, not the apparel layer).
+LoadAudit passed, meaning no error/warning/unresolved reference attributable to this mod's packageId was
+found from game start to that point, and its Keyed translations matched the active (English) language.
+Scenario E of TESTING.md (a turret pack actually firing) remains unautomated and `unverified`.
