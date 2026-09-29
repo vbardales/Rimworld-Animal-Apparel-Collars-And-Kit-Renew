@@ -85,25 +85,38 @@ verification limits. Credit and removal on request are not licence grants from t
 
 ## Checked here, and therefore not in `remaining`
 
-- **Preview recomposed on 2026-09-12 using the current shared style guide.**
-  Final: `Mod/About/Preview.png` (896 × 504, 576404 bytes). Unlettered source:
-  `Art/Preview.png`, copied unchanged from the retained `Art/Preview-source.png`;
-  no replacement illustration was generated. Composition: `Art/preview.html`;
-  sole palette: `Art/preview-palette.json`; renderer: `Art/build-preview.cjs`.
-  The veil follows the dark stone/wood surface. The vivid accent comes from the
-  red saddle cloth and straps, with increased saturation and lightness; it contrasts
-  with the dominant ochre family rather than repeating the lamp gold. The secondary ink
-  follows the dominant ochre family of the floor and wood, lightened for the dark veil.
-  Source positioning and a feathered left edge leave the existing summary unobstructed.
-  Chrome confirmed Segoe UI Semibold for the title, Segoe UI for tag/summary and
-  Segoe UI Bold for the badge, after `document.fonts.ready`. Badge version 1.6 is read
-  from the shipped supportedVersions. Full-box minimum contrasts on the rendered
-  text-free background: title 8.87:1, reduced liaison 11.63:1, Renew 7.2:1, tag 5.48:1,
-  summary 5.18:1; badge 5.46:1. Title uses 46 px, with direct 0.65em spans
-  for and (primary ink) and Renew (secondary ink), all at weight 600.
-  Visual checks at 896 × 504 and 268 px wide passed: no clipped text or overlapping
-  text elements; subjects remain visible; title/version identifiable and rule visible.
-  Evidence: `Art/preview-qa.json`, `Art/preview-background.png`, `Art/preview-268.png`.
+- **Preview recomposed on 2026-09-12 using the current shared style guide** with the
+  mod's own since-retired `Art/build-preview.cjs`/`Art/preview.html`. Superseded below;
+  kept as the source of the palette and copy decisions carried forward.
+- **Preview re-rendered on 2026-09-29 onto the shared `scripts/Render-Preview.cjs`/
+  `Art/verify-preview.py` pipeline (also used by AlphaMythologyRenew and others),
+  adding the ModIcon corner badge.** Final: `Mod/About/Preview.png` (896 × 504,
+  542560 bytes). Unlettered source unchanged: `Art/Preview.png`, copied from
+  `Art/Preview-source.png`. Composition: `Art/preview-copy.json` (title/suffix/tag/
+  copy, `iconBadge` pointing at `Art/ModIcon-badge.png`, corner `bottom-left`);
+  same palette, `Art/preview-palette.json`. `Art/ModIcon-badge.png` is
+  `Mod/About/ModIcon.png` background-removed and alpha-trimmed by
+  `Art/Make-PreviewBadge.ps1 -SaveTrimmedIconTo`.
+  This title ("Animal Apparel: Collars and Kit") wraps onto two lines at the shared
+  layout's 430 px column width, which no other mod using the renderer had exercised
+  yet: two shared-script fixes went in as a result, applying to every mod that uses
+  it, not a local override — `.copy` gained an explicit `width:430px` (the title
+  previously had none and could run under the illustration), and the veil's radial
+  gradient gained a flat 0%-48% opacity plateau before its fade (a two-line title
+  otherwise pushed the tag/summary into a low-opacity zone, contrast measured 2.0-2.4,
+  below the 4.5 floor). Iterated in place against this mod's own longer title and
+  verified against it; not separately re-verified on a short-titled mod, though the
+  plateau is a strict floor added below the previous curve and the width change only
+  constrains content that used to run unbounded, so neither should narrow an already
+  passing short title's layout.
+  `verify-preview.py` (2026-09-29 run): full-box minimum contrast on the rendered
+  text-free background — title 10.23:1, Renew 7.49:1, tag 5.41:1, summary 7.99:1,
+  badge 5.46:1; no clipped box; 542560 bytes, under the 900 000 ceiling.
+  Visual review at 896 × 504 and 268 px passed: badge sits clear of the copy box and
+  the version triangle, does not obscure the illustration's subjects, title/version
+  still identifiable, rule still visible.
+  Evidence: `Art/Preview-qa.json`, `Art/Preview-background-qa.png`,
+  `Art/Preview-thumbnail-qa.png`.
 - **Offline XML suite passed on 2026-09-12:** 55 XML files and 917 assertions using
   `pwsh -NoProfile -File _tools/test-xml.ps1`. Includes patch fixtures, conditional folders,
   translation targets and local texture paths. A GitHub Actions workflow is provided;

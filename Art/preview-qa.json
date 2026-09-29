@@ -1,100 +1,98 @@
 {
   "version": "1.6",
-  "fonts": {
-    "title": [
-      {
-        "familyName": "Segoe UI Semibold",
-        "postScriptName": "SegoeUI-Semibold",
-        "isCustomFont": false,
-        "glyphCount": 36
-      }
-    ],
-    "link": [
-      {
-        "familyName": "Segoe UI Semibold",
-        "postScriptName": "SegoeUI-Semibold",
-        "isCustomFont": false,
-        "glyphCount": 3
-      }
-    ],
-    "suffix": [
-      {
-        "familyName": "Segoe UI Semibold",
-        "postScriptName": "SegoeUI-Semibold",
-        "isCustomFont": false,
-        "glyphCount": 5
-      }
-    ],
-    "tag": [
-      {
-        "familyName": "Segoe UI",
-        "postScriptName": "SegoeUI",
-        "isCustomFont": false,
-        "glyphCount": 12
-      }
-    ],
-    "summary": [
-      {
-        "familyName": "Segoe UI",
-        "postScriptName": "SegoeUI",
-        "isCustomFont": false,
-        "glyphCount": 119
-      }
-    ],
-    "version": [
-      {
-        "familyName": "Segoe UI",
-        "postScriptName": "SegoeUI-Bold",
-        "isCustomFont": false,
-        "glyphCount": 3
-      }
-    ]
-  },
-  "boxes": {
-    "title": {
-      "x": 50,
-      "y": 54,
-      "width": 430,
-      "height": 101.1875
+  "paletteSource": "Art/preview-palette.json",
+  "copySource": "Art/preview-copy.json",
+  "iconBadgeCorner": "bottom-left",
+  "elements": {
+    ".title-main": {
+      "bounds": {
+        "x": 50,
+        "y": 48,
+        "width": 333.125,
+        "height": 112.59375
+      },
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 30
+        }
+      ],
+      "minimumContrast": 10.232
     },
-    "link": {
-      "x": 203.890625,
-      "y": 116.59375,
-      "width": 51.078125,
-      "height": 40
+    ".suffix": {
+      "bounds": {
+        "x": 50,
+        "y": 167.1875,
+        "width": 89.65625,
+        "height": 40
+      },
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 5
+        }
+      ],
+      "minimumContrast": 7.49
     },
-    "suffix": {
-      "x": 337.03125,
-      "y": 116.59375,
-      "width": 89.65625,
-      "height": 40
+    ".tag": {
+      "bounds": {
+        "x": 50,
+        "y": 213.78125,
+        "width": 430,
+        "height": 26.390625
+      },
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 12
+        }
+      ],
+      "minimumContrast": 5.413
     },
-    "tag": {
-      "x": 50,
-      "y": 163.1875,
-      "width": 430,
-      "height": 26.390625
+    "p": {
+      "bounds": {
+        "x": 50,
+        "y": 279.171875,
+        "width": 430,
+        "height": 60.875
+      },
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 85
+        }
+      ],
+      "minimumContrast": 7.997
     },
-    "summary": {
-      "x": 50,
-      "y": 228.578125,
-      "width": 430,
-      "height": 91.3125
-    },
-    "version": {
-      "x": 846.7371826171875,
-      "y": 4.737185001373291,
-      "width": 44.525634765625,
-      "height": 44.52562856674194
+    ".version": {
+      "bounds": {
+        "x": 846.7371826171875,
+        "y": 4.737185001373291,
+        "width": 44.525634765625,
+        "height": 44.52562856674194
+      },
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 3
+        }
+      ],
+      "minimumContrast": 5.458
     }
   },
-  "contrast": {
-    "title": 8.87,
-    "link": 11.63,
-    "suffix": 7.2,
-    "tag": 5.48,
-    "summary": 5.18,
-    "badge": 5.46
-  },
-  "bytes": 576404
+  "size": [
+    896,
+    504
+  ],
+  "bytes": 542560
 }

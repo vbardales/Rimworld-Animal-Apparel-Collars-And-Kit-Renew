@@ -1,0 +1,10 @@
+{
+  "title": "Animal Apparel: Collars and Kit",
+  "suffix": "Renew",
+  "tag": "(unofficial)",
+  "copyLines": [
+    "Collars, barding, clothing and turret packs",
+    "for animals, from Animal Gear's framework."
+  ],
+  "iconBadge": { "file": "ModIcon-badge.png", "corner": "bottom-left", "width": 220 }
+}

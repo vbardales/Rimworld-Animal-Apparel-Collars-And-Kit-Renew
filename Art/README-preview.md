@@ -1,26 +1,40 @@
 # Preview composition
 
 `Preview.png` is the unlettered source, copied unchanged from `Preview-source.png`.
-The original is retained. `preview.html` contains the composition and geometry;
-`preview-palette.json` is its only color palette. The title/tag and highest stable
-version are read from the shipped `Mod/About/About.xml`.
+The original is retained. Composition is `../scripts/Render-Preview.cjs`, shared with
+every other mod in this repository since 2026-09-29; this mod's own copy, title, tag
+and icon badge come from `preview-copy.json`, its colors from `preview-palette.json`.
+The highest stable version is read from the shipped `Mod/About/About.xml`.
 
-Run `node Art/build-preview.cjs` from the repository with Node.js, `playwright`
-and `sharp` available. Set `NODE_PATH` if these packages are provided by an external
-runtime. Chrome defaults to the Windows installation; override with `CHROME_PATH`.
-The script serves repository files on loopback while rendering and closes that server.
-It waits for fonts and the illustration, checks the actual platform fonts through CDP,
-then writes `Mod/About/Preview.png`, `preview-268.png`, `preview-background.png`
-and `preview-qa.json`. The background capture hides text for contrast measurements.
-Minimum contrast is measured over every pixel of each unrotated text bounding box,
-not just its corners; the badge has an opaque background.
+Run from this mod's own directory:
 
-The source is composed at 720 px wide, anchored to the right, with a transparent
-left edge blending into the sampled veil color. This leaves room for the 430 px summary.
-The dark veil holds its opacity across the text before fading into the illustration.
-The two-line title uses 46 px. Direct 0.65em spans reduce and (primary ink) and Renew
-(secondary ink), keeping weight 600. The red accent follows the saddle cloth and straps,
-distinct from the dominant ochre secondary ink. All parameters are in HTML.
+```bash
+node ../scripts/Render-Preview.cjs [bottom-left|bottom-right|top-left]
+uv run --with pillow python Art/verify-preview.py
+```
 
-Visual review at 896 and 268 px remains necessary after changes. The automated box
-checks cannot judge subject overlap or recognize cut glyphs inside a triangle.
+The first writes `Art/Preview-layout.html`, `Mod/About/Preview.png`,
+`Art/Preview-background-qa.png` and `Art/Preview-qa.json`. `verify-preview.py`
+reads those two, re-measures contrast (minimum 4.5, over every pixel of each
+unrotated text bounding box, not just its corners, against the actual rendered
+background), asserts no box is clipped and the PNG stays under 900 000 bytes, and
+writes `Art/Preview-thumbnail-qa.png` at 268 px for visual review at both sizes.
+Python is not installed directly on this machine; `uv run --with pillow` fetches
+Pillow into an ephemeral environment.
+
+The icon badge (`ModIcon-badge.png`) is `Mod/About/ModIcon.png` with its background
+flood-filled to transparent and cropped to its alpha bounding box, produced once by
+`../scripts/Make-PreviewBadge.ps1 -SaveTrimmedIconTo Art/ModIcon-badge.png`; rerun it
+only if `ModIcon.png` changes. `preview-copy.json`'s `iconBadge.corner` picks where
+it sits (`bottom-left` here — clear of both the copy box and the version triangle).
+
+This mod's title ("Animal Apparel: Collars and Kit") is long enough to wrap onto two
+lines, which the earlier per-mod-only renderer never exercised: the shared script's
+`.copy` box gained an explicit `width:430px` (2026-09-29) so a long title wraps
+inside the readable column instead of running under the illustration, and the veil's
+radial gradient gained a flat 0%-48% plateau before its fade so a two-line title
+does not push the tag/summary text into a low-opacity zone. Both changes are in
+`scripts/Render-Preview.cjs` and apply to every mod using it, not a local override.
+
+Visual review at 896 and 268 px remains necessary after changes: the automated
+checks cannot judge subject overlap or recognize a badge landing on the copy box.
