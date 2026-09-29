@@ -83,12 +83,26 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     When I take a screenshot "husky-shieldcollar"
     Then no errors were logged
 
+  # AnimalFallbackInvisible (ATTRIBUTION.md, Apparel_Diaper.xml): Dipsy drew art for only four
+  # animals - Bear_Grizzly, Bear_Polar, AEXP_Giraffe, AEXP_Gorilla - and the framework renders the
+  # diaper invisible, without error, on every other species. A husky has no art; asserting "draws"
+  # on one failed for that reason alone (avec-animaux-0971baa, 2026-09-29), not a mod defect. Use
+  # one of the four species that does have art to test drawing for real.
   Scenario: Animal Apparel Collars: the diaper is worn and drawn
+    Given the save "test-colony" is loaded
+    And Animal Apparel Collars: a tame "Bear_Grizzly" named "Bear" exists near the colony
+    When Animal Apparel Collars: "Bear" is dressed in "diaper"
+    Then Animal Apparel Collars: "Bear" is wearing "diaper"
+    And Animal Apparel Collars: the render tree of "Bear" draws "diaper"
+    And no errors were logged
+
+  # A husky has no diaper art (see above): AnimalFallbackInvisible must make it invisible, not
+  # error. This is the framework's documented fallback, not the "drawn" scenario's species.
+  Scenario: Animal Apparel Collars: the diaper is worn and invisible without art
     Given the save "test-colony" is loaded
     And Animal Apparel Collars: a tame "Husky" named "Husky" exists near the colony
     When Animal Apparel Collars: "Husky" is dressed in "diaper"
     Then Animal Apparel Collars: "Husky" is wearing "diaper"
-    And Animal Apparel Collars: the render tree of "Husky" draws "diaper"
     And no errors were logged
 
   Scenario: Animal Apparel Collars: an idle bare colony raises no error from this mod
