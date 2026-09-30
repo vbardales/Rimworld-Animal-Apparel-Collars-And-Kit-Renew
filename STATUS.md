@@ -7,7 +7,7 @@ automated_tests: complete
 xml_tests: complete
 localization: complete
 translation_en: complete
-translation_fr: complete
+translation_fr: partial
 mod:          Animal Apparel: Collars and Kit Renew (unofficial)
 packageId:    nelim.animalapparelcollarsandkit
 repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
@@ -29,6 +29,7 @@ showcase:     complete
 tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 remaining:
+  - unverified: French review by Virginie (TRANSLATIONS.md, "Systematic French review by Virginie"); FRENCH_REVIEW.md generated 2026-09-30, not yet read by her
   - unverified: in-game primary settings access, restart effects and persistence, hidden shortcut and RIMMSQOL interaction (scenario K)
   - unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, and Steam Deck layout
   - unverified: never loaded by RimWorld; scenarios A-K in TESTING.md are still waiting
@@ -811,3 +812,39 @@ exercised yet: no scenario got past its spawn step. To refile once the queue sho
 - 2026-09-28 run c488 (avec-animaux, 245178a): 7/7 red, exit 6. Real finding: `OskarPotocki.VFE.Vikings` (2231295285, 1.4 DLL only) is loaded as "incompatible version" and its world component raises `MissingMethodException: QuestUtility.SendLetterQuestAvailable`; a second `GenPlace.TryPlaceThing` MissingMethodException from a map component is not yet attributed. Vikings, JapaneseDogs, YorkshireTerrors and sarg.magicalmenagerie removed from the three animal pass maps (no 1.6 build). Exit 6 also = WSL lost for a moment (infrastructure). Pass refiled.
 
 - 2026-09-28 run 37ea (avec-animaux-sans-odyssey, 245178a): 27 scenarios, 0 passed, 17 failed ("PickleDriver.WaitUntil timed out after 175s"), 10 skipped. Same mod list as c488 (Vikings 1.4 DLL among them), so read as the same defect, not scenario failures. Refiled after map fix (0b71430); result of avec-animaux 4c3b decides.
+
+## Translation audit — 2026-09-30 (French gender-agreement rule and review gate)
+
+`TRANSLATIONS.md` gained two rules on 2026-09-30: every French text agreeing with a pawn must use
+the three-segment `{PAWN_gender ? masculine : feminine : ·neutral}` switch, and `translation_fr`
+cannot be `complete` until Virginie herself has read the French (a session can only reach
+`partial`). Every mod with a `Languages/French` folder had `translation_fr` reset to `unchecked`
+for the gender-agreement rule; this session's own field was reset by a peer session
+(`local_89040399-704d-4ba4-9dd3-d904bac14bfc`, "Vérification traductions féminines/inclusives"),
+corroborated independently against this file before acting.
+
+**Gender-agreement re-read, all 102 shipped French strings** (8 files: `Keyed/Settings.xml`, 7
+`DefInjected` files). None uses `{PAWN_gender...}` and none needs it: every agreeing adjective or
+participle modifies an inanimate noun (the apparel item — "un collier", "un sac", "une armure"),
+never the animal wearing it. Confirmed by reading each string, not by a pattern search for `{PAWN`
+or `·` (both absent, consistent with the reading). No text describes a pawn's own attributes in
+this mod, so the rule is `not_applicable` to it specifically, independent of the overall
+`translation_fr` field.
+
+**`FRENCH_REVIEW.md`** generated at the mod root (never inside `Mod/`) by a new
+`_tools/gen-french-review.mjs`, which reads the shipped XML rather than being written by hand: one
+table per source file, in shipped order, Key/path | Original | English | French. Original is the
+same as English everywhere — this mod migrates seven English Workshop add-ons (`ATTRIBUTION.md`),
+none with a non-English source. English for `Keyed/Settings.xml` comes from
+`Mod/Languages/English/Keyed/Settings.xml`; English for the seven `DefInjected` files comes from
+the `<!-- EN: ... -->` comment that precedes each entry in the shipped French XML itself (a
+pattern already used throughout this mod's DefInjected files). 18 of 102 rows have no such comment
+(`ApparelSettings.xml`'s two entries, and the 16 MVCF `comps.Comp_VerbGiver.verbProps.0.*` command
+labels/descriptions under a plain, non-`EN:` header comment) and are flagged `?` in the generated
+file for the reviewer to verify against `Mod/Defs` directly, rather than guessing.
+
+`translation_fr` moves from `unchecked` to `partial`: the inventory, gender-agreement re-read and
+`FRENCH_REVIEW.md` generation are done, but per the new rule it cannot become `complete` until
+Virginie reads `FRENCH_REVIEW.md` herself and records that review under this section, dated, with
+the revision covered and any corrections requested. This session does not mark its own French
+reviewed. `remaining` carries the "French review by Virginie" entry until then.
