@@ -30,6 +30,7 @@ tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 remaining:
   - unverified: French review by Virginie (TRANSLATIONS.md, "Systematic French review by Virginie"); FRENCH_REVIEW.md generated 2026-09-30, not yet read by her
+  - unverified: sans-facultatifs pass in game. Latest evidence, `sans-facultatifs-245178a` (2026-09-28), is red (0/27 passed, exitReason failed), predates the graphic-check and MVCF separateToggle fixes (0971baa, 6ba8de8); no green rerun since. Found trimming Evidence/ 2026-09-30.
   - unverified: in-game primary settings access, restart effects and persistence, hidden shortcut and RIMMSQOL interaction (scenario K)
   - unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, and Steam Deck layout
   - unverified: never loaded by RimWorld; scenarios A-K in TESTING.md are still waiting
