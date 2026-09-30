@@ -18,8 +18,7 @@
           "isCustomFont": false,
           "glyphCount": 30
         }
-      ],
-      "minimumContrast": 10.232
+      ]
     },
     ".suffix": {
       "bounds": {
@@ -35,8 +34,7 @@
           "isCustomFont": false,
           "glyphCount": 5
         }
-      ],
-      "minimumContrast": 7.49
+      ]
     },
     ".tag": {
       "bounds": {
@@ -52,8 +50,7 @@
           "isCustomFont": false,
           "glyphCount": 12
         }
-      ],
-      "minimumContrast": 5.413
+      ]
     },
     "p": {
       "bounds": {
@@ -69,8 +66,7 @@
           "isCustomFont": false,
           "glyphCount": 85
         }
-      ],
-      "minimumContrast": 7.997
+      ]
     },
     ".version": {
       "bounds": {
@@ -86,13 +82,7 @@
           "isCustomFont": false,
           "glyphCount": 3
         }
-      ],
-      "minimumContrast": 5.458
+      ]
     }
-  },
-  "size": [
-    896,
-    504
-  ],
-  "bytes": 542560
+  }
 }
