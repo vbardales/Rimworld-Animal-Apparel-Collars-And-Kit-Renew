@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using RimWorks.Pickle;
 using RimWorld;
 using Verse;
+using UnityEngine;
 
 namespace AnimalApparelCollars.PickleSteps
 {
@@ -341,6 +342,44 @@ namespace AnimalApparelCollars.PickleSteps
             bool covered = pawn.apparel.WornApparel.Any(
                 a => a.def.apparel.bodyPartGroups.Any(g => g.defName == groupDefName));
             ctx.Require(covered, $"'{nickname}' wears nothing on '{groupDefName}'");
+        }
+
+
+        // Gallery captures (PUBLISHING.md, pawn-capture rule 2026-10-01): colours that make the piece stand out.
+        [When("Animal Apparel Collars: {string} is dressed in {string} dyed {string}")]
+        public void DressDyed(PickleContext ctx, string nickname, string apparelDefName, string html)
+        {
+            Pawn pawn = Require(ctx, nickname);
+            ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
+            ThingDef def = DefDatabase<ThingDef>.GetNamedSilentFail(apparelDefName);
+            ctx.Require(def != null, $"no ThingDef '{apparelDefName}'");
+            ctx.Require(ColorUtility.TryParseHtmlString(html, out UnityEngine.Color color), $"'{html}' is not an HTML colour");
+            ThingDef stuff = def.MadeFromStuff ? GenStuff.DefaultStuffFor(def) : null;
+            Apparel apparel = (Apparel)ThingMaker.MakeThing(def, stuff);
+            apparel.SetColor(color, false);
+            pawn.apparel.Wear(apparel, true, false);
+        }
+
+        private static bool hiddenByUs;
+
+        [When("Animal Apparel Collars: the interface is hidden for the capture")]
+        public void HideInterface(PickleContext ctx)
+        {
+            Verse.Find.UIRoot.screenshotMode.Active = true;
+            hiddenByUs = true;
+        }
+
+        [When("Animal Apparel Collars: the interface is shown again")]
+        public void ShowInterface(PickleContext ctx) => Restore();
+
+        [AfterScenario]
+        public void AfterScenarioRestore() => Restore();
+
+        private static void Restore()
+        {
+            if (!hiddenByUs) return;
+            Verse.Find.UIRoot.screenshotMode.Active = false;
+            hiddenByUs = false;
         }
 
         private static class Find_

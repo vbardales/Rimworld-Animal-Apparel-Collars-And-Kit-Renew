@@ -113,3 +113,12 @@ closing scenario E of TESTING.md. None of this has been run yet.
   `-DepMap wsl-deps.removal.map -Filter '11-removal-write' -Then 'removal-check' -ThenWithout nelim.animalapparelcollarsandkit,nelim.animalapparelcollarsandkit.pickletests`.
   Two new local steps do the save and the hand-over (`GameDataSaveLoader.SaveGame`, a copy into the companion's
   folder). Never run. A restart with the mod kept (a save read by a fresh process) is still not designed.
+
+## Added 2026-10-01: feature 12, Workshop gallery captures
+
+Four `@review @gallery` scenarios (fox, horse, husky, muffalo with a turret pack) for the Steam gallery, following the
+pawn-capture rule of PUBLISHING.md: pieces dyed in contrasting colours (`is dressed in {string} dyed {string}`, HTML
+colour) and the interface hidden (`the interface is hidden for the capture`, restored by an `AfterScenario`).
+Scenario 4 needs VEF (pass avec-vef). Play with `-DepMap wsl-deps.avec-vef.map -Filter '12-gallery'`; the images are
+`gallery-N-*.png` in the evidence folder, to be opened, recropped to 16:9 and numbered `1-`..`4-` in `Art/gallery/`.
+Never run.
