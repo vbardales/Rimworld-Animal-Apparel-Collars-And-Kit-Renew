@@ -96,5 +96,15 @@
         "height": 259.90625
       }
     }
+  },
+  "iconBadgeAlpha": {
+    "width": 120,
+    "height": 105,
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 120,
+      "height": 105
+    }
   }
 }

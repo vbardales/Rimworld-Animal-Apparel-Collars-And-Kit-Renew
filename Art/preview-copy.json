@@ -20,7 +20,7 @@
     "file": "echo.png",
     "preSized": true,
     "color": "var(--accent)",
-    "width": 250,
+    "width": 233,
     "height": 280,
     "opacity": 1,
     "veil": false,
