@@ -19,3 +19,9 @@ are public: none is sent without Virginie's agreement.
   the save hand-over (11).
 - Green minimal-set (sans-facultatifs) pass.
 - Virginie's French review of `FRENCH_REVIEW.md`.
+
+## PR preparation (2026-10-01)
+
+Branches `add-rimworld-1.6` are committed locally in `C:\t\ae` (Animal Equipment, 278 files) and `C:\t\atp`
+(Animal Turret Packs, 12 files), outside this repository. Drafts of the PR texts are in `docs/upstream-prs/`.
+Not forked, not pushed, not sent. The ticks above stay open until Virginie agrees to send.
