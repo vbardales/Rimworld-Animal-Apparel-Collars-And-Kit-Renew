@@ -32,5 +32,5 @@ desktop.ini
 Tests/Pickle/Evidence/
 evidence/
 
-# Folder display icons (Windows), not part of the mod.
-*.ico
+# Folder display icons live in Art/ and are tracked; none may enter Mod/, which Steam publishes whole.
+Mod/**/*.ico
