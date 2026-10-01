@@ -355,11 +355,14 @@ steps 1-8 or RIMMSQOL UI compatibility; record actual expected/observed outcomes
 
 ## Evidence to keep
 
-Evidence lives on disk (`Tests/Pickle/Evidence/`, `evidence/`), ignored by git. Keep only, per scenario,
-the latest `summary.json` and `junit.xml` for the revision now in the repository, the `@review` captures that
-prove a claim, and `Player.log` if it is the sole proof of a check. Delete the rest as soon as a newer report
-replaces it (never `report.html`, `messages.ndjson` or a superseded build). One text line per run goes in
-`docs/runs/`. No evidence exists yet: no game run has taken place.
+Evidence lives on disk (`Tests/Pickle/Evidence/`, `evidence/`), ignored by git. Per scenario, keep the
+newest run for the revision now in the repository, plus an older run only when it is the sole proof of a
+check the newest did not repeat (2026-10-01: `avec-rimmsqol-245178a` for the shortcut scenario,
+`removal-24dc240` for the removal write). A kept run keeps `summary.md`, `summary.json`, a `junit.xml`
+under 1 MB, `Player.log` when it proves a check, and the `@review` screenshots that prove a claim.
+`report.html` and `messages.ndjson` are deleted once `exitReason` and the counts are read (same data,
+up to 80 MB). A red run replaced by a newer one is deleted whole. Never delete a run a `STATUS.md`
+field points at: repoint it first. One text line per run goes in `docs/runs/`.
 
 ## Pickle suite (2026-09-26)
 
