@@ -7,14 +7,14 @@ automated_tests: complete
 xml_tests: complete
 localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: complete
 mod:          Animal Apparel: Collars and Kit Renew (unofficial)
 packageId:    nelim.animalapparelcollarsandkit
 repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 visibility:   public
 detached:     yes
-stage:        showcase
-workflow_stage: options
+stage:        done
+workflow_stage: done
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
 upstream_mod_remotes:
@@ -30,7 +30,6 @@ showcase:     complete
 tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 remaining:
-  - unverified: French review by Virginie (TRANSLATIONS.md, "Systematic French review by Virginie"); FRENCH_REVIEW.md generated 2026-09-30, not yet read by her
   - unverified: sans-facultatifs pass in game. Its last report (2026-09-28, 0/27, red) predated the graphic-check and MVCF separateToggle fixes (0971baa, 6ba8de8) and was deleted 2026-10-01. `avec-animaux-ce65944` (2026-09-30) is green on current code (18 passed, 0 failed, 9 skipped) but is not the minimal set.
   - unverified: skipped scenarios to play on current code: shortcut 04 (green once in `avec-rimmsqol-245178a`, before the fixes), seven incompatibility checks in 05, save hand-over in 11.
   - unverified: in-game primary settings access, restart effects and persistence, hidden shortcut and RIMMSQOL interaction (scenario K)
@@ -39,7 +38,7 @@ remaining:
   - unverified: in-game rendering of the restructured textures; offline local-path checks passed
   - unverified: French text and Steam Deck behavior in game; offline translation-target checks passed
 session:      local_eb08411e-6348-4f15-aa6b-91964bb77df6
-updated:      2026-10-01, workflow audit: showcase / options (translation_fr partial); Evidence trimmed to 69 MB
+updated:      2026-10-01, French review validated by Virginie; stage done after rerun of XML (1273) and settings (30) tests
 ---
 
 # Animal Apparel: Collars and Kit Renew — status
@@ -887,3 +886,21 @@ chèvre`; `une prise pour monter la bête` becomes `un harnais de monte` (bridle
 universelle` becomes `écharpe universelle pour animaux`. The header now carries the real git revision, no
 longer "to be filled". `FRENCH_REVIEW.md` is regenerated from `1d79353`. `translation_fr` stays `partial`:
 these three French files changed, so Virginie must read them again; the review line is hers to write.
+
+## French review validated, stage raised — 2026-10-01
+
+**Translation audit, review line:** reviewer Virginie, 2026-10-01, revision `1d79353` (`FRENCH_REVIEW.md`
+regenerated at that revision), corrections requested in round 1 applied (see above), then "validé".
+`translation_fr` is `complete`; `remaining` no longer carries the French review.
+
+**Stage: `showcase / options` replaced by `done / done`.** The blocking transition `options -> l10n` now
+holds (`localization`, `translation_en`, `translation_fr` all `complete`). `l10n -> preTest`:
+dependencies and `LoadFolders` as audited 2026-09-13 (DEPENDENCIES.md), unchanged since. `preTest -> done`,
+replayed today on `1d79353`: `pwsh -NoProfile -File _tools/test-xml.ps1` PASS 1273 checks;
+`dotnet build Tests/Settings.Tests.csproj -c Release` then `Settings.Tests.exe` PASS 30 assertions.
+The settings test project did not build: its default globbing swallowed `Tests/Pickle/Source/*.cs`
+(Pickle steps need the Pickle assembly). Fixed in `Tests/Settings.Tests.csproj` (`Program.cs` only).
+The build rewrote the shipped `AnimalApparelCollarsAndKit.Settings.dll` (non-deterministic bytes, no
+source change); it was restored from git, not committed. Pickle suites are written with their scope in
+`Tests/Pickle/README.md`. `done` means ready for in-game validation: every `unverified` entry in
+`remaining` is a `done -> tested` item.
