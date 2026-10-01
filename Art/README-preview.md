@@ -36,5 +36,10 @@ radial gradient gained a flat 0%-48% plateau before its fade so a two-line title
 does not push the tag/summary text into a low-opacity zone. Both changes are in
 `scripts/Render-Preview.cjs` and apply to every mod using it, not a local override.
 
+The panel follows the shared content-sized layout: 30 px above top-anchored copy,
+48 px laterally, and 20 px below the summary. `Renew` and inline `(unofficial)`
+share the same 65% scale. `echo-source.png` is the bespoke transparent line-art
+source of the armored horse; the shared renderer normalizes it to a 3 px stroke.
+
 Visual review at 896 and 268 px remains necessary after changes: the automated
 checks cannot judge subject overlap or recognize a badge landing on the copy box.

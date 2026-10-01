@@ -6,26 +6,10 @@
   "elements": {
     ".title-main": {
       "bounds": {
-        "x": 50,
-        "y": 48,
-        "width": 333.125,
-        "height": 112.59375
-      },
-      "fonts": [
-        {
-          "familyName": "Segoe UI Semibold",
-          "postScriptName": "SegoeUI-Semibold",
-          "isCustomFont": false,
-          "glyphCount": 30
-        }
-      ]
-    },
-    ".suffix": {
-      "bounds": {
-        "x": 50,
-        "y": 167.1875,
-        "width": 89.65625,
-        "height": 40
+        "x": 48,
+        "y": 30,
+        "width": 403.59375,
+        "height": 132
       },
       "fonts": [
         {
@@ -33,15 +17,31 @@
           "postScriptName": "SegoeUI-Semibold",
           "isCustomFont": false,
           "glyphCount": 5
+        },
+        {
+          "familyName": "RimWordFont",
+          "postScriptName": "RimWordFont",
+          "isCustomFont": true,
+          "glyphCount": 30
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 12
         }
       ]
     },
+    ".suffix": {
+      "bounds": null,
+      "fonts": []
+    },
     ".tag": {
       "bounds": {
-        "x": 50,
-        "y": 213.78125,
-        "width": 430,
-        "height": 26.390625
+        "x": 135.84375,
+        "y": 119.4375,
+        "width": 123.171875,
+        "height": 35
       },
       "fonts": [
         {
@@ -54,17 +54,17 @@
     },
     "p": {
       "bounds": {
-        "x": 50,
-        "y": 279.171875,
-        "width": 430,
-        "height": 60.875
+        "x": 48,
+        "y": 198.59375,
+        "width": 362.25,
+        "height": 121.75
       },
       "fonts": [
         {
           "familyName": "Segoe UI",
           "postScriptName": "SegoeUI",
           "isCustomFont": false,
-          "glyphCount": 85
+          "glyphCount": 83
         }
       ]
     },
@@ -83,6 +83,22 @@
           "glyphCount": 3
         }
       ]
+    },
+    ".panel": {
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 519.671875,
+        "height": 341.34375
+      }
+    },
+    ".copy": {
+      "bounds": {
+        "x": 48,
+        "y": 30,
+        "width": 430,
+        "height": 290.34375
+      }
     }
   }
 }

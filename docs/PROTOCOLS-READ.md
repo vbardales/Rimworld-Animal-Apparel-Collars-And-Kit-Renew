@@ -15,6 +15,7 @@ Hash = first 10 hex digits of SHA-256 of the file in the monorepo root.
 | Rimworld-Release-Admin/docs/OPERATIONS.md | f6f85474f6 read 2026-09-26; now 23fcf64230, not re-read: no publication this session |
 | STATUS.md, TESTING.md, README.md, CHANGELOG.md, ATTRIBUTION.md, About.xml, PUBLICATION.md (this mod) | read at 6b39f65 (STATUS front matter and last sections, TESTING evidence section) |
 | docs/runs/README.md, Tests/Pickle/ (layout, Evidence summaries) | read 2026-10-01 |
+| Rimworld-Ticket-Dispatcher/docs/WELCOME.md, docs/SUBMIT.md | WELCOME 08b440a03f, re-read 2026-10-01 after the Ticket Manager's message (no desktop.ini or .ico tracked in Mod/: verified, `Mod/desktop.ini` is ignored and untracked; no grep -r on the Workshop, use scripts/Search-Workshop.sh) |
 
 ## Read, not useful for this mod now (do not re-read when they change, unless the task changes)
 
@@ -22,7 +23,7 @@ Hash = first 10 hex digits of SHA-256 of the file in the monorepo root.
 - WORKSHOP_COMMENTS.md (3fb37586f0): only when posting thank-you comments (after the public switch).
 - scripts/SEARCHING.md: corpus search, no search needed.
 - PickleTools/README.md, PickleTools/Headless/README.md, PickleTools/docs/steps.md,
-  Rimworld-Ticket-Dispatcher/docs/WELCOME.md (now 08b440a03f) and docs/SUBMIT.md: Pickle run
+  docs/SUBMIT.md: Pickle run
   mechanics; no run was submitted this session. Read them before submitting one.
 
 ## Absent in this mod
