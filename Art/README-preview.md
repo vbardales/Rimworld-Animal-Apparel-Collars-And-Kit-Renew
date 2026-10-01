@@ -15,9 +15,9 @@ uv run --with pillow python Art/verify-preview.py
 
 The first writes `Art/Preview-layout.html`, `Mod/About/Preview.png`,
 `Art/Preview-background-qa.png` and `Art/Preview-qa.json`. `verify-preview.py`
-reads those two, re-measures contrast (minimum 4.5, over every pixel of each
-unrotated text bounding box, not just its corners, against the actual rendered
-background), asserts no box is clipped and the PNG stays under 900 000 bytes, and
+reads those two, re-measures contrast (minimum 4.5, at the opaque core pixels of
+the rendered glyphs against the background directly beneath them), asserts no box
+is clipped and the PNG stays under 900 000 bytes, and
 writes `Art/Preview-thumbnail-qa.png` at 268 px for visual review at both sizes.
 Python is not installed directly on this machine; `uv run --with pillow` fetches
 Pillow into an ephemeral environment.
@@ -38,8 +38,9 @@ does not push the tag/summary text into a low-opacity zone. Both changes are in
 
 The panel follows the shared content-sized layout: 30 px above top-anchored copy,
 48 px laterally, and 20 px below the summary. `Renew` and inline `(unofficial)`
-share the same 65% scale. `echo-source.png` is the bespoke transparent line-art
-source of the armored horse; the shared renderer normalizes it to a 3 px stroke.
+share the same 65% scale. `echo.png` is the final pre-sized transparent line-art
+mask of the armored horse. It is consumed directly (`preSized: true`): the renderer
+does not threshold, skeletonize, resize, or thicken it.
 
 Visual review at 896 and 268 px remains necessary after changes: the automated
 checks cannot judge subject overlap or recognize a badge landing on the copy box.

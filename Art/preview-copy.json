@@ -13,29 +13,24 @@
   "suffix": "",
   "tag": "(unofficial)",
   "tagInline": true,
-  "copyLines": [
-    "Collars, barding, clothing and turret packs",
-    "for animals, from Animal Gear's framework."
-  ],
+  "copyLines": ["Collars, barding, clothing and turret packs for animals, from Animal Gear's framework."],
   "layout": "panel",
-  "panelAnchor": "top-left",
+  "panelAnchor": "bottom-left",
   "echo": {
-    "file": "echo-source.png",
-    "mode": "line-art",
-    "strokePx": 3,
-    "threshold": 22,
+    "file": "echo.png",
+    "preSized": true,
     "color": "var(--accent)",
     "width": 250,
     "height": 280,
     "opacity": 1,
     "veil": false,
-    "panelTop": 2,
+    "panelTop": 5,
     "panelRight": 1,
-    "panelWidth": 48
+    "panelWidth": 45
   },
   "iconBadge": {
     "file": "ModIcon-badge.png",
-    "corner": "bottom-left",
+    "corner": "bottom-right",
     "width": 220,
     "outline": false,
     "veil": "radial",

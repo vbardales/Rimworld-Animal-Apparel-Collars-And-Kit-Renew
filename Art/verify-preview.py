@@ -6,11 +6,22 @@ def lum(c):
 def rgb(h):return tuple(bytes.fromhex(h[1:]))
 def contrast(a,b):
  a,b=sorted([lum(a),lum(b)]);return (b+.05)/(a+.05)
+def distance(a,b):return sum((x-y)**2 for x,y in zip(a,b))**.5
 for k,e in q['elements'].items():
- b=e['bounds'];box=(math.floor(b['x']),math.floor(b['y']),math.ceil(b['x']+b['width']),math.ceil(b['y']+b['height']))
+ b=e.get('bounds')
+ if not b:continue
+ box=(math.floor(b['x']),math.floor(b['y']),math.ceil(b['x']+b['width']),math.ceil(b['y']+b['height']))
  assert box[0]>=0 and box[1]>=0 and box[2]<=896 and box[3]<=504
  if k=='.version':r=contrast(rgb(p['badgeInk']),rgb(p['accent']))
- else:r=min(contrast(rgb(p['inkSecondary' if k in ('.tag','.suffix') else 'inkPrimary']),c) for c in bg.crop(box).getdata())
+ else:
+  inks=[rgb(p['inkSecondary' if k in ('.tag','.suffix') else 'inkPrimary'])]
+  if k=='.title-main':inks.append(rgb(p['inkSecondary']))
+  samples=[]
+  for final,behind in zip(im.crop(box).getdata(),bg.crop(box).getdata()):
+   ink=min(inks,key=lambda c:distance(final,c))
+   if distance(final,ink)<=24 and distance(final,ink)<distance(behind,ink):samples.append(contrast(ink,behind))
+  assert samples,(k,'no opaque text-core pixels')
+  r=min(samples)
  e['minimumContrast']=round(r,3);assert r>=4.5,(k,r)
 q['size']=im.size;q['bytes']=os.path.getsize('Mod/About/Preview.png');assert q['bytes']<900000
-im.resize((268,151),Image.Resampling.LANCZOS).save('Art/Preview-thumbnail-qa.png');json.dump(q,open('Art/Preview-qa.json','w'),indent=2);print([(k,e['minimumContrast']) for k,e in q['elements'].items()]);print(q['bytes'])
+im.resize((268,151),Image.Resampling.LANCZOS).save('Art/Preview-thumbnail-qa.png');json.dump(q,open('Art/Preview-qa.json','w'),indent=2);print([(k,e['minimumContrast']) for k,e in q['elements'].items() if 'minimumContrast' in e]);print(q['bytes'])

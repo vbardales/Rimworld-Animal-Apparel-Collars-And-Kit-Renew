@@ -2,12 +2,12 @@
   "version": "1.6",
   "paletteSource": "Art/preview-palette.json",
   "copySource": "Art/preview-copy.json",
-  "iconBadgeCorner": "bottom-left",
+  "iconBadgeCorner": "bottom-right",
   "elements": {
     ".title-main": {
       "bounds": {
         "x": 48,
-        "y": 30,
+        "y": 224.09375,
         "width": 403.59375,
         "height": 132
       },
@@ -39,7 +39,7 @@
     ".tag": {
       "bounds": {
         "x": 135.84375,
-        "y": 119.4375,
+        "y": 313.53125,
         "width": 123.171875,
         "height": 35
       },
@@ -55,16 +55,16 @@
     "p": {
       "bounds": {
         "x": 48,
-        "y": 198.59375,
+        "y": 392.6875,
         "width": 362.25,
-        "height": 121.75
+        "height": 91.3125
       },
       "fonts": [
         {
           "familyName": "Segoe UI",
           "postScriptName": "SegoeUI",
           "isCustomFont": false,
-          "glyphCount": 83
+          "glyphCount": 84
         }
       ]
     },
@@ -83,21 +83,23 @@
           "glyphCount": 3
         }
       ]
-    },
-    ".panel": {
+    }
+  },
+  "layout": {
+    "panel": {
       "bounds": {
         "x": 0,
-        "y": 0,
+        "y": 203.09375,
         "width": 519.671875,
-        "height": 341.34375
+        "height": 300.90625
       }
     },
-    ".copy": {
+    "copy": {
       "bounds": {
         "x": 48,
-        "y": 30,
+        "y": 224.09375,
         "width": 430,
-        "height": 290.34375
+        "height": 259.90625
       }
     }
   }
