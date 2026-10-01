@@ -4,3 +4,11 @@
 2026-09-27 2c668a8 sans-facultatifs, 24 scenarios: FAILED, exitReason failed, 6/24 passed, 5 failed, 13 skipped. Superseded same evening by 275a1bc and b186a01 (both 11/24 passed, 0 failed). Evidence trimmed 2026-09-30 (disk pressure) per AGENTS.md.
 2026-09-27 275a1bc sans-facultatifs, 24 scenarios: PASSED (of the non-skipped), exitReason passed, 11/24 passed, 0 failed, 13 skipped. Duplicate of b186a01 run minutes later, same counts; superseded by it as the later of the two, then by the red 245178a the next day (current repo state's evidence, kept). Evidence trimmed 2026-09-30 (disk pressure) per AGENTS.md.
 2026-09-28 b6ab64c avec-vef, 13KB folder, no summary.json: the game did not reach a report (degenerate/incomplete run). Superseded same day by avec-vef-0631456 (13/24 passed, 0 failed, 11 skipped, kept). Evidence trimmed 2026-09-30 (disk pressure) per AGENTS.md.
+2026-09-28 245178a sans-facultatifs, 27 scenarios: FAILED, 0 passed, 13 failed, 14 skipped. Predates 0971baa and 6ba8de8. Folder deleted 2026-10-01.
+2026-09-28 245178a avec-animaux-sans-odyssey, 27 scenarios: FAILED, 0 passed, 17 failed, 10 skipped (WaitUntil timed out after 175 s). Folder deleted 2026-10-01.
+2026-09-27 29ba9b7 feature01, 5 scenarios: PASSED 5/5. Superseded by ce65944. Folder deleted 2026-10-01.
+2026-09-28 bff1208 turret-fire, 2 scenarios: 1 passed, 1 failed (real damage). Superseded by ce65944 (both passed). Folder deleted 2026-10-01.
+2026-09-28 0631456 avec-vef, 24 scenarios: 13 passed, 0 failed, 11 skipped. Superseded by ce65944. Folder deleted 2026-10-01.
+2026-09-28 245178a avec-rimmsqol, 27 scenarios: 7 passed, 10 failed, 10 skipped. Kept only as sole proof that scenario 04 (shortcut) passed; failures predate 0971baa and 6ba8de8.
+2026-09-30 ce65944 avec-animaux, 27 scenarios: PASSED, 18 passed, 0 failed, 9 skipped (04, seven in 05, 11 save). Kept; code unchanged since (only Preview.png).
+2026-09-28 24dc240 removal chain kept: seq1 removal write passed, seq2 reload without the mod passed.

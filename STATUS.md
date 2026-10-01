@@ -13,7 +13,8 @@ packageId:    nelim.animalapparelcollarsandkit
 repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 visibility:   public
 detached:     yes
-stage:        preTest
+stage:        showcase
+workflow_stage: options
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
 upstream_mod_remotes:
@@ -30,14 +31,15 @@ tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 remaining:
   - unverified: French review by Virginie (TRANSLATIONS.md, "Systematic French review by Virginie"); FRENCH_REVIEW.md generated 2026-09-30, not yet read by her
-  - unverified: sans-facultatifs pass in game. Latest evidence, `sans-facultatifs-245178a` (2026-09-28), is red (0/27 passed, exitReason failed), predates the graphic-check and MVCF separateToggle fixes (0971baa, 6ba8de8); no green rerun since. Found trimming Evidence/ 2026-09-30.
+  - unverified: sans-facultatifs pass in game. Its last report (2026-09-28, 0/27, red) predated the graphic-check and MVCF separateToggle fixes (0971baa, 6ba8de8) and was deleted 2026-10-01. `avec-animaux-ce65944` (2026-09-30) is green on current code (18 passed, 0 failed, 9 skipped) but is not the minimal set.
+  - unverified: skipped scenarios to play on current code: shortcut 04 (green once in `avec-rimmsqol-245178a`, before the fixes), seven incompatibility checks in 05, save hand-over in 11.
   - unverified: in-game primary settings access, restart effects and persistence, hidden shortcut and RIMMSQOL interaction (scenario K)
   - unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, and Steam Deck layout
   - unverified: never loaded by RimWorld; scenarios A-K in TESTING.md are still waiting
   - unverified: in-game rendering of the restructured textures; offline local-path checks passed
   - unverified: French text and Steam Deck behavior in game; offline translation-target checks passed
 session:      local_eb08411e-6348-4f15-aa6b-91964bb77df6
-updated:      2026-09-13, dependency audit complete and Odyssey gorilla regression corrected; ready for game validation
+updated:      2026-10-01, workflow audit: showcase / options (translation_fr partial); Evidence trimmed to 69 MB
 ---
 
 # Animal Apparel: Collars and Kit Renew — status
@@ -849,3 +851,29 @@ file for the reviewer to verify against `Mod/Defs` directly, rather than guessin
 Virginie reads `FRENCH_REVIEW.md` herself and records that review under this section, dated, with
 the revision covered and any corrections requested. This session does not mark its own French
 reviewed. `remaining` carries the "French review by Virginie" entry until then.
+
+## Workflow audit — 2026-10-01 (revision 6b39f65, working tree clean)
+
+**Previous: `stage: preTest`. Retained: `stage: showcase`, `workflow_stage: options`.** The first
+failing transition is `options -> l10n`: `translation_fr` is `partial` (rule of 2026-09-30: a session
+cannot mark French reviewed, and Virginie has not read `FRENCH_REVIEW.md`). The stage code
+`showcase` covers `Preview générée` through `l10n`. The "stage: done" paragraph above is replaced
+by this section on 2026-10-01 and kept as history.
+
+Checked directly:
+- Repository: `origin` is the GitHub repo, `main` level with it, no tag, tree clean.
+  `Mod/About/PublishedFileId.txt` holds `3806765840`, committed in `da1df6e`. `CHANGELOG.md` holds
+  `0.1.0` ("création d'un publishIdFile") under `Unreleased`. No `.dds` is tracked; `*.dds` is in `.gitignore`.
+- Evidence: nothing under `Tests/Pickle/Evidence/` or `evidence/` is tracked. Trimmed 691 MB to 69 MB.
+  Kept: `avec-animaux-ce65944` (latest, whole suite), `avec-rimmsqol-245178a` (sole proof of scenario 04),
+  `removal-24dc240` (sole proof of the removal write and reload). Six superseded or red runs deleted, and
+  `report.html` and `messages.ndjson` removed from the kept ones. One line per run in `docs/runs/README.md`.
+  Keep rule rewritten in `TESTING.md`.
+- Upstream: Animal Equipment (`Owlchemist/animal-equipment`, MIT) and Animal Turret Packs
+  (`flangopink/AnimalTurretPacks`, no licence) have reachable, unarchived GitHub repositories. A PR to
+  each is systematic (PUBLISHING.md, 2026-09-28): tracked in `BACKLOG.md`, nothing sent (public, needs
+  Virginie's agreement).
+- Not applicable: PUBLISHING.md's four animal integrations (ADS 2, Nocturnal Animals, Dogs mate,
+  Better Crossbreeding) concern mods that add a race; this mod adds apparel only.
+- Not tested: no scenario is `@wip`; `@requires` scenarios 04, the seven in 05 and 11's save step have no
+  green run on current code. No game was launched by this audit.

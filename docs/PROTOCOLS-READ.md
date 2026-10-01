@@ -1,35 +1,30 @@
 # Documents read, and their versions
 
-Read on 2026-09-26, in full. Re-read only what has moved since (compare the hash or commit).
-Protocol files live in the `rimworld-protocols` repository (`git --git-dir=../rimworld-protocols.git
---work-tree=. log -1 -- <file>` from the monorepo root); the others in the repository that carries them.
-Hash = first 10 hex digits of SHA-256.
+Read on 2026-10-01 (first full read 2026-09-26). Re-read only what has moved since.
+Hash = first 10 hex digits of SHA-256 of the file in the monorepo root.
 
 ## Read, and useful
 
-| File | Version read |
+| File | Hash read |
 | --- | --- |
-| AGENTS.md | 3a1d2cb 2026-09-24, 36631e7304 |
-| AUDIT.md | 4f034f5 2026-09-26, d5dc23b06e |
-| MOD_SETTINGS.md | b83933b 2026-09-23, 404916bc99 |
-| PUBLISHING.md | 4f034f5 2026-09-26, 7d34f55d58 |
-| TRANSLATIONS.md | f5c2d9d 2026-09-25, 298f74d226 |
-| Rimworld-Release-Admin/docs/OPERATIONS.md | f196148 2026-09-25, f6f85474f6 |
-| Rimworld-Ticket-Dispatcher/docs/WELCOME.md | 84a20e6 2026-09-26, 135d16d524 |
-| STATUS.md (this mod) | df8e28e 2026-09-13, 6d9d6e9912 |
-| TESTING.md (this mod) | df8e28e 2026-09-13, 5e3abdd578 |
-| README.md, CHANGELOG.md, ATTRIBUTION.md, LICENSE, Mod/About/About.xml | 7060c62 / df8e28e / 7060c62 / 80ece16 / 8183a2b |
+| AGENTS.md | 7a236f03ca |
+| AUDIT.md | 0fb60fdf8c |
+| MOD_SETTINGS.md | 404916bc99 (unchanged since 2026-09-26) |
+| PUBLISHING.md | 7fed7de415: lines 1-24 (start from the source repo) and 295-407 (animal integrations, repository) read 2026-10-01; the rest read at 7d34f55d58 |
+| TRANSLATIONS.md | e5197820fd |
+| Rimworld-Release-Admin/docs/OPERATIONS.md | f6f85474f6 read 2026-09-26; now 23fcf64230, not re-read: no publication this session |
+| STATUS.md, TESTING.md, README.md, CHANGELOG.md, ATTRIBUTION.md, About.xml, PUBLICATION.md (this mod) | read at 6b39f65 (STATUS front matter and last sections, TESTING evidence section) |
+| docs/runs/README.md, Tests/Pickle/ (layout, Evidence summaries) | read 2026-10-01 |
 
 ## Read, not useful for this mod now (do not re-read when they change, unless the task changes)
 
-- STYLE_RIMWORLD.md (7311308): Preview and ModIcon art rules; both images are accepted, and the
-  ModIcon is the owner's to generate.
-- WORKSHOP_COMMENTS.md (968de6f): only when drafting thank-you comments (no PUBLICATION.md yet).
-- scripts/SEARCHING.md (372c447): corpus search, no search needed.
-- PickleTools/README.md (c771bef), PickleTools/Headless/README.md (cfa7aac), PickleTools/docs/steps.md
-  (cba3ca1), Rimworld-Ticket-Dispatcher/docs/SUBMIT.md (c0a73a2): Pickle runs. This mod has no
-  `Tests/Pickle/`; re-read them if a Pickle suite is written.
+- STYLE_RIMWORLD.md (f17ef2bbdc): Preview and ModIcon art rules; both images are accepted.
+- WORKSHOP_COMMENTS.md (3fb37586f0): only when posting thank-you comments (after the public switch).
+- scripts/SEARCHING.md: corpus search, no search needed.
+- PickleTools/README.md, PickleTools/Headless/README.md, PickleTools/docs/steps.md,
+  Rimworld-Ticket-Dispatcher/docs/WELCOME.md (now 08b440a03f) and docs/SUBMIT.md: Pickle run
+  mechanics; no run was submitted this session. Read them before submitting one.
 
 ## Absent in this mod
 
-PUBLICATION.md, BACKLOG.md, NOTES.md, BUGS.md, `docs/runs/`, `Tests/Pickle/` do not exist.
+NOTES.md, BUGS.md. BACKLOG.md was created at the mod root on 2026-10-01 (the monorepo one is not this mod's).
