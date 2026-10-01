@@ -877,3 +877,13 @@ Checked directly:
   Better Crossbreeding) concern mods that add a race; this mod adds apparel only.
 - Not tested: no scenario is `@wip`; `@requires` scenarios 04, the seven in 05 and 11's save step have no
   green run on current code. No game was launched by this audit.
+
+**French review round 1 — 2026-10-01 (Virginie's feedback, French files changed, review still open).**
+Virginie returned the review as "not validable" with five points, all applied in `1d79353`: the 18 rows
+without an English source now get it from the native Defs (`_tools/gen-french-review.mjs` parses `Mod/Defs`
+and `Mod/Mods/*/Defs`; 0 rows flagged `?`, was 18); the header names the project neutral as the o-series
+(`ol`, `lo`, `o`, `do`) instead of `·neutral`; `cotte de mailles de chèvre` becomes `cotte de mailles pour
+chèvre`; `une prise pour monter la bête` becomes `un harnais de monte` (bridle and reins); `écharpe
+universelle` becomes `écharpe universelle pour animaux`. The header now carries the real git revision, no
+longer "to be filled". `FRENCH_REVIEW.md` is regenerated from `1d79353`. `translation_fr` stays `partial`:
+these three French files changed, so Virginie must read them again; the review line is hers to write.

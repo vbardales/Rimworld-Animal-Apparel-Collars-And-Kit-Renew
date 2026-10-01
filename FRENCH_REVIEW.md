@@ -1,10 +1,10 @@
 # French review — Animal Apparel: Collars and Kit
 
-Generated 2026-09-30 by `_tools/gen-french-review.mjs` from the shipped XML (revision to be filled by the reviewing session). Not shipped in `Mod/`.
+Generated 2026-10-01 by `_tools/gen-french-review.mjs` from the shipped XML at revision 1d79353. Not shipped in `Mod/`.
 
 **Original: same as English.** This mod migrates seven English Workshop add-ons (see `ATTRIBUTION.md`); none has a non-English source text.
 
-**Gender agreement scan:** every French cell below was read against TRANSLATIONS.md's three-segment switch rule (`{PAWN_gender ? masculine : feminine : ·neutral}`). None of this mod's text describes a pawn's own attributes — every agreeing adjective or participle modifies an inanimate noun (the apparel item), not the animal wearing it — so no switch is missing. Confirmed by reading, not by pattern search.
+**Gender agreement scan:** every French cell below was read against TRANSLATIONS.md's three-segment switch rule (`{PAWN_gender ? masculine : feminine : neutral}`; the project neutral is the o-series: `ol`, `lo`, `o`, `do`). None of this mod's text describes a pawn's own attributes — every agreeing adjective or participle modifies an inanimate noun (the apparel item), not the animal wearing it — so no switch is missing. Confirmed by reading, not by pattern search.
 
 ## Keyed/Settings.xml
 
@@ -28,8 +28,8 @@ Generated 2026-09-30 by `_tools/gen-french-review.mjs` from the shipped XML (rev
 
 | Key or path | Original | English | French |
 |---|---|---|---|
-| `AA_CK_Settings.label` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | équipement animal `?` — English source not captured in a comment, verify against Mod/Defs |
-| `AA_CK_Settings.description` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | Ouvrir les options du mod Collars and Kit. `?` — English source not captured in a comment, verify against Mod/Defs |
+| `AA_CK_Settings.label` | animal apparel | animal apparel | équipement animal |
+| `AA_CK_Settings.description` | Open the Collars and Kit mod settings. | Open the Collars and Kit mod settings. | Ouvrir les options du mod Collars and Kit. |
 
 ## Mod/Languages/French/DefInjected/ResearchProjectDef/ResearchProjects_AnimalGear.xml
 
@@ -66,7 +66,7 @@ Generated 2026-09-30 by `_tools/gen-french-review.mjs` from the shipped XML (rev
 | `Apparel_shielddogcollar.description` | A projectile-repulsion collar. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. | A projectile-repulsion collar. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. | Un collier répulseur de projectiles. Il tente d'arrêter les tirs et les éclats, mais ne fait rien contre les attaques de mêlée ni contre la chaleur. |
 | `diaper.label` | diaper | diaper | couche |
 | `diaper.description` | A Diaper animals can wear to eliminate filth production for a short time. | A Diaper animals can wear to eliminate filth production for a short time. | Une couche que les animaux peuvent porter : elle supprime les saletés qu'ils répandent, pour un temps. |
-| `Apparel_GoatMail.label` | goat mail | goat mail | cotte de mailles de chèvre |
+| `Apparel_GoatMail.label` | goat mail | goat mail | cotte de mailles pour chèvre |
 | `Apparel_GoatMail.description` | Armor plates covering the body. Protects against gunfire and melee attacks. | Armor plates covering the body. Protects against gunfire and melee attacks. | Des plaques d'armure couvrant le corps. Protège des tirs et des attaques de mêlée. |
 | `Apparel_MedievalHorsePlate.label` | horse barding | horse barding | barde de cheval |
 | `Apparel_MedievalHorsePlate.description` | Medieval plate barding shaped for a horse. Cumbersome, but it turns aside blades and blunts a charge. | Medieval plate barding shaped for a horse. Cumbersome, but it turns aside blades and blunts a charge. | Une barde de plates médiévale taillée pour un cheval. Encombrante, mais elle dévie les lames et amortit les chocs. |
@@ -83,7 +83,7 @@ Generated 2026-09-30 by `_tools/gen-french-review.mjs` from the shipped XML (rev
 | `Apparel_LargeAnimalScarf.label` | large animal headwear | large animal headwear | coiffe pour grand animal |
 | `Apparel_LargeAnimalScarf.description` | A specialized piece of headwear made of fabric or leather designed to fit a large animal. | A specialized piece of headwear made of fabric or leather designed to fit a large animal. | Une coiffe en tissu ou en cuir, taillée pour la tête d'un grand animal. |
 | `Apparel_bridle.label` | riding gear | riding gear | harnais de monte |
-| `Apparel_bridle.description` | Provides protection and a harness for riding. | Provides protection and a harness for riding. | Offre une protection et une prise pour monter la bête. |
+| `Apparel_bridle.description` | Provides protection and a harness for riding. | Provides protection and a harness for riding. | Offre une protection et un harnais de monte. |
 | `Apparel_SmallAnimalPowerArmor.label` | animal power armor | animal power armor | armure assistée pour animal |
 | `Apparel_SmallAnimalPowerArmor.description` | A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. | A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. | Une armure assistée légère conçue pour les animaux de combat. Ses plaques en tissage de plastacier arrêtent très efficacement les attaques et laissent peu d'articulations vulnérables. Des assistances neuro-mémétiques permettent à l'animal de la porter sans perdre sa mobilité. |
 | `Apparel_LargeAnimalPowerArmor.label` | large animal power armor | large animal power armor | armure assistée pour grand animal |
@@ -99,10 +99,10 @@ Generated 2026-09-30 by `_tools/gen-french-review.mjs` from the shipped XML (rev
 |---|---|---|---|
 | `Apparel_AnimalClothes.label` | universal animal clothes | universal animal clothes | vêtements universels pour animal |
 | `Apparel_AnimalClothes.description` | Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. | Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. | Des vêtements robustes pour animaux. Protègent des intempéries, ainsi que des éraflures et des coupures légères. |
-| `Apparel_AnimalScarf.label` | universal pet scarf | universal pet scarf | écharpe universelle |
+| `Apparel_AnimalScarf.label` | universal pet scarf | universal pet scarf | écharpe universelle pour animaux |
 | `Apparel_AnimalScarf.description` | A stylish accessory for cool, laid back animals. | A stylish accessory for cool, laid back animals. | Un accessoire élégant pour les bêtes décontractées. |
 | `Apparel_AnimalReins.label` | universal riding gear | universal riding gear | harnais de monte universel |
-| `Apparel_AnimalReins.description` | Provides protection and a harness for riding. | Provides protection and a harness for riding. | Offre une protection et une prise pour monter la bête. |
+| `Apparel_AnimalReins.description` | Provides protection and a harness for riding. | Provides protection and a harness for riding. | Offre une protection et un harnais de monte. |
 | `Apparel_AnimalPowerArmor.label` | universal animal power armor | universal animal power armor | armure assistée universelle |
 | `Apparel_AnimalPowerArmor.description` | A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. | A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. | Une armure assistée légère conçue pour les animaux de combat. Ses plaques en tissage de plastacier arrêtent très efficacement les attaques et laissent peu d'articulations vulnérables. Des assistances neuro-mémétiques permettent à l'animal de la porter sans perdre sa mobilité. |
 | `Apparel_AnimalPowerArmorHelmet.label` | universal animal power helmet | universal animal power helmet | casque assisté universel |
@@ -131,20 +131,20 @@ Generated 2026-09-30 by `_tools/gen-french-review.mjs` from the shipped XML (rev
 | `ATP_Bullet_SmallTurret.label` | mini-turret bullet | mini-turret bullet | balle de mini-tourelle |
 | `ATP_Bullet_ShotgunTurret.label` | mini-shotgun blast | mini-shotgun blast | gerbe de mini-fusil |
 | `ATP_Bullet_SpacerTurret.label` | mini-turret blaster shot | mini-turret blaster shot | tir de mini-tourelle à charge |
-| `ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | canon de mini-tourelle `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | Un canon automatique simple conçu pour être fixé sur un animal. `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | fusil à pompe de mini-tourelle `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | Un fusil à pompe automatique simple conçu pour être fixé sur un animal. `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | canon à charge de mini-tourelle `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | Un canon à charge automatique simple conçu pour être fixé sur un animal. `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | canon de mini-tourelle `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | Un canon automatique simple conçu pour être fixé sur un animal. `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | fusil à pompe de mini-tourelle `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | Un fusil à pompe automatique simple conçu pour être fixé sur un animal. `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | canon à charge de mini-tourelle `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | Un canon à charge automatique simple conçu pour être fixé sur un animal. `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | grenades `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | Une ceinture de grenades fixée sur un animal. `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | grenades `?` — English source not captured in a comment, verify against Mod/Defs |
-| `ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description` | (no `<!-- EN: -->` comment found) | (no `<!-- EN: -->` comment found) | Une ceinture de grenades fixée sur un animal. `?` — English source not captured in a comment, verify against Mod/Defs |
+| `ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel` | mini-turret gun | mini-turret gun | canon de mini-tourelle |
+| `ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description` | A simple automatic gun made to be strapped onto an animal. | A simple automatic gun made to be strapped onto an animal. | Un canon automatique simple conçu pour être fixé sur un animal. |
+| `ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel` | mini-turret shotgun | mini-turret shotgun | fusil à pompe de mini-tourelle |
+| `ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description` | A simple automatic shotgun made to be strapped onto an animal. | A simple automatic shotgun made to be strapped onto an animal. | Un fusil à pompe automatique simple conçu pour être fixé sur un animal. |
+| `ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel` | mini-turret charge blaster | mini-turret charge blaster | canon à charge de mini-tourelle |
+| `ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description` | A simple automatic charge blaster made to be strapped onto an animal. | A simple automatic charge blaster made to be strapped onto an animal. | Un canon à charge automatique simple conçu pour être fixé sur un animal. |
+| `ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel` | mini-turret gun | mini-turret gun | canon de mini-tourelle |
+| `ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description` | A simple automatic gun made to be strapped onto an animal. | A simple automatic gun made to be strapped onto an animal. | Un canon automatique simple conçu pour être fixé sur un animal. |
+| `ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel` | mini-turret shotgun | mini-turret shotgun | fusil à pompe de mini-tourelle |
+| `ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description` | A simple automatic shotgun made to be strapped onto an animal. | A simple automatic shotgun made to be strapped onto an animal. | Un fusil à pompe automatique simple conçu pour être fixé sur un animal. |
+| `ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel` | mini-turret charge blaster | mini-turret charge blaster | canon à charge de mini-tourelle |
+| `ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description` | A simple automatic charge blaster made to be strapped onto an animal. | A simple automatic charge blaster made to be strapped onto an animal. | Un canon à charge automatique simple conçu pour être fixé sur un animal. |
+| `ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel` | grenades | grenades | grenades |
+| `ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description` | A grenade belt strapped onto an animal. | A grenade belt strapped onto an animal. | Une ceinture de grenades fixée sur un animal. |
+| `ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel` | grenades | grenades | grenades |
+| `ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description` | A grenade belt strapped onto an animal. | A grenade belt strapped onto an animal. | Une ceinture de grenades fixée sur un animal. |
 
