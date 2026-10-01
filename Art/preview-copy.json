@@ -26,7 +26,8 @@
     "veil": false,
     "panelTop": 5,
     "panelRight": 1,
-    "panelWidth": 45
+    "panelWidth": 45,
+    "flipX": true
   },
   "iconBadge": {
     "file": "ModIcon-badge.png",
