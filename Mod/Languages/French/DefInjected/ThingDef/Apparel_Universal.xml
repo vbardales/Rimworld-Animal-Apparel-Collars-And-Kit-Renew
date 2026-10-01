@@ -11,14 +11,14 @@
   <Apparel_AnimalClothes.description>Des vêtements robustes pour animaux. Protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_AnimalClothes.description>
 
   <!-- EN: universal pet scarf -->
-  <Apparel_AnimalScarf.label>écharpe universelle</Apparel_AnimalScarf.label>
+  <Apparel_AnimalScarf.label>écharpe universelle pour animaux</Apparel_AnimalScarf.label>
   <!-- EN: A stylish accessory for cool, laid back animals. -->
   <Apparel_AnimalScarf.description>Un accessoire élégant pour les bêtes décontractées.</Apparel_AnimalScarf.description>
 
   <!-- EN: universal riding gear -->
   <Apparel_AnimalReins.label>harnais de monte universel</Apparel_AnimalReins.label>
   <!-- EN: Provides protection and a harness for riding. -->
-  <Apparel_AnimalReins.description>Offre une protection et une prise pour monter la bête.</Apparel_AnimalReins.description>
+  <Apparel_AnimalReins.description>Offre une protection et un harnais de monte.</Apparel_AnimalReins.description>
 
   <!-- EN: universal animal power armor -->
   <Apparel_AnimalPowerArmor.label>armure assistée universelle</Apparel_AnimalPowerArmor.label>

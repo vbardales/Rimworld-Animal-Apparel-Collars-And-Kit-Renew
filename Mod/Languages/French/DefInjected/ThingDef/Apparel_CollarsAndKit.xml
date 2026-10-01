@@ -33,7 +33,7 @@
   <!-- ===== [CSM]RealisticAwesomeGoat, by CSM ===== -->
 
   <!-- EN: goat mail -->
-  <Apparel_GoatMail.label>cotte de mailles de chèvre</Apparel_GoatMail.label>
+  <Apparel_GoatMail.label>cotte de mailles pour chèvre</Apparel_GoatMail.label>
   <!-- EN: Armor plates covering the body. Protects against gunfire and melee attacks. -->
   <Apparel_GoatMail.description>Des plaques d'armure couvrant le corps. Protège des tirs et des attaques de mêlée.</Apparel_GoatMail.description>
 
@@ -79,7 +79,7 @@
   <!-- EN: riding gear -->
   <Apparel_bridle.label>harnais de monte</Apparel_bridle.label>
   <!-- EN: Provides protection and a harness for riding. -->
-  <Apparel_bridle.description>Offre une protection et une prise pour monter la bête.</Apparel_bridle.description>
+  <Apparel_bridle.description>Offre une protection et un harnais de monte.</Apparel_bridle.description>
 
   <!-- EN: animal power armor -->
   <Apparel_SmallAnimalPowerArmor.label>armure assistée pour animal</Apparel_SmallAnimalPowerArmor.label>
