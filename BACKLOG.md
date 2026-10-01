@@ -18,7 +18,6 @@ are public: none is sent without Virginie's agreement.
 - Play the skipped scenarios on current code: shortcut (04), the seven incompatibility checks (05),
   the save hand-over (11).
 - Green minimal-set (sans-facultatifs) pass.
-- Virginie's French review of `FRENCH_REVIEW.md`.
 
 ## PR preparation (2026-10-01)
 

@@ -16,7 +16,7 @@ The 1.3/1.4 content is untouched. `LoadFolders.xml` gains a `v1.6` entry; `About
 `1.6/` contains:
 - Clothing, headwear (scarf) and riding gear, and the spacer power armour, with their research projects (same defNames, so saves keep their research). Flak and plate are left to Basic Armor, which already ports them; `PoweredAnimalArmor` hangs off vanilla `PoweredArmor` plus `ComplexAnimalClothing` instead of the removed `FlakAnimalArmor`.
 - An `AnimalNeck` body part group (and its patch onto animal bodies) so collars, clothes and riding gear can coexist.
-- The textures (276 files), restructured from `clothes_<Animal>_<rot>.png` into the per-animal folders the new framework resolves. The six horse riding-gear sprites and the redrawn cow scarf come from the released Workshop item; they never reached this repository.
+- The textures (270 files), restructured from `clothes_<Animal>_<rot>.png` into the per-animal folders the new framework resolves. The six horse riding-gear sprites and the redrawn cow scarf come from the released Workshop item; they never reached this repository.
 
 Not included: the per-mod sprite folders under `Mods/` (Dinosauria, Spider Camps' dogs, VAE Dinosauria, Alpha Animals, VFE Vikings). They are a follow-up if you want this folder.
 
