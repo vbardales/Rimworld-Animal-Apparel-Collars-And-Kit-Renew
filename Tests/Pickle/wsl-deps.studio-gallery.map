@@ -1,0 +1,5 @@
+# Pass studio-gallery: the zenNelim studio fixture, StageDecor (lamps, stool) and CameraZoom, for the staged gallery captures (12-gallery).
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod
+nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
