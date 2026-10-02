@@ -12,7 +12,6 @@ Feature: Animal Apparel Collars and Kit Renew, bodies without a neck
   # this scenario proves is the AnimalNeck fallback (wearing and coverage), not a visible sprite.
   # A first version of this feature asserted "draws" and failed on all three for that reason
   # (avec-animaux-0971baa, 2026-09-29), not a mod defect.
-  @review
   Scenario: Animal Apparel Collars: a snake wears the test collar
     Given the save "test-colony" is loaded
     And Animal Apparel Collars: a tame "Cobra" named "Cobra" exists near the colony

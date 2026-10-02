@@ -21,10 +21,13 @@ Feature: Animal Apparel Collars and Kit Renew, worn apparel survives a save and 
   Scenario: Animal Apparel Collars: a reloaded animal is still drawn with its collar
     Given the save "test-colony" is loaded
     And Animal Apparel Collars: a tame "Husky" named "SavedHusky" exists near the colony
-    When Animal Apparel Collars: "SavedHusky" is dressed in "Apparel_studdeddogcollar"
+    When Animal Apparel Collars: "SavedHusky" is dressed in "Apparel_studdeddogcollar" dyed "#2060d0"
     And I save and reload
-    And Animal Apparel Collars: the camera is centered on "SavedHusky"
-    And I zoom all the way in
     Then Animal Apparel Collars: "SavedHusky" is wearing "Apparel_studdeddogcollar"
-    When I take a screenshot "husky-collar-after-reload"
+    When Animal Apparel Collars: the camera is framed tight on "SavedHusky"
+    Then Animal Apparel Collars: the camera can see "SavedHusky"
+    When Animal Apparel Collars: the interface is hidden for the capture
+    And Nelim's Pickle Tools: I move the mouse to (5, 5)
+    And I take a screenshot "husky-collar-after-reload"
+    And Animal Apparel Collars: the interface is shown again
     Then no errors were logged
