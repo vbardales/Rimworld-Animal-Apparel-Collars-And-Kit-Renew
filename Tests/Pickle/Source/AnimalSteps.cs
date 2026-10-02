@@ -394,6 +394,36 @@ namespace AnimalApparelCollars.PickleSteps
                 $"{errors.Count} errors seen: " + string.Join(" | ", errors.Take(5).Select(m => m.text.Length > 120 ? m.text.Substring(0, 120) : m.text)));
         }
 
+        // The game's load-time duplicate errors are not in Log.Messages when a scenario runs (Dog Collars run a8d3 / 8ddb11f:
+        // 0 errors seen), so the declared incompatibility is checked at its source: the defNames written in the other
+        // mod's own Defs files, against those written in this mod's. Shared names are what makes loading both a clash.
+        [Then("Animal Apparel Collars: mod {string} still defines a defName that this mod defines too")]
+        public void ModSharesDefNames(PickleContext ctx, string packageId)
+        {
+            ModContentPack other = LoadedModManager.RunningMods.FirstOrDefault(m => string.Equals(m.PackageIdPlayerFacing, packageId, StringComparison.OrdinalIgnoreCase));
+            ModContentPack self = LoadedModManager.RunningMods.FirstOrDefault(m => string.Equals(m.PackageIdPlayerFacing, "nelim.animalapparelcollarsandkit", StringComparison.OrdinalIgnoreCase));
+            ctx.Require(other != null, $"mod '{packageId}' is not among the running mods");
+            ctx.Require(self != null, "this mod is not among the running mods");
+            var mine = DefNamesIn(self.RootDir);
+            var theirs = DefNamesIn(other.RootDir);
+            var shared = mine.Intersect(theirs).OrderBy(x => x).ToList();
+            ctx.Require(shared.Count > 0, $"no defName is written by both: this mod {mine.Count}, '{packageId}' {theirs.Count} (read from {other.RootDir})");
+            Log.Message("Animal Apparel Collars: " + packageId + " shares " + shared.Count + " defNames, e.g. " + string.Join(", ", shared.Take(5)));
+        }
+
+        private static HashSet<string> DefNamesIn(string root)
+        {
+            var names = new HashSet<string>();
+            var rx = new System.Text.RegularExpressions.Regex("<defName>([^<]+)</defName>");
+            foreach (string file in System.IO.Directory.EnumerateFiles(root, "*.xml", System.IO.SearchOption.AllDirectories))
+            {
+                string path = file.Replace('\\', '/');
+                if (path.IndexOf("/Defs/", StringComparison.OrdinalIgnoreCase) < 0) continue;
+                foreach (System.Text.RegularExpressions.Match m in rx.Matches(System.IO.File.ReadAllText(file))) names.Add(m.Groups[1].Value.Trim());
+            }
+            return names;
+        }
+
         private static bool hiddenByUs;
 
         [When("Animal Apparel Collars: the interface is hidden for the capture")]
