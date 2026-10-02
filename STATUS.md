@@ -904,3 +904,13 @@ The build rewrote the shipped `AnimalApparelCollarsAndKit.Settings.dll` (non-det
 source change); it was restored from git, not committed. Pickle suites are written with their scope in
 `Tests/Pickle/README.md`. `done` means ready for in-game validation: every `unverified` entry in
 `remaining` is a `done -> tested` item.
+
+## Game passes, state on 2026-10-02 (revision bf865a3 and the fixes after it)
+
+Played, read (`exitReason` first, scenarios played against discovered): sans-facultatifs EN green (17 passed, 15 skipped by requirement);
+avec-vef EN green (21 passed, 11 skipped); avec-animaux FR 20 passed, 3 failed (two 5 s tick-wait timeouts, fixed by a 90 s step; one
+scenario that belongs to the sans-odyssey pass); sans-facultatifs FR red (16 of 17 "Accessing map pawns off main thread", Pickle-side,
+cause not established, see `BACKLOG.md`); avec-rimmsqol EN killed by the watchdog on a low-memory machine, no verdict.
+Gallery captures 1-3 were opened and rejected (animals a few pixels tall); a tight-frame step replaces the zoom.
+Still in the queue: rerun of sans-facultatifs FR, avec-rimmsqol, gallery, idle colony, with-Odyssey, sans-odyssey, the 7 incompatibility
+checks, the removal chain. `tested` needs all of them green, the `@review` images opened, and no `@wip`. No scenario is `@wip`.
