@@ -360,12 +360,20 @@ namespace AnimalApparelCollars.PickleSteps
             pawn.apparel.Wear(apparel, true, false);
         }
 
-        [When("Animal Apparel Collars: the camera is framed tight on {string}")]
-        public void FrameTight(PickleContext ctx, string nickname)
+        // Paused, selection cleared, camera looking 2 cells past the animal (the pointer stays at the screen centre
+        // and Pickle's 'I move the mouse' no longer moves it, so the tooltip would otherwise land on the subject;
+        // same offset as CoatSteps' frame step). SetRootSize asks for 9, but the camera clamps to its sizeRange
+        // minimum: the size really reached is logged, so the Player.log says whether that is a bound or a delay.
+        [When("Animal Apparel Collars: the camera is framed tight on {string}", TimeoutSeconds = 15f)]
+        public async Task FrameTight(PickleContext ctx, string nickname)
         {
             Pawn pawn = Require(ctx, nickname);
-            Vector3 at = pawn.DrawPos;
-            Verse.Find.CameraDriver.SetRootPosAndSize(new Vector3(at.x, Verse.Find.CameraDriver.transform.position.y, at.z), 4.5f);
+            Verse.Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
+            Verse.Find.Selector.ClearSelection();
+            Verse.Find.CameraDriver.JumpToCurrentMapLoc(new IntVec3(pawn.Position.x, 0, pawn.Position.z - 2));
+            Verse.Find.CameraDriver.SetRootSize(9f);
+            await ctx.WaitFrames(30);
+            Log.Message("Animal Apparel Collars: framed '" + nickname + "', camera root size asked 9, now " + Verse.Find.CameraDriver.RootSize);
         }
 
         // Pickle's own "I wait {int} ticks" has the default 5 s step deadline, so 1800 ticks failed on a loaded
