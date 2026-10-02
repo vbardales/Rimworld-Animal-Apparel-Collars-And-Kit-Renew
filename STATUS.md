@@ -30,7 +30,7 @@ showcase:     complete
 tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 remaining:
-  - unverified: sans-facultatifs French pass (English passed 2026-10-02: `sans-facultatifs-en-bf865a3`, 17 passed, 0 failed, 15 skipped by requirement, exitReason passed; the French pass and every skipped scenario still wait for their own pass)
+  - unverified: sans-facultatifs passes are green in English (bf865a3) and French (12e815f, rerun after an intermittent Pickle-side failure); the 15 scenarios each skipped by requirement wait for their own pass (RIMMSQOL shortcut, the 7 incompatibilities, Odyssey pair, save hand-over, VEF-only turret scenarios were green in avec-vef)
   - unverified: skipped scenarios to play on current code: shortcut 04 (green once in `avec-rimmsqol-245178a`, before the fixes), seven incompatibility checks in 05, save hand-over in 11.
   - unverified: in-game primary settings access, restart effects and persistence, hidden shortcut and RIMMSQOL interaction (scenario K)
   - unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, and Steam Deck layout
