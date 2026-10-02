@@ -18,6 +18,6 @@ Animal Gear has no 1.6 version; its replacement, Animal Apparel: Framework (`Ing
 - `1.6/Defs/ResearchDefs/ResearchProjects_ATP.xml`: unchanged copy.
 - `1.6/Textures/`: the same eight textures, byte for byte.
 
-Testing, honestly: the XML is well-formed and the defs are the ones my collection ships. In that collection, with Animal Apparel: Framework and VEF on a headless 1.6 game, scenarios load the mod without errors, a muffalo wears a pack, and a pack deals damage to a hostile target. I have not run this exact folder layout as a standalone mod; if you would rather not carry a 1.6 branch I understand, and the same port is MIT-compatible for you to take from my repository: https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew
+Testing, honestly: the XML is well-formed and the defs are the ones my collection ships. In that collection, with Animal Apparel: Framework and VEF on a headless 1.6 game, scenarios load the mod without errors, a muffalo wears a pack, and a pack deals damage to a hostile target. I have not run this exact folder layout as a standalone mod; if you would rather not carry a 1.6 branch I understand. The port also lives in my collection: https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 
 The repository has no licence file; I am asking by this PR, not assuming.
