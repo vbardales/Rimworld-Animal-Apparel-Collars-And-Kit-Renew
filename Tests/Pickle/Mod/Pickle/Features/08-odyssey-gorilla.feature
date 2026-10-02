@@ -17,6 +17,6 @@ Feature: Animal Apparel Collars and Kit Renew, the VAE gorilla and Odyssey
   @requires:ludeon.rimworld.odyssey
   Scenario: Animal Apparel Collars: with Odyssey the missing gorilla raises no reference error
     Given the save "test-colony" is loaded
-    When I wait 1800 ticks
+    When Animal Apparel Collars: I let 1800 ticks pass
     Then no def "AEXP_Gorilla" exists
     And no errors were logged

@@ -368,6 +368,14 @@ namespace AnimalApparelCollars.PickleSteps
             Verse.Find.CameraDriver.SetRootPosAndSize(new Vector3(at.x, Verse.Find.CameraDriver.transform.position.y, at.z), 4.5f);
         }
 
+        // Pickle's own "I wait {int} ticks" has the default 5 s step deadline, so 1800 ticks failed on a loaded
+        // machine (French avec-animaux 74b7, 2026-10-02: 19.8 s and 42 s scenarios, "timed out after 5s").
+        [When("Animal Apparel Collars: I let {int} ticks pass", TimeoutSeconds = 90f)]
+        public async Task LetTicksPass(PickleContext ctx, int ticks)
+        {
+            await ctx.WaitTicks(ticks);
+        }
+
         private static bool hiddenByUs;
 
         [When("Animal Apparel Collars: the interface is hidden for the capture")]

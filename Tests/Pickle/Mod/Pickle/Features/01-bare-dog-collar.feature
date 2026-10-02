@@ -107,6 +107,6 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
 
   Scenario: Animal Apparel Collars: an idle bare colony raises no error from this mod
     Given the save "test-colony" is loaded
-    When I wait 1800 ticks
+    When Animal Apparel Collars: I let 1800 ticks pass
     Then no errors were logged
     And no warnings from mod "nelim.animalapparelcollarsandkit"

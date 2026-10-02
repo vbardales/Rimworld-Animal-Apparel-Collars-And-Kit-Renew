@@ -26,6 +26,6 @@ Feature: Animal Apparel Collars and Kit Renew, with Vanilla Expanded Framework
     And Animal Apparel Collars: a hostile "Thrumbo" named "Target" exists near the colony
     When Animal Apparel Collars: "Gunner" is dressed in "ATP_Apparel_LargeTurret"
     And Animal Apparel Collars: "Gunner" fires its turret pack at "Target"
-    And I wait 300 ticks
+    And Animal Apparel Collars: I let 300 ticks pass
     Then Animal Apparel Collars: "Target" health is below 100 percent
     And no errors were logged
