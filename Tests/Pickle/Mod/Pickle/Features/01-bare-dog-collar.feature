@@ -35,7 +35,6 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     When Animal Apparel Collars: the camera is framed tight on "Fox_Arctic"
     Then Animal Apparel Collars: the camera can see "Fox_Arctic"
     When Animal Apparel Collars: the interface is hidden for the capture
-    And Nelim's Pickle Tools: I move the mouse to (5, 5)
     And I take a screenshot "fox-collar-and-helmet"
     And Animal Apparel Collars: the interface is shown again
     Then no errors were logged
@@ -72,7 +71,6 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     When Animal Apparel Collars: the camera is framed tight on "Husky"
     Then Animal Apparel Collars: the camera can see "Husky"
     When Animal Apparel Collars: the interface is hidden for the capture
-    And Nelim's Pickle Tools: I move the mouse to (5, 5)
     And I take a screenshot "husky-dogbow"
     And Animal Apparel Collars: the interface is shown again
     And Animal Apparel Collars: "Husky" is stripped of its apparel
@@ -82,7 +80,6 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     When Animal Apparel Collars: the camera is framed tight on "Husky"
     Then Animal Apparel Collars: the camera can see "Husky"
     When Animal Apparel Collars: the interface is hidden for the capture
-    And Nelim's Pickle Tools: I move the mouse to (5, 5)
     And I take a screenshot "husky-studdedcollar"
     And Animal Apparel Collars: the interface is shown again
     And Animal Apparel Collars: "Husky" is stripped of its apparel
@@ -92,7 +89,6 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     When Animal Apparel Collars: the camera is framed tight on "Husky"
     Then Animal Apparel Collars: the camera can see "Husky"
     When Animal Apparel Collars: the interface is hidden for the capture
-    And Nelim's Pickle Tools: I move the mouse to (5, 5)
     And I take a screenshot "husky-shieldcollar"
     And Animal Apparel Collars: the interface is shown again
     Then no errors were logged

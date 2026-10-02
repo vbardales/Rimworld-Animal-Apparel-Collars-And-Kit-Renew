@@ -27,7 +27,6 @@ Feature: Animal Apparel Collars and Kit Renew, worn apparel survives a save and 
     When Animal Apparel Collars: the camera is framed tight on "SavedHusky"
     Then Animal Apparel Collars: the camera can see "SavedHusky"
     When Animal Apparel Collars: the interface is hidden for the capture
-    And Nelim's Pickle Tools: I move the mouse to (5, 5)
     And I take a screenshot "husky-collar-after-reload"
     And Animal Apparel Collars: the interface is shown again
     Then no errors were logged

@@ -17,7 +17,6 @@ Feature: Animal Apparel Collars and Kit Renew, horse set
     When Animal Apparel Collars: the camera is framed tight on "Horse"
     Then Animal Apparel Collars: the camera can see "Horse"
     When Animal Apparel Collars: the interface is hidden for the capture
-    And Nelim's Pickle Tools: I move the mouse to (5, 5)
     And I take a screenshot "horse-set"
     And Animal Apparel Collars: the interface is shown again
     Then no errors were logged
@@ -30,7 +29,6 @@ Feature: Animal Apparel Collars and Kit Renew, horse set
     And Animal Apparel Collars: the camera is framed tight on "Cow"
     Then Animal Apparel Collars: the camera can see "Cow"
     When Animal Apparel Collars: the interface is hidden for the capture
-    And Nelim's Pickle Tools: I move the mouse to (5, 5)
     And I take a screenshot "cow-scarf"
     And Animal Apparel Collars: the interface is shown again
     Then Animal Apparel Collars: "Cow" is wearing "Apparel_LargeAnimalScarf"

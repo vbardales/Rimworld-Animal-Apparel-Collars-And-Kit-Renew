@@ -397,7 +397,7 @@ namespace AnimalApparelCollars.PickleSteps
 
         // Pickle's own "I wait {int} ticks" has the default 5 s step deadline, so 1800 ticks failed on a loaded
         // machine (French avec-animaux 74b7, 2026-10-02: 19.8 s and 42 s scenarios, "timed out after 5s").
-        [When("Animal Apparel Collars: I let {int} ticks pass", TimeoutSeconds = 90f)]
+        [When("Animal Apparel Collars: I let {int} ticks pass", TimeoutSeconds = 240f)]
         public async Task LetTicksPass(PickleContext ctx, int ticks)
         {
             await ctx.WaitTicks(ticks);
