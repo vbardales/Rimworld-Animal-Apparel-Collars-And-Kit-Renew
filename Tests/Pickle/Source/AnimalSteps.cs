@@ -98,6 +98,25 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker even after the framework's EnsureInitApparelTrackers");
         }
 
+        // A staged capture needs the animal on a chosen cell of the studio, not near whichever colonist comes first.
+        [Given("Animal Apparel Collars: a tame {string} named {string} stands at \\({int}, {int}\\)")]
+        public void TameAnimalStandsAt(PickleContext ctx, string kindDefName, string nickname, int x, int z)
+        {
+            Map map = Find_.Map();
+            ctx.Require(map != null, "there is no current map: load a save first");
+            PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
+            ctx.Require(kind != null, $"no PawnKindDef '{kindDefName}'");
+            ctx.Require(Find(nickname) == null, $"'{nickname}' already exists");
+            var cell = new IntVec3(x, 0, z);
+            ctx.Require(cell.InBounds(map) && cell.Standable(map), $"cell {cell} is not standable");
+            Pawn pawn = PawnGenerator.GeneratePawn(kind, Faction.OfPlayer);
+            pawn.Name = new NameSingle(nickname);
+            GenSpawn.Spawn(pawn, cell, map);
+            ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn at {cell}");
+            EnsureTrackers(pawn);
+            ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker even after the framework's EnsureInitApparelTrackers");
+        }
+
         [When("Animal Apparel Collars: {string} is dressed in {string}")]
         public void Dress(PickleContext ctx, string nickname, string apparelDefName)
         {

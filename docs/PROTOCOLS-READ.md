@@ -11,6 +11,7 @@ Hash = first 10 hex digits of SHA-256 of the file in the monorepo root.
 | AUDIT.md | 0fb60fdf8c |
 | MOD_SETTINGS.md | 404916bc99 (unchanged since 2026-09-26) |
 | PUBLISHING.md | ba43a4d268, read in full 2026-10-01 (790 lines). New since 7fed7de415: gallery 0- copy of Preview, Preview badge/echo protocol, pawn-capture rule, animal integrations (not applicable: no race added) |
+| PUBLISHING.md, re-read 2026-10-02 | now 1542e38f9a (c770fd1e "prefer gameplay captures for line art"). Read again: Images section, lines 115-133 (gallery rules; the new one of 2026-10-02: every gallery capture is a staged photograph, a story, a common set, matched subject, decor put up and taken down). Rest of the file unchanged for this task |
 | TRANSLATIONS.md | e5197820fd |
 | Rimworld-Release-Admin/docs/OPERATIONS.md | f6f85474f6 read 2026-09-26; now 23fcf64230, not re-read: no publication this session |
 | STATUS.md, TESTING.md, README.md, CHANGELOG.md, ATTRIBUTION.md, About.xml, PUBLICATION.md (this mod) | read at 6b39f65 (STATUS front matter and last sections, TESTING evidence section) |
