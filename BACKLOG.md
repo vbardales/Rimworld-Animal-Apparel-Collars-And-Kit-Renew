@@ -24,3 +24,13 @@ are public: none is sent without Virginie's agreement.
 Branches `add-rimworld-1.6` are committed locally in `C:\t\ae` (Animal Equipment, 278 files) and `C:\t\atp`
 (Animal Turret Packs, 12 files), outside this repository. Drafts of the PR texts are in `docs/upstream-prs/`.
 Not forked, not pushed, not sent. The ticks above stay open until Virginie agrees to send.
+
+## Question for Pickle Tools (not sent: that session was not reachable on 2026-10-02)
+
+"Accessing map pawns off main thread" at the first step that reads `map.mapPawns` after a save load, with Pickle's sim
+ticking from pool threads (`SimSteps:53`, "Collection was modified", "Exception ticking hediff null for pawn Donkey").
+Seen here in `Tests/Pickle/Evidence/sans-facultatifs-fr-bf865a3` (French, 16 of 17 failures; English of the same commit: 0)
+and on 2026-09-28 (run 37ea). Ticket Manager also finds the message in the Player.log of ColorfulCoatsMegafaunaRenew
+(2026-09-28-1ed4ab5-minimal-rerun), EponaInstrumentsRenew (2026-09-25-craft-nofilm), GeniusesCraftFastRenew
+(minimal-en-e4fd722: 7 occurrences, English, run failed 1/8) and ImperialFurnishings (2026-09-28-studio), so it is not
+French-specific. Known cause, workaround, or a PENDING.md line? Rerun of the French pass: ticket 2a0e.
