@@ -16,27 +16,10 @@
   "copyLines": ["Collars, barding, clothing and turret packs for animals, from Animal Gear's framework."],
   "layout": "panel",
   "panelAnchor": "bottom-left",
-  "echo": {
-    "file": "echo.png",
-    "preSized": true,
-    "color": "var(--accent)",
-    "width": 233,
-    "height": 280,
-    "opacity": 1,
-    "veil": false,
-    "panelTop": 5,
-    "panelRight": 1,
-    "panelWidth": 45,
-    "flipX": true
-  },
-  "iconBadge": {
-    "file": "ModIcon-badge.png",
-    "corner": "bottom-right",
-    "width": 220,
-    "outline": false,
-    "veil": "radial",
-    "veilSize": 275,
-    "veilLeft": -55,
-    "veilBottom": -61
-  }
+  "backgroundFile": "Preview-source.png",
+  "backgroundPosition": "center",
+  "backgroundSize": "cover",
+  "echo": { "file": "echo.png", "preSized": true, "color": "var(--accent)", "width": 233, "height": 280, "opacity": 1, "veil": false, "panelTop": 5, "panelRight": 1, "panelWidth": 45, "flipX": true },
+  "iconBadge": { "file": "ModIcon-source.png", "corner": "bottom-right", "width": 220, "outline": false, "veil": "radial", "veilSize": 275, "veilLeft": -55, "veilBottom": -61 },
+  "palette": { "veil": "#181512", "inkPrimary": "#F2ECE1", "inkSecondary": "#E5BA79", "accent": "#E85F49", "badgeInk": "#17120E" }
 }

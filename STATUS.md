@@ -94,10 +94,9 @@ verification limits. Credit and removal on request are not licence grants from t
 - **Preview re-rendered on 2026-09-29 onto the shared `scripts/Render-Preview.cjs`/
   `Art/verify-preview.py` pipeline (also used by AlphaMythologyRenew and others),
   adding the ModIcon corner badge.** Final: `Mod/About/Preview.png` (896 × 504,
-  542560 bytes). Unlettered source unchanged: `Art/Preview.png`, copied from
-  `Art/Preview-source.png`. Composition: `Art/preview-copy.json` (title/suffix/tag/
-  copy, `iconBadge` pointing at `Art/ModIcon-badge.png`, corner `bottom-left`);
-  same palette, `Art/preview-palette.json`. `Art/ModIcon-badge.png` is
+  542560 bytes). Unlettered source unchanged: `Art/Preview-source.png`.
+  Composition, copy, placement and palette are unified in `Art/Preview.config.json`;
+  `iconBadge` points at the final transparent `Art/ModIcon-source.png`. That source is
   `Mod/About/ModIcon.png` background-removed and alpha-trimmed by
   `Art/Make-PreviewBadge.ps1 -SaveTrimmedIconTo`.
   This title ("Animal Apparel: Collars and Kit") wraps onto two lines at the shared
@@ -118,8 +117,7 @@ verification limits. Credit and removal on request are not licence grants from t
   Visual review at 896 × 504 and 268 px passed: badge sits clear of the copy box and
   the version triangle, does not obscure the illustration's subjects, title/version
   still identifiable, rule still visible.
-  Evidence: `Art/Preview-qa.json`, `Art/Preview-background-qa.png`,
-  `Art/Preview-thumbnail-qa.png`.
+  Reproducible local evidence is regenerated under ignored `Art/.render/`.
 - **Offline XML suite passed on 2026-09-12:** 55 XML files and 917 assertions using
   `pwsh -NoProfile -File _tools/test-xml.ps1`. Includes patch fixtures, conditional folders,
   translation targets and local texture paths. A GitHub Actions workflow is provided;
