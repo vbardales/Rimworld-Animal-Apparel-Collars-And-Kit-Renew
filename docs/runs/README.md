@@ -12,3 +12,4 @@
 2026-09-28 245178a avec-rimmsqol, 27 scenarios: 7 passed, 10 failed, 10 skipped. Kept only as sole proof that scenario 04 (shortcut) passed; failures predate 0971baa and 6ba8de8.
 2026-09-30 ce65944 avec-animaux, 27 scenarios: PASSED, 18 passed, 0 failed, 9 skipped (04, seven in 05, 11 save). Kept; code unchanged since (only Preview.png).
 2026-09-28 24dc240 removal chain kept: seq1 removal write passed, seq2 reload without the mod passed.
+2026-10-02 bf865a3 sans-facultatifs English (minimal set), 32 scenarios: PASSED, exitReason passed, 17 passed, 0 failed, 15 skipped (by requirement: VEF, RIMMSQOL, the 7 incompatibility checks, load audit, Odyssey pair, save hand-over, gallery 4). First green minimal-set run on current code; supersedes the red 0/27 of 2026-09-28. Gallery scenarios 1-3 passed but their images were rejected (animals a few pixels tall, colonists in frame): fixed with a tight-frame step, gallery rerun submitted.

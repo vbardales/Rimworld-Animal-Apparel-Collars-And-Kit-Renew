@@ -360,6 +360,14 @@ namespace AnimalApparelCollars.PickleSteps
             pawn.apparel.Wear(apparel, true, false);
         }
 
+        [When("Animal Apparel Collars: the camera is framed tight on {string}")]
+        public void FrameTight(PickleContext ctx, string nickname)
+        {
+            Pawn pawn = Require(ctx, nickname);
+            Vector3 at = pawn.DrawPos;
+            Verse.Find.CameraDriver.SetRootPosAndSize(new Vector3(at.x, Verse.Find.CameraDriver.transform.position.y, at.z), 4.5f);
+        }
+
         private static bool hiddenByUs;
 
         [When("Animal Apparel Collars: the interface is hidden for the capture")]

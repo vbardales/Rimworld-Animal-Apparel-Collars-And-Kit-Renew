@@ -30,7 +30,7 @@ showcase:     complete
 tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 remaining:
-  - unverified: sans-facultatifs pass in game. Its last report (2026-09-28, 0/27, red) predated the graphic-check and MVCF separateToggle fixes (0971baa, 6ba8de8) and was deleted 2026-10-01. `avec-animaux-ce65944` (2026-09-30) is green on current code (18 passed, 0 failed, 9 skipped) but is not the minimal set.
+  - unverified: sans-facultatifs French pass (English passed 2026-10-02: `sans-facultatifs-en-bf865a3`, 17 passed, 0 failed, 15 skipped by requirement, exitReason passed; the French pass and every skipped scenario still wait for their own pass)
   - unverified: skipped scenarios to play on current code: shortcut 04 (green once in `avec-rimmsqol-245178a`, before the fixes), seven incompatibility checks in 05, save hand-over in 11.
   - unverified: in-game primary settings access, restart effects and persistence, hidden shortcut and RIMMSQOL interaction (scenario K)
   - unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, and Steam Deck layout
