@@ -33,7 +33,7 @@ With Vanilla Expanded Framework active, open Mod options, then this mod's name: 
 
 Compatibility
 
-Requires Animal Apparel: Framework. Cannot run with Dylan's Animal Gear (the framework's own restriction), nor with any of the seven source mods, which declare the same defNames: disable them. Optional, with per-animal art or patches: Vanilla Animals Expanded, Vanilla Factions Expanded, Alpha Animals, Alpha Mythology (formerly Magical Menagerie), Spidercamp's Dog Pack, Rim Effect, Giddy-Up 2, Combat Extended, and about a dozen other animal mods listed in the repository README. Nothing errors when one is absent.
+Requires Animal Apparel: Framework. Cannot run with Dylan's Animal Gear (the framework's own restriction), nor with six of the seven source mods (all but Medieval Horse Plate Armour), which declare the same defNames: disable them. Optional, with per-animal art or patches: Vanilla Animals Expanded, Vanilla Factions Expanded, Alpha Animals, Alpha Mythology (formerly Magical Menagerie), Spidercamp's Dog Pack, Rim Effect, Giddy-Up 2, Combat Extended, and about a dozen other animal mods listed in the repository README. Nothing errors when one is absent.
 
 No per-save data of its own. Removing it mid-game deletes anything crafted from it, like any content mod.
 
@@ -69,14 +69,13 @@ Source code on GitHub (https://github.com/vbardales/Rimworld-Animal-Apparel-Coll
   <incompatibleWith>
     <!-- The framework this mod is built on refuses to run alongside the old one. -->
     <li>Dylan.AnimalGear</li>
-    <!-- The six source mods, plus Animal Equipment: this mod declares their defNames.
+    <!-- Five of the source mods, plus Animal Equipment: this mod declares their defNames.
          RimWorld says nothing when two mods declare the same defName - the last one loaded
          simply wins - so these have to be declared rather than left to chance. -->
     <li>Shenanigans.DogCollars</li>
     <li>Annabelesca.PatchCollarMalinois</li>
     <li>Dipsy.Diapers</li>
     <li>flangopink.animalturretpacks</li>
-    <li>Horse_Plate_Armour</li>
     <li>CSM.RealisticAwesomeGoat</li>
     <li>Owlchemist.AnimalGear.Equipment</li>
   </incompatibleWith>

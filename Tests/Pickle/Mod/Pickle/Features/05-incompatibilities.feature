@@ -39,11 +39,6 @@ Feature: Animal Apparel Collars and Kit Renew, declared incompatibilities
     Given mod "flangopink.animalturretpacks" is loaded
     Then Animal Apparel Collars: mod "flangopink.animalturretpacks" still defines a defName that this mod defines too
 
-  @allow-errors @requires:Horse_Plate_Armour
-  Scenario: Animal Apparel Collars: Medieval Horse Plate Armour still declares the same defNames
-    Given mod "Horse_Plate_Armour" is loaded
-    Then Animal Apparel Collars: mod "Horse_Plate_Armour" still defines a defName that this mod defines too
-
   @allow-errors @requires:CSM.RealisticAwesomeGoat
   Scenario: Animal Apparel Collars: RealisticAwesomeGoat still declares the same defName
     Given mod "CSM.RealisticAwesomeGoat" is loaded

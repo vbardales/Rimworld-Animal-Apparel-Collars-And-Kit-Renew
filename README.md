@@ -25,7 +25,7 @@ onto the framework that replaces it. Who wrote what, and under which licence, is
   Apparel: Basic Armor already ships without any def to use it.
 
 Requires the Framework. **Cannot run with Dylan's Animal Gear** (the Framework's own restriction),
-nor with any of the seven source mods, which declare the same `defName`s. All eight are listed in
+nor with six of the seven source mods (all but Medieval Horse Plate Armour), which declare the same `defName`s. All seven are listed in
 `<incompatibleWith>`.
 
 ---
