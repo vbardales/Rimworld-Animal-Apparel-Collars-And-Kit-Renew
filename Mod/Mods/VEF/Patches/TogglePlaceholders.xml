@@ -45,7 +45,10 @@
           @Name="DogCollarBase" or
           @Name="StuddedDogCollarBase" or
           @Name="DogBowBase" or
-          @Name="ShieldDogCollarBase"]</xpath>
+          @Name="ShieldDogCollarBase" or
+          @Name="AnimalTurretBase" or
+          defName="diaper" or
+          defName="Apparel_GoatMail"]</xpath>
         <value>
           <relicChance>0</relicChance>
         </value>

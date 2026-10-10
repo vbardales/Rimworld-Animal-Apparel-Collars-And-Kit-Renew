@@ -212,7 +212,7 @@ Assert ($toggled.SelectNodes($remove.xpath).Count -eq 0) 'Universal pieces remov
 Assert ($toggled.SelectNodes('//ThingDef[defName="Apparel_leatherdogcollar"]').Count -eq 1) 'Toggle preserves collars'
 $relics = $defs.CloneNode($true)
 Apply-Operations $relics $toggle.SelectNodes('/Patch/Operation/operations/li[@Class="PatchOperationAdd"]')
-Assert ($relics.SelectNodes('/Defs/ThingDef/relicChance[text()="0"]').Count -eq 9) 'Nine apparel bases excluded from relics'
+Assert ($relics.SelectNodes('/Defs/ThingDef/relicChance[text()="0"]').Count -eq 12) 'Twelve apparel bases excluded from relics (nine bases, the turret base, the diaper and the goat mail)'
 
 # Local texture paths: exact case, shared graphics or per-animal directories.
 $texturePaths = @($paths | Where-Object { $_ -match '(^|/)Textures/' } | ForEach-Object { $_ -replace '^.*?Textures/', '' })
