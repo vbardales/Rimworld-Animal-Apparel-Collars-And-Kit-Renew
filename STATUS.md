@@ -30,7 +30,7 @@ showcase:     partial
 tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 remaining:
-  - "2026-10-10: defect: Art/Preview-source.png fails the palette control of AUDIT 2.e (Measure-Palette.sh: 2 hue families, dominant 62%, but Vmean 0.266, floor 0.30; the warm light pool is a radial gradient/vignette). The owner decides: override or new source. Nothing regenerated here."
+  - "2026-10-10: unverified: new Art/Preview-source.png (owner, 1672x941) passes the AUDIT 2.e measures: Measure-Palette.sh 2 hue families, dominant 84%, Vmean 0.480; no readable colonist face, quadrupeds in side profile, nothing upright (read at full size). 268 px reading and panel/badge placement to check at mountPreview, Preview chain not re-rendered yet."
   - "2026-10-10: defect: Art/ModIcon-source.png (21 KB, 2026-09-29) is the shipped icon background-removed and alpha-trimmed, not the owner's full-resolution source (AUDIT 2.a); the full-resolution original is Art/ModIcon-original.png (1.4 MB, 2026-09-11) and Preview.config.json has no modIconSource key. Mod/About/ModIcon.png (2026-09-26) is older than ModIcon-source.png (2026-09-29): derivative stale by the AUDIT 2.b rule. The owner says which file is the source."
   - "2026-10-10: unverified: ModIcon 32 px legibility read today on a Lanczos 32 px render (head, wink and collar distinguishable; crowded by the style guide count, overridden by the owner 2026-09-26). Her override of 2026-09-26 predates the current rule text: to confirm."
   - "2026-10-10: defect: Art/ not the minimal set (PUBLISHING Images): Art/README-preview.md extra; the gallery folder is Art/gallery, the protocol says Art/Gallery; Art/ModIcon-original.png kept on purpose (see above). Working tree holds, not mine and left alone: modified Art/ModIcon.ico and Art/Preview.ico, untracked Art/ModIcon-signature-candidate.png (1.3 MB, 2026-10-04)."
@@ -75,14 +75,13 @@ TRANSLATIONS.md 06263cb, PUBLISHING.md 9f58f59 (Nommage and Images read in full,
 Rimworld-Ticket-Dispatcher WELCOME.md read in full. Local changes in the tree belong to the owner and were left.
 
 **Previous: `stage: done`, `workflow_stage: done` (old vocabulary, maps to `playTests`). Retained: `makeSources`.**
-First failing transition: `makeSources -> code`, criterion 2.e (palette of the source illustration), with 2.a/2.b
-(the icon source and its derivative) open for the owner. The three listed in `remaining` are defects of the art
+First failing transition: `makeSources -> code`, criteria 2.a/2.b (icon source and its derivative, owner to answer) and 2.f (`Art/`). 2.e failed at the audit (Vmean 0.266) and passes since the owner's new `Preview-source.png` the same day (Vmean 0.480). The three listed in `remaining` are defects of the art
 sources, not of the mod; per AUDIT the audit changes none of them.
 
 | Transition | Result |
 | --- | --- |
 | setupRepo -> makeSources | Established. Own repository, remote and pushed history; `(unofficial)` suffix and paragraph in About, README and `mod`; names coherent (packageId `nelim.animalapparelcollarsandkit`); ATTRIBUTION and LICENSE in root and `Mod/`; `Check-Status.ps1`: 0 errors. Author line format to fix (see `remaining`). |
-| makeSources -> code | **Not established.** 2.a, 2.b, 2.c, 2.e, 2.f as in `remaining`. Prompt file absent (2.d/2.f fine). |
+| makeSources -> code | **Not established.** 2.a, 2.b, 2.c, 2.f as in `remaining`; 2.e now passes (new source). Prompt file absent (2.d/2.f fine). |
 | code -> declareDependencies | Not re-judged beyond the build: shipped `AnimalApparelCollarsAndKit.Settings.dll` SHA-256 `E436B4CA9ADD781EB44F47391C40410F96BFDC97046556D9F2ACEEEDC9BAFA2B`, unchanged, equal to the committed one; sources unchanged since 2026-09-13. CHANGELOG holds `0.1.0` under Unreleased. |
 | declareDependencies -> auditSettings | Cited from DEPENDENCIES.md (2026-09-13, gorilla patch added), unchanged; About `modDependencies` (Framework), `loadAfter` (Framework, Basic Armor, VEF Core, Giddy-Up 2, Combat Extended) and `incompatibleWith` (Dylan, the six sources, Animal Equipment) re-read today and consistent. Not applicable: the four animal integrations (this mod adds no race). |
 | auditSettings -> localize | `settings_audit: partial` (was `complete`, which overclaimed: the in-game checks are `unverified`). Two Boolean options under Mod options -> mod name, hidden shortcut `AA_CK_Settings`, `Settings.Tests` **re-run today: 30 assertions passed** on the installed RimWorld 1.6 and VEF assemblies. The build rewrote the shipped DLL (non-deterministic); restored from git, hash above. Hidden shortcut played green with RIMMSQOL (bb0bb9f). |
@@ -92,13 +91,12 @@ sources, not of the mod; per AUDIT the audit changes none of them.
 
 ### What the owner decides
 
-1. Palette of `Art/Preview-source.png` (Vmean 0.266 under 0.30, warm spotlight gradient): override, or a new source.
-2. Which file is the icon source (`ModIcon-original.png` full resolution, or the trimmed `ModIcon-source.png`), and
+1. Which file is the icon source (`ModIcon-original.png` full resolution, or the trimmed `ModIcon-source.png`), and
    what `ModIcon-signature-candidate.png` and the two modified `.ico` files in the tree are.
 
 ### Next work to cross `makeSources -> code`
 
-Owner answers above; then regenerate the derivatives (icon, Preview chain, `.ico`), clean `Art/` and the mod root
+Owner answer above; then regenerate the derivatives (icon, Preview chain, `.ico`), clean `Art/` and the mod root
 (`_tools/`), fix the About author line, regenerate `FRENCH_REVIEW.md`, rename `Art/gallery` to `Art/Gallery`,
 replace the em dashes, align PUBLICATION.md. None of these needs a game run.
 
