@@ -21,7 +21,7 @@ are public: none is sent without Virginie's agreement.
   files (e9ed862); reruns queued (dog-collars, malinois, goat, horse-plate, animal-equipment, diapers, turret-packs).
   If a mod shares no defName with this one any more, its `incompatibleWith` entry in About.xml is to be reviewed.
 - Open: without-Odyssey half of the Odyssey pair (ticket f360); review captures redone (ticket 0979); staged gallery
-  on the zenNelim studio (ticket 4fac, pass `wsl-deps.studio-gallery.map`), then crop and enlarge into `Art/gallery/`.
+  on the zenNelim studio (ticket 4fac, pass `wsl-deps.studio-gallery.map`), then crop and enlarge into `Art/Gallery/`.
 
 ## PR preparation (2026-10-01)
 

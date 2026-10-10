@@ -237,7 +237,7 @@ Mod/
 ```
 
 Beside it, and never published: `Art/` holds the two generated images at full resolution,
-`Tests/` the XML and settings suites, and `TESTING.md` the scenarios the game runs have to settle.
+`Tests/` the XML and settings suites, and `TEST_SCENARIOS.md` the scenarios the game runs have to settle.
 
 `LoadFolders.xml` must keep that exact capitalisation. RimWorld looks for the literal string and
 does not case-fold it; on Windows NTFS hides the mistake, on Linux and the Steam Deck the file is

@@ -99,7 +99,7 @@ RimWorld's own handling of `<incompatibleWith>` nor the framework's code (checke
 this mod anything to assert in a running game - see AUDIT.md, "on ne teste pas le jeu". Feature 03 gained
 a second scenario that fires a turret pack's real verb (MVCF's `Comp_VerbGiver`/`VerbTracker`, found by
 name since MVCF is not a compile reference) at a hostile Thrumbo and checks its health actually drops,
-closing scenario E of TESTING.md. None of this has been run yet.
+closing scenario E of TEST_SCENARIOS.md. None of this has been run yet.
 
 ## Added 2026-09-28: scenario G (in-process) and scenario H (removal)
 
@@ -120,5 +120,5 @@ Four `@review @gallery` scenarios (fox, horse, husky, muffalo with a turret pack
 pawn-capture rule of PUBLISHING.md: pieces dyed in contrasting colours (`is dressed in {string} dyed {string}`, HTML
 colour) and the interface hidden (`the interface is hidden for the capture`, restored by an `AfterScenario`).
 Scenario 4 needs VEF (pass avec-vef). Play with `-DepMap wsl-deps.avec-vef.map -Filter '12-gallery'`; the images are
-`gallery-N-*.png` in the evidence folder, to be opened, recropped to 16:9 and numbered `1-`..`4-` in `Art/gallery/`.
+`gallery-N-*.png` in the evidence folder, to be opened, recropped to 16:9 and numbered `1-`..`4-` in `Art/Gallery/`.
 Never run.
