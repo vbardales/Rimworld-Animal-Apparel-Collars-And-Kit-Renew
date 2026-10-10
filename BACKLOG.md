@@ -15,13 +15,10 @@ are public: none is sent without Virginie's agreement.
 
 ## Game gates left before `tested`
 
-- Done 2026-10-02: shortcut (04), save hand-over (11), minimal-set pass (EN and FR), idle colony, with-Odyssey.
-- Open: the seven incompatibility checks (05). The first run (8ddb11f) read the game log for "Adding duplicate" and
-  found none; the greens of that run proved nothing. The scenarios now compare the defNames of the two mods' Defs
-  files (e9ed862); reruns queued (dog-collars, malinois, goat, horse-plate, animal-equipment, diapers, turret-packs).
-  If a mod shares no defName with this one any more, its `incompatibleWith` entry in About.xml is to be reviewed.
-- Open: without-Odyssey half of the Odyssey pair (ticket f360); review captures redone (ticket 0979); staged gallery
-  on the zenNelim studio (ticket 4fac, pass `wsl-deps.studio-gallery.map`), then crop and enlarge into `Art/Gallery/`.
+- Done 2026-10-10 (79998ce): six incompatibility checks green, review scenarios green, French idle and Odyssey rerun green.
+- Open: incompat Horse_Plate_Armour red (no shared defName: the source writes Apparel_Saddle, renamed here); About entry to review.
+- Open: without-Odyssey half of the Odyssey pair, red 4 times at the load of the test-colony save: ask Pickle Tools.
+- Open: staged gallery on the zenNelim studio (ticket 4fac, pass `wsl-deps.studio-gallery.map`), then crop and enlarge into `Art/Gallery/` (shootGallery).
 
 ## PR preparation (2026-10-01)
 

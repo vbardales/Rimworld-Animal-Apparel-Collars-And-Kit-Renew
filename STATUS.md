@@ -40,13 +40,15 @@ remaining:
   - "2026-10-10: done: PUBLICATION.md gallery section aligned with Art/Gallery (0 to 3); realign after the staged gallery at shootGallery."
   - "2026-10-10: defect: em dashes (U+2014) remain in ATTRIBUTION.md (17, root and Mod/ copies must stay identical) and CHANGELOG.md (12, append-only); removed from README, TESTING, DEPENDENCIES, TEST_SCENARIOS, FRENCH_REVIEW."
   - "2026-10-10: defect: STATUS.md was 71 KB; folded into docs/runs/ and this file today (lint threshold 40 KB)."
-  - "unverified: sans-facultatifs green in English (bf865a3) and French (12e815f); the 15 scenarios skipped by requirement need their passes: RIMMSQOL shortcut 04 green 2026-10-02 (bb0bb9f, 22 passed); seven incompatibility checks in 05 (defName comparison, reruns queued, three source mods not installed locally); Odyssey pair, with-Odyssey green (67c3), without-Odyssey red/crashed (f360, rerun needed); save hand-over 11 green (removal chain 24dc240)"
+  - "2026-10-10: done on 79998ce: six incompatibility checks green (dog-collars, patch-malinois, realistic-goat, animal-equipment, diapers, turret-packs: each still shares a defName), French rerun of idle colony and with-Odyssey green, review scenarios green (render-tree assertions pass, 8 captures opened). Earlier greens: minimal set EN bf865a3 and FR 12e815f, avec-vef EN, avec-animaux, avec-rimmsqol bb0bb9f (hidden shortcut), removal chain 24dc240."
   - "unverified: in-game primary settings access (Mod options, this mod's name), restart effects and persistence, scenario K"
   - "unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, Steam Deck layout"
-  - "unverified: review captures redone (ticket 0979: camera bounded at root size 11); staged gallery on the zenNelim studio (ticket 4fac, pass wsl-deps.studio-gallery.map), then crop and enlarge into Art/gallery"
+  - "2026-10-10: defect: incompat Horse_Plate_Armour red (ticket 0e84): the source writes one defName, Apparel_Saddle, which this mod renamed; no defName collision remains. About incompatibleWith entry Horse_Plate_Armour to review (owner decides: patches or textures may still conflict)."
+  - "2026-10-10: unverified: without-Odyssey half of the Odyssey pair: red 4th time (ticket 1dbb), timeout at the save load of test-colony, before any step of this mod; cause not established (fixture save needs Odyssey, or the 16 mods of the map stall the load). To discuss with Pickle Tools."
+  - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
   - "unverified: scenarios E (firing in combat), G (restart with gear worn), J (armour values by a hit taken) have no automated form"
 updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
-protocols_read_sha: 951bcc71db35d148e7b0df2d4c633f8eff34f6b0
+protocols_read_sha: b4a73cf0998fa5914b1d5e52b0817a8fe77abab3
 ---
 
 # Animal Apparel: Collars and Kit Renew: status
