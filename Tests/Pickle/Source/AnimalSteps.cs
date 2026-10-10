@@ -443,6 +443,52 @@ namespace AnimalApparelCollars.PickleSteps
             return names;
         }
 
+        // Primary access of the settings (MOD_SETTINGS.md 2): the page under Mod options, named after the mod, opened through the
+        // same Dialog_ModSettings the game builds for the entry. The mod class is the settings assembly of the VEF-gated folder, not a
+        // compile reference of this companion, so it is found by type name.
+        private static Mod SettingsMod() => LoadedModManager.ModHandles.FirstOrDefault(m => m.GetType().Name == "ApparelSettingsMod");
+
+        // Dialog_ModSettings keeps its Mod in a private field.
+        private static Mod DialogMod(Dialog_ModSettings w) => (Mod)typeof(Dialog_ModSettings).GetField("mod", BindingFlags.NonPublic | BindingFlags.Instance)?.GetValue(w);
+
+        [Then("Animal Apparel Collars: Mod options lists a page named after this mod")]
+        public void ModOptionsListsThisMod(PickleContext ctx)
+        {
+            Mod mod = SettingsMod();
+            ctx.Require(mod != null, "the settings Mod class (ApparelSettingsMod) is not loaded");
+            string category = mod.SettingsCategory();
+            ctx.Require(!string.IsNullOrEmpty(category), "the settings page has an empty name");
+            ctx.Require(category == mod.Content.Name, $"the page is named '{category}', the mod '{mod.Content.Name}'");
+            ctx.Require(LoadedModManager.ModHandles.Contains(mod) && !string.IsNullOrEmpty(mod.SettingsCategory()), "the page is not in the Mod options list");
+        }
+
+        // A Dialog_ModSettings force-pauses the game: wait frames, never ticks.
+        [When("Animal Apparel Collars: the Mod options page of this mod is opened", TimeoutSeconds = 30f)]
+        public async Task OpenModOptionsPage(PickleContext ctx)
+        {
+            Mod mod = SettingsMod();
+            ctx.Require(mod != null, "the settings Mod class (ApparelSettingsMod) is not loaded");
+            Verse.Find.WindowStack.Add(new Dialog_ModSettings(mod));
+            await ctx.WaitFrames(10);
+        }
+
+        [Then("Animal Apparel Collars: the Mod options page of this mod is open")]
+        public void ModOptionsPageIsOpen(PickleContext ctx)
+        {
+            Mod mod = SettingsMod();
+            bool open = Verse.Find.WindowStack.Windows.OfType<Dialog_ModSettings>().Any(w => DialogMod(w) == mod);
+            ctx.Require(open, "no Dialog_ModSettings built for this mod is on the window stack");
+        }
+
+        [When("Animal Apparel Collars: the Mod options page of this mod is closed", TimeoutSeconds = 30f)]
+        public async Task CloseModOptionsPage(PickleContext ctx)
+        {
+            Mod mod = SettingsMod();
+            foreach (Dialog_ModSettings w in Verse.Find.WindowStack.Windows.OfType<Dialog_ModSettings>().Where(x => DialogMod(x) == mod).ToList())
+                w.Close();
+            await ctx.WaitFrames(10);
+        }
+
         private static bool hiddenByUs;
 
         [When("Animal Apparel Collars: the interface is hidden for the capture")]
