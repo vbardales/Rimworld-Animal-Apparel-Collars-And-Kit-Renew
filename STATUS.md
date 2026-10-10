@@ -50,7 +50,7 @@ remaining:
   - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
   - "unverified: scenarios E (firing in combat), G (restart with gear worn), J (armour values by a hit taken) have no automated form"
 updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
-protocols_read_sha: b4a73cf0998fa5914b1d5e52b0817a8fe77abab3
+protocols_read_sha: a5c7cf48b349ae00e7d28fd643e852dc860dfaf2
 ---
 
 # Animal Apparel: Collars and Kit Renew: status
@@ -130,3 +130,13 @@ Giddy-Up 2, Combat Extended, RIMMSQOL, the animal mods gating the art folders, B
 description changes then, which reopens the publication review.
 
 Relay of 2026-10-10 (c3ff76f, 1567815): the CHANGELOG `## [Unreleased]` becomes `## [x.y.z] - date` only in the commit sent to the dry-run (publish state); the Use This Instead comment (Mlie's page 3396308787) is written in BBCode in PUBLICATION.md at writeDocs and handed to Virginie as an orange step, with rows `drafted` then `posted` in USE_THIS_INSTEAD.md. Points 3 and 4 do not concern this mod (public, not a private one).
+
+### Audit completion check, 2026-10-11 (HEAD at the commit of this entry)
+
+Rechecked what the 2026-10-10 entry had cited from older audits, against the protocols as of 2026-10-11:
+- `TESTING.md` now declares the passes (three families, the map and `@requires` of each, what is not automated; AUDIT "Passes Pickle"); its stale "four features" paragraph is gone. Suites 01 to 14 written; no `@wip`; each `@requires` has a map (table in TESTING.md).
+- CHANGELOG `## Unreleased` lists the changes of the version (Horse Plate entry removed, relic exclusion, Horse comps guard, author line, ModIcon and Preview); the date is set at the dry-run (12.e).
+- `ATTRIBUTION.md` identical in the root and `Mod/`; LICENSE copy checked in the earlier audit, unchanged.
+- Dependencies: DEPENDENCIES.md of 2026-09-13 stands (dated citation); `IfModActive` ids in `LoadFolders.xml` re-read, unchanged since; mods without a 1.6 build (Vikings, JapaneseDogs, YorkshireTerrors) keep guarded folders that load nothing.
+- AUDIT 11.b changes of the day (CHANGELOG date at the dry-run) concern `publish`; read.
+Still open in `playTests`: tickets 5190 and 171c (settings through Mod options, EN and FR) and 6fcd (load audit after the review fixes); then `settings_audit` can go `complete`, and the state moves on to `shootGallery` (staged gallery on the zenNelim studio) once the owner confirms.

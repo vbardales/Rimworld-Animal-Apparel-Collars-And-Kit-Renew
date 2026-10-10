@@ -111,9 +111,32 @@ under 1 MB, `Player.log` when it proves a check, and the `@review` screenshots t
 up to 80 MB). A red run replaced by a newer one is deleted whole. Never delete a run a `STATUS.md`
 field points at: repoint it first. One text line per run goes in `docs/runs/`.
 
-## Pickle suite (2026-09-26)
+## Pickle passes (AUDIT.md, "Passes Pickle")
 
-Written in `Tests/Pickle/` (see its README): four features, passes minimal EN/FR, avec-vef,
-avec-rimmsqol. Never run. It covers the render path, the AnimalNeck slot, the horse set, a turret pack
-worn, and the hidden shortcut. Scenarios E (firing), G (restart), H (removal) and J (a real hit) are
-not automated yet and remain `unverified`; A-K therefore still count as manual tests to close before `tested`.
+Suite: `Tests/Pickle/` (README there), features 01 to 14. Fixture save `test-colony` was made with Odyssey and cannot load
+without it: scenarios that must run without the DLC load no save (feature 08, `sans-odyssey`). A pass is one `-DepMap`;
+one request per pass and per language (`-Language English`, `-Language French`). Skipped by requirement is not passed.
+
+Family 1, without the optional mods (no `-DepMap`): Core, DLCs, Harmony, RimLogging, Pickle, the Framework and this mod.
+Plays 01, 02, 07, 09, 10 and the clean-load check where LoadAudit is staged. English and French.
+
+Family 2, with the optional mods (one pass per exclusive combination):
+
+| Pass (`wsl-deps.<name>.map`) | Mounts | Covers (`@requires`) |
+|---|---|---|
+| `avec-vef` | Vanilla Expanded Framework | 03 turret packs, 12 gallery, 14 settings through Mod options, review captures |
+| `avec-rimmsqol` | VEF and RIMMSQOL | 04 hidden shortcut revealed and hidden |
+| `avec-animaux` | the 1.6 animal mods, Basic Armor, Giddy-Up 2 | 08 with Odyssey, 06 clean load, 01 to 03 on those species |
+| `avec-animaux-sans-odyssey` | same, Odyssey left out | 08 without Odyssey (load audit, no save) |
+| `removal` | the removal companion | 11 save with gear, reloaded without the mod (`-Then`, `-ThenWithout`) |
+| `studio-gallery` | zenNelim studio, StageDecor, CameraZoom, ClearScreen | 12 staged gallery (shootGallery) |
+| `avec-ce`, `avec-sos2`, `avec-androidtiers`, `avec-bunrace-core`, `avec-rimeffect`, `avec-rimeffect-renegade`, `avec-animaux-vae-separes` | one optional mod each | per-mod art folders and patches; not yet played |
+
+Family 3, one pass per declared incompatibility, asserting the documented symptom (defName overlap), `@allow-errors`:
+`incompat-dog-collars`, `incompat-patch-malinois`, `incompat-realistic-goat`, `incompat-animal-equipment`, `incompat-diapers`,
+`incompat-turret-packs` (feature 05, six scenarios). `incompat-horse-plate` is no longer an incompatibility (entry removed 2026-10-10);
+it mounts Medieval Horse Plate Armour with LoadAudit for feature 13. Dylan's Animal Gear has nothing to assert in a running game
+(the framework's own restriction, "on ne teste pas le jeu"). Replayed when the other mod moves, not at each publication.
+
+Not automated, recorded `unverified`: E (firing in combat), G (restart with gear worn), J (armour values by a hit taken).
+Played results: `docs/runs/README.md`.
