@@ -34,7 +34,7 @@ On Windows with RimWorld 1.6, VEF and .NET SDK installed:
 
 ```powershell
 dotnet build Tests/Settings.Tests.csproj -c Release
-& ./.build/tests/Settings.Tests.exe
+& ./build/tests/Settings.Tests.exe
 ```
 
 Override RimWorldManaged/VefAssembly for the mod build and RimWorldManaged/VefDir
@@ -45,7 +45,7 @@ The 30 assertions exercise defaults, all four existing Boolean combinations, exa
 legacy keys, shared dictionary updates, reset without touching unrelated settings,
 partial legacy data, the actual VEF adapter, native visibility inheritance, real
 PatchOperation dispatch/removal/failure, and VEF's actual ExposeData/Scribe save/load
-round-trip. They write a disposable file under .build/tests, never the user's Config.
+round-trip. They write a disposable file under build/tests, never the user's Config.
 DeepProfiler is disabled only in the test process because no game preferences exist.
 
 The real MainButtonWorker.Visible/ModLister paths require Unity's ModsConfig startup;

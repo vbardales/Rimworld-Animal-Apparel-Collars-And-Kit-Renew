@@ -10,7 +10,7 @@
 PROMPT_*.md
 
 # Development environments.
-.build/
+build/
 Source/obj/
 Source/bin/
 Tests/obj/
