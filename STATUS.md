@@ -124,3 +124,5 @@ ten tickets have a result); questions to Virginie always orange with the click-b
 already writes it). Open for `writeDocs` (11.b/11.h): THANKS must name every integration named, claimed or exercised (Vanilla Expanded Framework,
 Giddy-Up 2, Combat Extended, RIMMSQOL, the animal mods gating the art folders, Basic Armor), each with a row in `WORKSHOP_COMMENTS.md`; the Steam
 description changes then, which reopens the publication review.
+
+Relay of 2026-10-10 (c3ff76f, 1567815): the CHANGELOG `## [Unreleased]` becomes `## [x.y.z] - date` only in the commit sent to the dry-run (publish state); the Use This Instead comment (Mlie's page 3396308787) is written in BBCode in PUBLICATION.md at writeDocs and handed to Virginie as an orange step, with rows `drafted` then `posted` in USE_THIS_INSTEAD.md. Points 3 and 4 do not concern this mod (public, not a private one).
