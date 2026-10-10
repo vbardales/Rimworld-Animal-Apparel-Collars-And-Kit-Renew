@@ -46,7 +46,7 @@ remaining:
   - "unverified: review captures redone (ticket 0979: camera bounded at root size 11); staged gallery on the zenNelim studio (ticket 4fac, pass wsl-deps.studio-gallery.map), then crop and enlarge into Art/gallery"
   - "unverified: scenarios E (firing in combat), G (restart with gear worn), J (armour values by a hit taken) have no automated form"
 updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
-protocols_read_sha: 8dc7759df76e83f3ebe7489e18035a62f07089fe
+protocols_read_sha: 951bcc71db35d148e7b0df2d4c633f8eff34f6b0
 ---
 
 # Animal Apparel: Collars and Kit Renew: status
