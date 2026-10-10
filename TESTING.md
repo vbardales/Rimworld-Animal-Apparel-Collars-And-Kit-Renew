@@ -81,11 +81,11 @@ the seven source mods, which declare the same `defName`s and are listed in this 
 | String in the log | Written by | What it would mean for this mod |
 |---|---|---|
 | `Failed to find graphic for` | the framework's `RenderHelpers.TryGetGraphicApparelForAnimal` | **The fault this mod is most exposed to.** Read out of `AnimalGear.dll`; the full line ends `at either <A> or <B> and AnimalFallbackInvisible was not set!`. Means a restructured texture folder is wrong, or an animal has no art and no fallback tag. |
-| `Adding duplicate` | `DefDatabase.Add` | A `defName` collision — with Basic Armor, or with one of the seven source mods left enabled. Must never appear. |
+| `Adding duplicate` | `DefDatabase.Add` | A `defName` collision: with Basic Armor, or with one of the seven source mods left enabled. Must never appear. |
 | `Patch operation` … `failed` | `PatchOperation.Complete` | The `AnimalNeck` body patch matched nothing. Expected count from this mod: **zero**. Both of its operations carry `<success>Always</success>`, so a genuine failure here means the framework changed shape. |
-| `Could not resolve cross-reference` | `DirectXmlCrossRefLoader` | A `defName` pointing at nothing — a research prerequisite, a stuff category, or a tag naming a modded animal that a `MayRequire` failed to guard. |
+| `Could not resolve cross-reference` | `DirectXmlCrossRefLoader` | A `defName` pointing at nothing: a research prerequisite, a stuff category, or a tag naming a modded animal that a `MayRequire` failed to guard. |
 | `Could not find type named` | `DirectXmlToObject.ClassTypeOf` | An unresolved type, including `AnimalApparelCollarsAndKit.PatchOperation_ApparelSetting`, `GiddyUp.CompProperties_Overlay`, or MVCF's comps. |
-| `Failed to find any textures at` | `Graphic_Multi.Init` | A `texPath` with nothing behind it — the item's own icon, as opposed to its worn graphic. |
+| `Failed to find any textures at` | `Graphic_Multi.Init` | A `texPath` with nothing behind it: the item's own icon, as opposed to its worn graphic. |
 
 A clean run means **none of those naming an `Apparel_`, `diaper`, `AnimalNeck` or `AnimalGear`
 identifier**. Lines naming other mods are not ours to fix, and are worth leaving in the paste.

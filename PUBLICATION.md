@@ -81,13 +81,19 @@ First release. Six abandoned Animal Gear add-ons, and the unfinished half of a s
 
 ## Gallery (manual, on the Steam page)
 
-No captures exist. The gallery is a manual step (the CI only sends the header image). Planned order,
-to be produced by a dedicated Pickle scenario, zoomed close enough that the gear is visible:
-1. A dog wearing a collar over body armour (shows the AnimalNeck slot and the layer order).
-2. The horse set (barding, chanfron, saddle).
-3. A turret pack on a large animal (VEF pass).
-4. The settings page under Mod options.
-Put them, and only them, in a folder numbered `01-`, `02-`... and open each one before upload.
+The gallery is a manual step (the CI only sends the header image). Folder `Art/Gallery/`, uploaded as it stands,
+indexes contiguous, `0-` the byte copy of `Mod/About/Preview.png`:
+
+| Index | File | Shows |
+|---|---|---|
+| 0 | `0-preview.png` | The Preview (copy of `Mod/About/Preview.png`) |
+| 1 | `1-fox.png` | A fox wearing a collar (Pickle capture, cropped and enlarged) |
+| 2 | `2-horse.png` | The horse set: barding, chanfron, saddle |
+| 3 | `3-husky.png` | A husky wearing a collar |
+
+The turret packs are `AnimalInvisible` by design (drawn by MVCF), so no capture shows them. A staged gallery on the
+zenNelim studio (feature `12-gallery`, pass `wsl-deps.studio-gallery.map`) is still to be shot at `shootGallery`;
+the table above is then realigned. Each image is opened before upload.
 
 ## Dependencies and DLC
 

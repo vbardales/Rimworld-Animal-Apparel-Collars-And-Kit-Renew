@@ -15,13 +15,13 @@ Six **Animal Gear** add-ons, plus the half of a seventh that nobody had finished
 onto the framework that replaces it. Who wrote what, and under which licence, is in
 [ATTRIBUTION.md](ATTRIBUTION.md).
 
-- **Four dog collars** — neck bow, leather, studded, shield — for 78 canines across 21 animal mods.
+- **Four dog collars** (neck bow, leather, studded, shield) for 78 canines across 21 animal mods.
 - **A diaper** that stops an animal spreading filth.
 - **Six turret packs and two grenade belts.** Needs Vanilla Expanded Framework; without it the rest
   still loads.
 - **Medieval barding, a chanfron and a saddle** for horses, with riding tack for Giddy-Up.
 - **Goat mail.**
-- **Animal clothing, headwear, riding gear and power armour** — Owlchemist's, whose art Animal
+- **Animal clothing, headwear, riding gear and power armour**: Owlchemist's, whose art Animal
   Apparel: Basic Armor already ships without any def to use it.
 
 Requires the Framework. **Cannot run with Dylan's Animal Gear** (the Framework's own restriction),
@@ -43,14 +43,14 @@ Animal Gear add-on.
 | per animal | `<li>Husky</li>` | `<li>defNameHusky</li>` |
 | any animal | `<li>AnimalALL</li>` | no `defName` tag at all |
 | mask shader | `<li>AnimalCUTOUTCOMPLEX</li>` | automatic when a `…m` mask sits beside the sprite |
-| never drawn | — | `<li>AnimalInvisible</li>` |
-| no sprite, no error | — | `<li>AnimalFallbackInvisible</li>` |
+| never drawn | - | `<li>AnimalInvisible</li>` |
+| no sprite, no error | - | `<li>AnimalFallbackInvisible</li>` |
 
 ### Body part groups
 
 The old framework grafted the **human** `Neck`, `Torso`, `Legs`, `UpperHead` and `FullHead` groups
-onto animal bodies. The new one defines three of its own — `AnimalHead`, `AnimalBody`, `AnimalLegs`
-— and puts the neck part into `AnimalBody`.
+onto animal bodies. The new one defines three of its own (`AnimalHead`, `AnimalBody`, `AnimalLegs`)
+and puts the neck part into `AnimalBody`.
 
 ### Textures
 
@@ -87,9 +87,9 @@ is wrong. So this mod adds a fourth group, **`AnimalNeck`**, and fills it in
 
 Two cases, because not every animal has a neck:
 
-- **Bodies with a `Neck` part** — every quadruped, plus `Bird` and `Monkey` — get `AnimalNeck` on
+- **Bodies with a `Neck` part**: every quadruped, plus `Bird` and `Monkey`: get `AnimalNeck` on
   the neck.
-- **Bodies without one** — `BeetleLike`, `Snake`, `TurtleLike` and most modded insect bodies — get
+- **Bodies without one**: `BeetleLike`, `Snake`, `TurtleLike` and most modded insect bodies: get
   it on the head instead. Vanilla refuses to equip apparel whose body part group is absent from the
   wearer, so without this a collar would simply never be equippable on those animals, silently.
   Dylan's Animal Gear had exactly that hole.
@@ -150,7 +150,7 @@ for its `<defName>`, and the gate written from what actually declares it:
 
 | Animals | Written against | Also, or instead, today |
 | --- | --- | --- |
-| `SC…` (19 dogs) | `mlie.spidercampsdogpack` | `Qux.stray.dogs` — "Stray Dogs (rescued)" |
+| `SC…` (19 dogs) | `mlie.spidercampsdogpack` | `Qux.stray.dogs`: "Stray Dogs (rescued)" |
 | `ERN_Dachshund…` | `Dumbs.Dumbs'Dachshunds` | `zal.dumbsdachshunds` |
 | `DW_Garmr` | `RebelRabbit.DireWolves` | `zal.wolvesden` |
 | `NightlingF` | `kikohi.forsakens` | `zal.forsakens` |
@@ -159,7 +159,7 @@ for its `<defName>`, and the gate written from what actually declares it:
 | 15 × `AEXP_…` | the individual VAE packs | `VanillaExpanded.VanillaAnimalsExpanded`, the merged pack |
 
 Both ids are kept in every case, so the mod works whichever version of the source someone runs.
-`MayRequireAnyOf` takes the list for tags, and `IfModActive` takes the same comma list for folders —
+`MayRequireAnyOf` takes the list for tags, and `IfModActive` takes the same comma list for folders:
 it fills `LoadFolder.requiredAnyOfPackageIds` and is tested with `ModLister.AnyModActiveNoSuffix`,
 so one `<li>` covers both ids and the folder is never added twice.
 
@@ -171,7 +171,7 @@ Eight things were already broken in the sources, six of them silently:
 
 - **Dog Collars** listed `SCNewfoundland`. Spidercamp's dog is `SCNewFoundland`, with a capital F,
   so the Newfoundland has never been able to wear a collar. Under the new framework a name that
-  resolves to nothing is no longer merely inert — it is a logged error on every apparel check.
+  resolves to nothing is no longer merely inert: it is a logged error on every apparel check.
 - **Dog Collars**, and Owlchemist's mod with it, gated on packageIds that several of the source
   mods no longer use. See the table above.
 
@@ -180,9 +180,9 @@ Eight things were already broken in the sources, six of them silently:
   a `Name` attribute and have no `defName`. The xpath matched nothing, and the thylacine and African
   wild dog have been missing from the collars' hyperlinks since the mod shipped.
 - **Dog Collars**, `LoadFolders.xml`: the Arid Shrubland folder was gated on the *Boreal Forest*
-  packageId — `<li IfModActive="VanillaExpanded.VAEBF">Mods/VanillaExpanded.VAEAS</li>`.
+  packageId: `<li IfModActive="VanillaExpanded.VAEBF">Mods/VanillaExpanded.VAEAS</li>`.
 - **Medieval Horse Plate Armour**: its Giddy-Up patch used `GiddyUpCore.CompProperties_Overlay`. In
-  Giddy-Up 2 the type is `GiddyUp.CompProperties_Overlay` — same assembly name, different namespace.
+  Giddy-Up 2 the type is `GiddyUp.CompProperties_Overlay`: same assembly name, different namespace.
   An unresolvable `Class=` makes RimWorld discard the whole def it appears in.
 - **Medieval Horse Plate Armour**: the same patch was gated with `PatchOperationFindMod` on the
   display name `Giddy-Up! Core`. The living mod is called "Giddy-Up 2 - Continued", so that test can

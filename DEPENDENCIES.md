@@ -1,4 +1,4 @@
-# Dependency verification — 2026-09-13
+# Dependency verification - 2026-09-13
 
 Audited payload: commit `7060c628a586c55551a8c9130ab9feb1a80ad657`, then the
 local `Diaper_OptionalGorilla.xml` correction and its regression tests.
