@@ -15,7 +15,7 @@ Put the tested SHA in `-Label`, and give a fresh `-EvidenceDir` under `Tests/Pic
 | 04 settings shortcut | Hidden by default, revealed by RIMMSQOL, opens the settings; a clean bar never draws it |
 
 Offline, not in Gherkin: XML patches and their branches, translation paths, settings values and
-persistence (`_tools/test-xml.ps1`, `Tests/Program.cs`), the neckless-body fallback (patch applied to
+persistence (`Tests/test-xml.ps1`, `Tests/Program.cs`), the neckless-body fallback (patch applied to
 bodies in the XML suite; a Pickle version would need a test-only collar def).
 
 ## Passes

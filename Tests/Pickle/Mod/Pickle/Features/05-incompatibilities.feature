@@ -17,7 +17,7 @@ Feature: Animal Apparel Collars and Kit Renew, declared incompatibilities
   # behaviour, not this mod's declaration - and nothing in the framework's own AnimalGear.dll (checked by
   # decompile) runs a check against Dylan.AnimalGear either, so there is no in-game symptom of ours to
   # assert. What this mod answers for is the declaration itself, in About.xml, which is a source-reading
-  # check, not a game scenario; not added to _tools/test-xml.ps1 without being asked.
+  # check, not a game scenario; not added to Tests/test-xml.ps1 without being asked.
 
   @allow-errors @requires:Shenanigans.DogCollars
   Scenario: Animal Apparel Collars: Dog Collars still declares the same defNames

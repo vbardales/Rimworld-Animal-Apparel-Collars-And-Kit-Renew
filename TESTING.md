@@ -7,7 +7,7 @@ This mod has never been loaded by RimWorld. The manual scenarios below remain un
 Run from the repository root with PowerShell 7 (no game installation or extra modules needed):
 
 ```powershell
-pwsh -NoProfile -File _tools/test-xml.ps1
+pwsh -NoProfile -File Tests/test-xml.ps1
 ```
 
 The same command runs on Linux in `.github/workflows/xml-tests.yml` for pushes and pull requests.

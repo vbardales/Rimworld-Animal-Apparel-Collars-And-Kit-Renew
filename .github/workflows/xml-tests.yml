@@ -7,4 +7,4 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate XML and patch behavior
         shell: pwsh
-        run: ./_tools/test-xml.ps1
+        run: ./Tests/test-xml.ps1
