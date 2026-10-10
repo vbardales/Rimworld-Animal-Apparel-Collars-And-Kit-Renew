@@ -44,7 +44,7 @@ remaining:
   - "unverified: in-game primary settings access (Mod options, this mod's name), restart effects and persistence, scenario K"
   - "unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, Steam Deck layout"
   - "2026-10-10: defect: incompat Horse_Plate_Armour red (ticket 0e84): the source writes one defName, Apparel_Saddle, which this mod renamed; no defName collision remains. About incompatibleWith entry Horse_Plate_Armour to review (owner decides: patches or textures may still conflict)."
-  - "2026-10-10: unverified: without-Odyssey half of the Odyssey pair: red 4th time (ticket 1dbb), timeout at the save load of test-colony, before any step of this mod; cause not established (fixture save needs Odyssey, or the 16 mods of the map stall the load). To discuss with Pickle Tools."
+  - "2026-10-10: unverified: without-Odyssey half of the Odyssey pair: red 4th time (ticket 1dbb), timeout at the save load of test-colony, before any step of this mod; cause established: the test-colony fixture was saved with Odyssey and cannot load without it (PlanetLayerDef Orbit missing, NullReferenceException in WorldGrid.CreateRequiredLayers). Scenario rewritten to audit the load log without a save (08); rerun to submit."
   - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
   - "unverified: scenarios E (firing in combat), G (restart with gear worn), J (armour values by a hit taken) have no automated form"
 updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"

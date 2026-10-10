@@ -17,7 +17,7 @@ are public: none is sent without Virginie's agreement.
 
 - Done 2026-10-10 (79998ce): six incompatibility checks green, review scenarios green, French idle and Odyssey rerun green.
 - Open: incompat Horse_Plate_Armour red (no shared defName: the source writes Apparel_Saddle, renamed here); About entry to review.
-- Open: without-Odyssey half of the Odyssey pair, red 4 times at the load of the test-colony save: ask Pickle Tools.
+- Open: without-Odyssey half of the Odyssey pair, red 4 times: test-colony was saved with Odyssey and cannot load without it; scenario rewritten without a save, rerun submitted.
 - Open: staged gallery on the zenNelim studio (ticket 4fac, pass `wsl-deps.studio-gallery.map`), then crop and enlarge into `Art/Gallery/` (shootGallery).
 
 ## PR preparation (2026-10-01)
