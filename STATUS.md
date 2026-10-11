@@ -140,3 +140,7 @@ Rechecked what the 2026-10-10 entry had cited from older audits, against the pro
 - Dependencies: DEPENDENCIES.md of 2026-09-13 stands (dated citation); `IfModActive` ids in `LoadFolders.xml` re-read, unchanged since; mods without a 1.6 build (Vikings, JapaneseDogs, YorkshireTerrors) keep guarded folders that load nothing.
 - AUDIT 11.b changes of the day (CHANGELOG date at the dry-run) concern `publish`; read.
 Still open in `playTests`: tickets 5190 and 171c (settings through Mod options, EN and FR) and 6fcd (load audit after the review fixes); then `settings_audit` can go `complete`, and the state moves on to `shootGallery` (staged gallery on the zenNelim studio) once the owner confirms.
+
+### Declarations and local scripts, 2026-10-11
+
+Declared to Audit workflow (mod scripts), CI/CD (publication scripts) and PickleTools (local steps of `AnimalSteps.cs`, incl. the four Mod options steps); messages delivered or queued behind their running turns, no reply yet. AGENTS "Local scripts" (owner rule 2026-10-11): `scripts/Check-CiTemplate.ps1` showed drift in `.github/` (build-check.sh and its test); regenerated with `generate-publish-workflow.sh --replace` with the same values (templateStamp 7fb8f006c206, CI tests 75 pass, `Check-CiTemplate`: identical). The one local script, `Tests/test-xml.ps1`, has its row and justification in `scripts/LOCAL_SCRIPTS.md` (13129ae); `Validated` stays empty until Virginie answers. `Check-ModBasics.ps1` passes on this mod (60 XML files, 42 defs).
