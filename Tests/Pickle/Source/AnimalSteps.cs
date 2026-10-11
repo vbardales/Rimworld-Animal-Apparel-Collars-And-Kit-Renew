@@ -489,6 +489,40 @@ namespace AnimalApparelCollars.PickleSteps
             await ctx.WaitFrames(10);
         }
 
+        // Settings round trip across a restart (MOD_SETTINGS.md 4: actual effect, persistence). The settings classes live in the
+        // VEF-gated assembly, which this companion does not reference: reached by reflection on the Mod class.
+        private static object ToggleSettingsObject()
+        {
+            Mod mod = SettingsMod();
+            if (mod == null) throw new InvalidOperationException("the settings Mod class (ApparelSettingsMod) is not loaded");
+            return mod.GetType().GetProperty("Settings", BindingFlags.Public | BindingFlags.Static).GetValue(null);
+        }
+
+        private static Type SettingsType(string name) => SettingsMod().GetType().Assembly.GetType("AnimalApparelCollarsAndKit." + name);
+
+        [When("Animal Apparel Collars: the option {string} is set to {word}")]
+        public void SetOption(PickleContext ctx, string option, string value)
+        {
+            object settings = ToggleSettingsObject();
+            object e = Enum.Parse(SettingsType("ApparelOption"), option);
+            SettingsType("ToggleSettings").GetMethod("Set").Invoke(settings, new object[] { e, bool.Parse(value) });
+        }
+
+        [Then("Animal Apparel Collars: the option {string} reads {word}")]
+        public void OptionReads(PickleContext ctx, string option, string value)
+        {
+            object settings = ToggleSettingsObject();
+            object e = Enum.Parse(SettingsType("ApparelOption"), option);
+            bool read = (bool)SettingsType("ToggleSettings").GetMethod("Get").Invoke(settings, new object[] { e });
+            ctx.Require(read == bool.Parse(value), $"the option {option} reads {read}, expected {value}");
+        }
+
+        [When("Animal Apparel Collars: the options are reset to their defaults")]
+        public void ResetOptions(PickleContext ctx)
+        {
+            SettingsType("ToggleSettings").GetMethod("Reset").Invoke(ToggleSettingsObject(), null);
+        }
+
         private static bool hiddenByUs;
 
         [When("Animal Apparel Collars: the interface is hidden for the capture")]
