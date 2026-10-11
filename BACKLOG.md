@@ -41,3 +41,8 @@ a save fails with this message 7-13 s after the load, Pickle's own steps only; f
 No workaround; no link to language shown (the other four logs are English). A home-made step reading `Map.mapPawns` after an `await`
 would fail the same way and be the step's fault: here the failing step is the synchronous spawn step right after load, and the only
 async step (`RenderTreeDraws`) runs later, so the suite is not the likely cause. To diagnose, a run needs the game's own error line with its stack.
+
+## Local steps to retire (PickleTools answer, 2026-10-11)
+
+- `Animal Apparel Collars: the camera is centered on X` and `... framed tight on X` can be replaced by PickleTools CameraZoom `the camera is centered on {string} at root size {float}` (colonist or animal), and the tick wait by `I let {int} frames pass`. It needs `nelim.pickletools.camerazoom` in the maps of the review scenarios (avec-vef at least) and a replay of those scenarios: after the settings tickets, not before.
+- Animal spawn, dress, wear, health steps and the Mod options steps stay local until a second mod needs them (PickleTools rule: one consumer stays local).
