@@ -15,6 +15,7 @@ remote:       https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-K
 visibility:   public
 detached:     yes
 workflow_stage: playTests[1.0.0]
+social_preview_sha256: 23867f07e884c61d201c28967d48b0fd0c00ef34166699dcfb70e9dda31444e9
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
 upstream_mod_remotes:
@@ -30,6 +31,7 @@ showcase:     partial
 tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 code_review_sha: c3bbe10ba7a90f7b3522b727f7ee92b63b739475
+  - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
   - "2026-10-10: done: code review 1800f5e..ac6b7e6 by a read-only reviewer agent, 0 blocking. Risks 1 and 2 fixed in c3bbe10 (relic exclusion now covers AnimalTurretBase, diaper and Apparel_GoatMail; HorseRidingOverlay creates a missing Horse comps node first; XML suite PASS 1278), the diff reviewed by the session; risk 3 (no null check on VFEGlobal.settings in ApparelSettingsMod.Settings) left: VEF initialises it before patches, 30 real-assembly assertions pass, changing it means rebuilding the shipped DLL. Targeted load-audit rerun on the Giddy-Up map queued."
   - "2026-10-10: unverified: new Art/Preview-source.png (owner, 1672x941) passes the AUDIT 2.e measures: Measure-Palette.sh 2 hue families, dominant 84%, Vmean 0.480; no readable colonist face, quadrupeds in side profile, nothing upright (read at full size). 268 px reading and panel/badge placement to check at mountPreview, Preview chain not re-rendered yet."
