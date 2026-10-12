@@ -1,5 +1,5 @@
 ---
-settings_audit: partial
+settings_audit: complete
 rights_audit: complete
 modicon_audit: partial
 preview_audit: partial
@@ -43,7 +43,7 @@ remaining:
   - "2026-10-10: defect: em dashes (U+2014) remain in ATTRIBUTION.md (17, root and Mod/ copies must stay identical) and CHANGELOG.md (12, append-only); removed from README, TESTING, DEPENDENCIES, TEST_SCENARIOS, FRENCH_REVIEW."
   - "2026-10-10: defect: STATUS.md was 71 KB; folded into docs/runs/ and this file today (lint threshold 40 KB)."
   - "2026-10-10: done on 79998ce: six incompatibility checks green (dog-collars, patch-malinois, realistic-goat, animal-equipment, diapers, turret-packs: each still shares a defName), French rerun of idle colony and with-Odyssey green, review scenarios green (render-tree assertions pass, 8 captures opened). Earlier greens: minimal set EN bf865a3 and FR 12e815f, avec-vef EN, avec-animaux, avec-rimmsqol bb0bb9f (hidden shortcut), removal chain 24dc240."
-  - "2026-10-11: done: primary settings access in game, EN and FR (feature 14, tickets 5190 and 171c green); hidden shortcut green with RIMMSQOL (bb0bb9f). unverified: option effect after a restart, persistence across a restart, page layout and clipping read from an image; settings_audit stays partial until then"
+  - "2026-10-11: done: primary settings access in game, EN and FR (feature 14, tickets 5190 and 171c green); hidden shortcut green with RIMMSQOL (bb0bb9f). restart round trip verified 2026-10-12 (feature 15, ticket 696a, three launches green); page layout read from an image stays unverified"
   - "unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, Steam Deck layout"
   - "2026-10-10: done: Horse_Plate_Armour removed from About.xml incompatibleWith on the owner decision (ticket 0e84 red: no shared defName; ticket 7800 green: clean load with both mods). Steam description and README now say six of the seven source mods; scenario removed from 05, feature 13 keeps the coexistence check. The description changed: the publication review reopens at writeDocs."
   - "2026-10-10: done: without-Odyssey half of the Odyssey pair: load audit without a save green (ticket 3f1a, b3a96c2); the save-based form cannot load without Odyssey (test-colony needs it)."
@@ -150,3 +150,7 @@ CI copy (2026-10-11): my regeneration from the working Release-Admin tree (stamp
 ### Protocol update read, 2026-10-11 (AGENTS, AUDIT, GALLERY, PICKLE, STYLE, WORKSHOP_COMMENTS)
 
 No cron, ScheduleWakeup, Monitor or watcher on a Pickle ticket any more (rule of 2026-10-11 supersedes the 30-minute safety check of 2026-10-10): the cron created for ticket 6a80 was deleted at once; after a ticket, 🟢 and wait for the Ticket Manager's message. The 32 px legibility test is no longer a workflow step (AUDIT 2.c: format and weight only), so that `unverified` entry is void. Before handing gallery captures to Virginie, the session opens each one, gives its verdict first and keeps only the serious candidates in `Art/Gallery/` under 2 MB (shootGallery). Ticket 6a80 filed on 7a29f86: settings written, read after a restart with the five universal defs absent, then reset (feature 15, -Then, -NoBatch).
+
+## Settings restart, 2026-10-12
+
+Ticket 6a80 (7a29f86) produced no report: the launcher read the second -Then filter as a language name. Resubmitted as 696a with -Then given as a PowerShell array. Result: seq1 (option written), seq2 (read after the restart, the five universal defs absent), seq3 (reset to defaults) all passed. `settings_audit` is now `complete`. Next: shootGallery once the owner confirms; regenerate `.github/` at CI/CD template 7a8f3a601751 before publish.
