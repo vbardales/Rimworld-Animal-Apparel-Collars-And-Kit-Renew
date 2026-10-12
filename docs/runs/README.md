@@ -58,3 +58,4 @@
 2026-10-12 7dd5754 settings restart round trip, feature 15, map avec-vef, -NoBatch (696a; 6a80 failed with no report, -Then array parsed as a language): seq1 written, seq2 read after restart with the five universal defs absent, seq3 reset: 3/3 PASSED. settings_audit complete.
 2026-10-12 Preview re-rendered from Art/echo-source.png (preSized, flipX false, panelWidth 34, panelTop 8); 0-preview.png identical; social preview uploaded to GitHub, social_preview_sha256 b39fd0a0.
 2026-10-12 Art/ModIcon-original.png and Art/echo-original.png deleted on the owner request (both stay in git history).
+2026-10-12 ModIcon badge now cropped at the frame edges: iconBadge.translate 12.5%,12.5% in Art/Preview.config.json (the shared renderer dropped its own 12.5 % shift on 2026-10-09, so this mod sets it itself); Preview, 0-preview and Preview.ico re-rendered, social preview uploaded, social_preview_sha256 07bf3e5a.
