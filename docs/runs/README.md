@@ -57,3 +57,4 @@
 2026-10-11 c3bbe10 load audit after the review fixes (6fcd, avec-animaux, Giddy-Up loaded): PASSED 1/1, 1723 log lines, 73 defs, 0 finding, 0 translation problem: the Horse comps guard and the relic exclusion raise nothing. Heavy files deleted.
 2026-10-12 7dd5754 settings restart round trip, feature 15, map avec-vef, -NoBatch (696a; 6a80 failed with no report, -Then array parsed as a language): seq1 written, seq2 read after restart with the five universal defs absent, seq3 reset: 3/3 PASSED. settings_audit complete.
 2026-10-12 Preview re-rendered from Art/echo-source.png (preSized, flipX false, panelWidth 34, panelTop 8); 0-preview.png identical; social preview uploaded to GitHub, social_preview_sha256 b39fd0a0.
+2026-10-12 Art/ModIcon-original.png and Art/echo-original.png deleted on the owner request (both stay in git history).
