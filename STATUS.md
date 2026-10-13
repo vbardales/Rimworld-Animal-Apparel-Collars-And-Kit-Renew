@@ -50,7 +50,9 @@ remaining:
   - "2026-10-10: done: Horse_Plate_Armour removed from About.xml incompatibleWith on the owner decision (ticket 0e84 red: no shared defName; ticket 7800 green: clean load with both mods). Steam description and README now say six of the seven source mods; scenario removed from 05, feature 13 keeps the coexistence check. The description changed: the publication review reopens at writeDocs."
   - "2026-10-10: done: without-Odyssey half of the Odyssey pair: load audit without a save green (ticket 3f1a, b3a96c2); the save-based form cannot load without Odyssey (test-colony needs it)."
   - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
-  - "unverified: scenarios E (firing in combat), G (restart with gear worn), J (armour values by a hit taken) have no automated form"
+  - "2026-10-13: defect: shared Check-Translations.ps1 (follows ParentName since 014467c) FAILS 8 findings: nested text `label` (2 texts, 0 injections) on the 8 ATP_Apparel_* packs, plus 8 WARN visualLabel paths outside its inventory. The verb `label` (\"Gun\") is kept untranslated on purpose (MVCF identifier, comment in ThingDefs_AnimalTurretPacks.xml); to arbitrate with Audit before translation_fr stays complete."
+  - "2026-10-13: defect: Check-CiTemplate.ps1 shows drift in .github (steam-page.mjs, steam-publish.mjs, steam-page.test.mjs +1): regenerate at the CI/CD template stamp before publish."
+  - "2026-10-13: E (feature 03) and J (feature 09) are automated and were green; G restart half is feature 16, ticket e8c4 pending (draw order collar above body piece not asserted)"
 updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
 protocols_read_sha: b1a713a1f6ec6d967734d6a92488778787bb40d5
 ---
