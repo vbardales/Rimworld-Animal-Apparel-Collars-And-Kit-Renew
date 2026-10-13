@@ -52,7 +52,7 @@ remaining:
   - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
   - "unverified: scenarios E (firing in combat), G (restart with gear worn), J (armour values by a hit taken) have no automated form"
 updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
-protocols_read_sha: a5c7cf48b349ae00e7d28fd643e852dc860dfaf2
+protocols_read_sha: b1a713a1f6ec6d967734d6a92488778787bb40d5
 ---
 
 # Animal Apparel: Collars and Kit Renew: status
