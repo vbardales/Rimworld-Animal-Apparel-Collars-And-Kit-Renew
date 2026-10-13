@@ -129,6 +129,40 @@ namespace AnimalApparelCollars.PickleSteps
             pawn.apparel.Wear(apparel, true, false);
         }
 
+        // Scenario G, restart half: material and quality are part of a stuffed item's identity (base def plus
+        // stuff), so they are set explicitly before the save and read back after the restart.
+        [When("Animal Apparel Collars: {string} is dressed in {string} made of {string} at quality {word}")]
+        public void DressMade(PickleContext ctx, string nickname, string apparelDefName, string stuffDefName, string quality)
+        {
+            Pawn pawn = Require(ctx, nickname);
+            ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
+            ThingDef def = DefDatabase<ThingDef>.GetNamedSilentFail(apparelDefName);
+            ctx.Require(def != null, $"no ThingDef '{apparelDefName}'");
+            ThingDef stuff = DefDatabase<ThingDef>.GetNamedSilentFail(stuffDefName);
+            ctx.Require(stuff != null, $"no stuff ThingDef '{stuffDefName}'");
+            ctx.Require(Enum.TryParse(quality, true, out QualityCategory category), $"'{quality}' is not a QualityCategory");
+            Apparel apparel = (Apparel)ThingMaker.MakeThing(def, stuff);
+            CompQuality compQuality = apparel.TryGetComp<CompQuality>();
+            ctx.Require(compQuality != null, $"'{apparelDefName}' has no CompQuality");
+            compQuality.SetQuality(category, ArtGenerationContext.Colony);
+            pawn.apparel.Wear(apparel, true, false);
+        }
+
+        [Then("Animal Apparel Collars: {string} is wearing {string} made of {string} at quality {word}")]
+        public void IsWearingMade(PickleContext ctx, string nickname, string apparelDefName, string stuffDefName, string quality)
+        {
+            Pawn pawn = Require(ctx, nickname);
+            ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
+            Apparel apparel = pawn.apparel.WornApparel.FirstOrDefault(a => a.def.defName == apparelDefName);
+            ctx.Require(apparel != null, $"'{nickname}' is not wearing '{apparelDefName}'; it wears " +
+                string.Join(", ", pawn.apparel.WornApparel.Select(a => a.def.defName)));
+            ctx.Require(apparel.Stuff?.defName == stuffDefName,
+                $"'{apparelDefName}' on '{nickname}' is made of '{apparel.Stuff?.defName ?? "nothing"}', expected '{stuffDefName}'");
+            ctx.Require(Enum.TryParse(quality, true, out QualityCategory expected), $"'{quality}' is not a QualityCategory");
+            ctx.Require(apparel.TryGetComp<CompQuality>()?.Quality == expected,
+                $"'{apparelDefName}' on '{nickname}' is quality {apparel.TryGetComp<CompQuality>()?.Quality}, expected {expected}");
+        }
+
         [Then("Animal Apparel Collars: {string} is wearing {string}")]
         public void IsWearing(PickleContext ctx, string nickname, string apparelDefName)
         {

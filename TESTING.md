@@ -113,7 +113,7 @@ field points at: repoint it first. One text line per run goes in `docs/runs/`.
 
 ## Pickle passes (AUDIT.md, "Passes Pickle")
 
-Suite: `Tests/Pickle/` (README there), features 01 to 14. Fixture save `test-colony` was made with Odyssey and cannot load
+Suite: `Tests/Pickle/` (README there), features 01 to 16. Fixture save `test-colony` was made with Odyssey and cannot load
 without it: scenarios that must run without the DLC load no save (feature 08, `sans-odyssey`). A pass is one `-DepMap`;
 one request per pass and per language (`-Language English`, `-Language French`). Skipped by requirement is not passed.
 
@@ -128,6 +128,7 @@ Family 2, with the optional mods (one pass per exclusive combination):
 | `avec-rimmsqol` | VEF and RIMMSQOL | 04 hidden shortcut revealed and hidden |
 | `avec-animaux` | the 1.6 animal mods, Basic Armor, Giddy-Up 2 | 08 with Odyssey, 06 clean load, 01 to 03 on those species |
 | `avec-animaux-sans-odyssey` | same, Odyssey left out | 08 without Odyssey (load audit, no save) |
+| `restart` | VEF and the removal companion (holds the save) | 16 gear worn survives a real restart (`-Then`) |
 | `removal` | the removal companion | 11 save with gear, reloaded without the mod (`-Then`, `-ThenWithout`) |
 | `studio-gallery` | zenNelim studio, StageDecor, CameraZoom, ClearScreen | 12 staged gallery (shootGallery) |
 | `avec-ce`, `avec-sos2`, `avec-androidtiers`, `avec-bunrace-core`, `avec-rimeffect`, `avec-rimeffect-renegade`, `avec-animaux-vae-separes` | one optional mod each | per-mod art folders and patches; not yet played |
@@ -138,5 +139,5 @@ Family 3, one pass per declared incompatibility, asserting the documented sympto
 it mounts Medieval Horse Plate Armour with LoadAudit for feature 13. Dylan's Animal Gear has nothing to assert in a running game
 (the framework's own restriction, "on ne teste pas le jeu"). Replayed when the other mod moves, not at each publication.
 
-Not automated, recorded `unverified`: E (firing in combat), G (restart with gear worn), J (armour values by a hit taken).
+E (turret pack fires and deals damage, feature 03) and J (armour takes less damage over 200 cuts, feature 09) are automated and were green on bf865a3 (avec-vef) and ce65944 (avec-animaux). G (restart with gear worn): in-process half feature 10, real restart feature 16 (pass `restart`), written 2026-10-13, not played yet.
 Played results: `docs/runs/README.md`.

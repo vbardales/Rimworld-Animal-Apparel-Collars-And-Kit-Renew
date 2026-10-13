@@ -1,0 +1,4 @@
+# Pass restart: scenario G, two launches with the mod kept. VEF gives the turret pack; the removal companion is only
+# the folder that holds the saved game between the launches (its Pickle/Fixtures), its own feature is not played.
+OskarPotocki.VanillaFactionsExpanded.Core   2023507013
+nelim.animalapparelcollarsandkit.pickleremoval   path:AnimalApparelCollarsAndKitRenew/Tests/Pickle/Removal/Mod

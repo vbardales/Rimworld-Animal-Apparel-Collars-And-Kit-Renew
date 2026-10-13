@@ -122,3 +122,12 @@ colour) and the interface hidden (`the interface is hidden for the capture`, res
 Scenario 4 needs VEF (pass avec-vef). Play with `-DepMap wsl-deps.avec-vef.map -Filter '12-gallery'`; the images are
 `gallery-N-*.png` in the evidence folder, to be opened, recropped to 16:9 and numbered `1-`..`4-` in `Art/Gallery/`.
 Never run.
+
+## Added 2026-10-13: feature 16, scenario G across a real restart
+
+Two launches with the mod kept, pass `wsl-deps.restart.map` (VEF for the turret pack, the removal companion only as the
+folder that holds the save). One request:
+`-DepMap wsl-deps.restart.map -Filter '16-restart-gear::are worn and saved' -Then '16-restart-gear::are still worn'`.
+Launch 1 dresses animals with a chosen material and quality (new steps `is dressed in {string} made of {string} at quality
+{word}` and `is wearing ... made of ... at quality ...`), saves `aack-restart-gear` and hands it over; launch 2 reloads it in a
+new process and checks identity, render nodes, the turret pack firing and the log. Draw order collar above body piece is not asserted.
