@@ -40,6 +40,7 @@ Feature: Animal Apparel Collars and Kit Renew, gear worn survives a real restart
     And Animal Apparel Collars: the render tree of "RestHorse" draws "Apparel_MedievalHorseSaddle"
     Given Animal Apparel Collars: a hostile "Thrumbo" named "RestTarget" exists near the colony
     When Animal Apparel Collars: "RestMuffalo" fires its turret pack at "RestTarget"
+    And game speed is fast
     And Animal Apparel Collars: I let 300 ticks pass
     Then Animal Apparel Collars: "RestTarget" health is below 100 percent
     And no errors were logged
