@@ -14,7 +14,7 @@ repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 remote:       https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: playTests[1.0.0]
+workflow_stage: shootGallery[1.0.0]
 social_preview_sha256: 07bf3e5a8a0333c0c2bf823e920ddf02b1b140a6ae9b9cd404ec3e3e170dbb7d
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
@@ -50,11 +50,11 @@ remaining:
   - "2026-10-10: done: Horse_Plate_Armour removed from About.xml incompatibleWith on the owner decision (ticket 0e84 red: no shared defName; ticket 7800 green: clean load with both mods). Steam description and README now say six of the seven source mods; scenario removed from 05, feature 13 keeps the coexistence check. The description changed: the publication review reopens at writeDocs."
   - "2026-10-10: done: without-Odyssey half of the Odyssey pair: load audit without a save green (ticket 3f1a, b3a96c2); the save-based form cannot load without Odyssey (test-colony needs it)."
   - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
-  - "2026-10-13: defect: shared Check-Translations.ps1 (follows ParentName since 014467c) FAILS 8 findings: nested text `label` (2 texts, 0 injections) on the 8 ATP_Apparel_* packs, plus 8 WARN visualLabel paths outside its inventory. The verb `label` (\"Gun\") is kept untranslated on purpose (MVCF identifier, comment in ThingDefs_AnimalTurretPacks.xml); to arbitrate with Audit before translation_fr stays complete."
+  - "2026-10-15: done: Check-Translations (follows ParentName) flagged 8 nested `label` texts on the ATP_Apparel_* packs; verbs.0.label and the MVCF verbProps.0.label are now translated in pairs (e9fc2e2), checker PASS, XML suite PASS 1326; French turret scenario replay queued (ticket bf49), MVCF pairing by label to confirm there"
   - "2026-10-13: defect: Check-CiTemplate.ps1 shows drift in .github (steam-page.mjs, steam-publish.mjs, steam-page.test.mjs +1): regenerate at the CI/CD template stamp before publish."
   - "2026-10-13: done: scenarios E (feature 03), J (feature 09) and G (feature 16, real restart, ticket e8c4 green on 23d4671) are automated and green; draw order of the collar above the body piece is not asserted"
 updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
-protocols_read_sha: abe91647aaaabbb913f42a9a699ab0b3db63942c
+protocols_read_sha: 583ce1259235b54ebacca29e1116689d1d24e589
 ---
 
 # Animal Apparel: Collars and Kit Renew: status
