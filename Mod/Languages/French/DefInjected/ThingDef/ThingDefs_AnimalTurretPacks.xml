@@ -2,8 +2,8 @@
 <LanguageData>
 
   <!-- VEF-only definitions. MVCF visualLabel and description use numeric list indices
-       because AdditionalVerbProps has no TranslationHandle. Keep the matching verb
-       labels unchanged: MVCF uses them as internal identifiers. -->
+       because AdditionalVerbProps has no TranslationHandle. The verb labels are
+       translated in pairs, see the end of this file. -->
 
   <!-- EN: small animal mini-turret pack -->
   <ATP_Apparel_SmallTurret.label>petit sac-tourelle</ATP_Apparel_SmallTurret.label>
@@ -71,5 +71,24 @@
   <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>Une ceinture de grenades fixée sur un animal.</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>
   <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>grenades</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>Une ceinture de grenades fixée sur un animal.</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+
+  <!-- Verb labels: the standard verb and its MVCF twin carry the same label and MVCF pairs them by it, so both are
+       translated to the same word (replayed by the French turret scenario of feature 03). -->
+  <ATP_Apparel_SmallTurret.verbs.0.label>canon</ATP_Apparel_SmallTurret.verbs.0.label>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>canon</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretShotgun.verbs.0.label>fusil à pompe</ATP_Apparel_SmallTurretShotgun.verbs.0.label>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>fusil à pompe</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretCharge.verbs.0.label>canon à charge</ATP_Apparel_SmallTurretCharge.verbs.0.label>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>canon à charge</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurret.verbs.0.label>canon</ATP_Apparel_LargeTurret.verbs.0.label>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>canon</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretShotgun.verbs.0.label>fusil à pompe</ATP_Apparel_LargeTurretShotgun.verbs.0.label>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>fusil à pompe</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretCharge.verbs.0.label>canon à charge</ATP_Apparel_LargeTurretCharge.verbs.0.label>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>canon à charge</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallGrenades.verbs.0.label>grenade</ATP_Apparel_SmallGrenades.verbs.0.label>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>grenade</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeGrenades.verbs.0.label>grenade</ATP_Apparel_LargeGrenades.verbs.0.label>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>grenade</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>
 
 </LanguageData>
