@@ -52,7 +52,7 @@ remaining:
   - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
   - "2026-10-13: defect: shared Check-Translations.ps1 (follows ParentName since 014467c) FAILS 8 findings: nested text `label` (2 texts, 0 injections) on the 8 ATP_Apparel_* packs, plus 8 WARN visualLabel paths outside its inventory. The verb `label` (\"Gun\") is kept untranslated on purpose (MVCF identifier, comment in ThingDefs_AnimalTurretPacks.xml); to arbitrate with Audit before translation_fr stays complete."
   - "2026-10-13: defect: Check-CiTemplate.ps1 shows drift in .github (steam-page.mjs, steam-publish.mjs, steam-page.test.mjs +1): regenerate at the CI/CD template stamp before publish."
-  - "2026-10-13: E (feature 03) and J (feature 09) are automated and were green; G restart half is feature 16, ticket e8c4 pending (draw order collar above body piece not asserted)"
+  - "2026-10-13: done: scenarios E (feature 03), J (feature 09) and G (feature 16, real restart, ticket e8c4 green on 23d4671) are automated and green; draw order of the collar above the body piece is not asserted"
 updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
 protocols_read_sha: abe91647aaaabbb913f42a9a699ab0b3db63942c
 ---

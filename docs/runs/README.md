@@ -59,3 +59,4 @@
 2026-10-12 Preview re-rendered from Art/echo-source.png (preSized, flipX false, panelWidth 34, panelTop 8); 0-preview.png identical; social preview uploaded to GitHub, social_preview_sha256 b39fd0a0.
 2026-10-12 Art/ModIcon-original.png and Art/echo-original.png deleted on the owner request (both stay in git history).
 2026-10-12 ModIcon badge now cropped at the frame edges: iconBadge.translate 12.5%,12.5% in Art/Preview.config.json (the shared renderer dropped its own 12.5 % shift on 2026-10-09, so this mod sets it itself); Preview, 0-preview and Preview.ico re-rendered, social preview uploaded, social_preview_sha256 07bf3e5a.
+2026-10-13 23d4671 restart (scenario G, pass restart), ticket e8c4: PASSED, seq1 1/1 (dress, save, hand over), seq2 1/1 (new process: material and quality, render nodes, turret pack fires, no error). First run 0d284bc failed only on the paused game (300 ticks never ran); folder deleted. Draw order collar above body piece not asserted.
