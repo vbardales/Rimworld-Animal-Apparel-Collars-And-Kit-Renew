@@ -437,16 +437,6 @@ namespace AnimalApparelCollars.PickleSteps
             await ctx.WaitTicks(ticks);
         }
 
-        // This Pickle build answers "Undefined step" for "an error matching {string} was logged"
-        // (incompat-*-en-bf865a3, 2026-10-02), so the suite reads the game's own log queue.
-        [Then("Animal Apparel Collars: an error matching {string} was logged")]
-        public void ErrorMatchingWasLogged(PickleContext ctx, string text)
-        {
-            var errors = Log.Messages.Where(m => m.type == LogMessageType.Error && m.text != null).ToList();
-            ctx.Require(errors.Any(m => m.text.Contains(text)), $"no error containing '{text}' was logged; " +
-                $"{errors.Count} errors seen: " + string.Join(" | ", errors.Take(5).Select(m => m.text.Length > 120 ? m.text.Substring(0, 120) : m.text)));
-        }
-
         // The game's load-time duplicate errors are not in Log.Messages when a scenario runs (Dog Collars run a8d3 / 8ddb11f:
         // 0 errors seen), so the declared incompatibility is checked at its source: the defNames written in the other
         // mod's own Defs files, against those written in this mod's. Shared names are what makes loading both a clash.
