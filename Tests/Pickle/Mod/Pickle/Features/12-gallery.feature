@@ -44,6 +44,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Sanctuary: Nelim has her own face
     Then Animal Apparel Collars: the render tree of "GalleryFox" draws "Apparel_leatherdogcollar"
     And Animal Apparel Collars: the render tree of "GalleryFox" draws "Apparel_SmallAnimalPowerArmorHelmet"
+    When Nelim's Pickle Tools: I frame the animal "GalleryFox" at zoom 3
     When Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-1-fox"
     And Nelim's Pickle Tools: the interface is shown again
@@ -67,6 +68,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     Then Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorsePlate"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseHelmet"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseSaddle"
+    When Nelim's Pickle Tools: I frame the animal "GalleryHorse" at zoom 4
     When Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-2-horse"
     And Nelim's Pickle Tools: the interface is shown again
@@ -86,6 +88,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" stands at (138, 67) facing East
     And Nelim's Sanctuary: Nelim has her own face
     Then Animal Apparel Collars: the render tree of "GalleryHusky" draws "Apparel_dogbow"
+    When Nelim's Pickle Tools: I frame the animal "GalleryHusky" at zoom 3
     When Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-3-husky"
     And Nelim's Pickle Tools: the interface is shown again
