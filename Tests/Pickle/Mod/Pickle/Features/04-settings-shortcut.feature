@@ -1,4 +1,4 @@
-@requires:MalteSchulze.RIMMSqol
+@requires:MalteSchulze.RIMMSqol @requires:nelim.pickletools.rimmsqol
 Feature: Animal Apparel Collars and Kit Renew, hidden settings shortcut
 
   # Pass avec-rimmsqol only. On a clean configuration the shortcut is neither visible nor greyed.

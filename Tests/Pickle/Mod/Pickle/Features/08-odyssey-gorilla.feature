@@ -1,4 +1,4 @@
-@requires:VanillaExpanded.VanillaAnimalsExpanded
+@requires:VanillaExpanded.VanillaAnimalsExpanded @requires:nelim.pickletools.loadaudit
 Feature: Animal Apparel Collars and Kit Renew, the VAE gorilla and Odyssey
 
   # Scenario F (gorilla regression). Passes: avec-animaux (Odyssey present) and
