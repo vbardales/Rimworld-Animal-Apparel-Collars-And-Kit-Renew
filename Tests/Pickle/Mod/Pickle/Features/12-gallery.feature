@@ -1,4 +1,4 @@
-@animal-apparel-collars @gallery @review @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.stagedecor
+@animal-apparel-collars @gallery @review @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace
 Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
 
   # Staged photographs for the Steam page (PUBLISHING.md, GALLERY.md). Pass: wsl-deps.sanctuary.map, the Sanctuaire de
