@@ -89,15 +89,15 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I let 477 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: time is paused for the capture
-    And Animal Apparel Collars: a tame "Husky" named "GalleryHusky" stands at (148, 214)
-    And Animal Apparel Collars: a tame "Cow" named "GalleryCow" stands at (154, 214)
+    And Animal Apparel Collars: a tame "Husky" named "GalleryHusky" stands at (148, 216)
+    And Animal Apparel Collars: a tame "Cow" named "GalleryCow" stands at (152, 216)
     And Nelim's Pickle Tools: "GalleryHusky" faces South
     And Nelim's Pickle Tools: "GalleryCow" faces South
     And Animal Apparel Collars: "GalleryHusky" is dressed in "Apparel_dogbow" dyed "#e0307a"
     And Animal Apparel Collars: "GalleryCow" is dressed in "Apparel_LargeAnimalScarf" dyed "#12a39a"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (58, 92, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (240, 228, 200)
-    And Nelim's Pickle Tools: "Nelim" stands at (151, 214) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (150, 212) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
