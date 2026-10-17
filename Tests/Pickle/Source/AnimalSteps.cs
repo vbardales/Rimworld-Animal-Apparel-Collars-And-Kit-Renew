@@ -117,6 +117,29 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker even after the framework's EnsureInitApparelTrackers");
         }
 
+        // A young animal for a staged capture (a cub in a diaper): the life stage is chosen by index, 0 the youngest.
+        [Given("Animal Apparel Collars: a tame {string} named {string} stands at \\({int}, {int}\\) at life stage {int}")]
+        public void TameAnimalStandsAtLifeStage(PickleContext ctx, string kindDefName, string nickname, int x, int z, int stage)
+        {
+            Map map = Find_.Map();
+            ctx.Require(map != null, "there is no current map: load a save first");
+            PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
+            ctx.Require(kind != null, $"no PawnKindDef '{kindDefName}'");
+            ctx.Require(Find(nickname) == null, $"'{nickname}' already exists");
+            var stages = kind.RaceProps.lifeStageAges;
+            ctx.Require(stage >= 0 && stage < stages.Count, $"'{kindDefName}' has {stages.Count} life stages, no stage {stage}");
+            var cell = new IntVec3(x, 0, z);
+            ctx.Require(cell.InBounds(map) && cell.Standable(map), $"cell {cell} is not standable");
+            float age = stages[stage].minAge + 0.001f;
+            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, Faction.OfPlayer,
+                PawnGenerationContext.NonPlayer, forceGenerateNewPawn: true, fixedBiologicalAge: age, fixedChronologicalAge: age));
+            pawn.Name = new NameSingle(nickname);
+            GenSpawn.Spawn(pawn, cell, map);
+            ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn at {cell}");
+            EnsureTrackers(pawn);
+            ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker even after the framework's EnsureInitApparelTrackers");
+        }
+
         [When("Animal Apparel Collars: {string} is dressed in {string}")]
         public void Dress(PickleContext ctx, string nickname, string apparelDefName)
         {
@@ -246,6 +269,23 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn near {anchor.Position}");
         }
 
+        // A hostile animal on a chosen cell, for a staged capture of a pack firing at an intruder.
+        [Given("Animal Apparel Collars: a hostile {string} named {string} stands at \\({int}, {int}\\)")]
+        public void HostileAnimalStandsAt(PickleContext ctx, string kindDefName, string nickname, int x, int z)
+        {
+            Map map = Find_.Map();
+            ctx.Require(map != null, "there is no current map: load a save first");
+            PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
+            ctx.Require(kind != null, $"no PawnKindDef '{kindDefName}'");
+            ctx.Require(Find(nickname) == null, $"'{nickname}' already exists");
+            var cell = new IntVec3(x, 0, z);
+            ctx.Require(cell.InBounds(map) && cell.Standable(map), $"cell {cell} is not standable");
+            Pawn pawn = PawnGenerator.GeneratePawn(kind, HostileFaction(ctx));
+            pawn.Name = new NameSingle(nickname);
+            GenSpawn.Spawn(pawn, cell, map);
+            ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn at {cell}");
+        }
+
         // Scenario E of TESTING.md: a turret pack must actually fire, not just draw. MVCF's own
         // Comp_VerbGiver (a ThingComp on the worn apparel, not on the pawn) is not a compile-time reference
         // of this companion, so it is found by name; VerbTracker and Verb are core Verse types once found.
@@ -254,6 +294,18 @@ namespace AnimalApparelCollars.PickleSteps
         // by this file's Wear() call.
         [When("Animal Apparel Collars: {string} fires its turret pack at {string}")]
         public void FireTurretPackAt(PickleContext ctx, string wearerNickname, string targetNickname)
+        {
+            FirePack(ctx, wearerNickname, targetNickname, true);
+        }
+
+        // The staged capture needs the target where it was put: same call, no move.
+        [When("Animal Apparel Collars: {string} fires its turret pack at {string} where it stands")]
+        public void FireTurretPackAtInPlace(PickleContext ctx, string wearerNickname, string targetNickname)
+        {
+            FirePack(ctx, wearerNickname, targetNickname, false);
+        }
+
+        private static void FirePack(PickleContext ctx, string wearerNickname, string targetNickname, bool moveTarget)
         {
             Pawn wearer = Require(ctx, wearerNickname);
             Pawn target = Require(ctx, targetNickname);
@@ -277,7 +329,7 @@ namespace AnimalApparelCollars.PickleSteps
             Map map = wearer.Map;
             IntVec3 from = wearer.Position;
             IntVec3 clear = IntVec3.Invalid;
-            for (int radius = 4; radius <= 12 && !clear.IsValid; radius++)
+            for (int radius = 4; moveTarget && radius <= 12 && !clear.IsValid; radius++)
             {
                 foreach (IntVec3 c in GenRadial.RadialCellsAround(from, radius, radius))
                 {
@@ -290,9 +342,12 @@ namespace AnimalApparelCollars.PickleSteps
                 }
             }
 
-            ctx.Require(clear.IsValid, $"no cell in line of sight of '{wearerNickname}' at {from} to place the target on");
-            target.Position = clear;
-            target.Notify_Teleported(false, true);
+            if (moveTarget)
+            {
+                ctx.Require(clear.IsValid, $"no cell in line of sight of '{wearerNickname}' at {from} to place the target on");
+                target.Position = clear;
+                target.Notify_Teleported(false, true);
+            }
 
             bool canHit = verb.CanHitTarget(target);
             bool started = canHit && verb.TryStartCastOn(target, surpriseAttack: true);

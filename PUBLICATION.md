@@ -87,9 +87,13 @@ indexes contiguous, `0-` the byte copy of `Mod/About/Preview.png`:
 | Index | File | Shows |
 |---|---|---|
 | 0 | `0-preview.png` | The Preview (copy of `Mod/About/Preview.png`) |
-| 1 | `1-fox.png` | A fox wearing a collar (Pickle capture, cropped and enlarged) |
-| 2 | `2-horse.png` | The horse set: barding, chanfron, saddle |
-| 3 | `3-husky.png` | A husky wearing a collar |
+| 1 | `1-fox.png` | A fox in a collar and a helmet, barn |
+| 2 | `2-horse.png` | The horse set: barding, chanfron, saddle, bridle |
+| 3 | `3-cub.png` | A grizzly cub in a diaper |
+| 4 | `4-goat.png` | A goat in goat mail |
+| 5 | `5-turret.png` | A cow turret pack firing at a wolf |
+| 6 | `6-parade.png` | The parade of the dressed troop |
+| 7 | `7-settings.png` | The Mod options page (interface, cropped, no subtitle) |
 
 ### Gallery subtitles
 
@@ -100,14 +104,14 @@ captures are accepted and reindexed. Originals go to `Art/Gallery-clean/`, subti
 
 | Index | File | Line |
 |---|---|---|
-| 1 | `1-fox.png` | Nelim buckles a collar on the smallest of her companions. |
-| 2 | `2-horse.png` | A whole set for the biggest one: barding, chanfron and saddle. |
-| 3 | `3-husky-cow.png` | The same gear fits any size. |
-| 4 | `4-parade.png` | Market morning: the whole troop is ready for the parade. |
+| 1 | `1-fox.png` | Nelim picks the next collar for the smallest of her companions. |
+| 2 | `2-horse.png` | A full set for the biggest one: barding, chanfron, saddle and bridle. |
+| 3 | `3-cub.png` | A spare diaper for the little ones. |
+| 4 | `4-goat.png` | Goat mail for the toughest climber. |
+| 5 | `5-turret.png` | A wolf at the fence: the troop can defend the farm. |
+| 6 | `6-parade.png` | Market morning: the whole troop heads out. |
 
-The turret packs are `AnimalInvisible` by design (drawn by MVCF), so no capture shows them. A staged gallery on the
-zenNelim studio (feature `12-gallery`, pass `wsl-deps.studio-gallery.map`) is still to be shot at `shootGallery`;
-the table above is then realigned. Each image is opened before upload.
+The turret packs are `AnimalInvisible` by design (drawn by MVCF), so image 5 shows the shot, not the pack. Staged gallery: feature `12-gallery`, pass `wsl-deps.sanctuary.map`; the table above is realigned once the captures are accepted. Each image is opened before upload.
 
 ## Dependencies and DLC
 

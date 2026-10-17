@@ -1,6 +1,7 @@
 # Pass sanctuary: the Sanctuaire de Nelim (fixture Nelims-tribe) for the staged gallery of this mod (12-gallery).
 # The Backlot's minimum list (bodies, trousers, faces, eyes) as AnimalArk carries it, without the keepers' extras:
-# the animals of this gallery are vanilla (fox, horse, husky, cow), so no animal mod and no VEF is mounted.
+# the animals of this gallery are vanilla (fox, horse, husky, cow, goat, grizzly, wolf); Vanilla Expanded Framework is
+# mounted for the turret packs and the settings page.
 nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
 nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
 nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
@@ -22,3 +23,4 @@ astryl.FacialAnimationPerformancePatch 3790129900
 sd.fa.movingvanillaeyes 3753978140
 nelim.sanctuarybacklot path:SanctuaryBacklot/Mod
 nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
