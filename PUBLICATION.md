@@ -36,7 +36,7 @@ The framework gives animals three body part groups, so a collar would share a sl
 
 ## Settings
 
-With Vanilla Expanded Framework active, open Mod options, then this mod's name: disable universal placeholder apparel, and exclude animal apparel from new relics. Existing VEF choices are kept. Changes apply after restarting RimWorld. An optional main-bar shortcut is hidden by default for customization mods to reveal.
+With Vanilla Expanded Framework active, open Mod options, then this mod's name: disable universal placeholder apparel, and exclude animal apparel from new relics. Existing VEF choices are kept. Changes apply after restarting RimWorld. An optional main-bar shortcut is hidden by default; customization mods can reveal it.
 
 ## Compatibility
 
@@ -90,6 +90,20 @@ indexes contiguous, `0-` the byte copy of `Mod/About/Preview.png`:
 | 1 | `1-fox.png` | A fox wearing a collar (Pickle capture, cropped and enlarged) |
 | 2 | `2-horse.png` | The horse set: barding, chanfron, saddle |
 | 3 | `3-husky.png` | A husky wearing a collar |
+
+### Gallery subtitles
+
+One English line at the bottom of each scene without an interface window (`GALLERY.md`, "Sous-titres"; `0-` has none).
+Drafted before the captures exist, from the story of `12-gallery.feature`; file names and lines are final only once the
+captures are accepted and reindexed. Originals go to `Art/Gallery-clean/`, subtitled images to `Art/Gallery/`
+(`scripts/Add-Subtitle.ps1`).
+
+| Index | File | Line |
+|---|---|---|
+| 1 | `1-fox.png` | Nelim buckles a collar on the smallest of her companions. |
+| 2 | `2-horse.png` | A whole set for the biggest one: barding, chanfron and saddle. |
+| 3 | `3-husky-cow.png` | The same gear fits any size. |
+| 4 | `4-parade.png` | Market morning: the whole troop is ready for the parade. |
 
 The turret packs are `AnimalInvisible` by design (drawn by MVCF), so no capture shows them. A staged gallery on the
 zenNelim studio (feature `12-gallery`, pass `wsl-deps.studio-gallery.map`) is still to be shot at `shootGallery`;

@@ -35,7 +35,7 @@
   <!-- EN: goat mail -->
   <Apparel_GoatMail.label>cotte de mailles pour chèvre</Apparel_GoatMail.label>
   <!-- EN: Armor plates covering the body. Protects against gunfire and melee attacks. -->
-  <Apparel_GoatMail.description>Des plaques d'armure couvrant le corps. Protège des tirs et des attaques de mêlée.</Apparel_GoatMail.description>
+  <Apparel_GoatMail.description>Des plaques d'armure couvrant le corps. Protègent des tirs et des attaques de mêlée.</Apparel_GoatMail.description>
 
   <!-- ===== Medieval Horse Plate Armour, by Riful ===== -->
 
@@ -52,7 +52,7 @@
   <!-- EN: saddle -->
   <Apparel_MedievalHorseSaddle.label>selle</Apparel_MedievalHorseSaddle.label>
   <!-- EN: A saddle for riding a horse, comfortably. -->
-  <Apparel_MedievalHorseSaddle.description>Une selle pour monter un cheval, confortablement.</Apparel_MedievalHorseSaddle.description>
+  <Apparel_MedievalHorseSaddle.description>Une selle permettant de monter confortablement à cheval.</Apparel_MedievalHorseSaddle.description>
 
   <!-- ===== Animal Equipment, by Owlchemist (after jptrrs) ===== -->
 

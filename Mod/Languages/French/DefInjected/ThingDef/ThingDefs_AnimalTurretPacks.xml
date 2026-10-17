@@ -11,7 +11,7 @@
   <ATP_Apparel_SmallTurret.description>Un petit sac de munitions et de composants pilotant une mini-tourelle, conçu pour être porté par un petit animal.</ATP_Apparel_SmallTurret.description>
 
   <!-- EN: small animal shotgun turret pack -->
-  <ATP_Apparel_SmallTurretShotgun.label>petit sac-tourelle à fusil</ATP_Apparel_SmallTurretShotgun.label>
+  <ATP_Apparel_SmallTurretShotgun.label>petit sac-tourelle à fusil à pompe</ATP_Apparel_SmallTurretShotgun.label>
   <!-- EN: A small pack of ammunition and components that control a mounted shotgun mini-turret designed to be carried by small animals. -->
   <ATP_Apparel_SmallTurretShotgun.description>Un petit sac de munitions et de composants pilotant une mini-tourelle à fusil à pompe, conçu pour être porté par un petit animal.</ATP_Apparel_SmallTurretShotgun.description>
 
@@ -26,7 +26,7 @@
   <ATP_Apparel_LargeTurret.description>Un sac de munitions et de composants pilotant une mini-tourelle, conçu pour être porté par une grande bête.</ATP_Apparel_LargeTurret.description>
 
   <!-- EN: large animal shotgun turret pack -->
-  <ATP_Apparel_LargeTurretShotgun.label>grand sac-tourelle à fusil</ATP_Apparel_LargeTurretShotgun.label>
+  <ATP_Apparel_LargeTurretShotgun.label>grand sac-tourelle à fusil à pompe</ATP_Apparel_LargeTurretShotgun.label>
   <!-- EN: A small pack of ammunition and components that control a mounted shotgun mini-turret designed to be carried by large animals. -->
   <ATP_Apparel_LargeTurretShotgun.description>Un sac de munitions et de composants pilotant une mini-tourelle à fusil à pompe, conçu pour être porté par une grande bête.</ATP_Apparel_LargeTurretShotgun.description>
 
@@ -49,7 +49,7 @@
   <ATP_Bullet_SmallTurret.label>balle de mini-tourelle</ATP_Bullet_SmallTurret.label>
 
   <!-- EN: mini-shotgun blast -->
-  <ATP_Bullet_ShotgunTurret.label>gerbe de mini-fusil</ATP_Bullet_ShotgunTurret.label>
+  <ATP_Bullet_ShotgunTurret.label>décharge de mini-fusil à pompe</ATP_Bullet_ShotgunTurret.label>
 
   <!-- EN: mini-turret blaster shot -->
   <ATP_Bullet_SpacerTurret.label>tir de mini-tourelle à charge</ATP_Bullet_SpacerTurret.label>

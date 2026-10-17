@@ -24,7 +24,7 @@
 
 ## [0.1.0] — 2026-09-23
 
-création d'un publishIdFile: private Workshop item 3806765840, created from the game's upload
+Created a `publishIdFile`: private Workshop item 3806765840, created from the game's upload
 button. It carried `Mod/` as it stood at commit 8183a2b, with nothing changed since, including
 the `.dds` files the game generated during the upload. Private and untested: not a release.
 
