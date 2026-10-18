@@ -159,7 +159,7 @@ No cron, ScheduleWakeup, Monitor or watcher on Pickle ticket any more (rule 2026
 ## Settings restart, 2026-10-12
 
 Ticket 6a80 (7a29f86) produced no report: launcher read second -Then filter as language name. Resubmitted as 696a with -Then given as PowerShell array. Result: seq1 (option written), seq2 (read after restart, five universal defs absent), seq3 (reset to defaults) all passed. `settings_audit` now `complete`. Next: shootGallery once owner confirms; regenerate `.github/` at CI/CD template 7a8f3a601751 before publish.
-## Shotlist, 2026-10-18 (skill write-shotlist, criteria a to j of GALLERY.md, feature , pass  with VEF)
+## Shotlist, 2026-10-18 (skill write-shotlist, criteria a to j of GALLERY.md, feature `12-gallery`, pass `wsl-deps.sanctuary.map` with VEF)
 
 Story: market morning at the Sanctuary, Nelim gets her troop ready for the parade (fox 08:00, horse 08:05, grizzly 08:10, goat 08:15), a wolf comes and the cow's turret pack answers (08:20), the troop parades out (08:25). Every scene gives Nelim her own outfit, hairstyle, hair colour, expression and a held piece (colours and defNames are written scene by scene in the header of the feature file); decor is named, placed for one image and removed after it (\); no prop is reused. Scene 7 (settings window at the centre of the screen) is an interface scene, set aside from the estimate. Audit relay of 2026-10-18 read (GALLERY-SHOTLIST-AUDIT.md: same outfit everywhere, no decor removal, catalogue plate for the horse, no action for 4 and 6, turret pack invisible): each point answered above.
 
