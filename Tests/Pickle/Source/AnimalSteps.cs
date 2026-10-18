@@ -139,6 +139,30 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker even after the framework's EnsureInitApparelTrackers");
         }
 
+        // Pickle Tools' "stands next to" resolves its second pawn among the colonists, so an animal is not reachable by it:
+        // this one puts the colonist on a standable cell beside the named animal (nearest first, never on its own cell).
+        [Given("Animal Apparel Collars: the colonist {string} stands next to the animal {string}")]
+        public void ColonistStandsNextToAnimal(PickleContext ctx, string colonistName, string animalName)
+        {
+            Map map = Find_.Map();
+            Pawn animal = Require(ctx, animalName);
+            Pawn colonist = map.mapPawns.FreeColonists.FirstOrDefault(
+                p => string.Equals(p.Name?.ToStringShort, colonistName, StringComparison.OrdinalIgnoreCase));
+            ctx.Require(colonist != null, $"no colonist named '{colonistName}'");
+            foreach (IntVec3 c in GenRadial.RadialCellsAround(animal.Position, 3.5f, false)
+                .OrderBy(c => c.DistanceTo(animal.Position)))
+            {
+                if (c != animal.Position && c.InBounds(map) && c.Standable(map) && c.GetFirstPawn(map) == null)
+                {
+                    colonist.Position = c;
+                    colonist.Notify_Teleported(false, true);
+                    return;
+                }
+            }
+
+            ctx.Require(false, $"no standable cell within three cells of '{animalName}' at {animal.Position}");
+        }
+
         [When("Animal Apparel Collars: {string} is dressed in {string}")]
         public void Dress(PickleContext ctx, string nickname, string apparelDefName)
         {

@@ -89,9 +89,9 @@ indexes contiguous, `0-` the byte copy of `Mod/About/Preview.png`:
 | 0 | `0-preview.png` | The Preview (copy of `Mod/About/Preview.png`) |
 | 1 | `1-fox.png` | A fox in a collar and a helmet in the barn straw (two frames, one kept) |
 | 2 | `2-horse.png` | The horse set: barding, chanfron, saddle, bridle, among the statues (two frames, one kept) |
-| 3 | `3-bear.png` | A grizzly in a diaper |
+| 3 | `3-bear.png` | A grizzly in profile in a diaper |
 | 4 | `4-goat.png` | A goat in goat mail in the clearing |
-| 5 | `5-turret.png` | A cow turret pack firing at a wolf (three frames, best kept) |
+| 5 | `5-husky.png` | A husky in power armour with a shield collar over it |
 | 6 | `6-parade.png` | The parade of the dressed troop |
 | 7 | `7-settings.png` | The Mod options page (interface, cropped, no subtitle) |
 
@@ -108,10 +108,10 @@ captures are accepted and reindexed. Originals go to `Art/Gallery-clean/`, subti
 | 2 | `2-horse.png` | A full set for the biggest one: barding, chanfron, saddle and bridle. |
 | 3 | `3-bear.png` | A spare diaper for the big ones too. |
 | 4 | `4-goat.png` | Goat mail for the toughest climber. |
-| 5 | `5-turret.png` | A wolf at the fence: the troop can defend the farm. |
+| 5 | `5-husky.png` | Collars have their own slot, on top of the armour. |
 | 6 | `6-parade.png` | Market morning: the whole troop heads out. |
 
-The turret packs are `AnimalInvisible` by design (drawn by MVCF), so image 5 shows the shot, not the pack. Staged gallery: feature `12-gallery`, pass `wsl-deps.sanctuary.map`; the table above is realigned once the captures are accepted. Each image is opened before upload.
+The turret packs are `AnimalInvisible` by design (drawn by MVCF), so no capture shows them (a run of 2026-10-18 confirmed it); image 5 shows the neck slot instead. Staged gallery: feature `12-gallery`, pass `wsl-deps.sanctuary.map`; the table above is realigned once the captures are accepted. Each image is opened before upload.
 
 ## Dependencies and DLC
 
