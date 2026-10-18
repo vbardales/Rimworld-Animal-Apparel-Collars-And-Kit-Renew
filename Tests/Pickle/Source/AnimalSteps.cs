@@ -139,28 +139,6 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker even after the framework's EnsureInitApparelTrackers");
         }
 
-        // A young animal for a staged capture (a cub in a diaper): the life stage is chosen by index, 0 the youngest.
-        [Given("Animal Apparel Collars: a tame {string} named {string} stands at \\({int}, {int}\\) at life stage {int}")]
-        public void TameAnimalStandsAtLifeStage(PickleContext ctx, string kindDefName, string nickname, int x, int z, int stage)
-        {
-            Map map = Find_.Map();
-            ctx.Require(map != null, "there is no current map: load a save first");
-            PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
-            ctx.Require(kind != null, $"no PawnKindDef '{kindDefName}'");
-            ctx.Require(Find(nickname) == null, $"'{nickname}' already exists");
-            var stages = kind.RaceProps.lifeStageAges;
-            ctx.Require(stage >= 0 && stage < stages.Count, $"'{kindDefName}' has {stages.Count} life stages, no stage {stage}");
-            IntVec3 cell = StandableNear(ctx, map, x, z);
-            float age = stages[stage].minAge + 0.001f;
-            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, Faction.OfPlayer,
-                PawnGenerationContext.NonPlayer, forceGenerateNewPawn: true, fixedBiologicalAge: age, fixedChronologicalAge: age));
-            pawn.Name = new NameSingle(nickname);
-            GenSpawn.Spawn(pawn, cell, map);
-            ctx.Require(pawn.Spawned, $"'{kindDefName}' did not spawn at {cell}");
-            EnsureTrackers(pawn);
-            ctx.Require(pawn.apparel != null, $"'{kindDefName}' has no apparel tracker even after the framework's EnsureInitApparelTrackers");
-        }
-
         [When("Animal Apparel Collars: {string} is dressed in {string}")]
         public void Dress(PickleContext ctx, string nickname, string apparelDefName)
         {

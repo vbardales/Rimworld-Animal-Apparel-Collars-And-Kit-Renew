@@ -87,8 +87,8 @@ indexes contiguous, `0-` the byte copy of `Mod/About/Preview.png`:
 | Index | File | Shows |
 |---|---|---|
 | 0 | `0-preview.png` | The Preview (copy of `Mod/About/Preview.png`) |
-| 1 | `1-fox.png` | A fox in a collar and a helmet, barn |
-| 2 | `2-horse.png` | The horse set: barding, chanfron, saddle, bridle |
+| 1 | `1-fox.png` | A fox in a collar and a helmet in the barn straw (two frames, one kept) |
+| 2 | `2-horse.png` | The horse set: barding, chanfron, saddle, bridle, among the statues (two frames, one kept) |
 | 3 | `3-bear.png` | A grizzly in a diaper |
 | 4 | `4-goat.png` | A goat in goat mail in the clearing |
 | 5 | `5-turret.png` | A cow turret pack firing at a wolf (three frames, best kept) |

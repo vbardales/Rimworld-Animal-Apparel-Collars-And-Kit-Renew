@@ -159,18 +159,18 @@ No cron, ScheduleWakeup, Monitor or watcher on Pickle ticket any more (rule 2026
 ## Settings restart, 2026-10-12
 
 Ticket 6a80 (7a29f86) produced no report: launcher read second -Then filter as language name. Resubmitted as 696a with -Then given as PowerShell array. Result: seq1 (option written), seq2 (read after restart, five universal defs absent), seq3 (reset to defaults) all passed. `settings_audit` now `complete`. Next: shootGallery once owner confirms; regenerate `.github/` at CI/CD template 7a8f3a601751 before publish.
-## Shotlist, 2026-10-18 (skill write-shotlist, feature `12-gallery`, pass `wsl-deps.sanctuary.map` with VEF)
+## Shotlist, 2026-10-18 (skill write-shotlist, criteria a to j of GALLERY.md, feature , pass  with VEF)
 
-Story: market morning at the Sanctuary, Nelim gets her troop ready for the parade (fox, horse, grizzly, goat), a wolf comes and the cow's turret pack answers, the troop parades out, last frame the settings page. Rhythm: 08:00 then +5 game minutes per image. Self-score of the shotlist: 4 (one story that moves; every animal frame has Nelim acting with a held piece; no catalogue plate left; weak points: the parade is still a row, the turret pack is invisible so image 5 rests on the shot). Scores are estimates before play, verdicts after the run.
+Story: market morning at the Sanctuary, Nelim gets her troop ready for the parade (fox 08:00, horse 08:05, grizzly 08:10, goat 08:15), a wolf comes and the cow's turret pack answers (08:20), the troop parades out (08:25). Every scene gives Nelim her own outfit, hairstyle, hair colour, expression and a held piece (colours and defNames are written scene by scene in the header of the feature file); decor is named, placed for one image and removed after it (\); no prop is reused. Scene 7 (settings window at the centre of the screen) is an interface scene, set aside from the estimate. Audit relay of 2026-10-18 read (GALLERY-SHOTLIST-AUDIT.md: same outfit everywhere, no decor removal, catalogue plate for the horse, no action for 4 and 6, turret pack invisible): each point answered above.
 
-| # | Scene | Place, time | Estimate | Main risk | Verdict |
-|---|---|---|---|---|---|
-| 1 | Fox in leather collar and helmet, Nelim holds a studded collar | barn, 08:00 | 4 | held item too small to read at zoom 3 | |
-| 2 | Pale horse in profile, barding, chanfron, saddle; Nelim in hat holds the bridle | calm-zone, 08:05 | 4 | bridle item unreadable; horse and Nelim crowd the square | |
-| 3 | Adult grizzly in a diaper, torches either side, Nelim holds a spare diaper | sofa-corner, 08:10 | 4 | bear too big for the free cells of the corner (nearest-cell fallback logged) | |
-| 4 | Goat in goat mail among daylilies | bare-clearing, 08:15 | 4 | mail art small on a goat; bare earth plain | |
-| 5 | Cow with turret pack fires at a wolf, three frames (12, 24, 36 ticks) | enclosure-south, 08:20 | 4 (3 without the bracket) | pack invisible by design: shot, flash and impact may not read; wolf may die or run; Nelim drifts | |
-| 6 | Parade in profile, four dressed animals staggered, Nelim in hat in the foreground | enclosure-south, 08:25 | 4 | still a row; staggered cells shifted by the fallback | |
-| 7 | Settings page of the mod (interface, no subtitle) | window-backdrop-for-height | 4 | window drawn over the backdrop; page layout unverified | |
+| # | Scene | Place, time | Estimate | Main risk | Plan against it | Verdict |
+|---|---|---|---|---|---|---|
+| 1 | Fox in leather collar and helmet in straw; Nelim in mustard shirt holds a studded collar | barn, 08:00 | 4 | held collar too small to read | two frames (zoom 3 and 4); worn collar and helmet carry the point | |
+| 2 | Pale horse in profile among statues and daylilies, Nelim in rust duster and hat holds the bridle at its head | statue-garden, 08:05 | 4 | statues crowd the cells; decor cell taken | Nelim placed next to the horse, nearest-cell fallback; first run names a taken decor cell, move it; two frames (zoom 6 and 8) | |
+| 3 | Adult grizzly in a diaper, lit torches, Nelim in lavender robe holds a spare diaper, half asleep | sofa-corner, 08:10 | 4 | bear too big for the free cells; diaper art on a bear unverified | nearest-cell fallback (logged); render-tree assertion on the diaper | |
+| 4 | Goat in goat mail among daylilies, Nelim in sage shirt holds a steel bar | bare-clearing, 08:15 | 4 | mail art small on a goat | tight rectangle 14 x 9, goat off-centre | |
+| 5 | Cow with turret pack fires at a wolf, Nelim in olive jacket with a bow, worried brows | enclosure-south, 08:20 | 4 | pack invisible by design: shot and impact may not read; wolf may die or run | three frames (12, 24, 36 ticks), best kept; none reads: scene dropped and replaced by the cow on guard | |
+| 6 | Parade in profile (fox, husky, cow, horse) staggered, Nelim in crimson shirt and navy beret holds twenty silver | enclosure-south, 08:25 | 4 | staggered cells fall back to one row (lineup) | widen the z offsets until it reads as a procession | |
+| 7 | Settings page of the mod (interface, no subtitle) | window-backdrop-for-height | not rated | window over the backdrop | none needed, set aside | |
 
-Lowest estimate 4. Cancelled ticket f09d (tree changed); new ticket filed after commit.
+Lowest estimate 4. Tickets f09d and fb09 cancelled (tree changed); a new ticket is filed after the commit.
