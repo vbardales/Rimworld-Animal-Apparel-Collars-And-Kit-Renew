@@ -89,9 +89,9 @@ indexes contiguous, `0-` the byte copy of `Mod/About/Preview.png`:
 | 0 | `0-preview.png` | The Preview (copy of `Mod/About/Preview.png`) |
 | 1 | `1-fox.png` | A fox in a collar and a helmet, barn |
 | 2 | `2-horse.png` | The horse set: barding, chanfron, saddle, bridle |
-| 3 | `3-cub.png` | A grizzly cub in a diaper |
-| 4 | `4-goat.png` | A goat in goat mail |
-| 5 | `5-turret.png` | A cow turret pack firing at a wolf |
+| 3 | `3-bear.png` | A grizzly in a diaper |
+| 4 | `4-goat.png` | A goat in goat mail in the clearing |
+| 5 | `5-turret.png` | A cow turret pack firing at a wolf (three frames, best kept) |
 | 6 | `6-parade.png` | The parade of the dressed troop |
 | 7 | `7-settings.png` | The Mod options page (interface, cropped, no subtitle) |
 
@@ -106,7 +106,7 @@ captures are accepted and reindexed. Originals go to `Art/Gallery-clean/`, subti
 |---|---|---|
 | 1 | `1-fox.png` | Nelim picks the next collar for the smallest of her companions. |
 | 2 | `2-horse.png` | A full set for the biggest one: barding, chanfron, saddle and bridle. |
-| 3 | `3-cub.png` | A spare diaper for the little ones. |
+| 3 | `3-bear.png` | A spare diaper for the big ones too. |
 | 4 | `4-goat.png` | Goat mail for the toughest climber. |
 | 5 | `5-turret.png` | A wolf at the fence: the troop can defend the farm. |
 | 6 | `6-parade.png` | Market morning: the whole troop heads out. |

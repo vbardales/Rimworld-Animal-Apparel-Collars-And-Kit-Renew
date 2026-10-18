@@ -3,11 +3,11 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
 
   # Staged photographs for the Steam page (PUBLISHING.md, GALLERY.md). Pass: wsl-deps.sanctuary.map, the Sanctuaire de
   # Nelim (fixture Nelims-tribe) with Vanilla Expanded Framework (the turret packs and the settings page need it).
-  # Gallery order on the page: 0 Preview, 1 fox, 2 horse, 3 bear cub, 4 goat, 5 turret pack, 6 parade, 7 settings.
+  # Gallery order on the page: 0 Preview, 1 fox, 2 horse, 3 grizzly, 4 goat, 5 turret pack (three frames, best kept), 6 parade, 7 settings.
   #
   # The story. Market morning at the Sanctuary. Nelim, who looks after the animals, gets her troop ready for the market
-  # parade: she picks a collar for the fox in the barn, harnesses the horse on the cream square, changes the bear cub in
-  # the hall, mails the goat by the pond, then a wolf comes to the enclosure and the cow's turret pack answers; the
+  # parade: she picks a collar for the fox in the barn, harnesses the horse on the cream square, changes the grizzly in
+  # the hall, mails the goat in the clearing, then a wolf comes to the enclosure and the cow's turret pack answers; the
   # intruder gone, the whole troop parades out. The last frame is the mod's settings page.
   # Nelim is the protagonist of every animal frame: cream shirt, denim trousers, her usual bun, a smile on her face; she
   # puts on a brown hat for the two outdoor frames of the horse and the parade. In each frame she holds the piece she is
@@ -23,15 +23,19 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   #   2 calm-zone (the cream square), 08:05: the pale horse in profile, purple barding, gold chanfron, green saddle; Nelim in
   #     her hat faces it holding the bridle; frame of 11 by 9 cells on a plain cream ground; says: a full set for the
   #     biggest one, riding tack included.
-  #   3 sofa-corner, 08:10: a grizzly cub in a pale blue diaper on the pink carpet, facing the camera; Nelim holds a spare
-  #     diaper; two lit torches either side; frame of about 10 by 6 cells; says: the diaper is for the little ones.
-  #   4 water-garden, west bank, 08:15: the goat in steel goat mail, daylilies around, the pond behind; Nelim facing it;
-  #     frame of 12 by 9 cells; says: armour for the toughest climber.
-  #   5 enclosure-south, 08:20: the cow in a turret pack fires at a wolf at the far end of the enclosure, a few ticks after
-  #     the shot, Nelim watching with a bow in hand; frame of 17 by 10 cells; says: the troop can defend the farm.
-  #   6 enclosure-south, 08:25: the parade in profile, fox, husky, cow, horse, staggered in depth, Nelim at the head in her
-  #     hat facing them; frame of 24 by 10 cells; says: the whole troop heads for the market.
-  #   7 window-backdrop-for-height: the Mod options page of this mod, a screenshot of the interface, no subtitle.
+  #   3 sofa-corner, 08:10: an adult grizzly in a pale blue diaper (the only art the diaper has is for adults) seated in the
+  #     pink corner, facing the camera, two lit torches either side; Nelim beside it holds a spare diaper; frame of about 13
+  #     by 7 cells; says: the diaper is for the big ones too.
+  #   4 bare-clearing, 08:15: the goat in steel goat mail among daylilies on the bare earth, Nelim at its side; frame of 14
+  #     by 9 cells; says: armour for the toughest climber.
+  #   5 enclosure-south, 08:20: the cow in a turret pack fires at a wolf at the far end of the enclosure, three frames at 12, 24 and 36
+  #     ticks after the shot (the pack is invisible by design, only the shot reads), Nelim watching with a bow in hand; frame of 17 by 10 cells; says: the troop can defend the farm.
+  #   6 enclosure-south, 08:25: the parade in profile, fox, husky, cow, horse, staggered in depth, Nelim in the foreground
+  #     in her hat facing the camera; frame of 24 by 10 cells; says: the whole troop heads for the market.
+  #   7 window-backdrop-for-height: the Mod options page of this mod, a screenshot of the interface, no subtitle (studio presentation mode
+  #     not enabled, it would hide the window).
+  # Estimates before play (owner rule 2026-10-18, every scene at 4 or more): see the shotlist table of STATUS.md.
+  # A staged cell that is not standable moves the animal to the nearest one (logged), so no scene fails on a cell.
   # Each scenario is one image: it reloads the save, sets the hour and weather, frames its own corner of the shared place,
   # photographs, and the interface comes back. Animals living in the place are removed first. A green run proves a picture
   # was taken, not that it is worth keeping: open every capture.
@@ -98,7 +102,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: the interface is shown again
     Then no errors were logged
 
-  Scenario: Animal Apparel Collars: gallery 3, the grizzly cub in a diaper in the hall
+  Scenario: Animal Apparel Collars: gallery 3, the grizzly in a diaper in the hall
     Given I set the hour to 8
     And I set the weather to "Clear"
     And Nelim's Sanctuary: I am at the sanctuary "sofa-corner"
@@ -108,46 +112,46 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (184, 127)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (184, 127) is lit
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (191, 127)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (191, 127) is lit
-    And Animal Apparel Collars: a tame "Bear_Grizzly" named "GalleryCub" stands at (186, 126) at life stage 0
-    And Nelim's Pickle Tools: "GalleryCub" faces South
-    And Animal Apparel Collars: "GalleryCub" is dressed in "diaper" dyed "#9ad0f0"
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (193, 127)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (193, 127) is lit
+    And Animal Apparel Collars: a tame "Bear_Grizzly" named "GalleryBear" stands at (189, 127)
+    And Nelim's Pickle Tools: "GalleryBear" faces South
+    And Animal Apparel Collars: "GalleryBear" is dressed in "diaper" dyed "#9ad0f0"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (58, 92, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (240, 228, 200)
     And Nelim's Pickle Tools: "Nelim" carries the item "diaper"
-    And Nelim's Pickle Tools: "Nelim" stands at (189, 126) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (185, 126) facing East
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
-    Then Animal Apparel Collars: the render tree of "GalleryCub" draws "diaper"
-    When Nelim's Pickle Tools: I frame the rectangle from (182, 123) to (193, 128)
+    Then Animal Apparel Collars: the render tree of "GalleryBear" draws "diaper"
+    When Nelim's Pickle Tools: I frame the rectangle from (182, 123) to (194, 129)
     And Nelim's Pickle Tools: the map is shown alone for a capture
-    And I take a screenshot "gallery-3-cub"
+    And I take a screenshot "gallery-3-bear"
     And Nelim's Pickle Tools: the interface is shown again
     Then no errors were logged
 
-  Scenario: Animal Apparel Collars: gallery 4, the goat in goat mail by the pond
+  Scenario: Animal Apparel Collars: gallery 4, the goat in goat mail in the bare clearing
     Given I set the hour to 8
     And I set the weather to "Clear"
-    And Nelim's Sanctuary: I am at the sanctuary "water-garden"
+    And Nelim's Sanctuary: I am at the sanctuary "bare-clearing"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 685 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: time is paused for the capture
-    And Animal Apparel Collars: a tame "Goat" named "GalleryGoat" stands at (153, 171)
+    And Animal Apparel Collars: a tame "Goat" named "GalleryGoat" stands at (197, 152)
     And Nelim's Pickle Tools: "GalleryGoat" faces South
     And Animal Apparel Collars: "GalleryGoat" is dressed in "Apparel_GoatMail"
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (155, 173) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (151, 173) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (200, 150) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 155) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (58, 92, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (240, 228, 200)
-    And Nelim's Pickle Tools: "Nelim" stands at (150, 170) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (193, 152) facing East
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     Then Animal Apparel Collars: the render tree of "GalleryGoat" draws "Apparel_GoatMail"
-    When Nelim's Pickle Tools: I frame the rectangle from (147, 167) to (158, 175)
+    When Nelim's Pickle Tools: I frame the rectangle from (190, 148) to (203, 156)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-4-goat"
     And Nelim's Pickle Tools: the interface is shown again
@@ -166,9 +170,6 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: "GalleryCow" is dressed in "ATP_Apparel_LargeTurret"
     And Animal Apparel Collars: a hostile "Wolf_Timber" named "GalleryWolf" stands at (156, 216)
     And Nelim's Pickle Tools: "GalleryWolf" faces West
-    And Animal Apparel Collars: "GalleryCow" fires its turret pack at "GalleryWolf" where it stands
-    And Nelim's Pickle Tools: I let 40 ticks pass
-    And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (58, 92, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (240, 228, 200)
     And Nelim's Pickle Tools: "Nelim" carries the item "Bow_Short"
@@ -179,7 +180,13 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     Then Animal Apparel Collars: "GalleryCow" is wearing "ATP_Apparel_LargeTurret"
     When Nelim's Pickle Tools: I frame the rectangle from (144, 210) to (160, 219)
     And Nelim's Pickle Tools: the map is shown alone for a capture
-    And I take a screenshot "gallery-5-turret"
+    And Animal Apparel Collars: "GalleryCow" fires its turret pack at "GalleryWolf" where it stands
+    And Nelim's Pickle Tools: I let 12 ticks pass
+    And I take a screenshot "gallery-5a-turret"
+    And Nelim's Pickle Tools: I let 12 ticks pass
+    And I take a screenshot "gallery-5b-turret"
+    And Nelim's Pickle Tools: I let 12 ticks pass
+    And I take a screenshot "gallery-5c-turret"
     And Nelim's Pickle Tools: the interface is shown again
     Then no errors were logged
 
@@ -209,7 +216,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (58, 92, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (240, 228, 200)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (122, 84, 48)
-    And Nelim's Pickle Tools: "Nelim" stands at (161, 216) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (150, 212) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
@@ -227,7 +234,6 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     Given I set the hour to 8
     And I set the weather to "Clear"
     And Nelim's Sanctuary: I am at the sanctuary "window-backdrop-for-height"
-    And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: developer mode is turned off for the capture

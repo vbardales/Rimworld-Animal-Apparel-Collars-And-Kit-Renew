@@ -159,3 +159,18 @@ No cron, ScheduleWakeup, Monitor or watcher on Pickle ticket any more (rule 2026
 ## Settings restart, 2026-10-12
 
 Ticket 6a80 (7a29f86) produced no report: launcher read second -Then filter as language name. Resubmitted as 696a with -Then given as PowerShell array. Result: seq1 (option written), seq2 (read after restart, five universal defs absent), seq3 (reset to defaults) all passed. `settings_audit` now `complete`. Next: shootGallery once owner confirms; regenerate `.github/` at CI/CD template 7a8f3a601751 before publish.
+## Shotlist, 2026-10-18 (skill write-shotlist, feature `12-gallery`, pass `wsl-deps.sanctuary.map` with VEF)
+
+Story: market morning at the Sanctuary, Nelim gets her troop ready for the parade (fox, horse, grizzly, goat), a wolf comes and the cow's turret pack answers, the troop parades out, last frame the settings page. Rhythm: 08:00 then +5 game minutes per image. Self-score of the shotlist: 4 (one story that moves; every animal frame has Nelim acting with a held piece; no catalogue plate left; weak points: the parade is still a row, the turret pack is invisible so image 5 rests on the shot). Scores are estimates before play, verdicts after the run.
+
+| # | Scene | Place, time | Estimate | Main risk | Verdict |
+|---|---|---|---|---|---|
+| 1 | Fox in leather collar and helmet, Nelim holds a studded collar | barn, 08:00 | 4 | held item too small to read at zoom 3 | |
+| 2 | Pale horse in profile, barding, chanfron, saddle; Nelim in hat holds the bridle | calm-zone, 08:05 | 4 | bridle item unreadable; horse and Nelim crowd the square | |
+| 3 | Adult grizzly in a diaper, torches either side, Nelim holds a spare diaper | sofa-corner, 08:10 | 4 | bear too big for the free cells of the corner (nearest-cell fallback logged) | |
+| 4 | Goat in goat mail among daylilies | bare-clearing, 08:15 | 4 | mail art small on a goat; bare earth plain | |
+| 5 | Cow with turret pack fires at a wolf, three frames (12, 24, 36 ticks) | enclosure-south, 08:20 | 4 (3 without the bracket) | pack invisible by design: shot, flash and impact may not read; wolf may die or run; Nelim drifts | |
+| 6 | Parade in profile, four dressed animals staggered, Nelim in hat in the foreground | enclosure-south, 08:25 | 4 | still a row; staggered cells shifted by the fallback | |
+| 7 | Settings page of the mod (interface, no subtitle) | window-backdrop-for-height | 4 | window drawn over the backdrop; page layout unverified | |
+
+Lowest estimate 4. Cancelled ticket f09d (tree changed); new ticket filed after commit.

@@ -37,6 +37,29 @@ namespace AnimalApparelCollars.PickleSteps
             throw new InvalidOperationException($"no pawn named '{nickname}' on the map; the pawns are {known}");
         }
 
+        // A staged cell that turns out not to be standable (a nesting box, a stone) moves the animal to the nearest one
+        // within three cells instead of failing the whole run; the move is logged.
+        private static IntVec3 StandableNear(PickleContext ctx, Map map, int x, int z)
+        {
+            var cell = new IntVec3(x, 0, z);
+            if (cell.InBounds(map) && cell.Standable(map) && cell.GetFirstPawn(map) == null)
+            {
+                return cell;
+            }
+
+            foreach (IntVec3 c in GenRadial.RadialCellsAround(cell, 3.5f, true))
+            {
+                if (c.InBounds(map) && c.Standable(map) && c.GetFirstPawn(map) == null)
+                {
+                    Log.Message($"[staging] cell {cell} is not standable, using {c}");
+                    return c;
+                }
+            }
+
+            ctx.Require(false, $"no standable cell within three cells of {cell}");
+            return cell;
+        }
+
         // The framework creates the outfit, equipment and apparel trackers of a player animal with this helper.
         private static void EnsureTrackers(Pawn pawn)
         {
@@ -107,8 +130,7 @@ namespace AnimalApparelCollars.PickleSteps
             PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
             ctx.Require(kind != null, $"no PawnKindDef '{kindDefName}'");
             ctx.Require(Find(nickname) == null, $"'{nickname}' already exists");
-            var cell = new IntVec3(x, 0, z);
-            ctx.Require(cell.InBounds(map) && cell.Standable(map), $"cell {cell} is not standable");
+            IntVec3 cell = StandableNear(ctx, map, x, z);
             Pawn pawn = PawnGenerator.GeneratePawn(kind, Faction.OfPlayer);
             pawn.Name = new NameSingle(nickname);
             GenSpawn.Spawn(pawn, cell, map);
@@ -128,8 +150,7 @@ namespace AnimalApparelCollars.PickleSteps
             ctx.Require(Find(nickname) == null, $"'{nickname}' already exists");
             var stages = kind.RaceProps.lifeStageAges;
             ctx.Require(stage >= 0 && stage < stages.Count, $"'{kindDefName}' has {stages.Count} life stages, no stage {stage}");
-            var cell = new IntVec3(x, 0, z);
-            ctx.Require(cell.InBounds(map) && cell.Standable(map), $"cell {cell} is not standable");
+            IntVec3 cell = StandableNear(ctx, map, x, z);
             float age = stages[stage].minAge + 0.001f;
             Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, Faction.OfPlayer,
                 PawnGenerationContext.NonPlayer, forceGenerateNewPawn: true, fixedBiologicalAge: age, fixedChronologicalAge: age));
@@ -278,8 +299,7 @@ namespace AnimalApparelCollars.PickleSteps
             PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
             ctx.Require(kind != null, $"no PawnKindDef '{kindDefName}'");
             ctx.Require(Find(nickname) == null, $"'{nickname}' already exists");
-            var cell = new IntVec3(x, 0, z);
-            ctx.Require(cell.InBounds(map) && cell.Standable(map), $"cell {cell} is not standable");
+            IntVec3 cell = StandableNear(ctx, map, x, z);
             Pawn pawn = PawnGenerator.GeneratePawn(kind, HostileFaction(ctx));
             pawn.Name = new NameSingle(nickname);
             GenSpawn.Spawn(pawn, cell, map);
