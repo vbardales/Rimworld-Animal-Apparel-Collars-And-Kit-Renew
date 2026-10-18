@@ -52,7 +52,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   #    turret pack, facing East; hostile timber wolf facing West at (156, 216), grass. d: dawn watch, burnt orange shirt
   #    (200, 100, 40), dark trousers (50, 50, 60), olive jacket (92, 110, 70), hair Ponytails black (30, 28, 28), brows
   #    BrowRaised, MouthLipsWorried, LidNormal. e: Nelim holds a short bow and watches the wolf as the pack fires. f: rectangle
-  #    (144, 210) to (160, 219), cow left, wolf right, Nelim in the foreground, three frames 12, 24 and 36 ticks after the shot.
+  #    (144, 210) to (160, 219), cow left, wolf right, Nelim in the foreground, three scenarios 5a, 5b, 5c, 12, 24 and 36 ticks after the shot, the best is kept.
   #    g: the troop can defend the farm. h: the pack is invisible by design, only the shot and the impact read; the wolf may die
   #    or run -> three frames, the best is kept; if none reads, the scene is dropped and replaced by the cow standing guard
   #    (written in STATUS.md). j: turret pack.
@@ -79,7 +79,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (202, 238) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (205, 237) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (201, 238) fully grown
     And Animal Apparel Collars: a tame "Fox_Arctic" named "GalleryFox" stands at (203, 236)
     And Nelim's Pickle Tools: "GalleryFox" faces South
     And Animal Apparel Collars: "GalleryFox" is dressed in "Apparel_leatherdogcollar" dyed "#c8202a"
@@ -88,7 +88,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (90, 58, 32)
-    And Nelim's Pickle Tools: "Nelim" carries the item "Apparel_studdeddogcollar"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Leather_Plain"
     And Nelim's Pickle Tools: "Nelim" stands at (200, 236) facing East
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
@@ -126,7 +126,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (122, 84, 48)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Flowy"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (70, 44, 26)
-    And Nelim's Pickle Tools: "Nelim" carries the item "Apparel_bridle"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Leather_Camel"
     And Nelim's Pickle Tools: "Nelim" stands next to "GalleryHorse"
     And Nelim's Pickle Tools: "Nelim" faces West
     And Nelim's Sanctuary: Nelim has her own face
@@ -163,7 +163,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Robe" dyed rgb (150, 120, 190)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Curly"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (28, 26, 30)
-    And Nelim's Pickle Tools: "Nelim" carries the item "diaper"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: "Nelim" stands at (185, 126) facing East
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLittleGrin"
@@ -201,14 +201,14 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
     Then Animal Apparel Collars: the render tree of "GalleryGoat" draws "Apparel_GoatMail"
-    When Nelim's Pickle Tools: I frame the rectangle from (190, 148) to (203, 156)
+    When Nelim's Pickle Tools: I frame the rectangle from (192, 150) to (199, 155)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-4-goat"
     And Nelim's Pickle Tools: the decor is removed
     And Nelim's Pickle Tools: the interface is shown again
     Then no errors were logged
 
-  Scenario: Animal Apparel Collars: gallery 5, the cow fires its turret pack at a wolf in the enclosure
+  Scenario: Animal Apparel Collars: gallery 5a, the cow fires its turret pack at a wolf in the enclosure (12 ticks after the shot)
     Given I set the hour to 8
     And I set the weather to "Clear"
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
@@ -223,6 +223,10 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: "GalleryCow" is dressed in "ATP_Apparel_LargeTurret"
     And Animal Apparel Collars: a hostile "Wolf_Timber" named "GalleryWolf" stands at (156, 216)
     And Nelim's Pickle Tools: "GalleryWolf" faces West
+    Then Animal Apparel Collars: "GalleryCow" is wearing "ATP_Apparel_LargeTurret"
+    When Animal Apparel Collars: "GalleryCow" fires its turret pack at "GalleryWolf" where it stands
+    And Nelim's Pickle Tools: I let 12 ticks pass
+    And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (50, 50, 60)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (200, 100, 40)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
@@ -234,15 +238,82 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsWorried"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
-    Then Animal Apparel Collars: "GalleryCow" is wearing "ATP_Apparel_LargeTurret"
-    When Nelim's Pickle Tools: I frame the rectangle from (144, 210) to (160, 219)
+    And Nelim's Pickle Tools: I frame the rectangle from (144, 210) to (160, 219)
     And Nelim's Pickle Tools: the map is shown alone for a capture
-    And Animal Apparel Collars: "GalleryCow" fires its turret pack at "GalleryWolf" where it stands
-    And Nelim's Pickle Tools: I let 12 ticks pass
     And I take a screenshot "gallery-5a-turret"
-    And Nelim's Pickle Tools: I let 12 ticks pass
+    And Nelim's Pickle Tools: the decor is removed
+    And Nelim's Pickle Tools: the interface is shown again
+    Then no errors were logged
+
+  Scenario: Animal Apparel Collars: gallery 5b, the cow fires its turret pack at a wolf in the enclosure (24 ticks after the shot)
+    Given I set the hour to 8
+    And I set the weather to "Clear"
+    And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: I let 833 ticks pass
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (146, 218) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (152, 218) fully grown
+    And Animal Apparel Collars: a tame "Cow" named "GalleryCow" stands at (148, 216)
+    And Nelim's Pickle Tools: "GalleryCow" faces East
+    And Animal Apparel Collars: "GalleryCow" is dressed in "Apparel_LargeAnimalScarf" dyed "#12a39a"
+    And Animal Apparel Collars: "GalleryCow" is dressed in "ATP_Apparel_LargeTurret"
+    And Animal Apparel Collars: a hostile "Wolf_Timber" named "GalleryWolf" stands at (156, 216)
+    And Nelim's Pickle Tools: "GalleryWolf" faces West
+    Then Animal Apparel Collars: "GalleryCow" is wearing "ATP_Apparel_LargeTurret"
+    When Animal Apparel Collars: "GalleryCow" fires its turret pack at "GalleryWolf" where it stands
+    And Nelim's Pickle Tools: I let 24 ticks pass
+    And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (50, 50, 60)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (200, 100, 40)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (30, 28, 28)
+    And Nelim's Pickle Tools: "Nelim" carries the item "Bow_Short"
+    And Nelim's Pickle Tools: "Nelim" stands at (150, 212) facing East
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsWorried"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
+    And Nelim's Pickle Tools: I frame the rectangle from (144, 210) to (160, 219)
+    And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5b-turret"
-    And Nelim's Pickle Tools: I let 12 ticks pass
+    And Nelim's Pickle Tools: the decor is removed
+    And Nelim's Pickle Tools: the interface is shown again
+    Then no errors were logged
+
+  Scenario: Animal Apparel Collars: gallery 5c, the cow fires its turret pack at a wolf in the enclosure (36 ticks after the shot)
+    Given I set the hour to 8
+    And I set the weather to "Clear"
+    And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: I let 833 ticks pass
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (146, 218) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (152, 218) fully grown
+    And Animal Apparel Collars: a tame "Cow" named "GalleryCow" stands at (148, 216)
+    And Nelim's Pickle Tools: "GalleryCow" faces East
+    And Animal Apparel Collars: "GalleryCow" is dressed in "Apparel_LargeAnimalScarf" dyed "#12a39a"
+    And Animal Apparel Collars: "GalleryCow" is dressed in "ATP_Apparel_LargeTurret"
+    And Animal Apparel Collars: a hostile "Wolf_Timber" named "GalleryWolf" stands at (156, 216)
+    And Nelim's Pickle Tools: "GalleryWolf" faces West
+    Then Animal Apparel Collars: "GalleryCow" is wearing "ATP_Apparel_LargeTurret"
+    When Animal Apparel Collars: "GalleryCow" fires its turret pack at "GalleryWolf" where it stands
+    And Nelim's Pickle Tools: I let 36 ticks pass
+    And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (50, 50, 60)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (200, 100, 40)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (30, 28, 28)
+    And Nelim's Pickle Tools: "Nelim" carries the item "Bow_Short"
+    And Nelim's Pickle Tools: "Nelim" stands at (150, 212) facing East
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsWorried"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
+    And Nelim's Pickle Tools: I frame the rectangle from (144, 210) to (160, 219)
+    And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5c-turret"
     And Nelim's Pickle Tools: the decor is removed
     And Nelim's Pickle Tools: the interface is shown again
@@ -288,7 +359,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: the render tree of "ParadeHusky" draws "Apparel_dogbow"
     And Animal Apparel Collars: the render tree of "ParadeCow" draws "Apparel_LargeAnimalScarf"
     And Animal Apparel Collars: the render tree of "ParadeHorse" draws "Apparel_MedievalHorsePlate"
-    When Nelim's Pickle Tools: I frame the rectangle from (141, 211) to (164, 220)
+    When Nelim's Pickle Tools: I frame the rectangle from (142, 212) to (160, 219)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-parade"
     And Nelim's Pickle Tools: the decor is removed
