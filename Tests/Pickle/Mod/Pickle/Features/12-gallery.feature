@@ -12,6 +12,10 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   # Time: start hour 8 in every scenario, then a cumulative wait (setup 60 ticks, then +208 per image: 60, 268, 477, 685, 833,
   # 1042; 2,500 ticks per game hour), weather Clear. Only day animals, all awake. Each scenario reloads the save, so decor is
   # placed for one image and removed after it ("the decor is removed"); no prop is reused from an image to the next.
+  # Hats (owner rule 2026-10-18): the pass mounts Show Hair Under Stuff (RaccoonCuddler.ShowHair, 3255379190, 1.6 and 1.7,
+  # Harmony) so the hair shows under a hat; Nelim wears a hat in scenes 2 and 6 only, always with long loose hair, never a
+  # ponytail or a bun (scene 1 and 5 ponytails have no hat). Risk: the mod hides nothing on a hat it does not know -> the first
+  # capture of 2 and 6 is read for the hair under the hat.
   # Nelim is the protagonist and changes outfit, hairstyle, hair colour and expression in every scene (colours below).
   # Animals seen from the front (South): fox 1, grizzly 3, goat 4; horse and parade in profile on purpose (the barding and the
   # saddle read from the side).
@@ -26,7 +30,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   #  2 STATUE-GARDEN 08:05. b: Plant_Daylily x3 fully grown near the horse (at (151, 103), (156, 102), (154, 106)); the
   #    place has its statues behind c: pale horse in profile (East), purple barding (#7a1fa2), gold chanfron (#e0b020), green
   #    saddle (#2e8b57), daylilies. d: riding dress, white collar shirt (240, 240, 235), tan trousers (176, 140, 96), rust
-  #    duster (150, 80, 40), brown cowboy hat (122, 84, 48), hair BraidedKnot dark brown (70, 44, 26), MouthLipsSmallSmile,
+  #    duster (150, 80, 40), brown cowboy hat (122, 84, 48), hair Flowy dark brown (70, 44, 26), loose under the hat, MouthLipsSmallSmile,
   #    LidSquinting (sun). e: Nelim holds the bridle and steps up to the horse's head. f: zoom 6 and zoom 8 on the horse, statues
   #    and flowers behind, Nelim at its head on the right of the frame, morning sun from the east. g: a full set for the biggest
   #    one, riding tack included. h: statues crowd the cells -> Nelim is put next to the horse (not on a cell), the animal
@@ -34,7 +38,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   #    chanfron, saddle, bridle.
   #  3 SOFA-CORNER 08:10 (the hall, pink carpet). b: two lit torches at (184, 127), (193, 127) c: adult grizzly facing South in a
   #    pale blue diaper (#9ad0f0) (the diaper has art for adults only). d: cosy morning, lavender robe (150, 120, 190) over
-  #    cream trousers (225, 215, 195), hair Long jet black (28, 26, 30), MouthLittleGrin, LidSleepy. e: Nelim holds a spare
+  #    cream trousers (225, 215, 195), hair Curly jet black (28, 26, 30), MouthLittleGrin, LidSleepy. e: Nelim holds a spare
   #    diaper and eyes the bear, half asleep. f: rectangle (182, 123) to (194, 129), bear centred slightly back, Nelim at the
   #    left foreground, warm lamplight on the carpet. g: the diaper is for the big ones too. h: the bear is too big for the
   #    free cells -> nearest-cell fallback logged; diaper art on a bear unverified -> render-tree assertion. j: diaper.
@@ -54,7 +58,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   #    (written in STATUS.md). j: turret pack.
   #  6 ENCLOSURE-SOUTH 08:25. b: Plant_Daylily x2 (148, 211), (152, 211) c: fox (collar, helmet), husky (pink bow #e0307a), cow
   #    (scarf), horse (barding set) heading East, staggered in depth (z 215 to 217), daylilies. d: festival dress, crimson
-  #    collar shirt (170, 30, 60), cream trousers (235, 228, 205), navy beret (30, 50, 110), hair Bob black (24, 22, 26),
+  #    collar shirt (170, 30, 60), cream trousers (235, 228, 205), navy beret (30, 50, 110), hair Long black (24, 22, 26), loose under the beret,
   #    MouthClassicSmile, LidCheerful, BrowRaised. e: Nelim leads the troop to the market holding twenty silver. f: rectangle
   #    (141, 211) to (164, 220), troop crossing from left to right behind her, she is in the left foreground facing the camera.
   #    g: the whole troop heads for the market. h: the staggered cells can fall back to one row -> if it reads as a lineup the
@@ -120,7 +124,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (240, 240, 235)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Duster" dyed rgb (150, 80, 40)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (122, 84, 48)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "BraidedKnot"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Flowy"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (70, 44, 26)
     And Nelim's Pickle Tools: "Nelim" carries the item "Apparel_bridle"
     And Nelim's Pickle Tools: "Nelim" stands next to "GalleryHorse"
@@ -157,7 +161,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: "GalleryBear" is dressed in "diaper" dyed "#9ad0f0"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (225, 215, 195)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Robe" dyed rgb (150, 120, 190)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Curly"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (28, 26, 30)
     And Nelim's Pickle Tools: "Nelim" carries the item "diaper"
     And Nelim's Pickle Tools: "Nelim" stands at (185, 126) facing East
@@ -272,7 +276,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (235, 228, 205)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (170, 30, 60)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Beret" dyed rgb (30, 50, 110)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (24, 22, 26)
     And Nelim's Pickle Tools: "Nelim" carries 20 of the item "Silver"
     And Nelim's Pickle Tools: "Nelim" stands at (150, 212) facing South

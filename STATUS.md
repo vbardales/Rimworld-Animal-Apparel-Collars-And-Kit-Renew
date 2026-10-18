@@ -173,4 +173,6 @@ Story: market morning at the Sanctuary, Nelim gets her troop ready for the parad
 | 6 | Parade in profile (fox, husky, cow, horse) staggered, Nelim in crimson shirt and navy beret holds twenty silver | enclosure-south, 08:25 | 4 | staggered cells fall back to one row (lineup) | widen the z offsets until it reads as a procession | |
 | 7 | Settings page of the mod (interface, no subtitle) | window-backdrop-for-height | not rated | window over the backdrop | none needed, set aside | |
 
-Lowest estimate 4. Tickets f09d and fb09 cancelled (tree changed); a new ticket is filed after the commit.
+Hat rule (GALLERY.md d, 2026-10-18): the sanctuary pass now mounts Show Hair Under Stuff (RaccoonCuddler.ShowHair, 3255379190, found with Search-Workshop, About.xml lists 1.6 and 1.7); hats only in scenes 2 (cowboy hat, Flowy dark brown) and 6 (beret, Long black), both long loose hair; scene 3 is Curly black, scenes 1 and 5 keep ponytails (no hat). Risk: the mod may not hide hair on a hat it does not know; plan: read the hair under the hat on the first capture of 2 and 6, switch to Hat Hair Control (lordfelix.HatHairControl, 3760821540) if it shows none.
+
+Lowest estimate 4. Tickets f09d, fb09 and 5345 cancelled (tree changed); a new ticket is filed after the commit.
