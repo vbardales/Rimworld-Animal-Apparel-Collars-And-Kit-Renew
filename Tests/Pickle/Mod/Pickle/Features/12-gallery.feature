@@ -14,7 +14,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   # placed for one image and removed after it ("the decor is removed"); no prop is reused from an image to the next.
   # Hats (owner rule 2026-10-18): the pass mounts Show Hair Under Stuff (RaccoonCuddler.ShowHair, 3255379190, 1.6 and 1.7,
   # Harmony) so the hair shows under a hat; Nelim wears a hat in scenes 2 and 6 only, always with long loose hair, never a
-  # ponytail or a bun (scene 1 and 5 ponytails have no hat). Risk: the mod hides nothing on a hat it does not know -> the first
+  # ponytail or a bun (scene 1 ponytails have no hat). Risk: the mod hides nothing on a hat it does not know -> the first
   # capture of 2 and 6 is read for the hair under the hat.
   # Nelim is the protagonist and changes outfit, hairstyle, hair colour and expression in every scene (colours below).
   # Animals seen from the front (South): fox 1 and husky 5; horse, grizzly, goat and the parade in profile on purpose (the barding,
@@ -48,9 +48,9 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   #    BrowRaised. e: Nelim carries a steel bar (the mail's stuff) and looks over the mail she just fitted. f: zoom 3 on
   #    the goat, goat off-centre right, Nelim left, flowers in the foreground corners. g: armour for the
   #    toughest climber. h: the mail art is small on a goat -> rectangle tight (14 x 9). j: goat mail.
-  #  5 ENCLOSURE-SOUTH 08:20. b: Plant_YellowTallGrass x2 at (146, 218), (152, 218) c: husky facing South in grey power armour
+  #  5 ENCLOSURE-SOUTH 08:20. b: Plant_Dandelion x2 at (146, 218), (152, 218) (not the grass of scene 1) c: husky facing South in grey power armour
   #    (#8a949e), gold helmet (#c9a227) and a red shield collar (#c8202a) drawn over the armour, grass. d: dawn watch, burnt
-  #    orange shirt (200, 100, 40), dark trousers (50, 50, 60), olive jacket (92, 110, 70), hair Ponytails black (30, 28, 28),
+  #    orange shirt (200, 100, 40), dark trousers (50, 50, 60), olive jacket (92, 110, 70), hair Pigtails black (30, 28, 28),
   #    BrowRaised, MouthLipsSmirk, LidHardened. e: Nelim holds a bar of plasteel and checks the fit of the armour. f: zoom 4 on
   #    the husky, Nelim at the left foreground facing it, both off-centre, early light. g: collars have their own slot and sit
   #    on top of the armour. h: the collar may hide under the armour -> render-tree assertions on all three pieces; the turret
@@ -216,8 +216,8 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I let 833 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (146, 218) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (152, 218) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (146, 218) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (152, 218) fully grown
     And Animal Apparel Collars: a tame "Husky" named "GalleryHusky" stands at (148, 216)
     And Nelim's Pickle Tools: "GalleryHusky" faces South
     And Animal Apparel Collars: "GalleryHusky" is dressed in "Apparel_SmallAnimalPowerArmor" dyed "#8a949e"
@@ -226,7 +226,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (50, 50, 60)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (200, 100, 40)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Pigtails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (30, 28, 28)
     And Nelim's Pickle Tools: "Nelim" carries the item "Plasteel"
     And Nelim's Pickle Tools: "Nelim" stands at (150, 212) facing West
