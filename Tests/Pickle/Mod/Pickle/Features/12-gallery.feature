@@ -23,9 +23,12 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   #  1 BARN 08:00, instant: Nelim walks to the fox with the next piece of leather, one step before she kneels. fox South, red
   #    collar (#c8202a) and blue helmet (#1f6fb5), grass x2 for straw. Nelim: MouthSmile, LidCheerful. rectangle, wide. j: collar, helmet.
   #    Risk: haul of an item she carries unverified (first run). 40 ticks.
-  #  2 STATUE-GARDEN 08:05, instant: Nelim in the job Train on the horse. pale horse East, purple barding, gold chanfron, green saddle,
-  #    daylilies. MouthLipsSmallSmile, LidNormal. zoom 6, Nelim right of the horse. j: barding, chanfron, saddle. Risk: the Train
-  #    gesture only draws while the game ticks; 30 ticks.
+  #  2 STATUE-GARDEN 08:05, instant: she has just raised a hand towards the horse's head to put the bridle on, next she leads it out;
+  #    obtained by the job Train on the horse, 30 ticks, then pause. pale horse East, purple barding, gold chanfron, green saddle,
+  #    daylilies. MouthLipsSmallSmile, LidNormal. zoom 5 (the horse fills about a quarter of the frame height, readable at
+  #    268 px), horse in the left third, Nelim on its right facing it, statues behind, daylilies in the foreground, low morning
+  #    sun from the east. j: barding, chanfron, saddle. Risk: the Train gesture only draws while the game ticks; fallback: haul
+  #    Leather_Camel (the bridle's stuff) to the horse's head.
   #  3 SOFA-CORNER 08:10, instant: the grizzly lies asleep in its diaper, Nelim tiptoes up with a spare one (haul of Cloth).
   #    MouthLittleGrin, LidNormal. zoom 4, two lit torches. j: diaper. Risk: LayDown may end early; 60 ticks.
   #  4 BARE-CLEARING 08:15, instant: Nelim walks past the goat with a bar of steel after fitting the mail. goat East, goat mail,
@@ -105,7 +108,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
-    And Nelim's Pickle Tools: I frame the animal "GalleryHorse" at zoom 6
+    And Nelim's Pickle Tools: I frame the animal "GalleryHorse" at zoom 5
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-2-horse"
     And Nelim's Pickle Tools: the decor is removed
