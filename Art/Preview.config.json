@@ -1,26 +1,22 @@
 {
-  "title": "Animal Apparel: Collars and Kit Renew (unofficial)",
-  "titleSize": 40,
-  "titleParts": [
-    { "text": "Animal Apparel:", "scale": 1 },
-    { "break": true },
-    { "text": "Collars ", "scale": 1 },
-    { "text": "and ", "scale": 0.65 },
-    { "text": "Kit", "scale": 1 },
-    { "break": true },
-    { "text": "Renew", "scale": 0.65, "font": "ui", "color": "secondary" }
-  ],
-  "suffix": "",
-  "tag": "(unofficial)",
-  "tagInline": true,
-  "copyLines": ["Collars, barding, clothing and turret packs for animals, from Animal Gear's framework."],
-  "layout": "panel",
-  "panelAnchor": "bottom-left",
+  "panel": {
+    "title": "Animal Apparel: Collars and Kit Renew (unofficial)",
+    "titleSize": 40,
+    "titleParts": [
+      { "text": "Animal Apparel:", "scale": 1 },
+      { "break": true },
+      { "text": "Collars ", "scale": 1 },
+      { "text": "and ", "scale": 0.65 },
+      { "text": "Kit", "scale": 1 },
+      { "break": true },
+      { "text": "Renew", "scale": 0.65, "font": "ui", "color": "secondary" }
+    ],
+    "tag": "(unofficial)",
+    "tagInline": true,
+    "copyLines": ["Collars, barding, clothing and turret packs for animals, from Animal Gear's framework."]
+  },
   "backgroundFile": "Preview-source.png",
-  "backgroundPosition": "center",
-  "backgroundSize": "cover",
-  "echo": { "file": "echo-source.png", "preSized": true, "color": "var(--accent)", "width": 233, "height": 280, "opacity": 1, "veil": false, "panelTop": 8, "panelRight": 0, "panelWidth": 34, "flipX": false },
-  "modIconSource": "ModIcon-source.png",
-  "iconBadge": { "file": "ModIcon-source.png", "corner": "bottom-right", "translate": "12.5%,12.5%", "width": 220, "outline": false, "veil": "radial", "veilSize": 275, "veilLeft": -55, "veilBottom": -61 },
+  "echo": { "file": "echo-source.png", "color": "var(--accent)", "width": 233, "height": 280 },
+  "icon": { "file": "ModIcon-source.png", "corner": "bottom-right" },
   "palette": { "veil": "#181512", "inkPrimary": "#F2ECE1", "inkSecondary": "#E5BA79", "accent": "#E85F49", "badgeInk": "#17120E" }
 }
