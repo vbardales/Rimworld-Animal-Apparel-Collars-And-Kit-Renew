@@ -33,9 +33,14 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   #  3 SOFA-CORNER 08:10, instant: the grizzly lies asleep in its diaper, Nelim tiptoes up with a spare one (haul of Cloth).
   #    MouthLittleGrin, LidNormal. zoom 4, two lit torches. j: diaper; the bear fills most of the frame at zoom 4, the diaper
   #    reads at 268 px (to confirm on the capture). Risk: LayDown may end early; 60 ticks.
-  #  4 BARE-CLEARING 08:15, instant: Nelim walks past the goat with a bar of steel after fitting the mail. goat East, goat mail,
-  #    daylilies in the corners. MouthSmirkSmile, BrowRaised. zoom 3, Nelim right. j: goat mail; the goat fills about half the
-  #    frame height at zoom 3, the mail reads at 268 px (to confirm on the capture). 40 ticks.
+  #  4 BARE-CLEARING 08:15, instant (reworked 2026-10-25 after b7f7: goat 12 % of the frame, Nelim out of frame, bare ground):
+  #    the mail is fitted, the goat steps off West toward the flower border and Nelim follows at its flank with a bar of steel, one
+  #    step behind it. goat West (walk to (191,152) from (194,152), 40 ticks), goat mail; Nelim walks (198,153) to (194,153) facing
+  #    West. MouthSmirkSmile, BrowRaised. Fixed frame (not the animal, which drifts): rectangle (190,150)-(196,153), 7 x 4 cells, so
+  #    both stay in. Foreground (south edge z 150): two daylilies (192,150) (195,150); background (north, z 153): two tall yellow
+  #    grass (191,153) (193,153) and the natural flower border at x 190; goat at the middle, Nelim right of it, low morning sun from
+  #    the east (shadows West). j: goat mail; the goat fills about a fifth of the frame width (about 55 px at 268 px), mail read
+  #    by its dark grey against the cream coat (weak, kept). Tight.
   #  5 ENCLOSURE-SOUTH 08:20, instant: the husky trots South toward the camera in power armour and shield collar (no helmet:
   #    the small power helmet has no husky tag, ticket b7f7), Nelim left with plasteel. dandelions in the foreground, enclosure
   #    fence behind, low morning sun from the east. MouthLipsSmirk, LidHardened. the animal framed at zoom 4, husky centre,
@@ -168,11 +173,12 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 685 ticks pass
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (200, 150) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 155) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (195, 155) fully grown
-    And Animal Apparel Collars: a tame "Goat" named "GalleryGoat" stands at (197, 152)
-    And Nelim's Pickle Tools: "GalleryGoat" faces East
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (192, 150) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 150) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (191, 153) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (193, 153) fully grown
+    And Animal Apparel Collars: a tame "Goat" named "GalleryGoat" stands at (194, 152)
+    And Nelim's Pickle Tools: "GalleryGoat" faces West
     And Animal Apparel Collars: "GalleryGoat" is dressed in "Apparel_GoatMail"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
@@ -180,15 +186,16 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (90, 58, 32)
     And Nelim's Pickle Tools: "Nelim" carries the item "Steel"
-    And Nelim's Pickle Tools: "Nelim" stands at (200, 154) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (198, 153) facing West
     Then Animal Apparel Collars: the render tree of "GalleryGoat" draws "Apparel_GoatMail"
-    When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Steel" to (196, 154)
+    When Nelim's Pickle Tools: "GalleryGoat" is forced to walk to (191, 152)
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Steel" to (194, 153)
     And Nelim's Pickle Tools: I let 40 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
-    And Nelim's Pickle Tools: I frame the animal "GalleryGoat" at zoom 3
+    And Nelim's Pickle Tools: I frame the rectangle from (190, 150) to (196, 153)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-4-goat"
     And Nelim's Pickle Tools: the decor is removed
