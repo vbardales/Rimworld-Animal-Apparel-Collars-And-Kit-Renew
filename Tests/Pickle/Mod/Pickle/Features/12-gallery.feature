@@ -16,28 +16,36 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   # one image and removed after it.
   # THE INSTANT (GALLERY.md e: the image looks like a game paused mid-play). Each scene starts a real job or move, lets the game
   # run N ticks (`I let N ticks pass`), THEN pauses (`time is paused for the capture`), then sets the face and frames. Nothing
-  # stands still facing the camera. Steps used: forced to haul (Nelim walks with the item), forced into the job Train on an
-  # animal, animal forced to walk / follows / lies down (NPT, 2026-10-23, compiled, NOT PLAYED before this run).
+  # stands still facing the camera. Steps used: forced to haul (Nelim walks with the item), animal forced to walk / follows / lies down (NPT, 2026-10-23, compiled, NOT PLAYED before this run).
   # Shot sizes: 1 wide (opening), 2 medium, 3 tight, 4 tight, 5 medium, 6 wide (closing). Fronts: fox 1, husky 5.
   #
   #  1 BARN 08:00, instant: Nelim walks to the fox with the next piece of leather, one step before she kneels. fox South, red
-  #    collar (#c8202a) and blue helmet (#1f6fb5), grass x2 for straw. Nelim: MouthSmile, LidCheerful. rectangle, wide. j: collar, helmet.
-  #    Risk: haul of an item she carries unverified (first run). 40 ticks.
-  #  2 STATUE-GARDEN 08:05, instant: she has just raised a hand towards the horse's head to put the bridle on, next she leads it out;
-  #    obtained by the job Train on the horse, 30 ticks, then pause. pale horse East, purple barding, gold chanfron, green saddle,
+  #    collar (#c8202a) and blue helmet (#1f6fb5), grass x2 for straw. Nelim: MouthSmile, LidCheerful. rectangle (195,232)-(209,240),
+  #    wide opening: barn wall behind, yellow grass in the foreground, fox off-centre left of the middle, low morning sun from
+  #    the east. j: collar, helmet; at 268 px the fox is small (about 1 cell of 14), the wide shot is for the place, the collar
+  #    reads in shots 4 to 6. 40 ticks.
+  #  2 STATUE-GARDEN 08:05, instant: Nelim walks up with the bridle's leather (Leather_Camel) towards the horse's head, one step
+  #    before she buckles it on, next she leads it out; obtained by a haul of Leather_Camel to the horse's head (the job Train
+  #    was refused in ticket b7f7: RopeToPen), 30 ticks, then pause. pale horse East, purple barding, gold chanfron, green saddle,
   #    daylilies. MouthLipsSmallSmile, LidNormal. zoom 5 (the horse fills about a quarter of the frame height, readable at
   #    268 px), horse in the left third, Nelim on its right facing it, statues behind, daylilies in the foreground, low morning
-  #    sun from the east. j: barding, chanfron, saddle. Risk: the Train gesture only draws while the game ticks; fallback: haul
-  #    Leather_Camel (the bridle's stuff) to the horse's head.
+  #    sun from the east. j: barding, chanfron, saddle.
   #  3 SOFA-CORNER 08:10, instant: the grizzly lies asleep in its diaper, Nelim tiptoes up with a spare one (haul of Cloth).
-  #    MouthLittleGrin, LidNormal. zoom 4, two lit torches. j: diaper. Risk: LayDown may end early; 60 ticks.
+  #    MouthLittleGrin, LidNormal. zoom 4, two lit torches. j: diaper; the bear fills most of the frame at zoom 4, the diaper
+  #    reads at 268 px (to confirm on the capture). Risk: LayDown may end early; 60 ticks.
   #  4 BARE-CLEARING 08:15, instant: Nelim walks past the goat with a bar of steel after fitting the mail. goat East, goat mail,
-  #    daylilies in the corners. MouthSmirkSmile, BrowRaised. zoom 3, Nelim right. j: goat mail. 40 ticks.
-  #  5 ENCLOSURE-SOUTH 08:20, instant: the husky trots South toward the camera in power armour, helmet and shield collar, Nelim
-  #    left with plasteel. dandelions. MouthLipsSmirk, LidHardened. rectangle medium. j: AnimalNeck slot. 40 ticks.
+  #    daylilies in the corners. MouthSmirkSmile, BrowRaised. zoom 3, Nelim right. j: goat mail; the goat fills about half the
+  #    frame height at zoom 3, the mail reads at 268 px (to confirm on the capture). 40 ticks.
+  #  5 ENCLOSURE-SOUTH 08:20, instant: the husky trots South toward the camera in power armour and shield collar (no helmet:
+  #    the small power helmet has no husky tag, ticket b7f7), Nelim left with plasteel. dandelions in the foreground, enclosure
+  #    fence behind, low morning sun from the east. MouthLipsSmirk, LidHardened. the animal framed at zoom 4, husky centre,
+  #    Nelim left. j: armour and AnimalNeck slot; the husky fills about a fifth of the frame height at zoom 4 (to confirm on the
+  #    capture). 40 ticks.
   #  6 ENCLOSURE-SOUTH 08:25, instant: Nelim hauls twenty silver East, the troop (fox, husky in its scene-5 set, cow, horse in its
-  #    set) follows her. daylilies. MouthClassicSmile, LidCheerful. rectangle, wide. j: every piece. Risk: FollowClose on
-  #    animals unverified; 60 ticks.
+  #    set) follows her. daylilies in the foreground, fence behind, low morning sun from the east, the troop in a line from left
+  #    to right. MouthClassicSmile, LidCheerful. rectangle (141,211)-(164,220), wide closing. j: every piece; at 268 px the
+  #    animals are small (about 11 px per cell), the shot is the closing summary, each piece reads in shots 1 to 5. Risk:
+  #    FollowClose on animals unverified; 60 ticks.
   #  7 interface, window-backdrop-for-height: the Mod options page, set aside from the estimate, no subtitle, cropped.
   # A green run proves a picture was taken, not that it is worth keeping: open every capture.
 
@@ -99,10 +107,12 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (90, 58, 32)
+    And Nelim's Pickle Tools: "Nelim" carries the item "Leather_Camel"
+    And Nelim's Pickle Tools: "Nelim" stands at (157, 104) facing West
     Then Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorsePlate"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseHelmet"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseSaddle"
-    When Nelim's Pickle Tools: "Nelim" is forced into the job "Train" on "GalleryHorse"
+    When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Leather_Camel" to (154, 104)
     And Nelim's Pickle Tools: I let 30 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
@@ -197,7 +207,6 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: a tame "Husky" named "GalleryHusky" stands at (148, 214)
     And Nelim's Pickle Tools: "GalleryHusky" faces South
     And Animal Apparel Collars: "GalleryHusky" is dressed in "Apparel_SmallAnimalPowerArmor" dyed "#8a949e"
-    And Animal Apparel Collars: "GalleryHusky" is dressed in "Apparel_SmallAnimalPowerArmorHelmet" dyed "#c9a227"
     And Animal Apparel Collars: "GalleryHusky" is dressed in "Apparel_shielddogcollar" dyed "#c8202a"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
@@ -207,7 +216,6 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" carries the item "Plasteel"
     And Nelim's Pickle Tools: "Nelim" stands at (144, 216) facing East
     Then Animal Apparel Collars: the render tree of "GalleryHusky" draws "Apparel_SmallAnimalPowerArmor"
-    And Animal Apparel Collars: the render tree of "GalleryHusky" draws "Apparel_SmallAnimalPowerArmorHelmet"
     And Animal Apparel Collars: the render tree of "GalleryHusky" draws "Apparel_shielddogcollar"
     When Nelim's Pickle Tools: "GalleryHusky" is forced to walk to (148, 220)
     And Nelim's Pickle Tools: I let 40 ticks pass
@@ -215,7 +223,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
     And Nelim's Pickle Tools: "Nelim" lids are "LidHardened"
-    And Nelim's Pickle Tools: I frame the rectangle from (141, 212) to (155, 222)
+    And Nelim's Pickle Tools: I frame the animal "GalleryHusky" at zoom 4
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-husky"
     And Nelim's Pickle Tools: the decor is removed
@@ -242,7 +250,6 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: "ParadeFox" is dressed in "Apparel_leatherdogcollar" dyed "#c8202a"
     And Animal Apparel Collars: "ParadeFox" is dressed in "Apparel_SmallAnimalPowerArmorHelmet" dyed "#1f6fb5"
     And Animal Apparel Collars: "ParadeHusky" is dressed in "Apparel_SmallAnimalPowerArmor" dyed "#8a949e"
-    And Animal Apparel Collars: "ParadeHusky" is dressed in "Apparel_SmallAnimalPowerArmorHelmet" dyed "#c9a227"
     And Animal Apparel Collars: "ParadeHusky" is dressed in "Apparel_shielddogcollar" dyed "#c8202a"
     And Animal Apparel Collars: "ParadeCow" is dressed in "Apparel_LargeAnimalScarf" dyed "#12a39a"
     And Animal Apparel Collars: "ParadeHorse" is dressed in "Apparel_MedievalHorsePlate" dyed "#7a1fa2"
