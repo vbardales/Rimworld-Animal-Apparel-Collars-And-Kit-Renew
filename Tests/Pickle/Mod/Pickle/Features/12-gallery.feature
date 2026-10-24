@@ -43,7 +43,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
   #    by its dark grey against the cream coat (weak, kept). Tight.
   #  5 ENCLOSURE-SOUTH 08:20, instant: the husky trots South toward the camera in power armour and shield collar (no helmet:
   #    the small power helmet has no husky tag, ticket b7f7), Nelim left with plasteel. dandelions in the foreground, enclosure
-  #    fence behind, low morning sun from the east. MouthLipsSmirk, LidHardened. the animal framed at zoom 4, husky centre,
+  #    fence behind, low morning sun from the east. MouthSmirkSmile, LidNormal (smile, owner 2026-10-25). the animal framed at zoom 4, husky centre,
   #    Nelim left. j: armour and AnimalNeck slot; the husky fills about a fifth of the frame height at zoom 4 (to confirm on the
   #    capture). 40 ticks.
   #  6 ENCLOSURE-SOUTH 08:25, instant: Nelim hauls twenty silver East, the troop (fox, husky in its scene-5 set, cow, horse in its
@@ -228,8 +228,8 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I let 40 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
-    And Nelim's Pickle Tools: "Nelim" lids are "LidHardened"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
     And Nelim's Pickle Tools: I frame the animal "GalleryHusky" at zoom 4
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-husky"
