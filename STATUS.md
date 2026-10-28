@@ -57,7 +57,7 @@ remaining:
   - "2026-10-13: defect: Check-CiTemplate.ps1 shows drift in .github (steam-page.mjs, steam-publish.mjs, steam-page.test.mjs +1): regenerate at the CI/CD template stamp before publish."
   - "2026-10-13: done: scenarios E (feature 03), J (feature 09) and G (feature 16, real restart, ticket e8c4 green on 23d4671) are automated and green; draw order of the collar above the body piece is not asserted"
 updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
-protocols_read_sha: 709f94c1383b5e32138ef80caf13ef1057a42d1f
+protocols_read_sha: cc1f93006ee3756009054a0389731cff310d8784
 ---
 # Animal Apparel: Collars and Kit Renew: status
 
