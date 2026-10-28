@@ -14,7 +14,7 @@ repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 remote:       https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: shootGallery[1.0.0]
+workflow_stage: writeTests[1.0.0]
 social_preview_sha256: 07bf3e5a8a0333c0c2bf823e920ddf02b1b140a6ae9b9cd404ec3e3e170dbb7d
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
@@ -33,6 +33,10 @@ workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the gam
 code_review_sha: c3bbe10ba7a90f7b3522b727f7ee92b63b739475
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
+  - "2026-10-29: open: replay-audit 7.g: no proof that Virginie reviewed the French after 2026-10-01 (1d79353); French strings changed in e9fc2e2 (2026-10-15) and 88d8f1c (2026-10-17), FRENCH_REVIEW.md regenerated at 88d8f1c; her review of those strings is the exit of writeTests [owner]"
+  - "2026-10-29: open: replay-audit 8.m (after 7.g): Mod/ changed since code_review_sha c3bbe10 (French DefInjected, commits e9fc2e2 and 88d8f1c): review of the diff to redo, then new code_review_sha"
+  - "2026-10-29: defect: TESTING.md says the mod was never loaded by RimWorld (stale, runs 2026-10-10 to 2026-10-23 green); Docs/TEST_SCENARIOS.md sits beside TESTING.md (STYLE_RIMWORLD root list: one of the two); fix at the next doc pass"
+  - "2026-10-29: done: replay-audit checks green: Check-Status 0 errors (warn social_preview_sha256 stale), Check-ModBasics PASS, Check-Translations PASS, Run-UnitTests PASS 30, Tests/test-xml.ps1 PASS 1326; gallery work (ef32 digested, candidates 1, 2, 3, 6) stays valid, resumes at shootGallery after 7.g and 8.m"
   - "2026-10-23: done: ticket 5a60 (load audit + with Odyssey, avec-animaux, 1b9df68) green 2 of 2, minified into Tests/Pickle/Evidence/load-odyssey-1b9df68 (RELEASE.md); with-odyssey-7cd2067 and loadaudit-c3bbe10 deleted (covered); French review regenerated at 88d8f1c; 939d, idle 49a1, settings French ff6b already green"
   - "2026-10-17: unverified: French strings changed after four ChatGPT reviews and the owner's call (impersonal address): Keyed/Settings.xml (AA_CK_UniversalHelp, AA_CK_RelicsUnavailable), three shotgun labels (a pompe), GoatMail and horse saddle descriptions; FRENCH_REVIEW.md regenerated, XML suite PASS 1326; owner's French review of 2026-10-01 to redo on these strings; not committed. Open for writeDocs: Thanks section (the six authors above is ambiguous), CHANGELOG 1.0.0 date against the private 0.1.0."
   - "2026-10-18: unverified: gallery series recomposed on the owner request (7 images: fox, horse, cub in a diaper, goat, cow turret pack firing at a wolf, parade, settings page; plan in 12-gallery.feature, three new local steps in AnimalSteps.cs, VEF added to wsl-deps.sanctuary.map), committed d760478, played in tickets f09d to 8ac6 (see the shotlist section) (ticket 45dd, exit 125, no report, folder deleted); to subtitle (Art/Gallery-clean, Add-Subtitle.ps1, lines in PUBLICATION.md); unknowns: standable cells (goat bank, cub, parade, Nelim at 161,216), turret frame timing (40 ticks), diaper art on a cub; version stays 1.0.0 (owner, 2026-10-17); AACaK session code"
@@ -56,7 +60,7 @@ remaining:
   - "2026-10-15: done: Check-Translations (follows ParentName) flagged 8 nested `label` texts on the ATP_Apparel_* packs; verbs.0.label and the MVCF verbProps.0.label are now translated in pairs (e9fc2e2), checker PASS, XML suite PASS 1326; French turret scenario replay queued (ticket bf49), MVCF pairing by label to confirm there"
   - "2026-10-13: defect: Check-CiTemplate.ps1 shows drift in .github (steam-page.mjs, steam-publish.mjs, steam-page.test.mjs +1): regenerate at the CI/CD template stamp before publish."
   - "2026-10-13: done: scenarios E (feature 03), J (feature 09) and G (feature 16, real restart, ticket e8c4 green on 23d4671) are automated and green; draw order of the collar above the body piece is not asserted"
-updated:      2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
+updated:      2026-10-29, replay-audit (writeTests 7.g), earlier: 2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
 protocols_read_sha: cc1f93006ee3756009054a0389731cff310d8784
 ---
 # Animal Apparel: Collars and Kit Renew: status
