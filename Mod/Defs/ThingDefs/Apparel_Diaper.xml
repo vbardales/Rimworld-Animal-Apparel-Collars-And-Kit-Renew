@@ -18,7 +18,7 @@
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>diaper</defName>
     <label>diaper</label>
-    <description>A Diaper animals can wear to eliminate filth production for a short time.</description>
+    <description>A diaper that animals can wear to eliminate filth production for a short time.</description>
     <techLevel>Neolithic</techLevel>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>

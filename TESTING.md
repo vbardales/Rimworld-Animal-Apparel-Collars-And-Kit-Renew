@@ -1,6 +1,6 @@
 # Testing
 
-This mod has never been loaded by RimWorld. The manual scenarios below remain unexecuted.
+The mod has been loaded by RimWorld in Pickle runs (list in `Docs/runs/README.md`). The manual scenarios below are played by those runs where a feature covers them; the rest stay unexecuted.
 
 ## Automated offline checks
 
