@@ -40,7 +40,7 @@ With Vanilla Expanded Framework active, open Mod options, then this mod's name: 
 
 ## Compatibility
 
-Requires Animal Apparel: Framework. Cannot run with Dylan's Animal Gear (the framework's own restriction), nor with six of the seven source mods (all but Medieval Horse Plate Armour), which declare the same defNames: disable them. Optional, with per-animal art or patches: Vanilla Animals Expanded, Vanilla Factions Expanded, Alpha Animals, Alpha Mythology (formerly Magical Menagerie), Spidercamp's Dog Pack, Rim Effect, Giddy-Up 2, Combat Extended, and about a dozen other animal mods listed in the repository README. Nothing errors when one is absent.
+Requires Animal Apparel: Framework. Cannot run with Dylan's Animal Gear (the framework's own restriction), nor with six of the seven source mods (all but Medieval Horse Plate Armour), which declare the same defNames: disable them. Optional, with per-animal art or patches: Vanilla Animals Expanded, Vanilla Factions Expanded, Alpha Animals, Alpha Mythology (formerly Magical Menagerie), Spidercamp's Dog Pack, Rim Effect, Giddy-Up 2, Combat Extended, and about a dozen other animal mods listed in the repository README. No error is expected when one is absent.
 
 No per-save data of its own. Removing it mid-game deletes anything crafted from it, like any content mod.
 
@@ -82,7 +82,7 @@ First release. Six abandoned Animal Gear add-ons, and the unfinished half of a s
 ## Gallery (manual, on the Steam page)
 
 The gallery is a manual step (the CI only sends the header image). Folder `Art/Gallery/`, uploaded as it stands,
-indexes contiguous, `0-` the byte copy of `Mod/About/Preview.png`:
+indexed contiguously, with `0-` as the byte-for-byte copy of `Mod/About/Preview.png`:
 
 | Index | File | Shows |
 |---|---|---|
