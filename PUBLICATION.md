@@ -3,7 +3,7 @@
 Workshop item `3806765840` (private, created by the 0.1.0 prepublication of 2026-09-23). Package
 `nelim.animalapparelcollarsandkit`. Repository
 `vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew`. Status: not publishable yet, see
-STATUS.md (Pickle runs since 2026-10-10 are listed in `Docs/runs/README.md`; the item is not published yet).
+STATUS.md (Pickle runs since 2026-10-10 are listed in `Docs/runs/README.md`; the item is private, never public, and not publishable yet).
 
 ## Steam description
 
