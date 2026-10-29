@@ -30,13 +30,13 @@ dependencies: declared
 showcase:     partial
 tested_on:
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
-code_review_sha: c3bbe10ba7a90f7b3522b727f7ee92b63b739475
+code_review_sha: 2d452b60f5ce5d90d814b64924eb58be6e5ceb42
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
   - "2026-10-29: done: 7.g French review by Virginie (chat confirmation, 2026-10-29) of FRENCH_REVIEW.md at revision 651c069, after four ChatGPT rounds (changes e9fc2e2, 88d8f1c, 5022938, 01beeb4 and the round 3 commit); translation_fr complete; stage moved writeTests to playTests (7.i)"
   - "2026-10-29: done: ChatGPT review page 1 applied with Virginie's go: diaper.description and ATP_Charge.description (French), PUBLICATION.md compatibility and gallery wording; Check-Translations PASS, test-xml PASS 1326; FRENCH_REVIEW.md regenerated; her review of the French (7.g) still open on the new revision"
   - "2026-10-29: done: ChatGPT review round 2 with Virginie's go: Apparel_dogbow.label now nœud papillon; shield collar wording left as is (optional); 24 nested turret entries without Original and English columns = generator limit of Make-FrenchReview.ps1, to report to the Audit session; CHANGELOG 1.0.0 against the private 0.1.0 stays open for writeDocs; FRENCH_REVIEW.md regenerated"
-  - "2026-10-29: open: replay-audit 8.m: Mod/ changed since code_review_sha c3bbe10 (French DefInjected, commits e9fc2e2 and 88d8f1c): review of the diff to redo, then new code_review_sha"
+  - "2026-10-29: done: 8.m code review c3bbe10..2d452b6 (Mod/ text edits and Preview.png) by an Opus read-only reviewer, 0 blocking, one nit fixed (diaper EN comment); code_review_sha moved to 2d452b6"
   - "2026-10-29: done: stale no-game-run statements fixed (TESTING.md line 3, PUBLICATION.md header, line 12 and the Dependencies line); defect left: Docs/TEST_SCENARIOS.md sits beside TESTING.md (STYLE_RIMWORLD root list: one of the two)"
   - "2026-10-29: done: ChatGPT review round 3 with Virginie's go: diaper English description typo (Mod/Defs/ThingDefs/Apparel_Diaper.xml, reopens 8.m like the French edits), AA_CK_SettingsScope French (scope and timing split); left: turret pack descriptions and universal apparel labels (style, owner call of 2026-10-17); FRENCH_REVIEW.md regenerated"
   - "2026-10-29: done: replay-audit checks green: Check-Status 0 errors (warn social_preview_sha256 stale), Check-ModBasics PASS, Check-Translations PASS, Run-UnitTests PASS 30, Tests/test-xml.ps1 PASS 1326; gallery work (ef32 digested, candidates 1, 2, 3, 6) stays valid, resumes at shootGallery after 7.g and 8.m"
