@@ -11,25 +11,9 @@ function Read-Xml([string]$path) {
     $doc.Load($path)
     return ,$doc
 }
+. (Join-Path $PSScriptRoot '../../scripts/lib/PatchEngine.ps1')
 function Apply-Operations($doc, $operations) {
-    foreach ($op in $operations) {
-        $kind = $op.GetAttribute('Class')
-        if ($kind -eq 'PatchOperationSequence') {
-            Apply-Operations $doc $op.SelectNodes('operations/li')
-            continue
-        }
-        Assert ($kind -in @('PatchOperationAdd','PatchOperationRemove','PatchOperationReplace')) "Unsupported operation $kind"
-        $targets = @($doc.SelectNodes($op.xpath))
-        Assert (($targets.Count -gt 0) -or ($op.success -eq 'Always')) "Unmatched XPath: $($op.xpath)"
-        foreach ($target in $targets) {
-            if ($kind -eq 'PatchOperationRemove') { [void]$target.ParentNode.RemoveChild($target); continue }
-            foreach ($value in $op.SelectNodes('value/*')) {
-                $copy = $doc.ImportNode($value, $true)
-                if ($kind -eq 'PatchOperationReplace') { [void]$target.ParentNode.ReplaceChild($copy, $target) }
-                else { [void]$target.AppendChild($copy) }
-            }
-        }
-    }
+    foreach ($op in $operations) { Invoke-PatchOperation $op $doc -RequireMatch }
 }
 $docs = @{}
 foreach ($file in Get-ChildItem $root -Recurse -Filter '*.xml') {
