@@ -16,7 +16,7 @@
     "copyLines": ["Collars, barding, clothing and turret packs for animals, from Animal Gear's framework."]
   },
   "backgroundFile": "Preview-source.png",
-  "echo": { "file": "echo-source.png", "color": "var(--accent)", "width": 233, "height": 280 },
+  "echo": { "file": "echo-source.png", "color": "var(--accent)" },
   "icon": { "file": "ModIcon-source.png", "corner": "bottom-right" },
   "palette": { "veil": "#181512", "inkPrimary": "#F2ECE1", "inkSecondary": "#E5BA79", "accent": "#E85F49", "badgeInk": "#17120E" }
 }
