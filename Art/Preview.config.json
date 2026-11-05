@@ -1,22 +1,19 @@
 {
   "panel": {
     "title": "Animal Apparel: Collars and Kit Renew (unofficial)",
-    "titleSize": 40,
     "titleParts": [
-      { "text": "Animal Apparel:", "scale": 1 },
-      { "break": true },
-      { "text": "Collars ", "scale": 1 },
+      { "text": "Animal Apparel: Collars" },
       { "text": "and ", "scale": 0.65 },
-      { "text": "Kit", "scale": 1 },
-      { "break": true },
-      { "text": "Renew", "scale": 0.65, "font": "ui", "color": "secondary" }
+      { "text": "Kit" },
+      { "text": "Renew (unofficial)", "suffix": true }
     ],
-    "tag": "(unofficial)",
-    "tagInline": true,
-    "copyLines": ["Collars, barding, clothing and turret packs for animals, from Animal Gear's framework."]
+    "description": "Collars, barding, clothing and turret packs for animals, from Animal Gear's framework."
   },
-  "backgroundFile": "Preview-source.png",
+  "background": { "file": "Preview-source.png" },
   "echo": { "file": "echo-source.png" },
-  "icon": { "file": "ModIcon-source.png", "corner": "bottom-right" },
+  "icon": {
+    "file": "ModIcon-source.png",
+    "corner": "bottom-right"
+  },
   "palette": { "veil": "#181512", "inkPrimary": "#F2ECE1", "inkSecondary": "#E5BA79", "accent": "#E85F49", "badgeInk": "#17120E" }
 }
