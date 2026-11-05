@@ -33,6 +33,7 @@ workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the gam
 code_review_sha: 2d452b60f5ce5d90d814b64924eb58be6e5ceb42
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
+  - "2026-11-05: done: resume: tickets b86c (settings French, avec-vef) and f655 (load audit French, avec-animaux) on 1257b7e green 1 of 1 each (Inbox settings-fr-1257b7e, loadaudit-fr-1257b7e still to minify into Evidence or delete); Preview re-rendered with the new config format (6ae0aa6, 268 px echo clear of the title); open: conversion of Tests/test-xml.ps1 to Tests/Rule-OwnValues.ps1 + generated Test-Mod.ps1 (AGENTS, owner mission 2026-11-05; CUT list in docs/LOCAL-SCRIPTS-REVIEW-2026-11-04.md), stage stays playTests[1.0.0] until 8.a, 8.h, 8.l are settled"
   - "2026-10-31: done: Tests/test-xml.ps1 applies patches with Invoke-PatchOperation from the vendored Tests/lib/PatchEngine.ps1 (Sync-PatchEngine.ps1, owner decision 2026-10-31, mod CI runs alone); PASS 1066 checks on powershell 5.1 and pwsh (was 1326: per-op asserts now inside the engine), Sync -Check same; LOCAL_SCRIPTS rows updated"
   - "2026-10-31: done: PatchEngine migration of Tests/test-xml.ps1 reverted (xml-tests.yml runs it in a checkout without scripts/lib); local interpreter back, PASS 1326 checks; Audit and the owner settle how a standalone-CI mod gets shared code"
   - "2026-10-29: done: 7.g French review by Virginie (chat confirmation, 2026-10-29) of FRENCH_REVIEW.md at revision 651c069, after four ChatGPT rounds (changes e9fc2e2, 88d8f1c, 5022938, 01beeb4 and the round 3 commit); translation_fr complete; stage moved writeTests to playTests (7.i)"
@@ -67,7 +68,7 @@ remaining:
   - "2026-10-13: defect: Check-CiTemplate.ps1 shows drift in .github (steam-page.mjs, steam-publish.mjs, steam-page.test.mjs +1): regenerate at the CI/CD template stamp before publish."
   - "2026-10-13: done: scenarios E (feature 03), J (feature 09) and G (feature 16, real restart, ticket e8c4 green on 23d4671) are automated and green; draw order of the collar above the body piece is not asserted"
 updated:      2026-10-29, replay-audit (writeTests 7.g), earlier: 2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
-protocols_read_sha: c228d63f96747e9496cb9d3c6d8bf583ac84cdb8
+protocols_read_sha: 7365508a5f05abbab9ab3acec0f80ef4236c54ae
 ---
 # Animal Apparel: Collars and Kit Renew: status
 
