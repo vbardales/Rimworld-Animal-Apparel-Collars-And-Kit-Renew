@@ -1,6 +1,7 @@
 {
   "panel": {
     "title": "Animal Apparel: Collars and Kit Renew (unofficial)",
+    "panelAnchor": "bottom-left",
     "titleParts": [
       { "text": "Animal Apparel: Collars" },
       { "text": "and ", "scale": 0.65 },
