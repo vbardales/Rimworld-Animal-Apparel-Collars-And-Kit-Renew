@@ -250,7 +250,7 @@ Proposal for `shootGallery` (not applied):
 | 1 collar and helmet on the smallest | arctic fox | PENDING owner: keep the fox (outside NSB) or use a small NSB animal that wears the pieces (Pécan the FoxSquirrel, Labrador Shogun with collar) |
 | 2 full set for the biggest | horse | NSB horse of the save (statue-garden) or Rain with her scarf as the canon big animal |
 | 3 diaper on the big ones | grizzly | the NSB grizzly (1 in the save), sofa-corner |
-| 4 goat mail | goat | PENDING owner: goat is outside NSB; ibex or another NSB animal that takes the goat mail |
+| 4 goat mail | goat | goat kept, outside NSB, validated by the owner 2026-11-05 ("je valide pour la chèvre", chat) |
 | 5 armour and shield collar | non-Yuki husky | Yuki (NSB) with armour only if the owner agrees (canon: collar only), else an NSB save husky |
 | 6 parade | fox, husky, cow, horse, goat, bear | NSB animals only |
 
@@ -271,6 +271,6 @@ Proposal for `shootGallery` (not applied):
 | arctic fox "GalleryFox" | 1, 6 | collar, small helmet | not in NSB | outside NSB, PENDING |
 | horse | 2, 6 | barding, chanfron, saddle | species in the save (CATALOGUE not a sheet) | none |
 | grizzly | 3 | diaper | species in the save | none |
-| goat | 4, 6 | goat mail | not in NSB | outside NSB, PENDING |
+| goat | 4, 6 | goat mail | not in NSB | outside NSB, validated by the owner 2026-11-05 ("je valide pour la chèvre", chat), this mod, the goat only |
 | husky "GalleryHusky" | 5, 6 | armour, helmet, shield collar | Yuki sheet not opened | non-Yuki husky: species is in the save (3); Yuki armour not canon |
 | cow | 6 | scarf | species in the save | none |
