@@ -275,3 +275,8 @@ Proposal for `shootGallery` (not applied):
 | goat | 4, 6 | goat mail | not in NSB | outside NSB, validated by the owner 2026-11-05 ("je valide pour la chèvre", chat), this mod, the goat only |
 | husky "GalleryHusky" | 5, 6 | armour, helmet, shield collar | Yuki sheet not opened | non-Yuki husky: species is in the save (3); Yuki armour not canon |
 | cow | 6 | scarf | species in the save | none |
+
+Update 2026-11-05 after NSB re-documented itself (SANCTUAIRE-LIEUX.md "Qui une galerie peut utiliser", dated 2026-11-05; CATALOGUE-ANIMAUX and NELIM-PROFIL got dated headers; read: that section, Places read and Tribe read dates above stay):
+- Colonists: only Nelim is in the save (I wrongly read this as NSB's whole cast, owner correction 2026-11-05). Every other NSB colonist is created by step (`a colonist "X" of kind "Y" exists`, templates `sanctuary-daily*.feature`): kind `Colonist` = Miel, Soren, Ryu, Daichi, Emi, Haru, Celeste, Iori, Quill, Quo, Quaren; kind `OL_SerenColonist` = Ada, Jiro, Lyra, Dalia, Vesper. All free to use. Which colonists the gallery uses: PENDING owner.
+- Named animals in the save: Atticus, Rain (thrumbos, in the house), Shogun (labrador), Yuki (husky). Tama, Kuru, Ottawa, Onigiri, Pecan, Wren, Wrille, Ulysse, Ursule, Xylo are NOT in the save (NSB gives the steps on request). Other save fauna is anonymous decor, free as a plain animal of its species, no NSB name or role.
+- No goat, no arctic fox, no FoxSquirrel in the save; Erin's FoxSquirrel mod is in no NSB pass map. Goat: validated by the owner (above). Arctic fox / FoxSquirrel for scene 1: replace by a species of the save (Shogun with his leather collar, or an anonymous small animal of the save such as a Yorkshire) unless the owner validates the fox.
