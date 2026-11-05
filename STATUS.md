@@ -28,11 +28,12 @@ upstream_mod_remotes:
   - Animal Equipment, Owlchemist (after jptrrs): https://github.com/Owlchemist/animal-equipment (MIT; pull request sent 2026-10-02)
 dependencies: declared
 showcase:     partial
-tested_on:
+tested_on:    2026-10-29 (tickets b86c settings French and f655 load audit French green on 1257b7e; EN and earlier runs in Tests/Pickle/Evidence)
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
-code_review_sha: 2d452b60f5ce5d90d814b64924eb58be6e5ceb42
+code_review_sha: 257f13e193592cb108c03c3c9dbfdb9e902b3683
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
+  - "2026-11-05: done: 8.m code review sha moved to 257f13e: revue du diff 2d452b6..HEAD : images et texte seuls (only Mod/About/Preview.png changed under Mod/ and Source/); 8.l greens b86c and f655 minified into Tests/Pickle/Evidence (settings-fr-1257b7e, loadaudit-fr-1257b7e, RELEASE.md written), superseded settings-fr-43e6f48 removed by Prune-Evidence; tested_on set; queue holds bdde and ee84 (SaveSteps, 60 requests pending ahead, tests=42 is the suite size, filters 11-removal-write + removal-check, 16-restart-gear pair)"
   - "2026-11-05: done: Preview with panel bottom-left validated by Virginie (chat, 2026-11-05), renderer 091c3f8 (Audit fixed the suffix split and the echo overlap found on this mod), title 35 px, suffix inline; supersedes the validation at 1b35af1; social_preview_sha256 stale until the Steam upload"
   - "2026-11-05: owner withdrew her validation of a per-scene expression for Nelim (chat): the smiles of the gallery scenes (shotlist column d, 12-gallery.feature mouths and lids, owner call of 2026-10-25) are unvalidated again; no capture of those scenes goes to her as validated, expression of Nelim to settle with her before the next gallery ticket (scenes 4 and 5 refile)"
   - "2026-11-05: done: Preview validated by Virginie (chat, 2026-11-05) at 1b35af1 (renderer e044f5e, title 35 px, suffix inline); social_preview_sha256 still stale until the Steam upload (publication step)"
