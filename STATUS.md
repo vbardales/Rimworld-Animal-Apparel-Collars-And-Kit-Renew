@@ -176,6 +176,37 @@ Ticket 6a80 (7a29f86) produced no report: launcher read second -Then filter as l
 2026-10-24: b7f7 (v6b) scenes 1 and 4 passed; 5 failed (the small power helmet has no husky tag, Apparel_AnimalPowerArmor.xml: husky helmet dropped from scenes 5 and 6), 2 failed (job Train refused, RopeToPen: replaced by a haul of Leather_Camel), 3 failed on a save-load timeout (rerun as is); c629 (v6a) no report (stall guard), folder deleted. Plan re-rated 3.8 (rate-gallery): composition and 268 px lines written for 1, 3 to 6 in bb15150. Ticket ef32 filed on bb15150 (scenes 2, 3, 5, 6, Inbox/gallery-v6c, wsl-deps.sanctuary.map). 2026-10-25 verdicts on b7f7: scene 1 fox kept as candidate (instant and outfit hold, fox small but wide shot, helmet and red collar readable, Nelim holds the collar), not yet in Art/Gallery (2.8 MB PNG, recompress under 2 MB at reindex); scene 4 goat refused (Nelim absent from frame, goat mail unreadable, bare brown ground, no story): scene 4 not in ef32, to recompose and refile with it. Scene 4 reworked the same day (write-shotlist 4): goat walks West ((194,152) to (191,152)), Nelim follows with Steel, fixed frame rectangle (190,150)-(196,153), daylilies (192,150) (195,150) foreground, tall grass (191,153) (193,153) and the x 190 flower border behind; b, f now ok, j weak (goat about a fifth of the width): estimate 3.5 to 4.5, series mean 4.4 to 4.5. Not filed: new ticket after ef32 digest. Scene 5 Nelim now smiles (MouthSmirkSmile, owner 2026-10-25: smile on default scenes; animal outfits and mouths are the session's call, wardrobe suggestions not validated). Pending answer: request to NPT via the TM (NPT archived) for a step holding an animal in place and facing during ticks (fox profile and goat drift in b7f7), plus whether walk to, follows, lies down were played; if NPT declines, tell the owner to arbitrate. Rating 2026-10-25: series mean 4.6 (1 4.5, 2 5, 3 4.5, 4 4.5, 5 4.5, 6 4.5; weak: j on 1, 4, 5, 6; f on 3). NSB canon (CATALOGUE-ANIMAUX): Yuki and Shogun wear only Apparel_leatherdogcollar, so the armoured husky of 5 and 6 stays a non-Yuki husky (GalleryHusky, ParadeHusky). Folders gallery-v6b and gallery-v6b-1 stay in Inbox until ef32 is digested. Open: ef32 result (scenes 2, 3, 5, 6), scene 4 recomposition; stale Art/Gallery/1-fox.png, 2-horse.png, 3-husky.png to delete at reindex.
 2026-10-29: ef32 green 4 of 4 (scenes 2, 3, 5, 6; animal steps walk to, lies down, follows played, no proof beyond the captures). Verdicts: 2 horse kept (purple barding, saddle, Nelim holds the item; horse about 12 % of the frame, no statues visible, dim light: j weak, b weak); 3 bear kept (diaper, Z, Nelim beside: story clear); 5 husky refused (small, armour unreadable, Nelim back to camera, bare ground: recompose tighter, zoom in); 6 parade kept (cow, fox, husky, horse, Nelim with silver; animals scattered, wide). Art/Gallery holds 1, 2, 3, 6 as *-candidate-*.jpg (under 2 MB), 7 settings; stale PNGs deleted; Inbox emptied. Open: scene 4 goat refile, scene 5 husky recompose and refile (new ticket, scenes 4 and 5 together, with the DLL of NPT for stands at facing), polish per shot, subtitles, reindex.
 
+## NSB
+
+Sync 2026-11-05 (skill sync-nsb, stage playTests: nothing in the shotlist or scenarios changed, only what would change is noted). Owner rules of 2026-11-05: NSB places, colonists and domestic animals are free; a colonist or domestic animal outside NSB needs her express validation; any change to a colonist's properties needs it too; every outfit is free.
+
+What changed in NSB since the last note: the barn grew (interior x 188-204, z 230-244) and its east extension (x 199-204) is now furnished (12 beds, 4 braziers); Nelim's wardrobe was reviewed on 2026-11-04/05 (daily outfit LTS_Tunika emerald, others validated). `git log` of the NSB Docs returned nothing, so no other date is known. Opened: SANCTUAIRE-LIEUX (lines of the six places only), CATALOGUE-ANIMAUX, NELIM-PROFIL, GALERIE-COLONS. Not opened: SANCTUAIRE-CASES, EMBELLISSEMENT-LIEUX, NSB-ROSTER, APPARENCES-CANON, LOOKS-VALIDATION, the animal sheets.
+
+Places read: 2026-11-05 (partial). Tribe read: 2026-11-05 (partial).
+
+| Place | Shots | Changes for the gallery | Last read |
+| --- | --- | --- | --- |
+| barn (193,237) | 1 | tall grass (201,238) (202,238) now falls in the furnished east extension (x 199-204): check at refile, scene 1 was played before | 2026-11-05 |
+| statue-garden (155,97) | 2 | daylilies x3 | 2026-11-05 |
+| sofa-corner (187,123) | 3 | two lit torches | 2026-11-05 |
+| bare-clearing (195,152) | 4 | daylilies, tall grass, x 190 flower border (as NSB describes it) | 2026-11-05 |
+| enclosure-south (149,214) | 5, 6 | dandelions, daylilies | 2026-11-05 |
+
+| Colonist | Shots | Outfit per shot | Last read | Exceptions |
+| --- | --- | --- | --- | --- |
+| Nelim | 1 to 6 | one outfit all day, mustard shirt, brown trousers, olive jacket (a market morning she dressed at dawn; NSB daily is LTS_Tunika emerald, outfits are free) | 2026-11-05 | PENDING (rule 3): hairstyle "Ponytails" and colour rgb (90,58,32) in 12-gallery.feature, the roster says Roo_HD_Hair_Highpony and Hair_DarkSaturatedReddish #382412; no quoted validation. Mouths: smile on default scenes, owner 2026-10-25 (quoted above); each scene's smile variant is the session's call within it |
+
+| Animal | Shots | Outfit | Last read | Exceptions |
+| --- | --- | --- | --- | --- |
+| arctic fox (GalleryFox) | 1 | red collar, blue helmet | 2026-11-05 (not in the catalogue) | outside NSB, tamed wildlife: not covered by rule 2 (session call); NSB has Pecan, a FoxSquirrel, only if its mod is loaded |
+| horse | 2 | purple barding, gold chanfron, green saddle | 2026-11-05 (not in the catalogue) | outside NSB, domestic: PENDING |
+| grizzly bear | 3 | pale blue diaper | 2026-11-05 (not in the catalogue) | outside NSB, tamed wildlife: session call |
+| goat | 4 | goat mail | 2026-11-05 (not in the catalogue) | outside NSB, domestic: PENDING |
+| husky (GalleryHusky, ParadeHusky) | 5, 6 | Apparel_SmallAnimalPowerArmor, Apparel_shielddogcollar | 2026-11-05 (CATALOGUE-ANIMAUX) | outside NSB, domestic: PENDING. Yuki is the NSB husky and wears only Apparel_leatherdogcollar by default (another garment allowed when the story says so, owner 2026-10-25), so an armoured husky stays a non-Yuki one unless she says otherwise |
+| cow | 6 | per feature 12 | 2026-11-05 (not in the catalogue) | outside NSB, domestic: PENDING |
+
+Would change at shootGallery if she says no: Nelim back to the roster hair; horse, goat, cow dropped or replaced by Shogun and Yuki (NSB) in garments the story justifies; scene 1 grass cells moved out of the extension.
+
 ## Shotlist v6, 2026-10-23 (skill write-shotlist, GALLERY.md a to k as of 2026-10-23, feature `12-gallery`, pass `wsl-deps.sanctuary.map` with VEF)
 
 Why reworked: GALLERY.md of 2026-10-23 (d outfit continuity in a story day; e game paused mid-play, instant and how the gesture is obtained; k series: opening, closing, shot variety; h and i retired). The 2026-10-18 plan (new outfit, hairstyle and hat per scene, Nelim standing still) no longer fits. Ticket e578 (old plan, scenes 2 to 5) to cancel. Opus director pass done (one call); remarks below.
