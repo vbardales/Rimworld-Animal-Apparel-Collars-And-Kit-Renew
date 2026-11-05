@@ -1,107 +1,55 @@
-param([string]$ModPath = (Join-Path $PSScriptRoot '../Mod'))
+# What only this mod asserts: the AnimalNeck body patch on bodies with and without a neck, the Combat Extended saddle edit, the
+# Giddy-Up horse overlay with and without an existing comp, the VEF toggle (universal pieces, relic exclusion), the legacy gorilla
+# tag, the MVCF verb pairing, the Keyed settings keys read from the source, the hidden settings shortcut and the load-folder facts.
+# Generic checks (XML, duplicate defNames, xpath compile, textures, translation coverage) are the shared scripts', run by Test-Mod.ps1.
+# Takes -ModRoot (repository root) and -SharedDir; prints findings, exits 1 on any.
+param([string]$ModRoot = (Join-Path $PSScriptRoot '..'), [string]$SharedDir)
 $ErrorActionPreference = 'Stop'
-$root = (Resolve-Path $ModPath).Path
-$script:checks = 0
-function Assert($condition, [string]$message) {
-    $script:checks++
-    if (-not $condition) { throw "FAIL: $message" }
-}
-function Read-Xml([string]$path) {
-    $doc = [System.Xml.XmlDocument]::new()
-    $doc.Load($path)
-    return ,$doc
-}
-. (Join-Path $PSScriptRoot 'lib/PatchEngine.ps1')
+$ModRoot = (Resolve-Path -LiteralPath $ModRoot).Path
+$root = Join-Path $ModRoot 'Mod'
+$script:findings = New-Object System.Collections.Generic.List[string]
+function Assert($Condition, [string]$Message) { if (-not $Condition) { $script:findings.Add("FAIL: $Message") } }
+function Read-Xml([string]$path) { $doc = [System.Xml.XmlDocument]::new(); $doc.Load($path); return ,$doc }
+$engine = @($SharedDir, (Join-Path $ModRoot '../scripts'), (Join-Path $PSScriptRoot '.')) | Where-Object { $_ } | ForEach-Object { Join-Path $_ 'lib/PatchEngine.ps1' } | Where-Object { Test-Path -LiteralPath $_ } | Select-Object -First 1
+if (-not $engine) { $engine = Join-Path $PSScriptRoot 'lib/PatchEngine.ps1' }
+. $engine
 function Apply-Operations($doc, $operations) {
     foreach ($op in $operations) { Invoke-PatchOperation $op $doc -RequireMatch }
 }
+
 $docs = @{}
-foreach ($file in Get-ChildItem $root -Recurse -Filter '*.xml') {
-    $docs[$file.FullName] = Read-Xml $file.FullName
-    Assert ($docs[$file.FullName].DocumentElement.LocalName -in @('Defs','Patch','LanguageData','ModMetaData','loadFolders')) "Unexpected root: $file"
-}
-Write-Host "Parsed $($docs.Count) XML files"
+foreach ($file in Get-ChildItem $root -Recurse -Filter '*.xml') { $docs[$file.FullName] = Read-Xml $file.FullName }
 $about = Read-Xml (Join-Path $root 'About/About.xml')
 Assert ($about.SelectNodes('/ModMetaData/modDependencies/li[packageId="Ingendum.AnimalApparelFramework"]').Count -eq 1) 'Framework dependency'
 Assert ($about.ModMetaData.description.Contains($about.ModMetaData.url)) 'GitHub URL in description'
 Assert ($about.ModMetaData.url -match '^https://github.com/') 'GitHub metadata URL'
 
-# Case-sensitive relative paths, including on Windows.
 $paths = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
-foreach ($item in Get-ChildItem $root -Recurse) {
-    [void]$paths.Add($item.FullName.Substring($root.Length + 1).Replace('\','/'))
-}
-Assert ($paths.Contains('LoadFolders.xml')) 'LoadFolders filename case'
+foreach ($item in Get-ChildItem $root -Recurse) { [void]$paths.Add($item.FullName.Substring($root.Length + 1).Replace('\','/')) }
 $folders = Read-Xml (Join-Path $root 'LoadFolders.xml')
 $entries = @($folders.SelectNodes('/loadFolders/v1.6/li'))
-$seen = @{}
-foreach ($entry in $entries) {
-    $path = $entry.InnerText
-    Assert (-not $seen.ContainsKey($path)) "Repeated load folder: $path"
-    $seen[$path] = $true
-    Assert (($path -eq '/') -or $paths.Contains($path)) "Missing/case-mismatched load folder: $path"
-    if ($path -ne '/') { Assert ($entry.HasAttribute('IfModActive')) "Unguarded optional folder: $path" }
-}
 function Active-Folders([string[]]$packages) {
     @($entries | Where-Object { -not $_.HasAttribute('IfModActive') -or @($_.GetAttribute('IfModActive').Split(',') | Where-Object { $_ -in $packages }).Count -gt 0 } | ForEach-Object { $_.InnerText })
 }
 Assert ((Active-Folders @()).Count -eq 1) 'Bare modlist loads only base content'
-foreach ($entry in $entries | Where-Object { $_.HasAttribute('IfModActive') }) {
-    foreach ($alias in $entry.GetAttribute('IfModActive').Split(',')) {
-        Assert ($entry.InnerText -in (Active-Folders @($alias))) "Alias does not activate folder: $alias"
-    }
-}
 Assert ('Mods/VEF' -notin (Active-Folders @('MemeGoddess.GiddyUp'))) 'VEF remains absent without VEF'
 
 $defs = [xml]'<Defs />'
-$identities = @{}
 foreach ($doc in $docs.Values | Where-Object { $_.DocumentElement.LocalName -eq 'Defs' }) {
-    foreach ($def in $doc.SelectNodes('/Defs/*')) {
-        $id = if ($def.defName) { $def.defName } else { '@' + $def.GetAttribute('Name') }
-        $key = $def.LocalName + ':' + $id
-        Assert (-not $identities.ContainsKey($key)) "Duplicate definition: $key"
-        $identities[$key] = $true
-        [void]$defs.DocumentElement.AppendChild($defs.ImportNode($def, $true))
-    }
+    foreach ($def in $doc.SelectNodes('/Defs/*')) { [void]$defs.DocumentElement.AppendChild($defs.ImportNode($def, $true)) }
 }
-# Translation targets and duplicate keys, scoped by Def type.
-$keys = @{}
-foreach ($file in Get-ChildItem (Join-Path $root 'Languages') -Recurse -Filter '*.xml' | Where-Object { $_.FullName -match '[\\/]DefInjected[\\/]' }) {
-    $type = $file.Directory.Name
-    foreach ($node in $docs[$file.FullName].SelectNodes('/LanguageData/*')) {
-        $key = $type + ':' + $node.Name
-        Assert (-not $keys.ContainsKey($key)) "Duplicate translation: $key"
-        $keys[$key] = $true
-        $id = $node.Name.Split('.')[0]
-        Assert ($identities.ContainsKey($type + ':' + $id)) "Unknown translation target: $key"
-        Assert (-not [string]::IsNullOrWhiteSpace($node.InnerText)) "Empty translation: $key"
-    }
-}
-# Coverage is checked against authored text, not just existing translation keys.
-# MVCF label pairs are identifiers; visualLabel and description are displayed text.
-$textCount = 0
+# MVCF verb pairing: the verb label is the identifier the translation index relies on.
 foreach ($def in $defs.SelectNodes('/Defs/*[defName]')) {
-    foreach ($field in $def.SelectNodes('label | description')) {
-        $key = $def.LocalName + ':' + $def.defName + '.' + $field.Name
-        Assert ($keys.ContainsKey($key)) "Missing French text: $key"
-        Assert (-not [string]::IsNullOrWhiteSpace($field.InnerText)) "Empty English text: $key"
-        $textCount++
-    }
     foreach ($prop in $def.SelectNodes('comps/li[@Class="MVCF.Comps.CompProperties_VerbGiver"]/verbProps/li')) {
         Assert ($def.SelectNodes('verbs/li').Count -eq 1) "Review MVCF verb mapping: $($def.defName)"
         Assert ($def.SelectSingleNode('verbs/li/label').InnerText -ceq $prop.label) "MVCF identifier mismatch: $($def.defName)"
         Assert ($prop.ParentNode.SelectNodes('li').Count -eq 1) "Review MVCF translation index: $($def.defName)"
-        foreach ($field in @('visualLabel', 'description')) {
-            $key = 'ThingDef:' + $def.defName + '.comps.Comp_VerbGiver.verbProps.0.' + $field
-            Assert ($keys.ContainsKey($key)) "Missing French MVCF text: $key"
-            Assert (-not [string]::IsNullOrWhiteSpace($prop.SelectSingleNode($field).InnerText)) "Empty English MVCF text: $key"
-            $textCount++
-        }
     }
 }
-Write-Host "Covered $textCount authored Def text fields in English and French."
+
+try {
 # Keyed settings text is inventoried from the actual literal keys in the source.
-$sourceRoot = Join-Path $PSScriptRoot '../Source'
+$sourceRoot = Join-Path $ModRoot 'Source'
 $usedKeys = @([regex]::Matches((Get-Content (Join-Path $sourceRoot 'ApparelSettingsMod.cs') -Raw), '"(AA_CK_[A-Za-z]+)"') | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique)
 foreach ($language in @('English','French')) {
     $languageKeys = @{}
@@ -121,10 +69,6 @@ Assert ($button.buttonVisible -ceq 'false') 'Shortcut is hidden by default'
 Assert ($button.validWithoutMap -ceq 'true') 'Shortcut supports world view'
 Assert ($button.workerClass -eq 'AnimalApparelCollarsAndKit.MainButtonWorker_ApparelSettings') 'Shortcut worker'
 Assert ($paths.Contains('Mods/VEF/Defs/MainButtonDefs/ApparelSettings.xml')) 'Shortcut gated with VEF'
-# All authored XPath expressions must compile, even in disabled optional branches.
-foreach ($doc in $docs.Values) {
-    foreach ($xpath in $doc.SelectNodes('//xpath')) { [void][System.Xml.XPath.XPathExpression]::Compile($xpath.InnerText); $script:checks++ }
-}
 # Fixtures exercise actual body patch selectors: existing/missing groups, neck/head,
 # human exclusion, and a body with no matching part. No game loader is emulated.
 $bodyPatch = Read-Xml (Join-Path $root 'Patches/Bodies_AnimalNeck.xml')
@@ -198,14 +142,7 @@ $relics = $defs.CloneNode($true)
 Apply-Operations $relics $toggle.SelectNodes('/Patch/Operation/operations/li[@Class="PatchOperationAdd"]')
 Assert ($relics.SelectNodes('/Defs/ThingDef/relicChance[text()="0"]').Count -eq 12) 'Twelve apparel bases excluded from relics (nine bases, the turret base, the diaper and the goat mail)'
 
-# Local texture paths: exact case, shared graphics or per-animal directories.
-$texturePaths = @($paths | Where-Object { $_ -match '(^|/)Textures/' } | ForEach-Object { $_ -replace '^.*?Textures/', '' })
-foreach ($doc in $docs.Values) {
-    foreach ($node in $doc.SelectNodes('//texPath | //wornGraphicPath')) {
-        $path = $node.InnerText
-        if (-not $path.StartsWith('Things/Pawn/Animal/Apparel/')) { continue } # Vanilla/external paths need the game database.
-        $matches = @($texturePaths | Where-Object { $_ -ceq ($path + '.png') -or $_ -ceq ($path + '_east.png') -or $_.StartsWith($path + '/', [StringComparison]::Ordinal) })
-        Assert ($matches.Count -gt 0) "Missing local texture path: $path"
-    }
-}
-Write-Host "PASS: $script:checks checks. Game rendering, external types and full XML inheritance require RimWorld."
+
+} catch { $script:findings.Add("FAIL: rule script error: $($_.Exception.Message)") }
+if ($script:findings.Count) { $script:findings | ForEach-Object { Write-Output $_ }; exit 1 }
+Write-Host 'Rule-OwnValues: PASS'

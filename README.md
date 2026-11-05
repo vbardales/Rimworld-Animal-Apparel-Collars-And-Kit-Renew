@@ -218,7 +218,7 @@ The only output shipped is `Mod/Mods/VEF/Assemblies/AnimalApparelCollarsAndKit.S
 game/framework reference assemblies are not copied. Sources, tests and intermediates
 stay outside Mod. The remaining payload is XML and textures.
 
-Offline validation: run `pwsh -NoProfile -File Tests/test-xml.ps1` with PowerShell 7.
+Offline validation: run `pwsh -NoProfile -File Tests/Test-Mod.ps1` with PowerShell 7.
 GitHub Actions runs the same suite on pushes and pull requests. See [TESTING.md](TESTING.md)
 for coverage, limitations and the manual game scenarios.
 

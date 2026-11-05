@@ -7,7 +7,7 @@ The mod has been loaded by RimWorld in Pickle runs (list in `Docs/runs/README.md
 Run from the repository root with PowerShell 7 (no game installation or extra modules needed):
 
 ```powershell
-pwsh -NoProfile -File Tests/test-xml.ps1
+pwsh -NoProfile -File Tests/Test-Mod.ps1
 ```
 
 The same command runs on Linux in `.github/workflows/xml-tests.yml` for pushes and pull requests.
