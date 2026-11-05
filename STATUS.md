@@ -269,7 +269,7 @@ Proposal for `shootGallery` (not applied):
 
 | Animal | Shots | Outfit chosen | Last read of its sheet | Exceptions |
 | --- | --- | --- | --- | --- |
-| arctic fox "GalleryFox" | 1, 6 | collar, small helmet | not in NSB | outside NSB, PENDING |
+| arctic fox "GalleryFox" | 1, 6 | collar, small helmet | not in NSB | outside NSB, validated by the owner 2026-11-05 ("je valide le renard arctique", chat), this mod, the arctic fox only |
 | horse | 2, 6 | barding, chanfron, saddle | species in the save (CATALOGUE not a sheet) | none |
 | grizzly | 3 | diaper | species in the save | none |
 | goat | 4, 6 | goat mail | not in NSB | outside NSB, validated by the owner 2026-11-05 ("je valide pour la chèvre", chat), this mod, the goat only |
@@ -282,3 +282,4 @@ Update 2026-11-05 after NSB re-documented itself (SANCTUAIRE-LIEUX.md "Qui une g
 - No goat, no arctic fox, no FoxSquirrel in the save; Erin's FoxSquirrel mod is in no NSB pass map. Goat: validated by the owner (above). Arctic fox / FoxSquirrel for scene 1: replace by a species of the save (Shogun with his leather collar, or an anonymous small animal of the save such as a Yorkshire) unless the owner validates the fox.
 
 Owner rule 2026-11-05 (chat, quoted): "je suis en train de redécorer NSB. Donc je valide la redécoration lieu par lieu. Je viens de valider ces lieux, tu peux donc commencer tes prises de vues là-bas. De la même manière, Nelim et certaines de ses tenues sont validées, tu peux les travailler sans risque que je les change. Mais les autres lieux aussi (et les autres colons/animaux et les autres tenues aussi) seront validés, mais pas encore là maintenant, donc il faut attendre pour les utiliser". Validated now: places `cloister` (179, 130), `terrace` (197, 123), `infirmary-pawns` (202, 52) (via NPT too); Nelim and the outfits marked validated in NELIM-PROFIL (daily LTS_Tunika, underwear, ceremony FCA2_OrangeScarfDress, party LTS_LacedDress, sleep Apparel_PonpecoPajamaB, soignante LisaWork scrubs, formal LTS_RegalCloth, date LTS_SummerSundress, combat). NOT yet: every other place (barn, statue-garden, sofa-corner, bare-clearing, enclosure-south are on hold), other colonists (Soren), other animals, other outfits: wait, do not shoot with them. Consequence: the six-scene plan above is on hold except what fits the three places and Nelim; animals to use now: PENDING owner.
+Animals usable now (2026-11-05): goat and arctic fox, both outside NSB and validated by the owner (quotes above and in the animals table). Other animals wait for her validation. Places usable now: cloister, terrace, infirmary-pawns; colonist: Nelim.
