@@ -1,4 +1,5 @@
 @requires:OskarPotocki.VanillaFactionsExpanded.Core
+@requires:nelim.pickletools.savesteps
 @requires:nelim.animalapparelcollarsandkit.pickleremoval
 Feature: Animal Apparel Collars and Kit Renew, gear worn survives a real restart of the game
 
@@ -23,8 +24,8 @@ Feature: Animal Apparel Collars and Kit Renew, gear worn survives a real restart
     And Animal Apparel Collars: "RestMuffalo" is dressed in "ATP_Apparel_LargeTurret"
     Then Animal Apparel Collars: "RestFox" is wearing "Apparel_leatherdogcollar" made of "Leather_Plain" at quality Good
     And Animal Apparel Collars: "RestHorse" is wearing "Apparel_MedievalHorseSaddle" made of "Leather_Plain" at quality Poor
-    When Animal Apparel Collars: the game is saved as "aack-restart-gear"
-    And Animal Apparel Collars: the saved game "aack-restart-gear" is handed to the mod "nelim.animalapparelcollarsandkit.pickleremoval"
+    When Nelim's Pickle Tools: the game is saved as "aack-restart-gear"
+    And Nelim's Pickle Tools: the saved game "aack-restart-gear" is handed to the mod "nelim.animalapparelcollarsandkit.pickleremoval"
     Then no errors were logged
 
   Scenario: Animal Apparel Collars: pieces are still worn after the restart

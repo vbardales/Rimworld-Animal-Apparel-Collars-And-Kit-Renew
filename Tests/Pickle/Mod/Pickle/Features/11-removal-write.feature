@@ -1,3 +1,4 @@
+@requires:nelim.pickletools.savesteps
 @requires:nelim.animalapparelcollarsandkit.pickleremoval
 Feature: Animal Apparel Collars and Kit Renew, save with the mod for removal
 
@@ -16,6 +17,6 @@ Feature: Animal Apparel Collars and Kit Renew, save with the mod for removal
     And Animal Apparel Collars: "RemHorse" is dressed in "Apparel_MedievalHorsePlate"
     And Animal Apparel Collars: "RemHorse" is dressed in "Apparel_MedievalHorseSaddle"
     Then Animal Apparel Collars: "RemHorse" is wearing "Apparel_MedievalHorseSaddle"
-    When Animal Apparel Collars: the game is saved as "aack-removal-with-mod"
-    And Animal Apparel Collars: the saved game "aack-removal-with-mod" is handed to the mod "nelim.animalapparelcollarsandkit.pickleremoval"
+    When Nelim's Pickle Tools: the game is saved as "aack-removal-with-mod"
+    And Nelim's Pickle Tools: the saved game "aack-removal-with-mod" is handed to the mod "nelim.animalapparelcollarsandkit.pickleremoval"
     Then no errors were logged
