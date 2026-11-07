@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OptionalCompat>
+  <li><packageId>Annabelesca.Malinois</packageId><workshopId>3058371446</workshopId><kind>texture</kind></li>
+  <li><packageId>Atlas.AndroidTiers</packageId><workshopId>1386412863</workshopId><kind>texture</kind></li>
+  <li><packageId>Dumbs.Dumbs'Dachshunds</packageId><workshopId>2603863207</workshopId><kind>texture</kind></li>
+  <li><packageId>Erin.LizzardDoggo</packageId><workshopId>2527471245</workshopId><kind>texture</kind></li>
+  <li><packageId>Erin.MountainDog</packageId><workshopId>2761001056</workshopId><kind>texture</kind></li>
+  <li><packageId>Erin.Palamutes</packageId><workshopId>2485624026</workshopId><kind>texture</kind></li>
+  <li><packageId>kagypoo.YorkshireTerrors</packageId><workshopId>2275850226</workshopId><kind>texture</kind></li>
+  <li><packageId>kentington.saveourship2</packageId><workshopId>1909914131</workshopId><kind>texture</kind></li>
+  <li><packageId>kikohi.forsakens</packageId><workshopId>1728999127</workshopId><kind>texture</kind></li>
+  <li><packageId>mlie.spidercampsdogpack</packageId><workshopId>1256708879</workshopId><kind>texture</kind></li>
+  <li><packageId>OskarPotocki.VFE.Vikings</packageId><workshopId>2231295285</workshopId><kind>texture</kind></li>
+  <li><packageId>Poetik.JapaneseDogs</packageId><workshopId>2192937058</workshopId><kind>texture</kind></li>
+  <li><packageId>Qux.stray.dogs</packageId><workshopId>3549460027</workshopId><kind>texture</kind></li>
+  <li><packageId>RebelRabbit.DireWolves</packageId><workshopId>2538220495</workshopId><kind>texture</kind></li>
+  <li><packageId>RimEffect.Core</packageId><workshopId>2479560240</workshopId><kind>texture</kind></li>
+  <li><packageId>RimEffectRenegade.Core</packageId><workshopId>3473370247</workshopId><kind>texture</kind></li>
+  <li><packageId>rtp.bordercollies</packageId><workshopId>2261957667</workshopId><kind>texture</kind></li>
+  <li><packageId>rtp.rhodesianridgebacks</packageId><workshopId>2076237940</workshopId><kind>texture</kind></li>
+  <li><packageId>sarg.alphaanimals</packageId><workshopId>1541721856</workshopId><kind>texture</kind></li>
+  <!-- sarg.magicalmenagerie: no Workshop page found by title search 2026-11-07, left without workshopId -->
+  <li><packageId>sarg.magicalmenagerie</packageId><workshopId></workshopId><kind>texture</kind></li>
+  <li><packageId>SpankyH.BunRace.bundogs</packageId><workshopId>3784817124</workshopId><kind>texture</kind></li>
+  <li><packageId>SpankyH.BunRace.core</packageId><workshopId>2108324996</workshopId><kind>texture</kind></li>
+  <li><packageId>VanillaExpanded.VAEAS</packageId><workshopId>1836900626</workshopId><kind>texture</kind></li>
+  <li><packageId>VanillaExpanded.VAEBF</packageId><workshopId>1895364938</workshopId><kind>texture</kind></li>
+  <li><packageId>VanillaExpanded.VAECD</packageId><workshopId>1823540489</workshopId><kind>texture</kind></li>
+  <!-- VanillaExpanded.VAED: no separate Workshop page found 2026-11-07, merged mod is VanillaExpanded.VanillaAnimalsExpanded 2871933948 -->
+  <li><packageId>VanillaExpanded.VAED</packageId><workshopId></workshopId><kind>texture</kind></li>
+  <li><packageId>VanillaExpanded.VAEEndAndExt</packageId><workshopId>2366589898</workshopId><kind>texture</kind></li>
+  <li><packageId>VanillaExpanded.VAETR</packageId><workshopId>1907283872</workshopId><kind>texture</kind></li>
+  <li><packageId>VanillaExpanded.VanillaAnimalsExpanded</packageId><workshopId>2871933948</workshopId><kind>texture</kind></li>
+  <li><packageId>zal.dumbsdachshunds</packageId><workshopId>3646509270</workshopId><kind>texture</kind></li>
+  <li><packageId>zal.forsakens</packageId><workshopId>3263003456</workshopId><kind>texture</kind></li>
+  <li><packageId>zal.wolvesden</packageId><workshopId>3379367192</workshopId><kind>texture</kind></li>
+</OptionalCompat>
