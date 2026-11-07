@@ -17,6 +17,16 @@ namespace AnimalApparelCollars.PickleSteps
     [PickleSteps]
     public class AnimalSteps
     {
+        // Pickle runs a synchronous step on the thread the previous await resumed on; after a save load that can be a worker thread,
+        // where the game refuses to read map.mapPawns ("Accessing map pawns off main thread", ticket ea2f, 2026-11-07). The wait resumes on the main thread.
+        private static async Task MainThread(PickleContext ctx)
+        {
+            if (!UnityData.IsInMainThread)
+            {
+                await ctx.WaitUntil(() => UnityData.IsInMainThread, 30f);
+            }
+        }
+
         private static Pawn Find(string nickname)
         {
             Map map = Find_.Map();
@@ -81,8 +91,9 @@ namespace AnimalApparelCollars.PickleSteps
         }
 
         [Then("Animal Apparel Collars: {string} takes less damage than {string} over {int} cuts of {int} damage")]
-        public void TakesLess(PickleContext ctx, string armoured, string bare, int hits, int damage)
+        public async Task TakesLess(PickleContext ctx, string armoured, string bare, int hits, int damage)
         {
+            await MainThread(ctx);
             Pawn a = Require(ctx, armoured);
             Pawn b = Require(ctx, bare);
             float avgA = AverageDamage(a, hits, damage);
@@ -97,8 +108,9 @@ namespace AnimalApparelCollars.PickleSteps
         // pawns - in a cell the player has never uncovered. Spawning next to an existing colonist instead
         // guarantees a revealed, walkable cell.
         [Given("Animal Apparel Collars: a tame {string} named {string} exists near the colony")]
-        public void TameAnimalExistsNearColony(PickleContext ctx, string kindDefName, string nickname)
+        public async Task TameAnimalExistsNearColony(PickleContext ctx, string kindDefName, string nickname)
         {
+            await MainThread(ctx);
             Map map = Find_.Map();
             ctx.Require(map != null, "there is no current map: load a save first");
             PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
@@ -123,8 +135,9 @@ namespace AnimalApparelCollars.PickleSteps
 
         // A staged capture needs the animal on a chosen cell of the studio, not near whichever colonist comes first.
         [Given("Animal Apparel Collars: a tame {string} named {string} stands at \\({int}, {int}\\)")]
-        public void TameAnimalStandsAt(PickleContext ctx, string kindDefName, string nickname, int x, int z)
+        public async Task TameAnimalStandsAt(PickleContext ctx, string kindDefName, string nickname, int x, int z)
         {
+            await MainThread(ctx);
             Map map = Find_.Map();
             ctx.Require(map != null, "there is no current map: load a save first");
             PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
@@ -142,8 +155,9 @@ namespace AnimalApparelCollars.PickleSteps
         // Pickle Tools' "stands next to" resolves its second pawn among the colonists, so an animal is not reachable by it:
         // this one puts the colonist on a standable cell beside the named animal (nearest first, never on its own cell).
         [Given("Animal Apparel Collars: the colonist {string} stands next to the animal {string}")]
-        public void ColonistStandsNextToAnimal(PickleContext ctx, string colonistName, string animalName)
+        public async Task ColonistStandsNextToAnimal(PickleContext ctx, string colonistName, string animalName)
         {
+            await MainThread(ctx);
             Map map = Find_.Map();
             Pawn animal = Require(ctx, animalName);
             Pawn colonist = map.mapPawns.FreeColonists.FirstOrDefault(
@@ -164,8 +178,9 @@ namespace AnimalApparelCollars.PickleSteps
         }
 
         [When("Animal Apparel Collars: {string} is dressed in {string}")]
-        public void Dress(PickleContext ctx, string nickname, string apparelDefName)
+        public async Task Dress(PickleContext ctx, string nickname, string apparelDefName)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
             ThingDef def = DefDatabase<ThingDef>.GetNamedSilentFail(apparelDefName);
@@ -178,8 +193,9 @@ namespace AnimalApparelCollars.PickleSteps
         // Scenario G, restart half: material and quality are part of a stuffed item's identity (base def plus
         // stuff), so they are set explicitly before the save and read back after the restart.
         [When("Animal Apparel Collars: {string} is dressed in {string} made of {string} at quality {word}")]
-        public void DressMade(PickleContext ctx, string nickname, string apparelDefName, string stuffDefName, string quality)
+        public async Task DressMade(PickleContext ctx, string nickname, string apparelDefName, string stuffDefName, string quality)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
             ThingDef def = DefDatabase<ThingDef>.GetNamedSilentFail(apparelDefName);
@@ -195,8 +211,9 @@ namespace AnimalApparelCollars.PickleSteps
         }
 
         [Then("Animal Apparel Collars: {string} is wearing {string} made of {string} at quality {word}")]
-        public void IsWearingMade(PickleContext ctx, string nickname, string apparelDefName, string stuffDefName, string quality)
+        public async Task IsWearingMade(PickleContext ctx, string nickname, string apparelDefName, string stuffDefName, string quality)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
             Apparel apparel = pawn.apparel.WornApparel.FirstOrDefault(a => a.def.defName == apparelDefName);
@@ -210,8 +227,9 @@ namespace AnimalApparelCollars.PickleSteps
         }
 
         [Then("Animal Apparel Collars: {string} is wearing {string}")]
-        public void IsWearing(PickleContext ctx, string nickname, string apparelDefName)
+        public async Task IsWearing(PickleContext ctx, string nickname, string apparelDefName)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
             bool worn = pawn.apparel.WornApparel.Any(a => a.def.defName == apparelDefName);
@@ -220,8 +238,9 @@ namespace AnimalApparelCollars.PickleSteps
         }
 
         [When("Animal Apparel Collars: {string} is stripped of its apparel")]
-        public void Strip(PickleContext ctx, string nickname)
+        public async Task Strip(PickleContext ctx, string nickname)
         {
+            await MainThread(ctx);
             // Pickle's own "I strip" resolves a player colonist by nickname (the same lookup that failed on an
             // animal before this file existed): this one uses the same animal-aware lookup as the rest here.
             Pawn pawn = Require(ctx, nickname);
@@ -235,15 +254,17 @@ namespace AnimalApparelCollars.PickleSteps
         // Pickle's own "I move the camera to {string}" and "the camera can see {string}" resolve a player
         // colonist by nickname, the same restriction that failed on "I dress" before this file existed.
         [When("Animal Apparel Collars: the camera is centered on {string}")]
-        public void CenterCameraOn(PickleContext ctx, string nickname)
+        public async Task CenterCameraOn(PickleContext ctx, string nickname)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             Verse.Find.CameraDriver.JumpToCurrentMapLoc(pawn.Position);
         }
 
         [Then("Animal Apparel Collars: the camera can see {string}")]
-        public void CameraCanSee(PickleContext ctx, string nickname)
+        public async Task CameraCanSee(PickleContext ctx, string nickname)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             ctx.Require(Verse.Find.CameraDriver.CurrentViewRect.Contains(pawn.Position),
                 $"the camera does not see '{nickname}' at {pawn.Position}; the view rect is {Verse.Find.CameraDriver.CurrentViewRect}");
@@ -269,8 +290,9 @@ namespace AnimalApparelCollars.PickleSteps
         }
 
         [Given("Animal Apparel Collars: a hostile {string} named {string} exists near the colony")]
-        public void HostileAnimalExistsNearColony(PickleContext ctx, string kindDefName, string nickname)
+        public async Task HostileAnimalExistsNearColony(PickleContext ctx, string kindDefName, string nickname)
         {
+            await MainThread(ctx);
             Map map = Find_.Map();
             ctx.Require(map != null, "there is no current map: load a save first");
             PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
@@ -294,8 +316,9 @@ namespace AnimalApparelCollars.PickleSteps
 
         // A hostile animal on a chosen cell, for a staged capture of a pack firing at an intruder.
         [Given("Animal Apparel Collars: a hostile {string} named {string} stands at \\({int}, {int}\\)")]
-        public void HostileAnimalStandsAt(PickleContext ctx, string kindDefName, string nickname, int x, int z)
+        public async Task HostileAnimalStandsAt(PickleContext ctx, string kindDefName, string nickname, int x, int z)
         {
+            await MainThread(ctx);
             Map map = Find_.Map();
             ctx.Require(map != null, "there is no current map: load a save first");
             PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
@@ -315,15 +338,17 @@ namespace AnimalApparelCollars.PickleSteps
         // again here makes the assertion independent of whether that hook fired for a pawn dressed directly
         // by this file's Wear() call.
         [When("Animal Apparel Collars: {string} fires its turret pack at {string}")]
-        public void FireTurretPackAt(PickleContext ctx, string wearerNickname, string targetNickname)
+        public async Task FireTurretPackAt(PickleContext ctx, string wearerNickname, string targetNickname)
         {
+            await MainThread(ctx);
             FirePack(ctx, wearerNickname, targetNickname, true);
         }
 
         // The staged capture needs the target where it was put: same call, no move.
         [When("Animal Apparel Collars: {string} fires its turret pack at {string} where it stands")]
-        public void FireTurretPackAtInPlace(PickleContext ctx, string wearerNickname, string targetNickname)
+        public async Task FireTurretPackAtInPlace(PickleContext ctx, string wearerNickname, string targetNickname)
         {
+            await MainThread(ctx);
             FirePack(ctx, wearerNickname, targetNickname, false);
         }
 
@@ -384,8 +409,9 @@ namespace AnimalApparelCollars.PickleSteps
         // Pickle's own catalogue only has "{string} health is above {int} percent"; proving real damage
         // needs the other direction.
         [Then("Animal Apparel Collars: {string} health is below {int} percent")]
-        public void HealthIsBelow(PickleContext ctx, string nickname, int percent)
+        public async Task HealthIsBelow(PickleContext ctx, string nickname, int percent)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             float actual = pawn.health.summaryHealth.SummaryHealthPercent * 100f;
             ctx.Require(actual < percent, $"'{nickname}' health is {actual:F1}%, not below {percent}%");
@@ -398,6 +424,7 @@ namespace AnimalApparelCollars.PickleSteps
         [Then("Animal Apparel Collars: the render tree of {string} draws {string}", TimeoutSeconds = 20f)]
         public async Task RenderTreeDraws(PickleContext ctx, string nickname, string apparelDefName)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             await ctx.WaitFrames(5);
             PawnRenderTree tree = pawn.Drawer.renderer.renderTree;
@@ -442,8 +469,9 @@ namespace AnimalApparelCollars.PickleSteps
         }
 
         [Then("Animal Apparel Collars: {string} apparel covers {string}")]
-        public void Covers(PickleContext ctx, string nickname, string groupDefName)
+        public async Task Covers(PickleContext ctx, string nickname, string groupDefName)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
             bool covered = pawn.apparel.WornApparel.Any(
@@ -454,8 +482,9 @@ namespace AnimalApparelCollars.PickleSteps
 
         // Gallery captures (PUBLISHING.md, pawn-capture rule 2026-10-01): colours that make the piece stand out.
         [When("Animal Apparel Collars: {string} is dressed in {string} dyed {string}")]
-        public void DressDyed(PickleContext ctx, string nickname, string apparelDefName, string html)
+        public async Task DressDyed(PickleContext ctx, string nickname, string apparelDefName, string html)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             ctx.Require(pawn.apparel != null, $"'{nickname}' has no apparel tracker");
             ThingDef def = DefDatabase<ThingDef>.GetNamedSilentFail(apparelDefName);
@@ -474,6 +503,7 @@ namespace AnimalApparelCollars.PickleSteps
         [When("Animal Apparel Collars: the camera is framed tight on {string}", TimeoutSeconds = 15f)]
         public async Task FrameTight(PickleContext ctx, string nickname)
         {
+            await MainThread(ctx);
             Pawn pawn = Require(ctx, nickname);
             Verse.Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
             Verse.Find.Selector.ClearSelection();
