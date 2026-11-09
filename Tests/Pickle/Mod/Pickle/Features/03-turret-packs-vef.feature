@@ -10,9 +10,11 @@ Feature: Animal Apparel Collars and Kit Renew, with Vanilla Expanded Framework
     When Animal Apparel Collars: "Muffalo" is dressed in "ATP_Apparel_LargeTurret"
     Then Animal Apparel Collars: "Muffalo" is wearing "ATP_Apparel_LargeTurret"
     When Animal Apparel Collars: the camera is centered on "Muffalo"
-    And I zoom all the way in
+    And Nelim's Pickle Tools: the camera orthographic size is held at 5
     Then Animal Apparel Collars: the camera can see "Muffalo"
-    When I take a screenshot "muffalo-turret-pack"
+    When Animal Apparel Collars: the interface is hidden for the capture
+    And I take a screenshot "muffalo-turret-pack"
+    And Animal Apparel Collars: the interface is shown again
     Then no errors were logged
 
   # Scenario E: the pack must actually fire, not just wear. MVCF's own animal-AI decision to open fire is
