@@ -15,7 +15,7 @@ Feature: Animal Apparel Collars and Kit Renew, horse set
     And Animal Apparel Collars: "Horse" is wearing "Apparel_MedievalHorseSaddle"
     And Animal Apparel Collars: the render tree of "Horse" draws "Apparel_MedievalHorseSaddle"
     When Animal Apparel Collars: the camera is framed tight on "Horse"
-    And Nelim's Pickle Tools: the camera orthographic size is held at 3
+    Given Nelim's Pickle Tools: the camera orthographic size is held at 3
     Then Animal Apparel Collars: the camera can see "Horse"
     When Animal Apparel Collars: the interface is hidden for the capture
     And I take a screenshot "horse-set"
@@ -28,7 +28,7 @@ Feature: Animal Apparel Collars and Kit Renew, horse set
     And Animal Apparel Collars: a tame "Cow" named "Cow" exists near the colony
     When Animal Apparel Collars: "Cow" is dressed in "Apparel_LargeAnimalScarf" dyed "#c8202a"
     And Animal Apparel Collars: the camera is framed tight on "Cow"
-    And Nelim's Pickle Tools: the camera orthographic size is held at 3
+    Given Nelim's Pickle Tools: the camera orthographic size is held at 3
     Then Animal Apparel Collars: the camera can see "Cow"
     When Animal Apparel Collars: the interface is hidden for the capture
     And I take a screenshot "cow-scarf"
