@@ -25,6 +25,7 @@ Feature: Animal Apparel Collars and Kit Renew, worn apparel survives a save and 
     And I save and reload
     Then Animal Apparel Collars: "SavedHusky" is wearing "Apparel_studdeddogcollar"
     When Animal Apparel Collars: the camera is framed tight on "SavedHusky"
+    And Nelim's Pickle Tools: the camera orthographic size is held at 2.5
     Then Animal Apparel Collars: the camera can see "SavedHusky"
     When Animal Apparel Collars: the interface is hidden for the capture
     And I take a screenshot "husky-collar-after-reload"

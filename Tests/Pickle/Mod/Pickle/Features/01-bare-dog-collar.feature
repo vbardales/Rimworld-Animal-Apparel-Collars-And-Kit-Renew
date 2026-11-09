@@ -33,6 +33,7 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     And Animal Apparel Collars: the render tree of "Fox_Arctic" draws "Apparel_leatherdogcollar"
     And Animal Apparel Collars: the render tree of "Fox_Arctic" draws "Apparel_SmallAnimalPowerArmorHelmet"
     When Animal Apparel Collars: the camera is framed tight on "Fox_Arctic"
+    And Nelim's Pickle Tools: the camera orthographic size is held at 2.5
     Then Animal Apparel Collars: the camera can see "Fox_Arctic"
     When Animal Apparel Collars: the interface is hidden for the capture
     And I take a screenshot "fox-collar-and-helmet"
@@ -69,6 +70,7 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     Then Animal Apparel Collars: "Husky" is wearing "Apparel_dogbow"
     And Animal Apparel Collars: the render tree of "Husky" draws "Apparel_dogbow"
     When Animal Apparel Collars: the camera is framed tight on "Husky"
+    And Nelim's Pickle Tools: the camera orthographic size is held at 2.5
     Then Animal Apparel Collars: the camera can see "Husky"
     When Animal Apparel Collars: the interface is hidden for the capture
     And I take a screenshot "husky-dogbow"
@@ -78,6 +80,7 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     Then Animal Apparel Collars: "Husky" is wearing "Apparel_studdeddogcollar"
     And Animal Apparel Collars: the render tree of "Husky" draws "Apparel_studdeddogcollar"
     When Animal Apparel Collars: the camera is framed tight on "Husky"
+    And Nelim's Pickle Tools: the camera orthographic size is held at 2.5
     Then Animal Apparel Collars: the camera can see "Husky"
     When Animal Apparel Collars: the interface is hidden for the capture
     And I take a screenshot "husky-studdedcollar"
@@ -87,6 +90,7 @@ Feature: Animal Apparel Collars and Kit Renew, framework alone
     Then Animal Apparel Collars: "Husky" is wearing "Apparel_shielddogcollar"
     And Animal Apparel Collars: the render tree of "Husky" draws "Apparel_shielddogcollar"
     When Animal Apparel Collars: the camera is framed tight on "Husky"
+    And Nelim's Pickle Tools: the camera orthographic size is held at 2.5
     Then Animal Apparel Collars: the camera can see "Husky"
     When Animal Apparel Collars: the interface is hidden for the capture
     And I take a screenshot "husky-shieldcollar"
