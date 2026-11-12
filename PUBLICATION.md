@@ -54,7 +54,7 @@ Code, XML patches, tests and documentation were written with Claude (Anthropic) 
 
 ## Thanks
 
-Shenanigans, Dipsy, flangopink, Ogam, Riful, CSM, Owlchemist and jptrrs; s_m_w, for Animal Apparel: Framework and Basic Armor; and Dylan, for the original Animal Gear. Harmony and the development-only test tools Pickle and RimLogging are never dependencies of this mod.
+Shenanigans, Dipsy, flangopink, Ogam, Riful, CSM, Owlchemist and jptrrs; s_m_w, for Animal Apparel: Framework and Basic Armor; and Dylan, for the original Animal Gear. Harmony is never a dependency of this mod. Pickle and RimLogging are development-only tools, never dependencies of this mod.
 
 Credits, licence scope and the source-by-source assessment are in ATTRIBUTION.md and LICENSE (MIT for original contributions and Animal Equipment only).
 
@@ -87,7 +87,7 @@ indexed contiguously, with `0-` as the byte-for-byte copy of `Mod/About/Preview.
 | Index | File | Shows |
 |---|---|---|
 | 0 | `0-preview.png` | The Preview (copy of `Mod/About/Preview.png`) |
-| 1 | `1-fox.png` | A fox in a collar and a helmet in the barn straw (two frames, one kept) |
+| 1 | `1-fox.png` | A fox wearing a collar and a helmet amid the barn straw (two frames, one kept) |
 | 2 | `2-horse.png` | The horse set: barding, chanfron, saddle, bridle, among the statues (two frames, one kept) |
 | 3 | `3-bear.png` | A grizzly in profile in a diaper |
 | 4 | `4-goat.png` | A goat in goat mail in the clearing |
