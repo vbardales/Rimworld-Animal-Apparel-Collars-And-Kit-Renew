@@ -41,7 +41,7 @@
   <ThingDef ParentName="AnimalScarfBase">
     <defName>Apparel_AnimalScarf</defName>
     <label>universal pet scarf</label>
-    <description>A stylish accessory for cool, laid back animals.</description>
+    <description>A stylish accessory for cool, laid-back animals.</description>
     <statBases>
       <WorkToMake>1800</WorkToMake>
       <MaxHitPoints>50</MaxHitPoints>

@@ -27,7 +27,7 @@
     <defName>ATP_Charge</defName>
     <label>animal charge weapons</label>
     <tab>AnimalGear</tab>
-    <description>Craft high tech charge weapons made to fit onto domestic animals.</description>
+    <description>Craft high-tech charge weapons made to fit onto domestic animals.</description>
     <baseCost>3000</baseCost>
     <techLevel>Spacer</techLevel>
     <prerequisites>

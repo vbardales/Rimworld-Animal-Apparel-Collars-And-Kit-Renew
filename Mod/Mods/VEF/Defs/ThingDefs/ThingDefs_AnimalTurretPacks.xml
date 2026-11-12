@@ -288,7 +288,7 @@
 	<ThingDef ParentName="AnimalTurretBase">
 		<defName>ATP_Apparel_LargeTurret</defName>
 		<label>large animal mini-turret pack</label>
-		<description>A small pack of ammunition and components that control a mounted mini-turret designed to be carried by large animals.</description>
+		<description>A pack of ammunition and components that control a mounted mini-turret designed to be carried by large animals.</description>
 		<costList>
 			<ComponentIndustrial>1</ComponentIndustrial>
 			<Steel>40</Steel>
@@ -351,7 +351,7 @@
 	<ThingDef ParentName="AnimalTurretBase">
 		<defName>ATP_Apparel_LargeTurretShotgun</defName>
 		<label>large animal shotgun turret pack</label>
-		<description>A small pack of ammunition and components that control a mounted shotgun mini-turret designed to be carried by large animals.</description>
+		<description>A pack of ammunition and components that control a mounted shotgun mini-turret designed to be carried by large animals.</description>
 		<costList>
 			<ComponentIndustrial>1</ComponentIndustrial>
 			<Steel>45</Steel>
@@ -414,7 +414,7 @@
 	<ThingDef ParentName="AnimalTurretBase">
 		<defName>ATP_Apparel_LargeTurretCharge</defName>
 		<label>large animal blaster turret pack</label>
-		<description>A small pack of ammunition and components that control a mounted blaster mini-turret designed to be carried by large animals.</description>
+		<description>A pack of ammunition and components that control a mounted blaster mini-turret designed to be carried by large animals.</description>
 		<techLevel>Spacer</techLevel>
 		<generateCommonality>0.05</generateCommonality>
 		<recipeMaker>

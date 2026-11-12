@@ -54,7 +54,7 @@ Code, XML patches, tests and documentation were written with Claude (Anthropic) 
 
 ## Thanks
 
-The six authors above and jptrrs; s_m_w, for Animal Apparel: Framework and Basic Armor; Owlchemist; Dylan, for the original Animal Gear. Harmony, and the development-only test tools Pickle and RimLogging, never a dependency of this mod.
+Shenanigans, Dipsy, flangopink, Ogam, Riful, CSM, Owlchemist and jptrrs; s_m_w, for Animal Apparel: Framework and Basic Armor; and Dylan, for the original Animal Gear. Harmony, and the development-only test tools Pickle and RimLogging, never a dependency of this mod.
 
 Credits, licence scope and the source-by-source assessment are in ATTRIBUTION.md and LICENSE (MIT for original contributions and Animal Equipment only).
 
