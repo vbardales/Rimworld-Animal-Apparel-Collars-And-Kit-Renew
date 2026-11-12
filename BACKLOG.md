@@ -33,7 +33,7 @@ Answer (Pickle Tools, 2026-10-02): known, intermittent, cause not established (`
 
 Each PR needs Virginie's go for that PR, goes through the fork branch, follows the closed-PR process (gh pr list --author "@me" --state all, rebase the fork branch on upstream main, reopen or open linking the old one).
 
-- [ ] Animal Equipment, wording fixes of the 2026-11-12 translation review (riding designs, high-tech, laid-back): fork branch to prepare, nothing opened.
-- [ ] Animal Turret Packs, wording fixes of the 2026-11-12 translation review (high-tech charge weapons, large packs without "small", "that controls"): fork branch to prepare, nothing opened.
+- [x] Animal Equipment: PR Owlchemist/animal-equipment#1 reopened 2026-11-12 (Virginie go, chat) with a wording commit (a2349b0) on vbardales:add-rimworld-1.6; the laid-back fix belongs to our own mod only, not in the PR.
+- [x] Animal Turret Packs: PR flangopink/AnimalTurretPacks#1 reopened 2026-11-12 (Virginie go, chat) with a wording commit (81e22ed) on vbardales:add-rimworld-1.6.
 - [ ] 1.6 update PR to each upstream after a green playTests on 1.6 (PRs of 2026-10-02 to check: state, closed for inactivity?).
 - [ ] 1.7 update PR to each upstream, only after a green 1.7 run (tested_1_7: yes).
