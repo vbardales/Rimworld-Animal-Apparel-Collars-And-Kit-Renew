@@ -29,3 +29,11 @@ Answer (Pickle Tools, 2026-10-02): known, intermittent, cause not established (`
 
 - `Animal Apparel Collars: the camera is centered on X` and `... framed tight on X` replaceable by PickleTools CameraZoom `the camera is centered on {string} at root size {float}` (colonist or animal), tick wait by `I let {int} frames pass`. Needs `nelim.pickletools.camerazoom` in maps of review scenarios (avec-vef at least) and replay of those scenarios: after settings tickets, not before.
 - Animal spawn, dress, wear, health steps and Mod options steps stay local until second mod needs them (PickleTools rule: one consumer stays local).
+## TODO: upstream pull requests (missions item 22, 2026-11-12)
+
+Each PR needs Virginie's go for that PR, goes through the fork branch, follows the closed-PR process (gh pr list --author "@me" --state all, rebase the fork branch on upstream main, reopen or open linking the old one).
+
+- [ ] Animal Equipment, wording fixes of the 2026-11-12 translation review (riding designs, high-tech, laid-back): fork branch to prepare, nothing opened.
+- [ ] Animal Turret Packs, wording fixes of the 2026-11-12 translation review (high-tech charge weapons, large packs without "small", "that controls"): fork branch to prepare, nothing opened.
+- [ ] 1.6 update PR to each upstream after a green playTests on 1.6 (PRs of 2026-10-02 to check: state, closed for inactivity?).
+- [ ] 1.7 update PR to each upstream, only after a green 1.7 run (tested_1_7: yes).
