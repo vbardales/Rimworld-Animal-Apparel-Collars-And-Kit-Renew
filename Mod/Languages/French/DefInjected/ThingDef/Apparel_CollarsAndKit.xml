@@ -35,7 +35,7 @@
   <!-- EN: goat mail -->
   <Apparel_GoatMail.label>cotte de mailles pour chèvre</Apparel_GoatMail.label>
   <!-- EN: Armor plates covering the body. Protects against gunfire and melee attacks. -->
-  <Apparel_GoatMail.description>Des plaques d'armure couvrant le corps. Protègent des tirs et des attaques de mêlée.</Apparel_GoatMail.description>
+  <Apparel_GoatMail.description>Des plaques d'armure couvrant le corps. Elles protègent des tirs et des attaques de mêlée.</Apparel_GoatMail.description>
 
   <!-- ===== Medieval Horse Plate Armour, by Riful ===== -->
 
@@ -59,12 +59,12 @@
   <!-- EN: animal clothes -->
   <Apparel_SmallAnimalClothes.label>vêtements pour animal</Apparel_SmallAnimalClothes.label>
   <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
-  <Apparel_SmallAnimalClothes.description>Des vêtements robustes pour animaux. Protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_SmallAnimalClothes.description>
+  <Apparel_SmallAnimalClothes.description>Des vêtements robustes pour animaux. Ils protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_SmallAnimalClothes.description>
 
   <!-- EN: large animal clothes -->
   <Apparel_LargeAnimalClothes.label>vêtements pour grand animal</Apparel_LargeAnimalClothes.label>
   <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
-  <Apparel_LargeAnimalClothes.description>Des vêtements robustes pour animaux. Protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_LargeAnimalClothes.description>
+  <Apparel_LargeAnimalClothes.description>Des vêtements robustes pour animaux. Ils protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_LargeAnimalClothes.description>
 
   <!-- EN: animal headwear -->
   <Apparel_SmallAnimalScarf.label>coiffe pour animal</Apparel_SmallAnimalScarf.label>
