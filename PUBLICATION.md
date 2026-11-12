@@ -14,8 +14,8 @@ fence inside. Nothing here claims more in-game testing than the runs in `Docs/ru
 generator's `--about-from-description`, read the diff, before the first CI publish.
 
 ```markdown
-UNOFFICIAL. This mod is published without the original author's explicit consent.
-If the original author contacts me to request its removal, I undertake to take it down promptly.
+UNOFFICIAL. This mod is published without the original authors' explicit consent.
+If an original author contacts me to request its removal, I undertake to take it down promptly.
 
 Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on [Animal Apparel: Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850).
 
@@ -125,7 +125,7 @@ The turret packs are `AnimalInvisible` by design (drawn by MVCF), so no capture 
 
 ## Adult content
 
-Nothing adult in the text or images. The Preview and ModIcon are a scene and a mascot; the 1400 sprites are
+Nothing adult in the text or images. The Preview and ModIcon are a scene and a mascot; the 1,400 sprites depict
 animal apparel. Still to do before the first CI publish: open a sample of the sprites and the Preview again
 and answer the Steam boxes with that, not from file names.
 
