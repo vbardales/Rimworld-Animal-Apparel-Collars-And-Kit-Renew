@@ -7,7 +7,7 @@ automated_tests: complete
 xml_tests: complete
 localization: complete
 translation_en: complete
-translation_fr: pending_review
+translation_fr: complete
 mod:          Animal Apparel: Collars and Kit Renew (unofficial)
 packageId:    nelim.animalapparelcollarsandkit
 repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
@@ -34,6 +34,7 @@ workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the gam
 code_review_sha: 257f13e193592cb108c03c3c9dbfdb9e902b3683
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
+  - "2026-11-12: done: Virginie validated the translation review (chat, \"je valide la review\"), revision 3c9f8d3, TRANSLATION_REVIEW.md as committed; translation_fr complete. Upstream PR go still pending per PR"
   - "2026-11-12: done: upstream sync via gh (no clone): flangopink/AnimalTurretPacks head c1c9852 (2023-10-18) and Owlchemist/animal-equipment head 532e91a (2023-03-01), both older than the port, nothing new to integrate; the five other sources have no git repository (Workshop only, per upstream_mod_remotes): not compared, packages not installed. 1.6 and 1.7 upstream PRs each need her go, via fork branch, listed in BACKLOG TODO"
   - "2026-11-12: done: ChatGPT translation review (4 passes, last one clean at 4e308f8, TRANSLATION_REVIEW.md frozen): English wording fixes (high-tech, laid-back, riding designs, large turret packs, that controls, Settings help strings), Thanks list explicit, PUBLICATION wording; three refusals in Docs/review-refusals.md; translation_fr pending_review until Virginie validates. Upstream PRs (Animal Turret Packs: turret pack wording; Animal Equipment: riding, high-tech, laid-back): prepare fork branches only, open nothing until her go per PR (missions 21b, 21c). Check-Translations FAIL 67 findings (French keys for defs the load state does not load, VEF folder defs): not touched, to look at with Audit. replay-audit not run yet"
   - "2026-11-12: read: ticket 9a0d green 5 of 5 (15b66cb, Inbox review-close-15b66cb, 7 captures opened): fox red collar and blue helmet, horse purple barding gold chanfron green saddle, cow red scarf, husky collars (bow pink, shield brown, studded blue, reload blue) all readable, animal framed close, no tooltip, no HUD; verdict accept for 8.d (colonist in frame is Jet, test colony, not a gallery shot). Muffalo ticket ffe0: Inbox review-muffalo-052d081 holds 0 scenarios, no capture: state to check with the TM (check-tickets), refile on the new DLL if gone. Folders stay until ffe0 is settled, then Prune-Evidence. Next: 8.i, 8.k, Mod options settings check, 8.n; nsb-sync warn 2026-11-12 (run sync-nsb-npt before shootGallery); social_preview_sha256 stale (upload at publish)"
