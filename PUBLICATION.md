@@ -71,7 +71,7 @@ Drafted for the first real release; fill it in when the 1.0.0 content is final.
 ```
 [b]1.0.0[/b]
 
-First release. Six abandoned Animal Gear add-ons, and the unfinished half of a seventh, moved onto Animal Apparel: Framework for RimWorld 1.6.
+First release. Six abandoned Animal Gear add-ons and the unfinished half of a seventh have been moved to Animal Apparel: Framework for RimWorld 1.6.
 [list]
 [*]AnimalNeck slot and collars one layer above armour.
 [*]Localized settings under Mod options (with Vanilla Expanded Framework), English and French.

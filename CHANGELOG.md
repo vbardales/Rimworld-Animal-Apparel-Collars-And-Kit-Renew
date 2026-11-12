@@ -2,11 +2,11 @@
 
 ## Unreleased
 
-- Remove Medieval Horse Plate Armour from `incompatibleWith`: its one def, `Apparel_Saddle`, was renamed here, so no
-  defName collides any more, and a load with both mods raises nothing attributable to this mod.
+- Declare Medieval Horse Plate Armour incompatible again: its plate, helmet and saddle are already in this mod under new
+  defNames, so loading it adds a second saddle and a patch with no target.
 - Exclude the diaper, the goat mail and the turret pack base from relic selection too, like the other animal apparel
   (option "Exclude animal apparel from relics").
-- Create the Horse `comps` node before adding the Giddy-Up riding overlay, so the patch cannot fail without it.
+- Create the Horse `comps` node before adding the Giddy-Up riding overlay, so the patch does not fail when the node is absent.
 - About author line now reads "... - 1.6 adapted by Nelim"; new ModIcon and Preview.
 - Fix a load-time `[MVCF] Found a verb marked for an integrated toggle while that feature is not
   enabled` error on every turret pack: mark their toggleable verbs `separateToggle`, since no
