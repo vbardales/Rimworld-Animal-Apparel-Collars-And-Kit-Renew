@@ -6,32 +6,32 @@
        translated in pairs, see the end of this file. -->
 
   <!-- EN: small animal mini-turret pack -->
-  <ATP_Apparel_SmallTurret.label>sac-tourelle pour petit animal</ATP_Apparel_SmallTurret.label>
+  <ATP_Apparel_SmallTurret.label>tourelle embarquée pour petit animal</ATP_Apparel_SmallTurret.label>
   <!-- EN: A small pack of ammunition and components that controls a mounted mini-turret designed to be carried by small animals. -->
   <ATP_Apparel_SmallTurret.description>Un petit sac de munitions et de composants pilotant une mini-tourelle, conçu pour être porté par un petit animal.</ATP_Apparel_SmallTurret.description>
 
   <!-- EN: small animal shotgun turret pack -->
-  <ATP_Apparel_SmallTurretShotgun.label>sac-tourelle à fusil à pompe pour petit animal</ATP_Apparel_SmallTurretShotgun.label>
+  <ATP_Apparel_SmallTurretShotgun.label>tourelle embarquée à fusil à pompe pour petit animal</ATP_Apparel_SmallTurretShotgun.label>
   <!-- EN: A small pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by small animals. -->
   <ATP_Apparel_SmallTurretShotgun.description>Un petit sac de munitions et de composants pilotant une mini-tourelle à fusil à pompe, conçu pour être porté par un petit animal.</ATP_Apparel_SmallTurretShotgun.description>
 
   <!-- EN: small animal blaster turret pack -->
-  <ATP_Apparel_SmallTurretCharge.label>sac-tourelle à charge pour petit animal</ATP_Apparel_SmallTurretCharge.label>
+  <ATP_Apparel_SmallTurretCharge.label>tourelle embarquée à charge pour petit animal</ATP_Apparel_SmallTurretCharge.label>
   <!-- EN: A small pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by small animals. -->
   <ATP_Apparel_SmallTurretCharge.description>Un petit sac de munitions et de composants pilotant une mini-tourelle à charge, conçu pour être porté par un petit animal.</ATP_Apparel_SmallTurretCharge.description>
 
   <!-- EN: large animal mini-turret pack -->
-  <ATP_Apparel_LargeTurret.label>sac-tourelle pour grand animal</ATP_Apparel_LargeTurret.label>
+  <ATP_Apparel_LargeTurret.label>tourelle embarquée pour grand animal</ATP_Apparel_LargeTurret.label>
   <!-- EN: A pack of ammunition and components that controls a mounted mini-turret designed to be carried by large animals. -->
   <ATP_Apparel_LargeTurret.description>Un sac de munitions et de composants pilotant une mini-tourelle, conçu pour être porté par une grande bête.</ATP_Apparel_LargeTurret.description>
 
   <!-- EN: large animal shotgun turret pack -->
-  <ATP_Apparel_LargeTurretShotgun.label>sac-tourelle à fusil à pompe pour grand animal</ATP_Apparel_LargeTurretShotgun.label>
+  <ATP_Apparel_LargeTurretShotgun.label>tourelle embarquée à fusil à pompe pour grand animal</ATP_Apparel_LargeTurretShotgun.label>
   <!-- EN: A pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by large animals. -->
   <ATP_Apparel_LargeTurretShotgun.description>Un sac de munitions et de composants pilotant une mini-tourelle à fusil à pompe, conçu pour être porté par une grande bête.</ATP_Apparel_LargeTurretShotgun.description>
 
   <!-- EN: large animal blaster turret pack -->
-  <ATP_Apparel_LargeTurretCharge.label>sac-tourelle à charge pour grand animal</ATP_Apparel_LargeTurretCharge.label>
+  <ATP_Apparel_LargeTurretCharge.label>tourelle embarquée à charge pour grand animal</ATP_Apparel_LargeTurretCharge.label>
   <!-- EN: A pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by large animals. -->
   <ATP_Apparel_LargeTurretCharge.description>Un sac de munitions et de composants pilotant une mini-tourelle à charge, conçu pour être porté par une grande bête.</ATP_Apparel_LargeTurretCharge.description>
 
