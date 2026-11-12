@@ -37,3 +37,13 @@ Each PR needs Virginie's go for that PR, goes through the fork branch, follows t
 - [x] Animal Turret Packs: PR flangopink/AnimalTurretPacks#1 reopened 2026-11-12 (Virginie go, chat) with a wording commit (81e22ed) on vbardales:add-rimworld-1.6.
 - [ ] 1.6 update PR to each upstream after a green playTests on 1.6 (PRs of 2026-10-02 to check: state, closed for inactivity?).
 - [ ] 1.7 update PR to each upstream, only after a green 1.7 run (tested_1_7: yes).
+
+## TODO: Medieval Horse Plate Armour (Horse_Plate_Armour, 2586212684), decided 2026-11-12
+
+Owner (chat): ask the author first (a); if he refuses, declare it incompatible (c). Until then nothing changes in Mod/ (coexistence load audit 7800 green, no shared defName, entry removed from incompatibleWith on 2026-10-10).
+
+- [ ] Virginie posts the message below on the Workshop page (nothing sent outward by the session). Fallback (c) if he refuses or does not answer: add `Horse_Plate_Armour` to `incompatibleWith`, fix "six of the seven source mods" in About, PUBLICATION and README, rework feature 13, replay the tests.
+
+Message (English, Workshop comment):
+
+> Hello, and thank you for the horse plate armour. Animal Gear has no 1.6 version; its replacement is Animal Apparel: Framework, which refuses to run next to it. Your mod depends on Dylan.AnimalGear, so it cannot load in a 1.6 game that uses the Framework. I maintain an unofficial port that merges several Animal Gear add-ons, "Animal Apparel: Collars and Kit Renew" (package id nelim.animalapparelcollarsandkit), which already works with the Framework. Could you add that package id next to Dylan.AnimalGear in your dependencies and loadAfter, or tell me if you would rather I do not support your mod? Both mods load together cleanly in my tests (no shared defName).
