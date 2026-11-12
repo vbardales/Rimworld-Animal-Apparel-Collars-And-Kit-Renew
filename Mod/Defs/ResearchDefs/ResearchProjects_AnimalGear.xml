@@ -48,7 +48,7 @@
 
   <ResearchProjectDef>
     <defName>PoweredAnimalArmor</defName>
-    <label>power armored animals</label>
+    <label>power-armored animals</label>
     <tab>AnimalGear</tab>
     <description>Craft high-tech power armor made to fit onto domestic animals.</description>
     <baseCost>8000</baseCost>
