@@ -42,7 +42,7 @@ Each PR needs Virginie's go for that PR, goes through the fork branch, follows t
 
 Owner (chat): ask the author first (a); if he refuses, declare it incompatible (c). Until then nothing changes in Mod/ (coexistence load audit 7800 green, no shared defName, entry removed from incompatibleWith on 2026-10-10).
 
-- [ ] Virginie posts the message below on the Workshop page (nothing sent outward by the session). Fallback (c) if he refuses or does not answer: add `Horse_Plate_Armour` to `incompatibleWith`, fix "six of the seven source mods" in About, PUBLICATION and README, rework feature 13, replay the tests.
+- [x] Decided 2026-11-12 (owner, chat "go c"): option (c) applied directly, no message to the author: Horse_Plate_Armour added to incompatibleWith, texts (About, PUBLICATION, README, TESTING) say the seven source mods, feature 13 and the incompat-horse-plate map retired. The message below stays as a courtesy draft, not needed.
 
 Message (English, Workshop comment):
 

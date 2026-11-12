@@ -135,8 +135,8 @@ Family 2, with the optional mods (one pass per exclusive combination):
 
 Family 3, one pass per declared incompatibility, asserting the documented symptom (defName overlap), `@allow-errors`:
 `incompat-dog-collars`, `incompat-patch-malinois`, `incompat-realistic-goat`, `incompat-animal-equipment`, `incompat-diapers`,
-`incompat-turret-packs` (feature 05, six scenarios). `incompat-horse-plate` is no longer an incompatibility (entry removed 2026-10-10);
-it mounts Medieval Horse Plate Armour with LoadAudit for feature 13. Dylan's Animal Gear has nothing to assert in a running game
+`incompat-turret-packs` (feature 05, six scenarios). Medieval Horse Plate Armour is declared incompatible again (2026-11-12, owner) because its content is already in this mod, not because of a shared defName (ticket 0e84: none), so no scenario asserts it;
+feature 13 and the `incompat-horse-plate` map are retired. Dylan's Animal Gear has nothing to assert in a running game
 (the framework's own restriction, "on ne teste pas le jeu"). Replayed when the other mod moves, not at each publication.
 
 E (turret pack fires and deals damage, feature 03) and J (armour takes less damage over 200 cuts, feature 09) are automated and were green on bf865a3 (avec-vef) and ce65944 (avec-animaux). G (restart with gear worn): in-process half feature 10, real restart feature 16 (pass `restart`), written 2026-10-13, not played yet.
