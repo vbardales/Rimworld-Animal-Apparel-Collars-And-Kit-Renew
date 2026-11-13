@@ -57,7 +57,7 @@
   <!-- ===== Animal Equipment, by Owlchemist (after jptrrs) ===== -->
 
   <!-- EN: animal clothes -->
-  <Apparel_SmallAnimalClothes.label>vêtements pour animal</Apparel_SmallAnimalClothes.label>
+  <Apparel_SmallAnimalClothes.label>vêtements pour petit animal</Apparel_SmallAnimalClothes.label>
   <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
   <Apparel_SmallAnimalClothes.description>Des vêtements robustes pour animaux. Ils protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_SmallAnimalClothes.description>
 
@@ -67,7 +67,7 @@
   <Apparel_LargeAnimalClothes.description>Des vêtements robustes pour animaux. Ils protègent des intempéries, ainsi que des éraflures et des coupures légères.</Apparel_LargeAnimalClothes.description>
 
   <!-- EN: animal headwear -->
-  <Apparel_SmallAnimalScarf.label>coiffe pour animal</Apparel_SmallAnimalScarf.label>
+  <Apparel_SmallAnimalScarf.label>coiffe pour petit animal</Apparel_SmallAnimalScarf.label>
   <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit an animal. -->
   <Apparel_SmallAnimalScarf.description>Une coiffe en tissu ou en cuir, taillée pour la tête d'un animal.</Apparel_SmallAnimalScarf.description>
 
@@ -82,7 +82,7 @@
   <Apparel_bridle.description>Offre une protection et un harnais de monte.</Apparel_bridle.description>
 
   <!-- EN: animal power armor -->
-  <Apparel_SmallAnimalPowerArmor.label>armure assistée pour animal</Apparel_SmallAnimalPowerArmor.label>
+  <Apparel_SmallAnimalPowerArmor.label>armure assistée pour petit animal</Apparel_SmallAnimalPowerArmor.label>
   <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
   <Apparel_SmallAnimalPowerArmor.description>Une armure assistée légère conçue pour les animaux de combat. Ses plaques en tissage de plastacier arrêtent très efficacement les attaques et laissent peu d'articulations vulnérables. Des assistances neuro-mémétiques permettent à l'animal de la porter sans perdre sa mobilité.</Apparel_SmallAnimalPowerArmor.description>
 
@@ -92,7 +92,7 @@
   <Apparel_LargeAnimalPowerArmor.description>Une armure assistée légère conçue pour les animaux de combat. Ses plaques en tissage de plastacier arrêtent très efficacement les attaques et laissent peu d'articulations vulnérables. Des assistances neuro-mémétiques permettent à une grande bête de la porter sans perdre sa mobilité.</Apparel_LargeAnimalPowerArmor.description>
 
   <!-- EN: animal power helmet -->
-  <Apparel_SmallAnimalPowerArmorHelmet.label>casque assisté pour animal</Apparel_SmallAnimalPowerArmorHelmet.label>
+  <Apparel_SmallAnimalPowerArmorHelmet.label>casque assisté pour petit animal</Apparel_SmallAnimalPowerArmorHelmet.label>
   <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
   <Apparel_SmallAnimalPowerArmorHelmet.description>Un casque assisté en tissage de plastacier, conçu pour les animaux.</Apparel_SmallAnimalPowerArmorHelmet.description>
 
