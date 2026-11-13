@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Combat Extended figures for the apparel taken over from Animal Equipment (Owlchemist,
+       after jptrrs).
+
+       Combat Extended ships these patches in its own ModPatches/Animal Equipment folder, but it
+       loads that folder only when the package id Owlchemist.AnimalGear.Equipment is active.
+       This mod declares that mod incompatible, so the folder never loads here and every piece
+       would keep vanilla armour values and no Bulk. The values below are copied from that
+       folder, applied to the same bases and defNames, which this mod keeps.
+
+       Left out on purpose: the flak armour, flak helmet, plate armour and plate helmet
+       patches, because their bases (AnimalFlakArmorBase, AnimalFlakHelmBase,
+       AnimalPlateArmorBase, AnimalPlateHelmBase) and defNames do not exist in this mod.
+       The medieval horse saddle is handled in Saddle_CE.xml.
+
+       The folder is gated on the packageId CETeam.CombatExtended in LoadFolders.xml. -->
+
+  <!-- Scarf -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[@Name="AnimalScarfBase"]/statBases</xpath>
+    <value>
+      <Bulk>1</Bulk>
+      <WornBulk>1</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[@Name="AnimalScarfBase"]/statBases/ArmorRating_Sharp</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="AnimalScarfBase"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>3</StuffEffectMultiplierArmor>
+    </value>
+  </Operation>
+
+  <!-- Clothes -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[@Name="AnimalClothesBase"]/statBases</xpath>
+    <value>
+      <Bulk>6</Bulk>
+      <WornBulk>2</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="AnimalClothesBase"]/statBases/StuffEffectMultiplierArmor</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>4</StuffEffectMultiplierArmor>
+    </value>
+  </Operation>
+
+  <!-- Riding gear -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Apparel_bridle"]</xpath>
+    <value>
+      <equippedStatOffsets>
+        <CarryWeight>25</CarryWeight>
+        <CarryBulk>15</CarryBulk>
+      </equippedStatOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Apparel_bridle"]/statBases</xpath>
+    <value>
+      <Bulk>6</Bulk>
+      <WornBulk>2</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Apparel_bridle"]/statBases/StuffEffectMultiplierArmor</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>6</StuffEffectMultiplierArmor>
+    </value>
+  </Operation>
+
+  <!-- Power armour -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerArmorBase"]/statBases</xpath>
+    <value>
+      <Bulk>50</Bulk>
+      <WornBulk>15</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerArmorBase"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>20</ArmorRating_Sharp>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerArmorBase"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>45</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerArmorBase"]/equippedStatOffsets/MoveSpeed</xpath>
+    <value>
+      <CarryWeight>60</CarryWeight>
+      <CarryBulk>10</CarryBulk>
+      <ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Apparel_SmallAnimalPowerArmor"]/statBases/MaxHitPoints</xpath>
+    <value>
+      <MaxHitPoints>450</MaxHitPoints>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Apparel_LargeAnimalPowerArmor"]/statBases/MaxHitPoints</xpath>
+    <value>
+      <MaxHitPoints>550</MaxHitPoints>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Apparel_SmallAnimalPowerArmor"]/costList</xpath>
+    <value>
+      <DevilstrandCloth>30</DevilstrandCloth>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Apparel_LargeAnimalPowerArmor"]/costList/Plasteel</xpath>
+    <value>
+      <DevilstrandCloth>60</DevilstrandCloth>
+      <Plasteel>150</Plasteel>
+    </value>
+  </Operation>
+
+  <!-- Power helmet -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerHelmBase"]/statBases</xpath>
+    <value>
+      <Bulk>5</Bulk>
+      <WornBulk>1</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerHelmBase"]/statBases/Flammability</xpath>
+    <value>
+      <Flammability>0</Flammability>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerHelmBase"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>16</ArmorRating_Sharp>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerHelmBase"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>36</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerHelmBase"]/apparel/immuneToToxGasExposure</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[@Name="AnimalSpacerHelmBase"]/apparel</xpath>
+      <value>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[@Name="AnimalSpacerHelmBase"]</xpath>
+    <value>
+      <equippedStatOffsets>
+        <ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+        <SmokeSensitivity>-1</SmokeSensitivity>
+      </equippedStatOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Apparel_SmallAnimalPowerArmorHelmet"]/statBases/MaxHitPoints</xpath>
+    <value>
+      <MaxHitPoints>220</MaxHitPoints>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Apparel_LargeAnimalPowerArmorHelmet"]/statBases/MaxHitPoints</xpath>
+    <value>
+      <MaxHitPoints>260</MaxHitPoints>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Apparel_SmallAnimalPowerArmorHelmet"]/costList/Plasteel</xpath>
+    <value>
+      <DevilstrandCloth>10</DevilstrandCloth>
+      <Plasteel>50</Plasteel>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Apparel_LargeAnimalPowerArmorHelmet"]/costList</xpath>
+    <value>
+      <DevilstrandCloth>30</DevilstrandCloth>
+    </value>
+  </Operation>
+
+  <!-- Universal pieces (Vanilla Expanded Framework): the reins, power armour and power helmet.
+       Combat Extended gates these on the display name of the framework; here the pieces exist
+       only when this mod's VEF folder is loaded, so the test is on the reins themselves. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Apparel_AnimalReins"]</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Apparel_AnimalReins"]</xpath>
+          <value>
+            <equippedStatOffsets>
+              <CarryWeight>25</CarryWeight>
+              <CarryBulk>15</CarryBulk>
+            </equippedStatOffsets>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Apparel_AnimalReins"]/statBases</xpath>
+          <value>
+            <Bulk>6</Bulk>
+            <WornBulk>2</WornBulk>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Apparel_AnimalReins"]/statBases/StuffEffectMultiplierArmor</xpath>
+          <value>
+            <StuffEffectMultiplierArmor>6</StuffEffectMultiplierArmor>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Apparel_AnimalPowerArmor"]/statBases/MaxHitPoints</xpath>
+          <value>
+            <MaxHitPoints>500</MaxHitPoints>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Apparel_AnimalPowerArmor"]/costList</xpath>
+          <value>
+            <DevilstrandCloth>40</DevilstrandCloth>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Apparel_AnimalPowerArmorHelmet"]/statBases/MaxHitPoints</xpath>
+          <value>
+            <MaxHitPoints>240</MaxHitPoints>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Apparel_AnimalPowerArmorHelmet"]/costList/Plasteel</xpath>
+          <value>
+            <DevilstrandCloth>15</DevilstrandCloth>
+            <Plasteel>60</Plasteel>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

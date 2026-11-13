@@ -100,6 +100,17 @@ $ce = $defs.CloneNode($true)
 Apply-Operations $ce (Read-Xml (Join-Path $root 'Mods/CETeam.CombatExtended/Patches/Saddle_CE.xml')).SelectNodes('/Patch/Operation')
 Assert ($ce.SelectSingleNode('//ThingDef[defName="Apparel_MedievalHorseSaddle"]/equippedStatOffsets/CarryBulk').InnerText -eq '25') 'CE saddle capacity'
 Assert ($ce.SelectSingleNode('//ThingDef[defName="Apparel_MedievalHorseSaddle"]/statBases/StuffEffectMultiplierArmor').InnerText -eq '3') 'CE saddle replacement'
+# Combat Extended figures taken over from Animal Equipment: every operation must match a node of this mod
+# (RequireMatch), then one value per family is read back. Flak and plate bases do not exist here and are not patched.
+Apply-Operations $ce (Read-Xml (Join-Path $root 'Mods/CETeam.CombatExtended/Patches/AnimalEquipment_CE.xml')).SelectNodes('/Patch/Operation')
+Assert ($ce.SelectSingleNode('//ThingDef[@Name="AnimalScarfBase"]/statBases/Bulk').InnerText -eq '1') 'CE scarf bulk'
+Assert ($null -eq $ce.SelectSingleNode('//ThingDef[@Name="AnimalScarfBase"]/statBases/ArmorRating_Sharp')) 'CE scarf sharp armour removed'
+Assert ($ce.SelectSingleNode('//ThingDef[@Name="AnimalClothesBase"]/statBases/StuffEffectMultiplierArmor').InnerText -eq '4') 'CE clothes armour multiplier'
+Assert ($ce.SelectSingleNode('//ThingDef[defName="Apparel_bridle"]/equippedStatOffsets/CarryWeight').InnerText -eq '25') 'CE riding gear carry weight'
+Assert ($ce.SelectSingleNode('//ThingDef[@Name="AnimalSpacerArmorBase"]/statBases/ArmorRating_Sharp').InnerText -eq '20') 'CE power armour sharp value'
+Assert ($ce.SelectSingleNode('//ThingDef[defName="Apparel_LargeAnimalPowerArmor"]/costList/DevilstrandCloth').InnerText -eq '60') 'CE large power armour cost'
+Assert ($ce.SelectSingleNode('//ThingDef[@Name="AnimalSpacerHelmBase"]/apparel/immuneToToxGasExposure').InnerText -eq 'true') 'CE power helmet gas immunity'
+Assert ($ce.SelectSingleNode('//ThingDef[defName="Apparel_AnimalReins"]/statBases/Bulk').InnerText -eq '6') 'CE universal reins bulk'
 foreach ($existing in @('', '<li Class="GiddyUp.CompProperties_Overlay"><old /></li>')) {
     $horse = [xml]"<Defs><ThingDef><defName>Horse</defName><comps><li Class='Other.Comp'/>$existing</comps></ThingDef></Defs>"
     Apply-Operations $horse (Read-Xml (Join-Path $root 'Mods/MemeGoddess.GiddyUp/Patches/HorseRidingOverlay.xml')).SelectNodes('/Patch/Operation')
