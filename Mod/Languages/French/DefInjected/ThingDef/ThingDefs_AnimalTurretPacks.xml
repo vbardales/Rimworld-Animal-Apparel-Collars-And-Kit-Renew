@@ -36,12 +36,12 @@
   <ATP_Apparel_LargeTurretCharge.description>Un sac de munitions et de composants pilotant une mini-tourelle à charge, conçu pour être porté par une grande bête.</ATP_Apparel_LargeTurretCharge.description>
 
   <!-- EN: small animal grenade belt -->
-  <ATP_Apparel_SmallGrenades.label>petite ceinture de grenades</ATP_Apparel_SmallGrenades.label>
+  <ATP_Apparel_SmallGrenades.label>ceinture de grenades pour petit animal</ATP_Apparel_SmallGrenades.label>
   <!-- EN: A grenade belt designed to be carried by small animals. -->
   <ATP_Apparel_SmallGrenades.description>Une ceinture de grenades conçue pour être portée par un petit animal.</ATP_Apparel_SmallGrenades.description>
 
   <!-- EN: large animal grenade belt -->
-  <ATP_Apparel_LargeGrenades.label>grande ceinture de grenades</ATP_Apparel_LargeGrenades.label>
+  <ATP_Apparel_LargeGrenades.label>ceinture de grenades pour grand animal</ATP_Apparel_LargeGrenades.label>
   <!-- EN: A grenade belt designed to be carried by large animals. -->
   <ATP_Apparel_LargeGrenades.description>Une ceinture de grenades conçue pour être portée par une grande bête.</ATP_Apparel_LargeGrenades.description>
 
