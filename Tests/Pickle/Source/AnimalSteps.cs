@@ -406,6 +406,39 @@ namespace AnimalApparelCollars.PickleSteps
                 + $"targetHostile={target.HostileTo(wearer)}, verbs on the pack={tracker.AllVerbs.Count}");
         }
 
+        // 2026-11-13 (ticket a76f): the muffalo capture shows no turret pack. MVCF draws a turret through
+        // VerbManager.DrawVerbs, which only visits verbs that NeedsDrawing registered in its private drawVerbs list,
+        // and DrawVerbs is called from a postfix on PawnRenderUtility.DrawEquipmentAndApparelExtras. This step reads the
+        // manager by reflection (MVCF is not a compile-time reference) and fails with what it found, to tell
+        // "verb not registered for drawing" from "registered, but the render path never calls it".
+        [Then("Animal Apparel Collars: MVCF draws the turret of {string}")]
+        public async Task MvcfDrawsTurretOf(PickleContext ctx, string nickname)
+        {
+            await MainThread(ctx);
+            Pawn pawn = Require(ctx, nickname);
+            Type util = AppDomain.CurrentDomain.GetAssemblies()
+                .Select(a => a.GetType("MVCF.Utilities.PawnVerbUtility", false)).FirstOrDefault(t => t != null);
+            ctx.Require(util != null, "MVCF.Utilities.PawnVerbUtility not found (MVCF not loaded)");
+            MethodInfo manager = util.GetMethod("Manager", BindingFlags.Public | BindingFlags.Static);
+            object man = manager?.Invoke(null, new object[] { pawn, false });
+            ctx.Require(man != null, $"'{nickname}' has no MVCF VerbManager");
+            System.Collections.IEnumerable verbs = man.GetType().GetProperty("ManagedVerbs")?.GetValue(man) as System.Collections.IEnumerable;
+            System.Collections.IList drawVerbs = man.GetType()
+                .GetField("drawVerbs", BindingFlags.NonPublic | BindingFlags.Instance)?.GetValue(man) as System.Collections.IList;
+            List<string> seen = new List<string>();
+            if (verbs != null)
+            {
+                foreach (object mv in verbs)
+                {
+                    bool needs = (bool)mv.GetType().GetProperty("NeedsDrawing").GetValue(mv);
+                    seen.Add($"{mv.GetType().Name} NeedsDrawing={needs}");
+                }
+            }
+
+            ctx.Require(drawVerbs != null && drawVerbs.Count > 0,
+                $"MVCF registered no verb of '{nickname}' for drawing (drawVerbs={(drawVerbs == null ? "unreadable" : drawVerbs.Count.ToString())}); managed verbs: [{string.Join("; ", seen)}]");
+        }
+
         // Pickle's own catalogue only has "{string} health is above {int} percent"; proving real damage
         // needs the other direction.
         [Then("Animal Apparel Collars: {string} health is below {int} percent")]

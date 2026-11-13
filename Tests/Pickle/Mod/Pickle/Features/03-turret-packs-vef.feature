@@ -12,6 +12,7 @@ Feature: Animal Apparel Collars and Kit Renew, with Vanilla Expanded Framework
     When Animal Apparel Collars: the camera is centered on "Muffalo"
     Given Nelim's Pickle Tools: the camera orthographic size is held at 5.0
     Then Animal Apparel Collars: the camera can see "Muffalo"
+    And Animal Apparel Collars: MVCF draws the turret of "Muffalo"
     When Animal Apparel Collars: the interface is hidden for the capture
     And I take a screenshot "muffalo-turret-pack"
     And Animal Apparel Collars: the interface is shown again
