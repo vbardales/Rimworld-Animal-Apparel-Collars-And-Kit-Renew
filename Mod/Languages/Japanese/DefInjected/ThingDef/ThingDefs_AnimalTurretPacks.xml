@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Japanese texts marked "Lucifel" come unchanged from "Animal Gear 日本語翻訳" by Lucifel (Steam Workshop 2644824504,
+       packageId Lucifel.AnimalGear.JPT). No licence is stated there; see ATTRIBUTION.md. All other entries were written for this mod. -->
+
+
+  <!-- VEF-only definitions. MVCF visualLabel and description use numeric list indices
+       because AdditionalVerbProps has no TranslationHandle. The verb labels are
+       translated in pairs, see the end of this file. -->
+
+  <!-- EN: small animal mini-turret pack -->
+  <ATP_Apparel_SmallTurret.label>小型動物用ミニタレットパック</ATP_Apparel_SmallTurret.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurret.description>小型の動物が運べるよう設計された、搭載型のミニタレットを制御する弾薬と部品のパックです。</ATP_Apparel_SmallTurret.description>
+
+  <!-- EN: small animal shotgun turret pack -->
+  <ATP_Apparel_SmallTurretShotgun.label>小型動物用ショットガンタレットパック</ATP_Apparel_SmallTurretShotgun.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretShotgun.description>小型の動物が運べるよう設計された、搭載型のショットガン・ミニタレットを制御する弾薬と部品のパックです。</ATP_Apparel_SmallTurretShotgun.description>
+
+  <!-- EN: small animal blaster turret pack -->
+  <ATP_Apparel_SmallTurretCharge.label>小型動物用チャージタレットパック</ATP_Apparel_SmallTurretCharge.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretCharge.description>小型の動物が運べるよう設計された、搭載型のチャージ式ミニタレットを制御する弾薬と部品のパックです。</ATP_Apparel_SmallTurretCharge.description>
+
+  <!-- EN: large animal mini-turret pack -->
+  <ATP_Apparel_LargeTurret.label>大型動物用ミニタレットパック</ATP_Apparel_LargeTurret.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurret.description>大型の動物が運べるよう設計された、搭載型のミニタレットを制御する弾薬と部品のパックです。</ATP_Apparel_LargeTurret.description>
+
+  <!-- EN: large animal shotgun turret pack -->
+  <ATP_Apparel_LargeTurretShotgun.label>大型動物用ショットガンタレットパック</ATP_Apparel_LargeTurretShotgun.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretShotgun.description>大型の動物が運べるよう設計された、搭載型のショットガン・ミニタレットを制御する弾薬と部品のパックです。</ATP_Apparel_LargeTurretShotgun.description>
+
+  <!-- EN: large animal blaster turret pack -->
+  <ATP_Apparel_LargeTurretCharge.label>大型動物用チャージタレットパック</ATP_Apparel_LargeTurretCharge.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretCharge.description>大型の動物が運べるよう設計された、搭載型のチャージ式ミニタレットを制御する弾薬と部品のパックです。</ATP_Apparel_LargeTurretCharge.description>
+
+  <!-- EN: small animal grenade belt -->
+  <ATP_Apparel_SmallGrenades.label>小型動物用グレネードベルト</ATP_Apparel_SmallGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by small animals. -->
+  <ATP_Apparel_SmallGrenades.description>小型の動物が身に着けられるよう設計されたグレネードベルトです。</ATP_Apparel_SmallGrenades.description>
+
+  <!-- EN: large animal grenade belt -->
+  <ATP_Apparel_LargeGrenades.label>大型動物用グレネードベルト</ATP_Apparel_LargeGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by large animals. -->
+  <ATP_Apparel_LargeGrenades.description>大型の動物が身に着けられるよう設計されたグレネードベルトです。</ATP_Apparel_LargeGrenades.description>
+
+  <!-- EN: mini-turret bullet -->
+  <ATP_Bullet_SmallTurret.label>ミニタレットの弾丸</ATP_Bullet_SmallTurret.label>
+
+  <!-- EN: mini-shotgun blast -->
+  <ATP_Bullet_ShotgunTurret.label>ミニショットガンの散弾</ATP_Bullet_ShotgunTurret.label>
+
+  <!-- EN: mini-turret blaster shot -->
+  <ATP_Bullet_SpacerTurret.label>ミニタレットのチャージ弾</ATP_Bullet_SpacerTurret.label>
+
+  <!-- MVCF command labels and tooltips. -->
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット砲身</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動砲です。</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット・ショットガン</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動ショットガンです。</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット・チャージ砲</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動チャージ砲です。</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット砲身</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動砲です。</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット・ショットガン</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動ショットガンです。</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット・チャージ砲</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動チャージ砲です。</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>グレネード</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けられたグレネードベルトです。</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>グレネード</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けられたグレネードベルトです。</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+
+  <!-- Verb labels: the standard verb and its MVCF twin carry the same label and MVCF pairs them by it, so both are
+       translated to the same word (replayed by the French turret scenario of feature 03). -->
+  <ATP_Apparel_SmallTurret.verbs.0.label>砲</ATP_Apparel_SmallTurret.verbs.0.label>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>砲</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretShotgun.verbs.0.label>ショットガン</ATP_Apparel_SmallTurretShotgun.verbs.0.label>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>ショットガン</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretCharge.verbs.0.label>チャージ砲</ATP_Apparel_SmallTurretCharge.verbs.0.label>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>チャージ砲</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurret.verbs.0.label>砲</ATP_Apparel_LargeTurret.verbs.0.label>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>砲</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretShotgun.verbs.0.label>ショットガン</ATP_Apparel_LargeTurretShotgun.verbs.0.label>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>ショットガン</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretCharge.verbs.0.label>チャージ砲</ATP_Apparel_LargeTurretCharge.verbs.0.label>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>チャージ砲</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallGrenades.verbs.0.label>グレネード</ATP_Apparel_SmallGrenades.verbs.0.label>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>グレネード</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeGrenades.verbs.0.label>グレネード</ATP_Apparel_LargeGrenades.verbs.0.label>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>グレネード</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+
+</LanguageData>

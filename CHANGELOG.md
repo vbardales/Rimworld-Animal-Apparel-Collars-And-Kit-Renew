@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add a Japanese translation: Lucifel's "Animal Gear 日本語翻訳" texts for the 18 apparel and research defs shared with
+  Animal Gear (credited in ATTRIBUTION.md), and new Japanese texts for everything else, settings included.
+- Add a `MVCF.ModDef` (`Mods/VEF/Defs/MVCFDefs/AACK_MVCF.xml`) enabling MVCF's `ApparelVerbs` and `Drawing` features
+  when VEF is active: without it the turret packs registered no verb and the turret was never drawn on the animal.
+
 - Declare Medieval Horse Plate Armour incompatible again: its plate, helmet and saddle are already in this mod under new
   defNames, so loading it adds a second saddle and a patch with no target.
 - Exclude the diaper, the goat mail and the turret pack base from relic selection too, like the other animal apparel

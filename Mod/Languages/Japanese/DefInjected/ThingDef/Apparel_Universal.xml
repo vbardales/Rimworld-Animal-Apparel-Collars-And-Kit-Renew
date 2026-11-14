@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Japanese texts marked "Lucifel" come unchanged from "Animal Gear 日本語翻訳" by Lucifel (Steam Workshop 2644824504,
+       packageId Lucifel.AnimalGear.JPT). No licence is stated there; see ATTRIBUTION.md. All other entries were written for this mod. -->
+
+
+  <!-- The universal pieces only exist when Vanilla Expanded Framework is active
+       (Mods/VEF/Defs/ThingDefs/Apparel_Universal.xml). A DefInjected key whose def is absent
+       is silently ignored, so keeping them in this same folder costs nothing. -->
+
+  <!-- EN: universal animal clothes -->
+  <Apparel_AnimalClothes.label>動物用衣服(汎用)</Apparel_AnimalClothes.label> <!-- Lucifel -->
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_AnimalClothes.description>動物用の頑丈な衣服です.ちょっとした傷や切り傷はもちろんのこと,風雨からも保護します.</Apparel_AnimalClothes.description> <!-- Lucifel -->
+
+  <!-- EN: universal pet scarf -->
+  <Apparel_AnimalScarf.label>動物用スカーフ(汎用)</Apparel_AnimalScarf.label> <!-- Lucifel -->
+  <!-- EN: A stylish accessory for cool, laid-back animals. -->
+  <Apparel_AnimalScarf.description>クールでゆったりとした動物たちのためのスタイリッシュなスカーフです.</Apparel_AnimalScarf.description> <!-- Lucifel -->
+
+  <!-- EN: universal riding gear -->
+  <Apparel_AnimalReins.label>万能騎乗用具</Apparel_AnimalReins.label> <!-- Lucifel -->
+  <!-- EN: Provides protection and a harness for riding. -->
+  <Apparel_AnimalReins.description>騎乗時の保護とハーネスを備えています.</Apparel_AnimalReins.description> <!-- Lucifel -->
+
+  <!-- EN: universal animal power armor -->
+  <Apparel_AnimalPowerArmor.label>動物用パワーアーマー(汎用)</Apparel_AnimalPowerArmor.label> <!-- Lucifel -->
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
+  <Apparel_AnimalPowerArmor.description>戦闘動物用に特別に設計された軽量パワーアーマーです.プラスチールを織り込んだ金属板を重ねることで,攻撃を防ぐのに非常に効果的で,関節部もしっかり覆われていて脆い部分はほとんどありません.神経記憶補助装置により,鎧を着用しても阻害されることなく動物は動き回ることができます.</Apparel_AnimalPowerArmor.description> <!-- Lucifel -->
+
+  <!-- EN: universal animal power helmet -->
+  <Apparel_AnimalPowerArmorHelmet.label>動物用パワーヘルメット(汎用)</Apparel_AnimalPowerArmorHelmet.label> <!-- Lucifel -->
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
+  <Apparel_AnimalPowerArmorHelmet.description>動物用に設計された,プラスチール製の金属板を織り込んで重ねたパワーヘルメットです.</Apparel_AnimalPowerArmorHelmet.description> <!-- Lucifel -->
+
+</LanguageData>

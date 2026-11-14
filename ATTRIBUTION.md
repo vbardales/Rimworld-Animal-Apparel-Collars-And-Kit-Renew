@@ -202,6 +202,19 @@ repository. Owlchemist never added the tag to go with the horse art; it is added
 - **s_m_w** (whose packageId prefix is Ingendum), for Animal Apparel: Framework and Basic Armor, which this is built on.
 - **Owlchemist** again, whose fork of Dylan's Animal Gear was s_m_w's starting point.
 
+## Japanese translation
+
+`Mod/Languages/Japanese` carries the Japanese texts of **Animal Gear 日本語翻訳** by **Lucifel**
+([2644824504](https://steamcommunity.com/sharedfiles/filedetails/?id=2644824504), packageId `Lucifel.AnimalGear.JPT`)
+for the 18 defs it shares with this mod (35 DefInjected fields, each marked `<!-- Lucifel -->` in the files), copied unchanged.
+The Workshop page and the package state no licence. They are included at the owner's decision (2026-11-14), without the
+author's agreement; they are removed on the author's first request. Every other Japanese text (76 DefInjected fields and
+the settings) was written for this mod with Claude and has not been reviewed by a native speaker.
+
+Of the four other translations of Animal Gear found, the Russian-Chinese 2894662683 and the two Spanish ones
+(3022247253, 3022246963) share no def with this mod. The Chinese pack 1998940296 (2020) shares five and is not
+integrated yet: it awaits the owner's decision.
+
 ## Not migrated, and why
 
 - **Animal Gear Third-Party Patches** ([2956961272](https://steamcommunity.com/sharedfiles/filedetails/?id=2956961272),

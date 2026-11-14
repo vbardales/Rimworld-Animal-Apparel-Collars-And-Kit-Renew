@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Japanese texts marked "Lucifel" come unchanged from "Animal Gear 日本語翻訳" by Lucifel (Steam Workshop 2644824504,
+       packageId Lucifel.AnimalGear.JPT). No licence is stated there; see ATTRIBUTION.md. All other entries were written for this mod. -->
+
+
+  <!-- ===== Dog Collars, by Shenanigans ===== -->
+
+  <!-- EN: leather dog collar -->
+  <Apparel_leatherdogcollar.label>革の首輪</Apparel_leatherdogcollar.label>
+  <!-- EN: A simple leather collar for dogs and other canines. It provides some protection for the neck. -->
+  <Apparel_leatherdogcollar.description>犬などイヌ科の動物向けのシンプルな革の首輪です。首を少しだけ守ります。</Apparel_leatherdogcollar.description>
+
+  <!-- EN: studded dog collar -->
+  <Apparel_studdeddogcollar.label>鋲付きの首輪</Apparel_studdeddogcollar.label>
+  <!-- EN: A leather dog collar reinforced with metal studs for added protection. -->
+  <Apparel_studdeddogcollar.description>金属の鋲で補強した革の首輪です。防御力が高まります。</Apparel_studdeddogcollar.description>
+
+  <!-- EN: dog neck bow -->
+  <Apparel_dogbow.label>蝶ネクタイ</Apparel_dogbow.label>
+  <!-- EN: A pretty little neck bow for dogs and other canines. It doesn't provide much protection, but it's a bit better than nothing at all. Plus, it's cute! -->
+  <Apparel_dogbow.description>犬などイヌ科の動物向けの、かわいらしい首元のリボンです。防御力はほとんどありませんが、何もないよりは少しましです。しかも、かわいい!</Apparel_dogbow.description>
+
+  <!-- EN: shield dog collar -->
+  <Apparel_shielddogcollar.label>シールド首輪</Apparel_shielddogcollar.label>
+  <!-- EN: A projectile-repulsion collar. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. -->
+  <Apparel_shielddogcollar.description>飛来する弾丸や破片を防ごうとする、弾道反発式の首輪です。近接攻撃や熱には効果がありません。</Apparel_shielddogcollar.description>
+
+  <!-- ===== Animal Diapers, by Dipsy ===== -->
+
+  <!-- EN: diaper -->
+  <diaper.label>おむつ</diaper.label>
+  <!-- EN: A diaper that animals can wear to eliminate filth production for a short time. -->
+  <diaper.description>動物が着用すると、しばらくの間、汚れが出なくなるおむつです。</diaper.description>
+
+  <!-- ===== [CSM]RealisticAwesomeGoat, by CSM ===== -->
+
+  <!-- EN: goat mail -->
+  <Apparel_GoatMail.label>ヤギ用鎖帷子</Apparel_GoatMail.label>
+  <!-- EN: Armor plates covering the body. Protects against gunfire and melee attacks. -->
+  <Apparel_GoatMail.description>体を覆う装甲板です。銃撃と近接攻撃から身を守ります。</Apparel_GoatMail.description>
+
+  <!-- ===== Medieval Horse Plate Armour, by Riful ===== -->
+
+  <!-- EN: horse barding -->
+  <Apparel_MedievalHorsePlate.label>馬鎧</Apparel_MedievalHorsePlate.label>
+  <!-- EN: Medieval plate barding shaped for a horse. Cumbersome, but it turns aside blades and blunts a charge. -->
+  <Apparel_MedievalHorsePlate.description>馬の体に合わせて作られた中世のプレートアーマーです。重くて扱いにくいですが、刃を受け流し、突撃の衝撃を和らげます。</Apparel_MedievalHorsePlate.description>
+
+  <!-- EN: horse chanfron -->
+  <Apparel_MedievalHorseHelmet.label>馬用面甲</Apparel_MedievalHorseHelmet.label>
+  <!-- EN: A plate faceguard shaped for a horse's head. Moderate protection against sharp attacks, little against blunt ones. -->
+  <Apparel_MedievalHorseHelmet.description>馬の頭に合わせて作られたプレート製の顔面防具です。鋭い攻撃にはそれなりに強く、鈍器にはあまり効きません。</Apparel_MedievalHorseHelmet.description>
+
+  <!-- EN: saddle -->
+  <Apparel_MedievalHorseSaddle.label>鞍</Apparel_MedievalHorseSaddle.label>
+  <!-- EN: A saddle for riding a horse, comfortably. -->
+  <Apparel_MedievalHorseSaddle.description>馬に快適に乗るための鞍です。</Apparel_MedievalHorseSaddle.description>
+
+  <!-- ===== Animal Equipment, by Owlchemist (after jptrrs) ===== -->
+
+  <!-- EN: animal clothes -->
+  <Apparel_SmallAnimalClothes.label>動物用衣服</Apparel_SmallAnimalClothes.label> <!-- Lucifel -->
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_SmallAnimalClothes.description>動物用の頑丈な衣服です.ちょっとした傷や切り傷はもちろんのこと,風雨からも保護します.</Apparel_SmallAnimalClothes.description> <!-- Lucifel -->
+
+  <!-- EN: large animal clothes -->
+  <Apparel_LargeAnimalClothes.label>動物用衣服(大型用)</Apparel_LargeAnimalClothes.label> <!-- Lucifel -->
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_LargeAnimalClothes.description>大型の動物用の頑丈な衣服です.ちょっとした傷や切り傷はもちろんのこと,風雨からも保護します.</Apparel_LargeAnimalClothes.description> <!-- Lucifel -->
+
+  <!-- EN: animal headwear -->
+  <Apparel_SmallAnimalScarf.label>動物用スカーフ</Apparel_SmallAnimalScarf.label> <!-- Lucifel -->
+  <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit an animal. -->
+  <Apparel_SmallAnimalScarf.description>動物用に合わせて作られた,布や革でできたスカーフです.</Apparel_SmallAnimalScarf.description> <!-- Lucifel -->
+
+  <!-- EN: large animal headwear -->
+  <Apparel_LargeAnimalScarf.label>動物用スカーフ(大型用)</Apparel_LargeAnimalScarf.label> <!-- Lucifel -->
+  <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit a large animal. -->
+  <Apparel_LargeAnimalScarf.description>大型の動物用に合わせて作られた,布や革でできたスカーフです.</Apparel_LargeAnimalScarf.description> <!-- Lucifel -->
+
+  <!-- EN: riding gear -->
+  <Apparel_bridle.label>騎乗用具</Apparel_bridle.label> <!-- Lucifel -->
+  <!-- EN: Provides protection and a harness for riding. -->
+  <Apparel_bridle.description>騎乗時の保護とハーネスを備えています.</Apparel_bridle.description> <!-- Lucifel -->
+
+  <!-- EN: animal power armor -->
+  <Apparel_SmallAnimalPowerArmor.label>動物用パワーアーマー</Apparel_SmallAnimalPowerArmor.label> <!-- Lucifel -->
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
+  <Apparel_SmallAnimalPowerArmor.description>戦闘動物用に特別に設計された軽量パワードアーマーです.プラスチールを織り込んだ金属板を重ねることで,攻撃を防ぐのに非常に効果的で,関節部もしっかり覆われていて脆い部分はほとんどありません.神経記憶補助装置により,鎧を着用しても阻害されることなく動物は動き回ることができます.</Apparel_SmallAnimalPowerArmor.description> <!-- Lucifel -->
+
+  <!-- EN: large animal power armor -->
+  <Apparel_LargeAnimalPowerArmor.label>動物用パワーアーマー(大型用)</Apparel_LargeAnimalPowerArmor.label> <!-- Lucifel -->
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a large animal to wear the armor and still move easily. -->
+  <Apparel_LargeAnimalPowerArmor.description>大型の戦闘動物用に特別に設計された軽量パワードアーマーです.プラスチールを織り込んだ金属板を重ねることで,攻撃を防ぐのに非常に効果的で,関節部もしっかり覆われていて脆い部分はほとんどありません.神経記憶補助装置により,鎧を着用しても阻害されることなく動物は動き回ることができます.</Apparel_LargeAnimalPowerArmor.description> <!-- Lucifel -->
+
+  <!-- EN: animal power helmet -->
+  <Apparel_SmallAnimalPowerArmorHelmet.label>動物用パワーヘルメット</Apparel_SmallAnimalPowerArmorHelmet.label> <!-- Lucifel -->
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
+  <Apparel_SmallAnimalPowerArmorHelmet.description>動物用に設計された,プラスチール製の金属板を織り込んで重ねたパワーヘルメットです.</Apparel_SmallAnimalPowerArmorHelmet.description> <!-- Lucifel -->
+
+  <!-- EN: large animal power helmet -->
+  <Apparel_LargeAnimalPowerArmorHelmet.label>動物用パワーヘルメット(大型用)</Apparel_LargeAnimalPowerArmorHelmet.label> <!-- Lucifel -->
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for large animals. -->
+  <Apparel_LargeAnimalPowerArmorHelmet.description>大型の動物用に設計された,プラスチール製の金属板を織り込んで重ねたパワーヘルメットです.</Apparel_LargeAnimalPowerArmorHelmet.description> <!-- Lucifel -->
+
+</LanguageData>

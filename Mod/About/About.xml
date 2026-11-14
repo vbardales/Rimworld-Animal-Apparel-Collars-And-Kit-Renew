@@ -7,8 +7,8 @@
     <li>1.6</li>
   </supportedVersions>
   <url>https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew</url>
-  <description>UNOFFICIAL. This mod is published without the original author's explicit consent.
-If the original author contacts me to request its removal, I undertake to take it down promptly.
+  <description>UNOFFICIAL. This mod is published without the original authors' explicit consent.
+If an original author contacts me to request its removal, I undertake to take it down promptly.
 
 Collars, diapers, clothing, turret packs and horse barding for animals, rebuilt on Animal Apparel: Framework (https://steamcommunity.com/sharedfiles/filedetails/?id=3513825850).
 
@@ -29,11 +29,11 @@ The framework gives animals three body part groups, so a collar would share a sl
 
 Settings
 
-With Vanilla Expanded Framework active, open Mod options, then this mod's name: disable universal placeholder apparel, and exclude animal apparel from new relics. Existing VEF choices are kept. Changes apply after restarting RimWorld. An optional main-bar shortcut is hidden by default for customization mods to reveal.
+With Vanilla Expanded Framework active, open Mod options, then this mod's name: disable universal placeholder apparel, and exclude animal apparel from new relics. Existing VEF choices are kept. Changes apply after restarting RimWorld. An optional main-bar shortcut is hidden by default; customization mods can reveal it.
 
 Compatibility
 
-Requires Animal Apparel: Framework. Cannot run with Dylan's Animal Gear (the framework's own restriction), nor with the seven source mods, which declare the same defNames or carry content this mod already includes: disable them. Optional, with per-animal art or patches: Vanilla Animals Expanded, Vanilla Factions Expanded, Alpha Animals, Alpha Mythology (formerly Magical Menagerie), Spidercamp's Dog Pack, Rim Effect, Giddy-Up 2, Combat Extended, and about a dozen other animal mods listed in the repository README. Nothing errors when one is absent.
+Requires Animal Apparel: Framework. Cannot run with Dylan's Animal Gear (the framework's own restriction), nor with the seven source mods, which declare the same defNames or carry content this mod already includes: disable them. Optional, with per-animal art or patches: Vanilla Animals Expanded, Vanilla Factions Expanded, Alpha Animals, Alpha Mythology (formerly Magical Menagerie), Spidercamp's Dog Pack, Rim Effect, Giddy-Up 2, Combat Extended, and about a dozen other animal mods listed in the repository README. No error is expected when one is absent.
 
 No per-save data of its own. Removing it mid-game deletes anything crafted from it, like any content mod.
 
@@ -43,11 +43,11 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 AI-generated
 
-Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI).
+Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI). The Japanese texts of the apparel shared with Animal Gear are by Lucifel; the other Japanese texts were translated with Claude and have not been reviewed by a native speaker.
 
 Thanks
 
-The six authors above and jptrrs; s_m_w, for Animal Apparel: Framework and Basic Armor; Owlchemist; Dylan, for the original Animal Gear. Harmony, and the development-only test tools Pickle and RimLogging, never a dependency of this mod.
+Shenanigans, Dipsy, flangopink, Ogam, Riful, CSM, Owlchemist and jptrrs; Lucifel, for the Japanese translation of Animal Gear; s_m_w, for Animal Apparel: Framework and Basic Armor; and Dylan, for the original Animal Gear. Harmony is never a dependency of this mod. Pickle and RimLogging are development-only tools, never dependencies of this mod.
 
 Credits, licence scope and the source-by-source assessment are in ATTRIBUTION.md and LICENSE (MIT for original contributions and Animal Equipment only).
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Japanese texts marked "Lucifel" come unchanged from "Animal Gear 日本語翻訳" by Lucifel (Steam Workshop 2644824504,
+       packageId Lucifel.AnimalGear.JPT). No licence is stated there; see ATTRIBUTION.md. All other entries were written for this mod. -->
+
+
+  <!-- EN: animal gear -->
+  <AnimalGear.label>動物の衣服</AnimalGear.label> <!-- Lucifel -->
+
+</LanguageData>
