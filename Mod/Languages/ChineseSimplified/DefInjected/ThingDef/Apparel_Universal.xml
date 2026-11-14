@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Four labels marked "Animal Gear Collection Chinese Pack" come unchanged from that pack by 混沌の味方 (Steam Workshop 1998940296,
+       packageId AnimalGear.ChinesePack). No licence is stated there; see ATTRIBUTION.md. All other entries were written for this mod. -->
+
+
+  <!-- The universal pieces only exist when Vanilla Expanded Framework is active
+       (Mods/VEF/Defs/ThingDefs/Apparel_Universal.xml). A DefInjected key whose def is absent
+       is silently ignored, so keeping them in this same folder costs nothing. -->
+
+  <!-- EN: universal animal clothes -->
+  <Apparel_AnimalClothes.label>动物服饰</Apparel_AnimalClothes.label> <!-- Animal Gear Collection Chinese Pack -->
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_AnimalClothes.description>坚固耐用的动物服装，能抵御恶劣天气，也能防护轻微的擦伤和割伤。</Apparel_AnimalClothes.description>
+
+  <!-- EN: universal pet scarf -->
+  <Apparel_AnimalScarf.label>宠物围巾</Apparel_AnimalScarf.label> <!-- Animal Gear Collection Chinese Pack -->
+  <!-- EN: A stylish accessory for cool, laid-back animals. -->
+  <Apparel_AnimalScarf.description>为悠闲酷飒的动物准备的时尚配饰。</Apparel_AnimalScarf.description>
+
+  <!-- EN: universal riding gear -->
+  <Apparel_AnimalReins.label>通用骑乘装备</Apparel_AnimalReins.label>
+  <!-- EN: Provides protection and a harness for riding. -->
+  <Apparel_AnimalReins.description>提供防护，并配有骑乘用的挽具。</Apparel_AnimalReins.description>
+
+  <!-- EN: universal animal power armor -->
+  <Apparel_AnimalPowerArmor.label>动物动力装甲</Apparel_AnimalPowerArmor.label> <!-- Animal Gear Collection Chinese Pack -->
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
+  <Apparel_AnimalPowerArmor.description>专为战斗动物设计的轻型动力装甲。多层塑钢编织板能高效抵御攻击，几乎没有脆弱的关节部位。神经模因辅助器让动物穿着后依然行动自如。</Apparel_AnimalPowerArmor.description>
+
+  <!-- EN: universal animal power helmet -->
+  <Apparel_AnimalPowerArmorHelmet.label>动物动力头盔</Apparel_AnimalPowerArmorHelmet.label> <!-- Animal Gear Collection Chinese Pack -->
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
+  <Apparel_AnimalPowerArmorHelmet.description>采用多层塑钢编织板的动力头盔，专为动物设计。</Apparel_AnimalPowerArmorHelmet.description>
+
+</LanguageData>

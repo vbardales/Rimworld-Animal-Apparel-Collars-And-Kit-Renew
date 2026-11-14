@@ -4,6 +4,8 @@
 
 - Add a Japanese translation: Lucifel's "Animal Gear 日本語翻訳" texts for the 18 apparel and research defs shared with
   Animal Gear (credited in ATTRIBUTION.md), and new Japanese texts for everything else, settings included.
+- Add a Simplified Chinese translation: four labels from 混沌の味方's "Animal Gear Collection Chinese Pack" (credited in
+  ATTRIBUTION.md), new Chinese texts for everything else, settings included.
 - Add a `MVCF.ModDef` (`Mods/VEF/Defs/MVCFDefs/AACK_MVCF.xml`) enabling MVCF's `ApparelVerbs` and `Drawing` features
   when VEF is active: without it the turret packs registered no verb and the turret was never drawn on the animal.
 

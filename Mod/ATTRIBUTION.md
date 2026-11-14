@@ -211,9 +211,15 @@ The Workshop page and the package state no licence. They are included at the own
 author's agreement; they are removed on the author's first request. Every other Japanese text (76 DefInjected fields and
 the settings) was written for this mod with Claude and has not been reviewed by a native speaker.
 
-Of the four other translations of Animal Gear found, the Russian-Chinese 2894662683 and the two Spanish ones
-(3022247253, 3022246963) share no def with this mod. The Chinese pack 1998940296 (2020) shares five and is not
-integrated yet: it awaits the owner's decision.
+`Mod/Languages/ChineseSimplified` takes four labels from the **Animal Gear Collection Chinese Pack** by **混沌の味方**
+([1998940296](https://steamcommunity.com/sharedfiles/filedetails/?id=1998940296), packageId `AnimalGear.ChinesePack`, 2020), unchanged
+and marked in the files: universal animal clothes, pet scarf, power armor and power helmet. No licence is stated; included at the
+owner's decision (2026-11-14), removed on the author's first request. Its other shared texts were not copied: the bridle label names
+the thrumbo only, and the descriptions list the species of the 2020 mod, which this mod's defs do not match. Its "Traditional" folder
+holds the same Simplified text, so no Traditional Chinese pack is shipped. All other Chinese texts (107 fields, settings included)
+were written for this mod with Claude and have not been reviewed by a native speaker.
+
+The Russian-Chinese 2894662683 and the two Spanish translations (3022247253, 3022246963) share no def with this mod and add nothing.
 
 ## Not migrated, and why
 

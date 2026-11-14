@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Four labels marked "Animal Gear Collection Chinese Pack" come unchanged from that pack by 混沌の味方 (Steam Workshop 1998940296,
+       packageId AnimalGear.ChinesePack). No licence is stated there; see ATTRIBUTION.md. All other entries were written for this mod. -->
+
+
+  <!-- EN: riding gear -->
+  <AnimalRidingGear.label>骑乘装备</AnimalRidingGear.label>
+  <!-- EN: Develop new equipment designs to improve animal riding. -->
+  <AnimalRidingGear.description>研发改善动物骑乘体验的新装备设计。</AnimalRidingGear.description>
+
+  <!-- EN: animal clothing -->
+  <ComplexAnimalClothing.label>动物服装</ComplexAnimalClothing.label>
+  <!-- EN: Adapt complex clothing to fit onto a variety of domestic animals. -->
+  <ComplexAnimalClothing.description>将复杂的服装改造得适合各种家养动物穿戴。</ComplexAnimalClothing.description>
+
+  <!-- EN: power-armored animals -->
+  <PoweredAnimalArmor.label>动力装甲动物</PoweredAnimalArmor.label>
+  <!-- EN: Craft high-tech power armor made to fit onto domestic animals. -->
+  <PoweredAnimalArmor.description>制造适合家养动物穿戴的高科技动力装甲。</PoweredAnimalArmor.description>
+
+  <!-- The two below only exist when Vanilla Expanded Framework is active
+       (Mods/VEF/Defs/ResearchDefs/ResearchProjects_ATP.xml). -->
+
+  <!-- EN: weaponized animals -->
+  <ATP_Weapons.label>武装动物</ATP_Weapons.label>
+  <!-- EN: Adapt existing weapon designs into turret packs specially made for animals. -->
+  <ATP_Weapons.description>将现有的武器设计改造成专为动物打造的炮塔包。</ATP_Weapons.description>
+
+  <!-- EN: animal charge weapons -->
+  <ATP_Charge.label>动物电荷武器</ATP_Charge.label>
+  <!-- EN: Craft high-tech charge weapons made to fit onto domestic animals. -->
+  <ATP_Charge.description>制造适合家养动物搭载的高科技电荷武器。</ATP_Charge.description>
+
+</LanguageData>

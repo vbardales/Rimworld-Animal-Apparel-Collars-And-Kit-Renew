@@ -50,11 +50,11 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## AI-generated
 
-Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI). The Japanese texts of the apparel shared with Animal Gear are by Lucifel; the other Japanese texts were translated with Claude and have not been reviewed by a native speaker.
+Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI). The Japanese texts of the apparel shared with Animal Gear are by Lucifel, and four Simplified Chinese labels are by 混沌の味方; all other Japanese and Simplified Chinese texts were translated with Claude and have not been reviewed by a native speaker.
 
 ## Thanks
 
-Shenanigans, Dipsy, flangopink, Ogam, Riful, CSM, Owlchemist and jptrrs; Lucifel, for the Japanese translation of Animal Gear; s_m_w, for Animal Apparel: Framework and Basic Armor; and Dylan, for the original Animal Gear. Harmony is never a dependency of this mod. Pickle and RimLogging are development-only tools, never dependencies of this mod.
+Shenanigans, Dipsy, flangopink, Ogam, Riful, CSM, Owlchemist and jptrrs; Lucifel and 混沌の味方, for the Japanese and Chinese translations of Animal Gear; s_m_w, for Animal Apparel: Framework and Basic Armor; and Dylan, for the original Animal Gear. Harmony is never a dependency of this mod. Pickle and RimLogging are development-only tools, never dependencies of this mod.
 
 Credits, licence scope and the source-by-source assessment are in ATTRIBUTION.md and LICENSE (MIT for original contributions and Animal Equipment only).
 
@@ -74,7 +74,7 @@ Drafted for the first real release; fill it in when the 1.0.0 content is final.
 First release. Six abandoned Animal Gear add-ons and the unfinished half of a seventh have been moved to Animal Apparel: Framework for RimWorld 1.6.
 [list]
 [*]AnimalNeck slot and collars one layer above armour.
-[*]Localized settings under Mod options (with Vanilla Expanded Framework), English, French and Japanese.
+[*]Localized settings under Mod options (with Vanilla Expanded Framework), English, French, Japanese and Simplified Chinese.
 [*]Diaper no longer references the missing VAE gorilla with Odyssey.
 [/list]
 ```
