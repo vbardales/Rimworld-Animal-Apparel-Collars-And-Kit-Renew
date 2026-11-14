@@ -206,9 +206,11 @@ repository. Owlchemist never added the tag to go with the horse art; it is added
 
 `Mod/Languages/Japanese` carries the Japanese texts of **Animal Gear 日本語翻訳** by **Lucifel**
 ([2644824504](https://steamcommunity.com/sharedfiles/filedetails/?id=2644824504), packageId `Lucifel.AnimalGear.JPT`)
-for the 18 defs it shares with this mod (35 DefInjected fields, each marked `<!-- Lucifel -->` in the files), copied unchanged.
+for the 18 defs it shares with this mod: 32 DefInjected fields, each marked `<!-- Lucifel -->` in the files, copied with only
+the ASCII `.` and `,` turned into `。` and `、`. Three more fields (tab label, riding gear and complex clothing descriptions)
+were corrected after the ChatGPT review and are no longer marked.
 The Workshop page and the package state no licence. They are included at the owner's decision (2026-11-14), without the
-author's agreement; they are removed on the author's first request. Every other Japanese text (76 DefInjected fields and
+author's agreement; they are removed on the author's first request. Every other Japanese text (79 DefInjected fields and
 the settings) was written for this mod with Claude and has not been reviewed by a native speaker.
 
 `Mod/Languages/ChineseSimplified` takes four labels from the **Animal Gear Collection Chinese Pack** by **混沌の味方**

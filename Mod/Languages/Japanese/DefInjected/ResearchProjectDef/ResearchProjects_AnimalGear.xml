@@ -7,17 +7,17 @@
   <!-- EN: riding gear -->
   <AnimalRidingGear.label>騎乗用具</AnimalRidingGear.label> <!-- Lucifel -->
   <!-- EN: Develop new equipment designs to improve animal riding. -->
-  <AnimalRidingGear.description>動物の乗り心地を向上させるための新しい用具の設計をします.</AnimalRidingGear.description> <!-- Lucifel -->
+  <AnimalRidingGear.description>動物への騎乗を改善する新しい装備を開発します。</AnimalRidingGear.description>
 
   <!-- EN: animal clothing -->
   <ComplexAnimalClothing.label>動物の衣服</ComplexAnimalClothing.label> <!-- Lucifel -->
   <!-- EN: Adapt complex clothing to fit onto a variety of domestic animals. -->
-  <ComplexAnimalClothing.description>動物に合わせたさまざまな衣服を作ります.</ComplexAnimalClothing.description> <!-- Lucifel -->
+  <ComplexAnimalClothing.description>複雑な衣服をさまざまな家畜に合うよう改造します。</ComplexAnimalClothing.description>
 
   <!-- EN: power-armored animals -->
   <PoweredAnimalArmor.label>動物用パワーアーマー</PoweredAnimalArmor.label> <!-- Lucifel -->
   <!-- EN: Craft high-tech power armor made to fit onto domestic animals. -->
-  <PoweredAnimalArmor.description>動物に合わせたハイテクのパワーアーマーを作ります.</PoweredAnimalArmor.description> <!-- Lucifel -->
+  <PoweredAnimalArmor.description>動物に合わせたハイテクのパワーアーマーを作ります。</PoweredAnimalArmor.description> <!-- Lucifel -->
 
   <!-- The two below only exist when Vanilla Expanded Framework is active
        (Mods/VEF/Defs/ResearchDefs/ResearchProjects_ATP.xml). -->
