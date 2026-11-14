@@ -420,8 +420,11 @@ namespace AnimalApparelCollars.PickleSteps
                 .Select(a => a.GetType("MVCF.Utilities.PawnVerbUtility", false)).FirstOrDefault(t => t != null);
             ctx.Require(util != null, "MVCF.Utilities.PawnVerbUtility not found (MVCF not loaded)");
             MethodInfo manager = util.GetMethod("Manager", BindingFlags.Public | BindingFlags.Static);
-            object man = manager?.Invoke(null, new object[] { pawn, false });
-            ctx.Require(man != null, $"'{nickname}' has no MVCF VerbManager");
+            // 2026-11-14 (ticket f324): MVCF creates a pawn's VerbManager lazily (gizmos, target finder, AI) and its drawing
+            // postfix reads it with createIfMissing:false, so a pawn nobody has asked yet is never drawn. Create it here
+            // the way the first selection or AI query would; the capture that follows then shows the real drawing.
+            object man = manager?.Invoke(null, new object[] { pawn, true });
+            ctx.Require(man != null, $"'{nickname}' has no MVCF VerbManager even with createIfMissing");
             System.Collections.IEnumerable verbs = man.GetType().GetProperty("ManagedVerbs")?.GetValue(man) as System.Collections.IEnumerable;
             System.Collections.IList drawVerbs = man.GetType()
                 .GetField("drawVerbs", BindingFlags.NonPublic | BindingFlags.Instance)?.GetValue(man) as System.Collections.IList;
