@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- MVCF only gives a worn apparel's verbs to a pawn, and only draws them, when a mod switches
+	     these two features on with an MVCF.ModDef. Animal Turret Packs shipped none, so the turret
+	     packs showed up only when some other mod had already switched them on (ticket a7a0: with
+	     Vanilla Expanded Framework alone a muffalo wearing a pack had no managed verb and no
+	     turret was drawn). This mod now asks for exactly what its packs need. -->
+	<MVCF.ModDef>
+		<defName>AACK_MVCF</defName>
+		<ActivateFeatures>
+			<li>ApparelVerbs</li>
+			<li>Drawing</li>
+		</ActivateFeatures>
+	</MVCF.ModDef>
+</Defs>
