@@ -21,7 +21,7 @@
   <!-- EN: shield dog collar -->
   <Apparel_shielddogcollar.label>collier à bouclier</Apparel_shielddogcollar.label>
   <!-- EN: A projectile-repulsion collar. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. -->
-  <Apparel_shielddogcollar.description>Un collier répulseur de projectiles. Il tente d'arrêter les tirs et les éclats, mais ne fait rien contre les attaques de mêlée ni contre la chaleur.</Apparel_shielddogcollar.description>
+  <Apparel_shielddogcollar.description>Un collier répulseur de projectiles. Il tente d'arrêter les projectiles et les éclats, mais ne fait rien contre les attaques de mêlée ni contre la chaleur.</Apparel_shielddogcollar.description>
 
   <!-- ===== Animal Diapers, by Dipsy ===== -->
 
