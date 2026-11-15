@@ -58,13 +58,13 @@
   <ATP_Bullet_SpacerTurret.label>迷你炮塔电荷弹</ATP_Bullet_SpacerTurret.label>
 
   <!-- MVCF command labels and tooltips. -->
-  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你炮塔炮管</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你炮塔炮</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>专为安装在动物身上而设计的简单的自动炮。</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>
   <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你炮塔霰弹枪</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>专为安装在动物身上而设计的简单的自动霰弹枪。</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
   <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你炮塔电荷炮</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>专为安装在动物身上而设计的简单的自动电荷炮。</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
-  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你炮塔炮管</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你炮塔炮</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>专为安装在动物身上而设计的简单的自动炮。</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>
   <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你炮塔霰弹枪</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>专为安装在动物身上而设计的简单的自动霰弹枪。</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>

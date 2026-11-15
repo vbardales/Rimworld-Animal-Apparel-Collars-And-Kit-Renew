@@ -58,13 +58,13 @@
   <ATP_Bullet_SpacerTurret.label>ミニタレットのチャージ弾</ATP_Bullet_SpacerTurret.label>
 
   <!-- MVCF command labels and tooltips. -->
-  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット砲身</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット砲</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動砲です。</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>
   <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット・ショットガン</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動ショットガンです。</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
   <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット・チャージ砲</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動チャージ砲です。</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
-  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット砲身</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット砲</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動砲です。</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>
   <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>ミニタレット・ショットガン</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>動物に取り付けるよう設計された、シンプルな自動ショットガンです。</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
