@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <AA_CK_SettingsScope>Estos ajustes se aplican a todas las partidas y surten efecto tras reiniciar RimWorld. Las opciones ya elegidas en Vanilla Expanded Framework se conservan.</AA_CK_SettingsScope>
+  <AA_CK_Universal>Desactivar la ropa universal para animales</AA_CK_Universal>
+  <AA_CK_UniversalHelp>Por defecto: desactivado. Elimina las cinco prendas universales que usan arte provisional. El equipo específico de cada especie sigue disponible. Tras reiniciar, las prendas desactivadas que ya estén en partidas guardadas desaparecerán; conviene hacer una copia de seguridad de la partida antes de activar esta opción.</AA_CK_UniversalHelp>
+  <AA_CK_Relics>Excluir la ropa para animales de las reliquias</AA_CK_Relics>
+  <AA_CK_RelicsHelp>Por defecto: activado. Impide que esta ropa para animales sea elegida como nueva reliquia cuando Vanilla Ideology Expanded - Relics and Artifacts está activo. Las reliquias existentes no se convierten.</AA_CK_RelicsHelp>
+  <AA_CK_RelicsUnavailable>Requiere Vanilla Ideology Expanded - Relics and Artifacts. La opción guardada se conserva mientras ese mod esté inactivo.</AA_CK_RelicsUnavailable>
+  <AA_CK_Reset>Restaurar valores por defecto</AA_CK_Reset>
+</LanguageData>

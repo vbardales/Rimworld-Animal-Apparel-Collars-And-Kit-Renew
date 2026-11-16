@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- All entries were written for this mod with Claude; not reviewed by a native speaker. -->
+
+
+  <!-- EN: riding gear -->
+  <AnimalRidingGear.label>снаряжение для верховой езды</AnimalRidingGear.label>
+  <!-- EN: Develop new equipment designs to improve animal riding. -->
+  <AnimalRidingGear.description>Разработка новых конструкций снаряжения для более удобной езды верхом на животных.</AnimalRidingGear.description>
+
+  <!-- EN: animal clothing -->
+  <ComplexAnimalClothing.label>одежда для животных</ComplexAnimalClothing.label>
+  <!-- EN: Adapt complex clothing to fit onto a variety of domestic animals. -->
+  <ComplexAnimalClothing.description>Переделка сложной одежды так, чтобы она подходила разным домашним животным.</ComplexAnimalClothing.description>
+
+  <!-- EN: power-armored animals -->
+  <PoweredAnimalArmor.label>животные в силовой броне</PoweredAnimalArmor.label>
+  <!-- EN: Craft high-tech power armor made to fit onto domestic animals. -->
+  <PoweredAnimalArmor.description>Изготовление высокотехнологичной силовой брони, рассчитанной на домашних животных.</PoweredAnimalArmor.description>
+
+  <!-- The two below only exist when Vanilla Expanded Framework is active
+       (Mods/VEF/Defs/ResearchDefs/ResearchProjects_ATP.xml). -->
+
+  <!-- EN: weaponized animals -->
+  <ATP_Weapons.label>вооружённые животные</ATP_Weapons.label>
+  <!-- EN: Adapt existing weapon designs into turret packs specially made for animals. -->
+  <ATP_Weapons.description>Переделка существующих образцов оружия в турельные комплекты, созданные специально для животных.</ATP_Weapons.description>
+
+  <!-- EN: animal charge weapons -->
+  <ATP_Charge.label>зарядное оружие для животных</ATP_Charge.label>
+  <!-- EN: Craft high-tech charge weapons made to fit onto domestic animals. -->
+  <ATP_Charge.description>Изготовление высокотехнологичного зарядного оружия, рассчитанного на домашних животных.</ATP_Charge.description>
+
+</LanguageData>

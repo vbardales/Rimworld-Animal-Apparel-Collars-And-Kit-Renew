@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- All entries were written for this mod with Claude; not reviewed by a native speaker. -->
+
+
+  <!-- The universal pieces only exist when Vanilla Expanded Framework is active
+       (Mods/VEF/Defs/ThingDefs/Apparel_Universal.xml). A DefInjected key whose def is absent
+       is silently ignored, so keeping them in this same folder costs nothing. -->
+
+  <!-- EN: universal animal clothes -->
+  <Apparel_AnimalClothes.label>универсальная одежда для животных</Apparel_AnimalClothes.label>
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_AnimalClothes.description>Прочная одежда для животных. Защищает от непогоды, а также от мелких ссадин и порезов.</Apparel_AnimalClothes.description>
+
+  <!-- EN: universal pet scarf -->
+  <Apparel_AnimalScarf.label>универсальный шарф для питомца</Apparel_AnimalScarf.label>
+  <!-- EN: A stylish accessory for cool, laid-back animals. -->
+  <Apparel_AnimalScarf.description>Стильный аксессуар для невозмутимых и крутых животных.</Apparel_AnimalScarf.description>
+
+  <!-- EN: universal riding gear -->
+  <Apparel_AnimalReins.label>универсальное снаряжение для верховой езды</Apparel_AnimalReins.label>
+  <!-- EN: Provides protection and a harness for riding. -->
+  <Apparel_AnimalReins.description>Даёт защиту и упряжь для верховой езды.</Apparel_AnimalReins.description>
+
+  <!-- EN: universal animal power armor -->
+  <Apparel_AnimalPowerArmor.label>универсальная силовая броня для животных</Apparel_AnimalPowerArmor.label>
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
+  <Apparel_AnimalPowerArmor.description>Лёгкая силовая броня, специально разработанная для боевых животных. Многослойные пластины из пласталевого плетения очень эффективно останавливают удары, а уязвимых мест в сочленениях почти нет. Нейромемные ассистенты позволяют животному носить броню и при этом свободно двигаться.</Apparel_AnimalPowerArmor.description>
+
+  <!-- EN: universal animal power helmet -->
+  <Apparel_AnimalPowerArmorHelmet.label>универсальный силовой шлем для животных</Apparel_AnimalPowerArmorHelmet.label>
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
+  <Apparel_AnimalPowerArmorHelmet.description>Силовой шлем с многослойными пластинами из пласталевого плетения, специально разработанный для животных.</Apparel_AnimalPowerArmorHelmet.description>
+
+</LanguageData>

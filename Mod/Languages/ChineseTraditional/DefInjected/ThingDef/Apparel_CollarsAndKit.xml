@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- All entries were written for this mod with Claude; not reviewed by a native speaker. -->
+
+
+  <!-- ===== Dog Collars, by Shenanigans ===== -->
+
+  <!-- EN: leather dog collar -->
+  <Apparel_leatherdogcollar.label>皮項圈</Apparel_leatherdogcollar.label>
+  <!-- EN: A simple leather collar for dogs and other canines. It provides some protection for the neck. -->
+  <Apparel_leatherdogcollar.description>給狗和其他犬科動物戴的簡單皮項圈，能稍微保護頸部。</Apparel_leatherdogcollar.description>
+
+  <!-- EN: studded dog collar -->
+  <Apparel_studdeddogcollar.label>鉚釘項圈</Apparel_studdeddogcollar.label>
+  <!-- EN: A leather dog collar reinforced with metal studs for added protection. -->
+  <Apparel_studdeddogcollar.description>用金屬鉚釘加固的皮項圈，防護更好。</Apparel_studdeddogcollar.description>
+
+  <!-- EN: dog neck bow -->
+  <Apparel_dogbow.label>蝴蝶結</Apparel_dogbow.label>
+  <!-- EN: A pretty little neck bow for dogs and other canines. It doesn't provide much protection, but it's a bit better than nothing at all. Plus, it's cute! -->
+  <Apparel_dogbow.description>給狗和其他犬科動物戴的漂亮小蝴蝶結。幾乎沒有防護，但總比什麼都沒有強。而且，它很可愛！</Apparel_dogbow.description>
+
+  <!-- EN: shield dog collar -->
+  <Apparel_shielddogcollar.label>護盾項圈</Apparel_shielddogcollar.label>
+  <!-- EN: A projectile-repulsion collar. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. -->
+  <Apparel_shielddogcollar.description>一種排斥彈射物的項圈，會嘗試攔截飛來的子彈和破片，但對近戰攻擊和高溫無效。</Apparel_shielddogcollar.description>
+
+  <!-- ===== Animal Diapers, by Dipsy ===== -->
+
+  <!-- EN: diaper -->
+  <diaper.label>尿布</diaper.label>
+  <!-- EN: A diaper that animals can wear to eliminate filth production for a short time. -->
+  <diaper.description>動物穿上後，短時間內不再產生汙物的尿布。</diaper.description>
+
+  <!-- ===== [CSM]RealisticAwesomeGoat, by CSM ===== -->
+
+  <!-- EN: goat mail -->
+  <Apparel_GoatMail.label>山羊鎖子甲</Apparel_GoatMail.label>
+  <!-- EN: Armor plates covering the body. Protects against gunfire and melee attacks. -->
+  <Apparel_GoatMail.description>覆蓋身體的裝甲板，能抵禦槍擊和近戰攻擊。</Apparel_GoatMail.description>
+
+  <!-- ===== Medieval Horse Plate Armour, by Riful ===== -->
+
+  <!-- EN: horse barding -->
+  <Apparel_MedievalHorsePlate.label>馬鎧</Apparel_MedievalHorsePlate.label>
+  <!-- EN: Medieval plate barding shaped for a horse. Cumbersome, but it turns aside blades and blunts a charge. -->
+  <Apparel_MedievalHorsePlate.description>為馬量身打造的中世紀板甲。笨重，但能擋開刀刃、緩衝衝撞。</Apparel_MedievalHorsePlate.description>
+
+  <!-- EN: horse chanfron -->
+  <Apparel_MedievalHorseHelmet.label>馬面甲</Apparel_MedievalHorseHelmet.label>
+  <!-- EN: A plate faceguard shaped for a horse's head. Moderate protection against sharp attacks, little against blunt ones. -->
+  <Apparel_MedievalHorseHelmet.description>為馬頭量身打造的板製面甲。對銳器有中等防護，對鈍器防護較弱。</Apparel_MedievalHorseHelmet.description>
+
+  <!-- EN: saddle -->
+  <Apparel_MedievalHorseSaddle.label>馬鞍</Apparel_MedievalHorseSaddle.label>
+  <!-- EN: A saddle for riding a horse comfortably. -->
+  <Apparel_MedievalHorseSaddle.description>讓人舒適地騎馬的馬鞍。</Apparel_MedievalHorseSaddle.description>
+
+  <!-- ===== Animal Equipment, by Owlchemist (after jptrrs) ===== -->
+
+  <!-- EN: animal clothes -->
+  <Apparel_SmallAnimalClothes.label>小型動物服裝</Apparel_SmallAnimalClothes.label>
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_SmallAnimalClothes.description>堅固耐用的動物服裝，能抵禦惡劣天氣，也能防護輕微的擦傷和割傷。</Apparel_SmallAnimalClothes.description>
+
+  <!-- EN: large animal clothes -->
+  <Apparel_LargeAnimalClothes.label>大型動物服裝</Apparel_LargeAnimalClothes.label>
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_LargeAnimalClothes.description>堅固耐用的動物服裝，能抵禦惡劣天氣，也能防護輕微的擦傷和割傷。</Apparel_LargeAnimalClothes.description>
+
+  <!-- EN: animal headwear -->
+  <Apparel_SmallAnimalScarf.label>小型動物頭飾</Apparel_SmallAnimalScarf.label>
+  <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit an animal. -->
+  <Apparel_SmallAnimalScarf.description>用布料或皮革製成的頭部裝飾，專為動物量身訂做。</Apparel_SmallAnimalScarf.description>
+
+  <!-- EN: large animal headwear -->
+  <Apparel_LargeAnimalScarf.label>大型動物頭飾</Apparel_LargeAnimalScarf.label>
+  <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit a large animal. -->
+  <Apparel_LargeAnimalScarf.description>用布料或皮革製成的頭部裝飾，專為大型動物量身訂做。</Apparel_LargeAnimalScarf.description>
+
+  <!-- EN: riding gear -->
+  <Apparel_bridle.label>騎乘裝備</Apparel_bridle.label>
+  <!-- EN: Provides protection and a harness for riding. -->
+  <Apparel_bridle.description>提供防護，並配有騎乘用的挽具。</Apparel_bridle.description>
+
+  <!-- EN: animal power armor -->
+  <Apparel_SmallAnimalPowerArmor.label>小型動物動力裝甲</Apparel_SmallAnimalPowerArmor.label>
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
+  <Apparel_SmallAnimalPowerArmor.description>專為戰鬥動物設計的輕型動力裝甲。多層塑鋼編織板能高效抵禦攻擊，幾乎沒有脆弱的關節部位。神經模因輔助器讓動物穿著後依然行動自如。</Apparel_SmallAnimalPowerArmor.description>
+
+  <!-- EN: large animal power armor -->
+  <Apparel_LargeAnimalPowerArmor.label>大型動物動力裝甲</Apparel_LargeAnimalPowerArmor.label>
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a large animal to wear the armor and still move easily. -->
+  <Apparel_LargeAnimalPowerArmor.description>專為戰鬥動物設計的輕型動力裝甲。多層塑鋼編織板能高效抵禦攻擊，幾乎沒有脆弱的關節部位。神經模因輔助器讓動物穿著後依然行動自如。</Apparel_LargeAnimalPowerArmor.description>
+
+  <!-- EN: animal power helmet -->
+  <Apparel_SmallAnimalPowerArmorHelmet.label>小型動物動力頭盔</Apparel_SmallAnimalPowerArmorHelmet.label>
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
+  <Apparel_SmallAnimalPowerArmorHelmet.description>採用多層塑鋼編織板的動力頭盔，專為動物設計。</Apparel_SmallAnimalPowerArmorHelmet.description>
+
+  <!-- EN: large animal power helmet -->
+  <Apparel_LargeAnimalPowerArmorHelmet.label>大型動物動力頭盔</Apparel_LargeAnimalPowerArmorHelmet.label>
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for large animals. -->
+  <Apparel_LargeAnimalPowerArmorHelmet.description>採用多層塑鋼編織板的動力頭盔，專為大型動物設計。</Apparel_LargeAnimalPowerArmorHelmet.description>
+
+</LanguageData>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- All entries were written for this mod with Claude; not reviewed by a native speaker. -->
+
+
+  <!-- The universal pieces only exist when Vanilla Expanded Framework is active
+       (Mods/VEF/Defs/ThingDefs/Apparel_Universal.xml). A DefInjected key whose def is absent
+       is silently ignored, so keeping them in this same folder costs nothing. -->
+
+  <!-- EN: universal animal clothes -->
+  <Apparel_AnimalClothes.label>動物服飾</Apparel_AnimalClothes.label>
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_AnimalClothes.description>堅固耐用的動物服裝，能抵禦惡劣天氣，也能防護輕微的擦傷和割傷。</Apparel_AnimalClothes.description>
+
+  <!-- EN: universal pet scarf -->
+  <Apparel_AnimalScarf.label>寵物圍巾</Apparel_AnimalScarf.label>
+  <!-- EN: A stylish accessory for cool, laid-back animals. -->
+  <Apparel_AnimalScarf.description>為悠閒酷颯的動物準備的時尚配飾。</Apparel_AnimalScarf.description>
+
+  <!-- EN: universal riding gear -->
+  <Apparel_AnimalReins.label>通用騎乘裝備</Apparel_AnimalReins.label>
+  <!-- EN: Provides protection and a harness for riding. -->
+  <Apparel_AnimalReins.description>提供防護，並配有騎乘用的挽具。</Apparel_AnimalReins.description>
+
+  <!-- EN: universal animal power armor -->
+  <Apparel_AnimalPowerArmor.label>動物動力裝甲</Apparel_AnimalPowerArmor.label>
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
+  <Apparel_AnimalPowerArmor.description>專為戰鬥動物設計的輕型動力裝甲。多層塑鋼編織板能高效抵禦攻擊，幾乎沒有脆弱的關節部位。神經模因輔助器讓動物穿著後依然行動自如。</Apparel_AnimalPowerArmor.description>
+
+  <!-- EN: universal animal power helmet -->
+  <Apparel_AnimalPowerArmorHelmet.label>動物動力頭盔</Apparel_AnimalPowerArmorHelmet.label>
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
+  <Apparel_AnimalPowerArmorHelmet.description>採用多層塑鋼編織板的動力頭盔，專為動物設計。</Apparel_AnimalPowerArmorHelmet.description>
+
+</LanguageData>

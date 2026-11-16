@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- All entries were written for this mod with Claude; not reviewed by a native speaker. -->
+
+  <!-- VEF-only definitions. MVCF visualLabel and description use numeric list indices
+       because AdditionalVerbProps has no TranslationHandle. The verb labels are
+       translated in pairs, see the end of this file. -->
+
+  <!-- EN: small animal mini-turret pack -->
+  <ATP_Apparel_SmallTurret.label>paquete de minitorreta para animales pequeños</ATP_Apparel_SmallTurret.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurret.description>Un paquete pequeño de munición y componentes que controla una minitorreta montada, diseñada para que la lleven animales pequeños.</ATP_Apparel_SmallTurret.description>
+
+  <!-- EN: small animal shotgun turret pack -->
+  <ATP_Apparel_SmallTurretShotgun.label>paquete de torreta de escopeta para animales pequeños</ATP_Apparel_SmallTurretShotgun.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretShotgun.description>Un paquete pequeño de munición y componentes que controla una minitorreta de escopeta montada, diseñada para que la lleven animales pequeños.</ATP_Apparel_SmallTurretShotgun.description>
+
+  <!-- EN: small animal blaster turret pack -->
+  <ATP_Apparel_SmallTurretCharge.label>paquete de torreta bláster para animales pequeños</ATP_Apparel_SmallTurretCharge.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretCharge.description>Un paquete pequeño de munición y componentes que controla una minitorreta bláster montada, diseñada para que la lleven animales pequeños.</ATP_Apparel_SmallTurretCharge.description>
+
+  <!-- EN: large animal mini-turret pack -->
+  <ATP_Apparel_LargeTurret.label>paquete de minitorreta para animales grandes</ATP_Apparel_LargeTurret.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurret.description>Un paquete de munición y componentes que controla una minitorreta montada, diseñada para que la lleven animales grandes.</ATP_Apparel_LargeTurret.description>
+
+  <!-- EN: large animal shotgun turret pack -->
+  <ATP_Apparel_LargeTurretShotgun.label>paquete de torreta de escopeta para animales grandes</ATP_Apparel_LargeTurretShotgun.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretShotgun.description>Un paquete de munición y componentes que controla una minitorreta de escopeta montada, diseñada para que la lleven animales grandes.</ATP_Apparel_LargeTurretShotgun.description>
+
+  <!-- EN: large animal blaster turret pack -->
+  <ATP_Apparel_LargeTurretCharge.label>paquete de torreta bláster para animales grandes</ATP_Apparel_LargeTurretCharge.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretCharge.description>Un paquete de munición y componentes que controla una minitorreta bláster montada, diseñada para que la lleven animales grandes.</ATP_Apparel_LargeTurretCharge.description>
+
+  <!-- EN: small animal grenade belt -->
+  <ATP_Apparel_SmallGrenades.label>cinturón de granadas para animales pequeños</ATP_Apparel_SmallGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by small animals. -->
+  <ATP_Apparel_SmallGrenades.description>Un cinturón de granadas diseñado para que lo lleven animales pequeños.</ATP_Apparel_SmallGrenades.description>
+
+  <!-- EN: large animal grenade belt -->
+  <ATP_Apparel_LargeGrenades.label>cinturón de granadas para animales grandes</ATP_Apparel_LargeGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by large animals. -->
+  <ATP_Apparel_LargeGrenades.description>Un cinturón de granadas diseñado para que lo lleven animales grandes.</ATP_Apparel_LargeGrenades.description>
+
+  <!-- EN: mini-turret bullet -->
+  <ATP_Bullet_SmallTurret.label>bala de minitorreta</ATP_Bullet_SmallTurret.label>
+
+  <!-- EN: mini-shotgun blast -->
+  <ATP_Bullet_ShotgunTurret.label>disparo de miniescopeta</ATP_Bullet_ShotgunTurret.label>
+
+  <!-- EN: mini-turret blaster shot -->
+  <ATP_Bullet_SpacerTurret.label>disparo bláster de minitorreta</ATP_Bullet_SpacerTurret.label>
+
+  <!-- MVCF command labels and tooltips. -->
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>cañón de minitorreta</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>Un arma automática sencilla, diseñada para montarse sobre un animal.</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>escopeta de minitorreta</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>Una escopeta automática sencilla, diseñada para montarse sobre un animal.</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>bláster de minitorreta</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>Un bláster automático sencillo, diseñado para montarse sobre un animal.</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>cañón de minitorreta</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>Un arma automática sencilla, diseñada para montarse sobre un animal.</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>escopeta de minitorreta</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>Una escopeta automática sencilla, diseñada para montarse sobre un animal.</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>bláster de minitorreta</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>Un bláster automático sencillo, diseñado para montarse sobre un animal.</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>granada</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>Un cinturón de granadas montado sobre un animal.</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>granada</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>Un cinturón de granadas montado sobre un animal.</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+
+  <!-- Verb labels: the standard verb and its MVCF twin carry the same label and MVCF pairs them by it, so both are
+       translated to the same word (replayed by the French turret scenario of feature 03). -->
+  <ATP_Apparel_SmallTurret.verbs.0.label>cañón</ATP_Apparel_SmallTurret.verbs.0.label>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>cañón</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretShotgun.verbs.0.label>escopeta</ATP_Apparel_SmallTurretShotgun.verbs.0.label>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>escopeta</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretCharge.verbs.0.label>bláster</ATP_Apparel_SmallTurretCharge.verbs.0.label>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>bláster</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurret.verbs.0.label>cañón</ATP_Apparel_LargeTurret.verbs.0.label>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>cañón</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretShotgun.verbs.0.label>escopeta</ATP_Apparel_LargeTurretShotgun.verbs.0.label>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>escopeta</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretCharge.verbs.0.label>bláster</ATP_Apparel_LargeTurretCharge.verbs.0.label>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>bláster</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallGrenades.verbs.0.label>granada</ATP_Apparel_SmallGrenades.verbs.0.label>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>granada</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeGrenades.verbs.0.label>granada</ATP_Apparel_LargeGrenades.verbs.0.label>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>granada</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+
+</LanguageData>

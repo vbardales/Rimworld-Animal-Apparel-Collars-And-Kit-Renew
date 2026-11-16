@@ -231,7 +231,7 @@ Mod/
   Defs/ResearchDefs/    the shared "animal gear" research tab
   Patches/              the AnimalNeck body patch
   Textures/             1400 sprites, restructured into the new per-animal layout
-  Languages/            English, French, Japanese and Simplified Chinese texts (DefInjected and settings keys)
+  Languages/            English, French, Japanese, Simplified and Traditional Chinese, Russian and Spanish (Spain and Latin America) texts (DefInjected and settings keys)
   Mods/<packageId>/     per-mod art and hyperlinks, gated in LoadFolders.xml
   Mods/VEF/             turret packs, universal pieces, settings assembly and hidden shortcut
 ```

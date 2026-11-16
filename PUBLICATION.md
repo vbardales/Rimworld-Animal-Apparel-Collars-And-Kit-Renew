@@ -50,7 +50,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## AI-generated
 
-Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI). The Japanese texts of the apparel and research defs shared with Animal Gear are by Lucifel, and four Simplified Chinese labels are by 混沌の味方; all other Japanese and Simplified Chinese texts were translated with Claude and have not been reviewed by a native speaker.
+Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI). The Japanese texts of the apparel and research defs shared with Animal Gear are by Lucifel, and four Simplified Chinese labels are by 混沌の味方; all other Japanese and Simplified Chinese texts, and all Traditional Chinese, Russian and Spanish texts, were translated with Claude and have not been reviewed by a native speaker.
 
 ## Thanks
 
@@ -74,7 +74,7 @@ Drafted for the first real release; fill it in when the 1.0.0 content is final.
 First release. Six abandoned Animal Gear add-ons and the unfinished half of a seventh have been moved to Animal Apparel: Framework for RimWorld 1.6.
 [list]
 [*]AnimalNeck slot and collars one layer above armour.
-[*]Localized settings under Mod options (with Vanilla Expanded Framework), English, French, Japanese and Simplified Chinese.
+[*]Localized settings under Mod options (with Vanilla Expanded Framework), English, French, Japanese, Simplified and Traditional Chinese, Russian and Spanish (Spain and Latin America).
 [*]Diaper no longer references the missing VAE gorilla with Odyssey.
 [/list]
 ```

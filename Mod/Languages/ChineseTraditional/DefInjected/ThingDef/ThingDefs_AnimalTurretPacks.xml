@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- All entries were written for this mod with Claude; not reviewed by a native speaker. -->
+
+
+  <!-- VEF-only definitions. MVCF visualLabel and description use numeric list indices
+       because AdditionalVerbProps has no TranslationHandle. The verb labels are
+       translated in pairs, see the end of this file. -->
+
+  <!-- EN: small animal mini-turret pack -->
+  <ATP_Apparel_SmallTurret.label>小型動物迷你砲塔包</ATP_Apparel_SmallTurret.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurret.description>由小型動物攜帶的彈藥與零件包，用來控制搭載的迷你砲塔。</ATP_Apparel_SmallTurret.description>
+
+  <!-- EN: small animal shotgun turret pack -->
+  <ATP_Apparel_SmallTurretShotgun.label>小型動物霰彈砲塔包</ATP_Apparel_SmallTurretShotgun.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretShotgun.description>由小型動物攜帶的彈藥與零件包，用來控制搭載的霰彈槍迷你砲塔。</ATP_Apparel_SmallTurretShotgun.description>
+
+  <!-- EN: small animal blaster turret pack -->
+  <ATP_Apparel_SmallTurretCharge.label>小型動物電荷砲塔包</ATP_Apparel_SmallTurretCharge.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretCharge.description>由小型動物攜帶的彈藥與零件包，用來控制搭載的電荷式迷你砲塔。</ATP_Apparel_SmallTurretCharge.description>
+
+  <!-- EN: large animal mini-turret pack -->
+  <ATP_Apparel_LargeTurret.label>大型動物迷你砲塔包</ATP_Apparel_LargeTurret.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurret.description>由大型動物攜帶的彈藥與零件包，用來控制搭載的迷你砲塔。</ATP_Apparel_LargeTurret.description>
+
+  <!-- EN: large animal shotgun turret pack -->
+  <ATP_Apparel_LargeTurretShotgun.label>大型動物霰彈砲塔包</ATP_Apparel_LargeTurretShotgun.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretShotgun.description>由大型動物攜帶的彈藥與零件包，用來控制搭載的霰彈槍迷你砲塔。</ATP_Apparel_LargeTurretShotgun.description>
+
+  <!-- EN: large animal blaster turret pack -->
+  <ATP_Apparel_LargeTurretCharge.label>大型動物電荷砲塔包</ATP_Apparel_LargeTurretCharge.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretCharge.description>由大型動物攜帶的彈藥與零件包，用來控制搭載的電荷式迷你砲塔。</ATP_Apparel_LargeTurretCharge.description>
+
+  <!-- EN: small animal grenade belt -->
+  <ATP_Apparel_SmallGrenades.label>小型動物榴彈帶</ATP_Apparel_SmallGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by small animals. -->
+  <ATP_Apparel_SmallGrenades.description>專為小型動物佩戴而設計的榴彈帶。</ATP_Apparel_SmallGrenades.description>
+
+  <!-- EN: large animal grenade belt -->
+  <ATP_Apparel_LargeGrenades.label>大型動物榴彈帶</ATP_Apparel_LargeGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by large animals. -->
+  <ATP_Apparel_LargeGrenades.description>專為大型動物佩戴而設計的榴彈帶。</ATP_Apparel_LargeGrenades.description>
+
+  <!-- EN: mini-turret bullet -->
+  <ATP_Bullet_SmallTurret.label>迷你砲塔子彈</ATP_Bullet_SmallTurret.label>
+
+  <!-- EN: mini-shotgun blast -->
+  <ATP_Bullet_ShotgunTurret.label>迷你霰彈槍散彈</ATP_Bullet_ShotgunTurret.label>
+
+  <!-- EN: mini-turret blaster shot -->
+  <ATP_Bullet_SpacerTurret.label>迷你砲塔電荷彈</ATP_Bullet_SpacerTurret.label>
+
+  <!-- MVCF command labels and tooltips. -->
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你砲塔砲</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>專為安裝在動物身上而設計的簡單的自動砲。</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你砲塔霰彈槍</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>專為安裝在動物身上而設計的簡單的自動霰彈槍。</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你砲塔電荷砲</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>專為安裝在動物身上而設計的簡單的自動電荷砲。</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你砲塔砲</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>專為安裝在動物身上而設計的簡單的自動砲。</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你砲塔霰彈槍</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>專為安裝在動物身上而設計的簡單的自動霰彈槍。</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>迷你砲塔電荷砲</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>專為安裝在動物身上而設計的簡單的自動電荷砲。</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>榴彈</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>安裝在動物身上的榴彈帶。</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>榴彈</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>安裝在動物身上的榴彈帶。</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+
+  <!-- Verb labels: the standard verb and its MVCF twin carry the same label and MVCF pairs them by it, so both are
+       translated to the same word (replayed by the French turret scenario of feature 03). -->
+  <ATP_Apparel_SmallTurret.verbs.0.label>砲</ATP_Apparel_SmallTurret.verbs.0.label>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>砲</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretShotgun.verbs.0.label>霰彈槍</ATP_Apparel_SmallTurretShotgun.verbs.0.label>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>霰彈槍</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretCharge.verbs.0.label>電荷砲</ATP_Apparel_SmallTurretCharge.verbs.0.label>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>電荷砲</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurret.verbs.0.label>砲</ATP_Apparel_LargeTurret.verbs.0.label>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>砲</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretShotgun.verbs.0.label>霰彈槍</ATP_Apparel_LargeTurretShotgun.verbs.0.label>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>霰彈槍</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretCharge.verbs.0.label>電荷砲</ATP_Apparel_LargeTurretCharge.verbs.0.label>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>電荷砲</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallGrenades.verbs.0.label>榴彈</ATP_Apparel_SmallGrenades.verbs.0.label>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>榴彈</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeGrenades.verbs.0.label>榴彈</ATP_Apparel_LargeGrenades.verbs.0.label>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>榴彈</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+
+</LanguageData>

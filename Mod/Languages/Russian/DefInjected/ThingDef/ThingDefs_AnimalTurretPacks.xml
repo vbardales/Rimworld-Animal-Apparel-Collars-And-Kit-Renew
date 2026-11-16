@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- All entries were written for this mod with Claude; not reviewed by a native speaker. -->
+
+
+  <!-- VEF-only definitions. MVCF visualLabel and description use numeric list indices
+       because AdditionalVerbProps has no TranslationHandle. The verb labels are
+       translated in pairs, see the end of this file. -->
+
+  <!-- EN: small animal mini-turret pack -->
+  <ATP_Apparel_SmallTurret.label>комплект мини-турели для мелких животных</ATP_Apparel_SmallTurret.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurret.description>Небольшой комплект боеприпасов и деталей, управляющий установленной мини-турелью, рассчитанной на ношение мелкими животными.</ATP_Apparel_SmallTurret.description>
+
+  <!-- EN: small animal shotgun turret pack -->
+  <ATP_Apparel_SmallTurretShotgun.label>комплект дробовой турели для мелких животных</ATP_Apparel_SmallTurretShotgun.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretShotgun.description>Небольшой комплект боеприпасов и деталей, управляющий установленной дробовой мини-турелью, рассчитанной на ношение мелкими животными.</ATP_Apparel_SmallTurretShotgun.description>
+
+  <!-- EN: small animal blaster turret pack -->
+  <ATP_Apparel_SmallTurretCharge.label>комплект бластерной турели для мелких животных</ATP_Apparel_SmallTurretCharge.label>
+  <!-- EN: A small pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by small animals. -->
+  <ATP_Apparel_SmallTurretCharge.description>Небольшой комплект боеприпасов и деталей, управляющий установленной бластерной мини-турелью, рассчитанной на ношение мелкими животными.</ATP_Apparel_SmallTurretCharge.description>
+
+  <!-- EN: large animal mini-turret pack -->
+  <ATP_Apparel_LargeTurret.label>комплект мини-турели для крупных животных</ATP_Apparel_LargeTurret.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurret.description>Комплект боеприпасов и деталей, управляющий установленной мини-турелью, рассчитанной на ношение крупными животными.</ATP_Apparel_LargeTurret.description>
+
+  <!-- EN: large animal shotgun turret pack -->
+  <ATP_Apparel_LargeTurretShotgun.label>комплект дробовой турели для крупных животных</ATP_Apparel_LargeTurretShotgun.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted shotgun mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretShotgun.description>Комплект боеприпасов и деталей, управляющий установленной дробовой мини-турелью, рассчитанной на ношение крупными животными.</ATP_Apparel_LargeTurretShotgun.description>
+
+  <!-- EN: large animal blaster turret pack -->
+  <ATP_Apparel_LargeTurretCharge.label>комплект бластерной турели для крупных животных</ATP_Apparel_LargeTurretCharge.label>
+  <!-- EN: A pack of ammunition and components that controls a mounted blaster mini-turret designed to be carried by large animals. -->
+  <ATP_Apparel_LargeTurretCharge.description>Комплект боеприпасов и деталей, управляющий установленной бластерной мини-турелью, рассчитанной на ношение крупными животными.</ATP_Apparel_LargeTurretCharge.description>
+
+  <!-- EN: small animal grenade belt -->
+  <ATP_Apparel_SmallGrenades.label>пояс с гранатами для мелких животных</ATP_Apparel_SmallGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by small animals. -->
+  <ATP_Apparel_SmallGrenades.description>Пояс с гранатами, рассчитанный на ношение мелкими животными.</ATP_Apparel_SmallGrenades.description>
+
+  <!-- EN: large animal grenade belt -->
+  <ATP_Apparel_LargeGrenades.label>пояс с гранатами для крупных животных</ATP_Apparel_LargeGrenades.label>
+  <!-- EN: A grenade belt designed to be carried by large animals. -->
+  <ATP_Apparel_LargeGrenades.description>Пояс с гранатами, рассчитанный на ношение крупными животными.</ATP_Apparel_LargeGrenades.description>
+
+  <!-- EN: mini-turret bullet -->
+  <ATP_Bullet_SmallTurret.label>пуля мини-турели</ATP_Bullet_SmallTurret.label>
+
+  <!-- EN: mini-shotgun blast -->
+  <ATP_Bullet_ShotgunTurret.label>выстрел дробовой мини-турели</ATP_Bullet_ShotgunTurret.label>
+
+  <!-- EN: mini-turret blaster shot -->
+  <ATP_Bullet_SpacerTurret.label>бластерный выстрел мини-турели</ATP_Bullet_SpacerTurret.label>
+
+  <!-- MVCF command labels and tooltips. -->
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>мини-турельная пушка</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>Простая автоматическая пушка, рассчитанная на установку на животное.</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>мини-турельный дробовик</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>Простой автоматический дробовик, рассчитанный на установку на животное.</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>мини-турельный бластер</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>Простой автоматический бластер, рассчитанный на установку на животное.</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>мини-турельная пушка</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>Простая автоматическая пушка, рассчитанная на установку на животное.</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>мини-турельный дробовик</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>Простой автоматический дробовик, рассчитанный на установку на животное.</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>мини-турельный бластер</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>Простой автоматический бластер, рассчитанный на установку на животное.</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>гранаты</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>Пояс с гранатами, закреплённый на животном.</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>гранаты</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>Пояс с гранатами, закреплённый на животном.</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>
+
+  <!-- Verb labels: the standard verb and its MVCF twin carry the same label and MVCF pairs them by it, so both are
+       translated to the same word (replayed by the French turret scenario of feature 03). -->
+  <ATP_Apparel_SmallTurret.verbs.0.label>пушка</ATP_Apparel_SmallTurret.verbs.0.label>
+  <ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>пушка</ATP_Apparel_SmallTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretShotgun.verbs.0.label>дробовик</ATP_Apparel_SmallTurretShotgun.verbs.0.label>
+  <ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>дробовик</ATP_Apparel_SmallTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallTurretCharge.verbs.0.label>бластер</ATP_Apparel_SmallTurretCharge.verbs.0.label>
+  <ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>бластер</ATP_Apparel_SmallTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurret.verbs.0.label>пушка</ATP_Apparel_LargeTurret.verbs.0.label>
+  <ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>пушка</ATP_Apparel_LargeTurret.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretShotgun.verbs.0.label>дробовик</ATP_Apparel_LargeTurretShotgun.verbs.0.label>
+  <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>дробовик</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeTurretCharge.verbs.0.label>бластер</ATP_Apparel_LargeTurretCharge.verbs.0.label>
+  <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>бластер</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallGrenades.verbs.0.label>гранаты</ATP_Apparel_SmallGrenades.verbs.0.label>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>гранаты</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeGrenades.verbs.0.label>гранаты</ATP_Apparel_LargeGrenades.verbs.0.label>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>гранаты</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+
+</LanguageData>

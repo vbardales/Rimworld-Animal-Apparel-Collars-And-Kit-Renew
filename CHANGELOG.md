@@ -6,6 +6,9 @@
   Animal Gear (credited in ATTRIBUTION.md), and new Japanese texts for everything else, settings included.
 - Add a Simplified Chinese translation: four labels from 混沌の味方's "Animal Gear Collection Chinese Pack" (credited in
   ATTRIBUTION.md), new Chinese texts for everything else, settings included.
+- Add Traditional Chinese, Russian and Spanish translations (the Spanish text is also shipped as Latin American Spanish), written
+  for this mod with Claude after the Animal Gear translations of Nevelian and kaiza were found: those share no def with this mod,
+  so nothing is copied from them.
 - Add a `MVCF.ModDef` (`Mods/VEF/Defs/MVCFDefs/AACK_MVCF.xml`) enabling MVCF's `ApparelVerbs` and `Drawing` features
   when VEF is active: without it the turret packs registered no verbs and the turret was never drawn on the animal.
 

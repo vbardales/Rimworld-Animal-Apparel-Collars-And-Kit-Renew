@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- All entries were written for this mod with Claude; not reviewed by a native speaker. -->
+
+
+  <!-- ===== Dog Collars, by Shenanigans ===== -->
+
+  <!-- EN: leather dog collar -->
+  <Apparel_leatherdogcollar.label>кожаный ошейник</Apparel_leatherdogcollar.label>
+  <!-- EN: A simple leather collar for dogs and other canines. It provides some protection for the neck. -->
+  <Apparel_leatherdogcollar.description>Простой кожаный ошейник для собак и других псовых. Немного защищает шею.</Apparel_leatherdogcollar.description>
+
+  <!-- EN: studded dog collar -->
+  <Apparel_studdeddogcollar.label>шипованный ошейник</Apparel_studdeddogcollar.label>
+  <!-- EN: A leather dog collar reinforced with metal studs for added protection. -->
+  <Apparel_studdeddogcollar.description>Кожаный ошейник, усиленный металлическими шипами для лучшей защиты.</Apparel_studdeddogcollar.description>
+
+  <!-- EN: dog neck bow -->
+  <Apparel_dogbow.label>бант</Apparel_dogbow.label>
+  <!-- EN: A pretty little neck bow for dogs and other canines. It doesn't provide much protection, but it's a bit better than nothing at all. Plus, it's cute! -->
+  <Apparel_dogbow.description>Красивый маленький бант на шею для собак и других псовых. Защищает слабо, но это всё же лучше, чем ничего. К тому же он милый!</Apparel_dogbow.description>
+
+  <!-- EN: shield dog collar -->
+  <Apparel_shielddogcollar.label>щитовой ошейник</Apparel_shielddogcollar.label>
+  <!-- EN: A projectile-repulsion collar. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. -->
+  <Apparel_shielddogcollar.description>Ошейник, отталкивающий снаряды. Пытается остановить летящие пули и осколки, но не защищает от атак в ближнем бою и от жара.</Apparel_shielddogcollar.description>
+
+  <!-- ===== Animal Diapers, by Dipsy ===== -->
+
+  <!-- EN: diaper -->
+  <diaper.label>подгузник</diaper.label>
+  <!-- EN: A diaper that animals can wear to eliminate filth production for a short time. -->
+  <diaper.description>Подгузник, который можно надеть на животное, чтобы на короткое время прекратить появление грязи.</diaper.description>
+
+  <!-- ===== [CSM]RealisticAwesomeGoat, by CSM ===== -->
+
+  <!-- EN: goat mail -->
+  <Apparel_GoatMail.label>козья кольчуга</Apparel_GoatMail.label>
+  <!-- EN: Armor plates covering the body. Protects against gunfire and melee attacks. -->
+  <Apparel_GoatMail.description>Броневые пластины, прикрывающие тело. Защищают от огнестрельного оружия и атак в ближнем бою.</Apparel_GoatMail.description>
+
+  <!-- ===== Medieval Horse Plate Armour, by Riful ===== -->
+
+  <!-- EN: horse barding -->
+  <Apparel_MedievalHorsePlate.label>конский доспех</Apparel_MedievalHorsePlate.label>
+  <!-- EN: Medieval plate barding shaped for a horse. Cumbersome, but it turns aside blades and blunts a charge. -->
+  <Apparel_MedievalHorsePlate.description>Средневековый пластинчатый доспех, подогнанный под лошадь. Громоздкий, но отводит клинки и смягчает удары при столкновении.</Apparel_MedievalHorsePlate.description>
+
+  <!-- EN: horse chanfron -->
+  <Apparel_MedievalHorseHelmet.label>конский налобник</Apparel_MedievalHorseHelmet.label>
+  <!-- EN: A plate faceguard shaped for a horse's head. Moderate protection against sharp attacks, little against blunt ones. -->
+  <Apparel_MedievalHorseHelmet.description>Пластинчатая защита морды, подогнанная под голову лошади. Умеренно защищает от острого оружия, слабо от тупого.</Apparel_MedievalHorseHelmet.description>
+
+  <!-- EN: saddle -->
+  <Apparel_MedievalHorseSaddle.label>седло</Apparel_MedievalHorseSaddle.label>
+  <!-- EN: A saddle for riding a horse comfortably. -->
+  <Apparel_MedievalHorseSaddle.description>Седло для удобной езды верхом на лошади.</Apparel_MedievalHorseSaddle.description>
+
+  <!-- ===== Animal Equipment, by Owlchemist (after jptrrs) ===== -->
+
+  <!-- EN: animal clothes -->
+  <Apparel_SmallAnimalClothes.label>одежда для животных</Apparel_SmallAnimalClothes.label>
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_SmallAnimalClothes.description>Прочная одежда для животных. Защищает от непогоды, а также от мелких ссадин и порезов.</Apparel_SmallAnimalClothes.description>
+
+  <!-- EN: large animal clothes -->
+  <Apparel_LargeAnimalClothes.label>одежда для крупных животных</Apparel_LargeAnimalClothes.label>
+  <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
+  <Apparel_LargeAnimalClothes.description>Прочная одежда для животных. Защищает от непогоды, а также от мелких ссадин и порезов.</Apparel_LargeAnimalClothes.description>
+
+  <!-- EN: animal headwear -->
+  <Apparel_SmallAnimalScarf.label>головной убор для животных</Apparel_SmallAnimalScarf.label>
+  <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit an animal. -->
+  <Apparel_SmallAnimalScarf.description>Особый головной убор из ткани или кожи, сшитый по размеру животного.</Apparel_SmallAnimalScarf.description>
+
+  <!-- EN: large animal headwear -->
+  <Apparel_LargeAnimalScarf.label>головной убор для крупных животных</Apparel_LargeAnimalScarf.label>
+  <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit a large animal. -->
+  <Apparel_LargeAnimalScarf.description>Особый головной убор из ткани или кожи, сшитый по размеру крупного животного.</Apparel_LargeAnimalScarf.description>
+
+  <!-- EN: riding gear -->
+  <Apparel_bridle.label>снаряжение для верховой езды</Apparel_bridle.label>
+  <!-- EN: Provides protection and a harness for riding. -->
+  <Apparel_bridle.description>Даёт защиту и упряжь для верховой езды.</Apparel_bridle.description>
+
+  <!-- EN: animal power armor -->
+  <Apparel_SmallAnimalPowerArmor.label>силовая броня для животных</Apparel_SmallAnimalPowerArmor.label>
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow an animal to wear the armor and still move easily. -->
+  <Apparel_SmallAnimalPowerArmor.description>Лёгкая силовая броня, специально разработанная для боевых животных. Многослойные пластины из пласталевого плетения очень эффективно останавливают удары, а уязвимых мест в сочленениях почти нет. Нейромемные ассистенты позволяют животному носить броню и при этом свободно двигаться.</Apparel_SmallAnimalPowerArmor.description>
+
+  <!-- EN: large animal power armor -->
+  <Apparel_LargeAnimalPowerArmor.label>силовая броня для крупных животных</Apparel_LargeAnimalPowerArmor.label>
+  <!-- EN: A suit of light powered armor specially designed for combat animals. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a large animal to wear the armor and still move easily. -->
+  <Apparel_LargeAnimalPowerArmor.description>Лёгкая силовая броня, специально разработанная для боевых животных. Многослойные пластины из пласталевого плетения очень эффективно останавливают удары, а уязвимых мест в сочленениях почти нет. Нейромемные ассистенты позволяют крупному животному носить броню и при этом свободно двигаться.</Apparel_LargeAnimalPowerArmor.description>
+
+  <!-- EN: animal power helmet -->
+  <Apparel_SmallAnimalPowerArmorHelmet.label>силовой шлем для животных</Apparel_SmallAnimalPowerArmorHelmet.label>
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for animals. -->
+  <Apparel_SmallAnimalPowerArmorHelmet.description>Силовой шлем с многослойными пластинами из пласталевого плетения, специально разработанный для животных.</Apparel_SmallAnimalPowerArmorHelmet.description>
+
+  <!-- EN: large animal power helmet -->
+  <Apparel_LargeAnimalPowerArmorHelmet.label>силовой шлем для крупных животных</Apparel_LargeAnimalPowerArmorHelmet.label>
+  <!-- EN: A powered helmet with layered plasteel-weave plates, designed specifically for large animals. -->
+  <Apparel_LargeAnimalPowerArmorHelmet.description>Силовой шлем с многослойными пластинами из пласталевого плетения, специально разработанный для крупных животных.</Apparel_LargeAnimalPowerArmorHelmet.description>
+
+</LanguageData>

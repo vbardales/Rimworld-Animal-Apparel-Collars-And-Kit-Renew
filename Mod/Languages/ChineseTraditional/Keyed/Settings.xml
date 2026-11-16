@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- All entries were written for this mod with Claude; not reviewed by a native speaker. -->
+  <AA_CK_SettingsScope>這些設定適用於所有存檔，重新啟動 RimWorld 後生效。Vanilla Expanded Framework 中已有的選擇會被保留。</AA_CK_SettingsScope>
+  <AA_CK_Universal>停用通用動物服裝</AA_CK_Universal>
+  <AA_CK_UniversalHelp>預設：關閉。移除五件使用佔位貼圖的通用服裝。各物種專用的裝備仍然可用。重新啟動後，存檔中已有的被停用物品會消失；啟用此選項前請先備份存檔。</AA_CK_UniversalHelp>
+  <AA_CK_Relics>將動物服裝排除出聖物</AA_CK_Relics>
+  <AA_CK_RelicsHelp>預設：開啟。當 Vanilla Ideology Expanded - Relics and Artifacts 啟用時，阻止這些動物服裝被選為新的聖物。已有的聖物不會被轉換。</AA_CK_RelicsHelp>
+  <AA_CK_RelicsUnavailable>需要 Vanilla Ideology Expanded - Relics and Artifacts。該模組未啟用時，已儲存的選擇會被保留。</AA_CK_RelicsUnavailable>
+  <AA_CK_Reset>恢復預設設定</AA_CK_Reset>
+</LanguageData>

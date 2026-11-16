@@ -218,10 +218,13 @@ the settings) was written for this mod with Claude and has not been reviewed by 
 and marked in the files: universal animal clothes, pet scarf, power armor and power helmet. No licence is stated; included at the
 owner's decision (2026-11-14), removed on the author's first request. Its other shared texts were not copied: the bridle label names
 the thrumbo only, and the descriptions list the species of the 2020 mod, which this mod's defs do not match. Its "Traditional" folder
-holds the same Simplified text, so no Traditional Chinese pack is shipped. All other Chinese texts (107 fields, settings included)
+holds the same Simplified text, so the Traditional Chinese shipped here is written separately (below). All other Chinese texts (107 fields, settings included)
 were written for this mod with Claude and have not been reviewed by a native speaker.
 
-The Russian-Chinese 2894662683 and the two Spanish translations (3022247253, 3022246963) share no def with this mod and add nothing.
+`Mod/Languages/Russian`, `Spanish`, `SpanishLatin` (the same text as Spanish) and `ChineseTraditional` were added on 2026-11-16 at the owner's order, one language
+per Animal Gear translation found (AUDIT 6.c): the Russian-Chinese pack 2894662683 by **Nevelian** and the Spanish packs 3022247253 and
+3022246963 by **kaiza**. Those packs share no def with this mod (they translate Dylan's defNames), so no text is copied from them and no
+licence question arises; every text of these four languages was written for this mod with Claude and has not been reviewed by a native speaker.
 
 ## Not migrated, and why
 
