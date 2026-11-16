@@ -68,9 +68,9 @@
   <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>Una escopeta automática sencilla, diseñada para montarse sobre un animal.</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.description>
   <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>bláster de minitorreta</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>Un bláster automático sencillo, diseñado para montarse sobre un animal.</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.description>
-  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>granada</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>granadas</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>Un cinturón de granadas montado sobre un animal.</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.description>
-  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>granada</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>granadas</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.visualLabel>
   <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>Un cinturón de granadas montado sobre un animal.</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.description>
 
   <!-- Verb labels: the standard verb and its MVCF twin carry the same label and MVCF pairs them by it, so both are

@@ -4,7 +4,7 @@
 
 - Add a Japanese translation: Lucifel's "Animal Gear 日本語翻訳" texts for the 18 apparel and research defs shared with
   Animal Gear (credited in ATTRIBUTION.md), and new Japanese texts for everything else, settings included.
-- Add a Simplified Chinese translation: four labels from 混沌の味方's "Animal Gear Collection Chinese Pack" (credited in
+- Add a Simplified Chinese translation: three labels from 混沌の味方's "Animal Gear Collection Chinese Pack" (credited in
   ATTRIBUTION.md), new Chinese texts for everything else, settings included.
 - Add Traditional Chinese, Russian and Spanish translations (the Spanish text is also shipped as Latin American Spanish), written
   for this mod with Claude after the Animal Gear translations of Nevelian and kaiza were found: those share no def with this mod,

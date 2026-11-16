@@ -207,15 +207,15 @@ repository. Owlchemist never added the tag to go with the horse art; it is added
 `Mod/Languages/Japanese` carries the Japanese texts of **Animal Gear 日本語翻訳** by **Lucifel**
 ([2644824504](https://steamcommunity.com/sharedfiles/filedetails/?id=2644824504), packageId `Lucifel.AnimalGear.JPT`)
 for the 18 defs it shares with this mod: 32 DefInjected fields, each marked `<!-- Lucifel -->` in the files, copied with only
-the ASCII `.` and `,` turned into `。` and `、`. Three more fields (tab label, riding gear and complex clothing descriptions)
+the ASCII `.` and `,` turned into `。` and `、`. Five more fields (tab label, riding gear and complex clothing descriptions, and the labels power-armored animals and universal riding gear)
 were corrected after the ChatGPT review and are no longer marked.
 The Workshop page and the package state no licence. They are included at the owner's decision (2026-11-14), without the
 author's agreement; they are removed on the author's first request. Every other Japanese text (79 DefInjected fields and
 the settings) was written for this mod with Claude and has not been reviewed by a native speaker.
 
-`Mod/Languages/ChineseSimplified` takes four labels from the **Animal Gear Collection Chinese Pack** by **混沌の味方**
+`Mod/Languages/ChineseSimplified` takes three labels from the **Animal Gear Collection Chinese Pack** by **混沌の味方**
 ([1998940296](https://steamcommunity.com/sharedfiles/filedetails/?id=1998940296), packageId `AnimalGear.ChinesePack`, 2020), unchanged
-and marked in the files: universal animal clothes, pet scarf, power armor and power helmet. No licence is stated; included at the
+and marked in the files: pet scarf, power armor and power helmet. A fourth, universal animal clothes, was corrected after the ChatGPT review (the word universal was missing) and is no longer marked. No licence is stated; included at the
 owner's decision (2026-11-14), removed on the author's first request. Its other shared texts were not copied: the bridle label names
 the thrumbo only, and the descriptions list the species of the 2020 mod, which this mod's defs do not match. Its "Traditional" folder
 holds the same Simplified text, so the Traditional Chinese shipped here is written separately (below). All other Chinese texts (107 fields, settings included)

@@ -15,7 +15,7 @@
   <ComplexAnimalClothing.description>複雑な衣服をさまざまな家畜に合うよう改造します。</ComplexAnimalClothing.description>
 
   <!-- EN: power-armored animals -->
-  <PoweredAnimalArmor.label>動物用パワーアーマー</PoweredAnimalArmor.label> <!-- Lucifel -->
+  <PoweredAnimalArmor.label>パワーアーマーを着た動物</PoweredAnimalArmor.label>
   <!-- EN: Craft high-tech power armor made to fit onto domestic animals. -->
   <PoweredAnimalArmor.description>動物に合わせたハイテクのパワーアーマーを作ります。</PoweredAnimalArmor.description> <!-- Lucifel -->
 
@@ -30,6 +30,6 @@
   <!-- EN: animal charge weapons -->
   <ATP_Charge.label>動物用チャージ兵器</ATP_Charge.label>
   <!-- EN: Craft high-tech charge weapons made to fit onto domestic animals. -->
-  <ATP_Charge.description>家畜動物に取り付けられるハイテクなチャージ兵器を作ります。</ATP_Charge.description>
+  <ATP_Charge.description>家畜に取り付けられるハイテクなチャージ兵器を作ります。</ATP_Charge.description>
 
 </LanguageData>

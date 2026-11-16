@@ -88,9 +88,9 @@
   <ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>дробовик</ATP_Apparel_LargeTurretShotgun.comps.Comp_VerbGiver.verbProps.0.label>
   <ATP_Apparel_LargeTurretCharge.verbs.0.label>бластер</ATP_Apparel_LargeTurretCharge.verbs.0.label>
   <ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>бластер</ATP_Apparel_LargeTurretCharge.comps.Comp_VerbGiver.verbProps.0.label>
-  <ATP_Apparel_SmallGrenades.verbs.0.label>гранаты</ATP_Apparel_SmallGrenades.verbs.0.label>
-  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>гранаты</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>
-  <ATP_Apparel_LargeGrenades.verbs.0.label>гранаты</ATP_Apparel_LargeGrenades.verbs.0.label>
-  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>гранаты</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_SmallGrenades.verbs.0.label>граната</ATP_Apparel_SmallGrenades.verbs.0.label>
+  <ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>граната</ATP_Apparel_SmallGrenades.comps.Comp_VerbGiver.verbProps.0.label>
+  <ATP_Apparel_LargeGrenades.verbs.0.label>граната</ATP_Apparel_LargeGrenades.verbs.0.label>
+  <ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>граната</ATP_Apparel_LargeGrenades.comps.Comp_VerbGiver.verbProps.0.label>
 
 </LanguageData>

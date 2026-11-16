@@ -15,7 +15,6 @@ remote:       https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-K
 visibility:   public
 detached:     yes
 workflow_stage: localize[1.0.0]
-french_review_pending: true
 social_preview_sha256: 07bf3e5a8a0333c0c2bf823e920ddf02b1b140a6ae9b9cd404ec3e3e170dbb7d
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13

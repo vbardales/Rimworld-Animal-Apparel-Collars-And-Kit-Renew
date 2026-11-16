@@ -8,7 +8,7 @@
        is silently ignored, so keeping them in this same folder costs nothing. -->
 
   <!-- EN: universal animal clothes -->
-  <Apparel_AnimalClothes.label>動物服飾</Apparel_AnimalClothes.label>
+  <Apparel_AnimalClothes.label>通用動物服裝</Apparel_AnimalClothes.label>
   <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
   <Apparel_AnimalClothes.description>堅固耐用的動物服裝，能抵禦惡劣天氣，也能防護輕微的擦傷和割傷。</Apparel_AnimalClothes.description>
 

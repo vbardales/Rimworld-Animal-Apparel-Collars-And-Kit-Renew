@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <!-- Four labels marked "Animal Gear Collection Chinese Pack" come unchanged from that pack by 混沌の味方 (Steam Workshop 1998940296,
+  <!-- Three labels marked "Animal Gear Collection Chinese Pack" come unchanged from that pack by 混沌の味方 (Steam Workshop 1998940296,
        packageId AnimalGear.ChinesePack). No licence is stated there; see ATTRIBUTION.md. All other entries were written for this mod. -->
 
 
@@ -9,7 +9,7 @@
        is silently ignored, so keeping them in this same folder costs nothing. -->
 
   <!-- EN: universal animal clothes -->
-  <Apparel_AnimalClothes.label>动物服饰</Apparel_AnimalClothes.label> <!-- Animal Gear Collection Chinese Pack -->
+  <Apparel_AnimalClothes.label>通用动物服装</Apparel_AnimalClothes.label>
   <!-- EN: Rugged apparel for animals. Provides protection against the elements, as well as minor scuffs and cuts. -->
   <Apparel_AnimalClothes.description>坚固耐用的动物服装，能抵御恶劣天气，也能防护轻微的擦伤和割伤。</Apparel_AnimalClothes.description>
 
