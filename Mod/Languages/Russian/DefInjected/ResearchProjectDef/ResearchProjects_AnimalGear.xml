@@ -18,17 +18,4 @@
   <!-- EN: Craft high-tech power armor made to fit onto domestic animals. -->
   <PoweredAnimalArmor.description>Изготовление высокотехнологичной силовой брони, рассчитанной на домашних животных.</PoweredAnimalArmor.description>
 
-  <!-- The two below only exist when Vanilla Expanded Framework is active
-       (Mods/VEF/Defs/ResearchDefs/ResearchProjects_ATP.xml). -->
-
-  <!-- EN: weaponized animals -->
-  <ATP_Weapons.label>вооружённые животные</ATP_Weapons.label>
-  <!-- EN: Adapt existing weapon designs into turret packs specially made for animals. -->
-  <ATP_Weapons.description>Переделка существующих образцов оружия в турельные комплекты, созданные специально для животных.</ATP_Weapons.description>
-
-  <!-- EN: animal charge weapons -->
-  <ATP_Charge.label>зарядное оружие для животных</ATP_Charge.label>
-  <!-- EN: Craft high-tech charge weapons made to fit onto domestic animals. -->
-  <ATP_Charge.description>Изготовление высокотехнологичного зарядного оружия, рассчитанного на домашних животных.</ATP_Charge.description>
-
 </LanguageData>
