@@ -50,7 +50,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## AI-generated
 
-Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI). The Japanese texts of the apparel and research defs shared with Animal Gear are by Lucifel, and three Simplified Chinese labels are by 混沌の味方; all other Japanese and Simplified Chinese texts, and all Traditional Chinese, Russian and Spanish texts, were translated with Claude and have not been reviewed by a native speaker.
+Code, XML patches, tests and documentation were written with Claude (Anthropic) under my direction and review. The Preview and the ModIcon were generated with DALL-E (OpenAI). The Japanese texts of the apparel and research defs shared with Animal Gear are by Lucifel, and three Simplified Chinese labels are by 混沌の味方; all other Japanese and Simplified Chinese texts, and all Traditional Chinese, Russian and Spanish texts were translated with Claude and have not been reviewed by a native speaker.
 
 ## Thanks
 

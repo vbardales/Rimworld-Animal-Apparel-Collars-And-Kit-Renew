@@ -70,12 +70,12 @@
   <Apparel_LargeAnimalClothes.description>大型の動物用の頑丈な衣服です。ちょっとした傷や切り傷はもちろんのこと、風雨からも保護します。</Apparel_LargeAnimalClothes.description> <!-- Lucifel -->
 
   <!-- EN: animal headwear -->
-  <Apparel_SmallAnimalScarf.label>動物用スカーフ</Apparel_SmallAnimalScarf.label> <!-- Lucifel -->
+  <Apparel_SmallAnimalScarf.label>動物用頭飾り</Apparel_SmallAnimalScarf.label>
   <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit an animal. -->
   <Apparel_SmallAnimalScarf.description>動物用に合わせて作られた、布や革でできたスカーフです。</Apparel_SmallAnimalScarf.description> <!-- Lucifel -->
 
   <!-- EN: large animal headwear -->
-  <Apparel_LargeAnimalScarf.label>動物用スカーフ(大型用)</Apparel_LargeAnimalScarf.label> <!-- Lucifel -->
+  <Apparel_LargeAnimalScarf.label>動物用頭飾り(大型用)</Apparel_LargeAnimalScarf.label>
   <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit a large animal. -->
   <Apparel_LargeAnimalScarf.description>大型の動物用に合わせて作られた、布や革でできたスカーフです。</Apparel_LargeAnimalScarf.description> <!-- Lucifel -->
 
