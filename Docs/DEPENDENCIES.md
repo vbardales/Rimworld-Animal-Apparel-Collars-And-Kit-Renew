@@ -1,8 +1,25 @@
-# Dependency verification - 2026-09-13
+# Dependency verification - 2026-09-13, revised 2026-11-16
 
 Audited payload: commit `7060c628a586c55551a8c9130ab9feb1a80ad657`, then the
 local `Diaper_OptionalGorilla.xml` correction and its regression tests.
 This is a source/assembly and XML audit, not a successful game session.
+
+## Revision 2026-11-16 (commit `b2839b085b91a72fad663a8a50cf292f2ecb176f`)
+
+Re-read against About.xml, LoadFolders.xml and OptionalCompat.xml at this commit.
+The mandatory dependency is unchanged: `Ingendum.AnimalApparelFramework` only.
+Changes since the first audit, none adds a dependency:
+
+- `Mods/VEF/Defs/MVCFDefs/AACK_MVCF.xml` (an `MVCF.ModDef` switching on `ApparelVerbs` and
+  `Drawing`) sits in the VEF folder, loaded only under
+  `OskarPotocki.VanillaFactionsExpanded.Core`; MVCF comes with VEF.
+- `Mods/CETeam.CombatExtended/Patches/AnimalEquipment_CE.xml` and `Saddle_CE.xml`: Combat Extended
+  stays optional, folder loaded only under `CETeam.CombatExtended`, listed in `loadAfter`.
+- `incompatibleWith` now also names `Horse_Plate_Armour` (its plate, helmet and saddle are in this mod).
+- `Languages/Japanese` and `Languages/ChineseSimplified` add texts only, no dependency.
+- `Mod/About/OptionalCompat.xml` lists 32 optional targets, all declared (Check-OptionalCompat OK).
+- Workshop required items: none to set yet. The mod has only a private prepublication (0.1.0);
+  the field `workshop_required_items` of STATUS.md reads `n/a, not released yet` until the 1.0.0 publication.
 
 ## Required and conditional providers
 

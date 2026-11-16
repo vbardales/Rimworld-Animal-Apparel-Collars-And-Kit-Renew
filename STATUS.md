@@ -27,6 +27,7 @@ upstream_mod_remotes:
   - RealisticAwesomeGoat, CSM: N/A (no <url> in the installed About.xml, checked 2026-09-28)
   - Animal Equipment, Owlchemist (after jptrrs): https://github.com/Owlchemist/animal-equipment (MIT; pull request sent 2026-10-02)
 dependencies: declared
+workshop_required_items: n/a, not released yet (private prepublication 0.1.0 only; owner 2026-11-10: decided at 1.0.0; set by hand on the Steam page at the end of writeReleaseDocs or at publish)
 upstream_synced: 2026-11-12 AnimalTurretPacks@c1c9852; animal-equipment@532e91a
 showcase:     partial
 tested_on:    2026-10-29 (tickets b86c settings French and f655 load audit French green on 1257b7e; EN and earlier runs in Tests/Pickle/Evidence)
@@ -188,6 +189,15 @@ Update 2026-11-05 after NSB re-documented itself (SANCTUAIRE-LIEUX.md "Qui une g
 
 Owner rule 2026-11-05 (chat, quoted): "je suis en train de redécorer NSB. Donc je valide la redécoration lieu par lieu. Je viens de valider ces lieux, tu peux donc commencer tes prises de vues là-bas. De la même manière, Nelim et certaines de ses tenues sont validées, tu peux les travailler sans risque que je les change. Mais les autres lieux aussi (et les autres colons/animaux et les autres tenues aussi) seront validés, mais pas encore là maintenant, donc il faut attendre pour les utiliser". Validated now: places `cloister` (179, 130), `terrace` (197, 123), `infirmary-pawns` (202, 52) (via NPT too); Nelim and the outfits marked validated in NELIM-PROFIL (daily LTS_Tunika, underwear, ceremony FCA2_OrangeScarfDress, party LTS_LacedDress, sleep Apparel_PonpecoPajamaB, soignante LisaWork scrubs, formal LTS_RegalCloth, date LTS_SummerSundress, combat). NOT yet: every other place (barn, statue-garden, sofa-corner, bare-clearing, enclosure-south are on hold), other colonists (Soren), other animals, other outfits: wait, do not shoot with them. Consequence: the six-scene plan above is on hold except what fits the three places and Nelim; animals to use now: PENDING owner.
 Animals usable now (2026-11-05): goat and arctic fox, both outside NSB and validated by the owner (quotes above and in the animals table). Other animals wait for her validation. Places usable now: cloister, terrace, infirmary-pawns; colonist: Nelim.
+
+## Dependencies
+
+Checked 2026-11-16 at commit b2839b0 against About.xml, LoadFolders.xml, OptionalCompat.xml (detail and assembly hashes: Docs/DEPENDENCIES.md, revised the same day).
+- Mandatory (`modDependencies`): Ingendum.AnimalApparelFramework, Workshop 3513825850.
+- Ordering only (`loadAfter`): Ingendum.AnimalArmorBasic, OskarPotocki.VanillaFactionsExpanded.Core, MemeGoddess.GiddyUp, CETeam.CombatExtended.
+- Optional integrations: the 32 targets of Mod/About/OptionalCompat.xml (Check-OptionalCompat OK, 32 declared); folders IfModActive in LoadFolders.xml (VEF with MVCF ModDef, Combat Extended, Giddy-Up, animal mods).
+- Incompatible (`incompatibleWith`): Dylan.AnimalGear, Shenanigans.DogCollars, Annabelesca.PatchCollarMalinois, Dipsy.Diapers, flangopink.animalturretpacks, CSM.RealisticAwesomeGoat, Owlchemist.AnimalGear.Equipment, Horse_Plate_Armour.
+- DLC: none required; Odyssey and non-Odyssey folders both load (supportedVersions 1.6).
 
 ## Ecosystem
 
