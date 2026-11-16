@@ -1,3 +1,4 @@
+@requires:nelim.pickletools.screenshotstudio
 @animal-apparel-collars
 Feature: Animal Apparel Collars and Kit Renew, horse set
 
