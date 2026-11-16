@@ -34,8 +34,8 @@
 
   <!-- EN: goat mail -->
   <Apparel_GoatMail.label>cotte de mailles pour chèvre</Apparel_GoatMail.label>
-  <!-- EN: Armor plates covering the body. Protects against gunfire and melee attacks. -->
-  <Apparel_GoatMail.description>Des plaques d'armure couvrant le corps. Elles protègent des tirs et des attaques de mêlée.</Apparel_GoatMail.description>
+  <!-- EN: Interlocking metal rings covering the body. Protects against gunfire and melee attacks. -->
+  <Apparel_GoatMail.description>Des anneaux métalliques entrelacés couvrant le corps. Ils protègent des tirs et des attaques de mêlée.</Apparel_GoatMail.description>
 
   <!-- ===== Medieval Horse Plate Armour, by Riful ===== -->
 
@@ -47,7 +47,7 @@
   <!-- EN: horse chanfron -->
   <Apparel_MedievalHorseHelmet.label>chanfrein</Apparel_MedievalHorseHelmet.label>
   <!-- EN: A plate faceguard shaped for a horse's head. Moderate protection against sharp attacks, little against blunt ones. -->
-  <Apparel_MedievalHorseHelmet.description>Une plaque faciale taillée pour la tête d'un cheval. Protection correcte contre le tranchant, faible contre le contondant.</Apparel_MedievalHorseHelmet.description>
+  <Apparel_MedievalHorseHelmet.description>Un chanfrein de plates taillé pour la tête d'un cheval. Protection correcte contre le tranchant, faible contre le contondant.</Apparel_MedievalHorseHelmet.description>
 
   <!-- EN: saddle -->
   <Apparel_MedievalHorseSaddle.label>selle</Apparel_MedievalHorseSaddle.label>

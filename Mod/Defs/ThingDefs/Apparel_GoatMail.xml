@@ -28,7 +28,7 @@
   <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_GoatMail</defName>
     <label>goat mail</label>
-    <description>Armor plates covering the body. Protects against gunfire and melee attacks.</description>
+    <description>Interlocking metal rings covering the body. Protects against gunfire and melee attacks.</description>
     <techLevel>Medieval</techLevel>
     <descriptionHyperlinks>
       <ThingDef>Goat</ThingDef>
