@@ -24,7 +24,7 @@
   <!-- EN: shield dog collar -->
   <Apparel_shielddogcollar.label>护盾项圈</Apparel_shielddogcollar.label>
   <!-- EN: A projectile-repulsion collar. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. -->
-  <Apparel_shielddogcollar.description>一种排斥弹射物的项圈，会尝试拦截飞来的子弹和破片，但对近战攻击和高温无效。</Apparel_shielddogcollar.description>
+  <Apparel_shielddogcollar.description>一种排斥弹射物的项圈，会尝试拦截飞来的投射物和破片，但对近战攻击和高温无效。</Apparel_shielddogcollar.description>
 
   <!-- ===== Animal Diapers, by Dipsy ===== -->
 
