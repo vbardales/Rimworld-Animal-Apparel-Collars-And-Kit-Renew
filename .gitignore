@@ -41,3 +41,7 @@ Art/.render/
 # Pickle runs land in Inbox/, failures parked in Parked/ (AGENTS.md, Test evidence).
 Tests/Pickle/Inbox/
 Tests/Pickle/Parked/
+
+# Pickle step project build output.
+Tests/Pickle/Source/obj/
+Tests/Pickle/Source/bin/
