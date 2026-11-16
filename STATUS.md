@@ -14,7 +14,7 @@ repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 remote:       https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: playTests[1.0.0]
+workflow_stage: declareDependencies[1.0.0]
 social_preview_sha256: 07bf3e5a8a0333c0c2bf823e920ddf02b1b140a6ae9b9cd404ec3e3e170dbb7d
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
@@ -34,6 +34,7 @@ workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the gam
 code_review_sha: 257f13e193592cb108c03c3c9dbfdb9e902b3683
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
+  - "2026-11-16: open: replay-audit moved the mod back to declareDependencies at 4.g: STATUS.md carries no dated dependency record (Docs/DEPENDENCIES.md is dated 2026-09-13 at 7060c62, 333 commits behind: CE patch, MVCF ModDef, Horse Plate incompatibility, Japanese and Chinese packs) and no workshop_required_items field (n/a, not released yet: private prepublication 0.1.0). Redo 4.g, then replay up to playTests; 8.h settings_audit passed after the FR and EN rerun, 8.i, 8.k, 8.m (code_review_sha stale, 32 files) stay open there. Ledger .replays/AnimalApparelCollarsAndKitRenew-20261116.tsv"
   - "2026-11-14: done: owner said yes (chat) to integrating the Japanese and then the Chinese pack 1998940296 (Mod/Languages/ChineseSimplified: 4 labels copied and marked, 107 fields written with Claude; Open item on the Chinese pack closed). Japanese translation without the author's agreement (no licence stated): Mod/Languages/Japanese (35 fields of Lucifel 2644824504 copied unchanged and marked, 76 fields + settings written with Claude, not native-reviewed); ATTRIBUTION.md section Japanese translation, PUBLICATION.md and About.xml AI sentence and thanks, CHANGELOG. Open: Chinese pack 1998940296 shares 5 defs (2020, no licence), not integrated, owner to decide; no Japanese Pickle scenario yet; Check-Translations is French-only (67 old findings unchanged); tell PiI the 5 study items are free; remove the Japanese on the author's first request"
   - "2026-11-14: done: ticket adc2 GREEN (muffalo review, 4806a1b, passed 1 failed 0): MVCF draws the turret on the muffalo after the AACK_MVCF ModDef; capture Tests/Pickle/Inbox/review-muffalo-4806a1b/screenshots/manual--muffalo-turret-pack--step0.png read (animal framed, turret pack readable, no tooltip, no HUD). Keep the folder as proof, move to Evidence per TEST-EVIDENCE at the non-regression pass"
   - "2026-11-13 23:04: waiting: ticket f324 (muffalo turret drawVerbs diagnostic, 01831b1, -Filter '03-turret-packs-vef::a muffalo carries a turret pack', wsl-deps.avec-vef.map, Inbox review-muffalo-01831b1). New step 'MVCF draws the turret of' reads MVCF VerbManager.drawVerbs: red message says whether the verb is not registered for drawing (NeedsDrawing false) or registered but never drawn (render path PawnRenderUtility.DrawEquipmentAndApparelExtras not called for animals, MVCF Feature_Drawing off). Tree frozen for feature 03 until RUN_DONE. Then fix, recapture. Hypotheses: H1 verb not in drawVerbs (red, empty list); H2 registered but vanilla never calls DrawEquipmentAndApparelExtras for animals or MVCF Feature_Drawing off; H3 drawn under the body (same altitude) or bad texture; H4 ShouldDraw false. If the step is green: add a Harmony diagnostic counting VerbManager.DrawVerbs calls"
@@ -58,8 +59,8 @@ remaining:
   - "unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, Steam Deck layout"
   - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
   - "2026-10-13: defect: Check-CiTemplate.ps1 shows drift in .github (steam-page.mjs, steam-publish.mjs, steam-page.test.mjs +1): regenerate at the CI/CD template stamp before publish."
-updated:      2026-10-29, replay-audit (writeTests 7.g), earlier: 2026-10-10, full re-audit against the protocols of 2026-10-10 (3266bf3), see "Audit 2026-10-10"
-protocols_read_sha: 8f7916c0e2e7031640a4b718f4f721f7c2fb8537
+updated:      2026-11-16, replay-audit (declareDependencies 4.g), earlier: 2026-10-29 replay-audit (writeTests 7.g)
+protocols_read_sha: 03c85f871290381d597a7e2cd5abc2a314d80098
 ---
 # Animal Apparel: Collars and Kit Renew: status
 
