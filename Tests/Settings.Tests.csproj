@@ -11,7 +11,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <ProjectReference Include="../Source/AnimalApparelSettings.csproj" />
+    <ProjectReference Include="../Source/AnimalApparelSettings.csproj" Condition="'$(ModAssembly)' == ''" />
+    <Reference Include="AnimalApparelCollarsAndKit.Settings" Condition="'$(ModAssembly)' != ''"><HintPath>$(ModAssembly)</HintPath><Private>true</Private></Reference>
     <Reference Include="Assembly-CSharp"><HintPath>$(RimWorldManaged)/Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="UnityEngine.CoreModule"><HintPath>$(RimWorldManaged)/UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="VEF"><HintPath>$(VefDir)/VEF.dll</HintPath><Private>false</Private></Reference>
