@@ -72,12 +72,12 @@
   <!-- EN: animal headwear -->
   <Apparel_SmallAnimalScarf.label>動物用頭飾り</Apparel_SmallAnimalScarf.label>
   <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit an animal. -->
-  <Apparel_SmallAnimalScarf.description>動物用に合わせて作られた、布や革でできたスカーフです。</Apparel_SmallAnimalScarf.description> <!-- Lucifel -->
+  <Apparel_SmallAnimalScarf.description>動物の頭に合わせて作られた、布製または革製の専用の頭部用装具です。</Apparel_SmallAnimalScarf.description>
 
   <!-- EN: large animal headwear -->
   <Apparel_LargeAnimalScarf.label>動物用頭飾り(大型用)</Apparel_LargeAnimalScarf.label>
   <!-- EN: A specialized piece of headwear made of fabric or leather designed to fit a large animal. -->
-  <Apparel_LargeAnimalScarf.description>大型の動物用に合わせて作られた、布や革でできたスカーフです。</Apparel_LargeAnimalScarf.description> <!-- Lucifel -->
+  <Apparel_LargeAnimalScarf.description>大型動物の頭に合わせて作られた、布製または革製の専用の頭部用装具です。</Apparel_LargeAnimalScarf.description>
 
   <!-- EN: riding gear -->
   <Apparel_bridle.label>騎乗用具</Apparel_bridle.label> <!-- Lucifel -->
