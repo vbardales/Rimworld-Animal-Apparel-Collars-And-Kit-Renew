@@ -14,7 +14,7 @@ repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 remote:       https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: playTests[1.0.0]
+workflow_stage: writeShotlist[1.0.0]
 social_preview_sha256: 07bf3e5a8a0333c0c2bf823e920ddf02b1b140a6ae9b9cd404ec3e3e170dbb7d
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
@@ -30,11 +30,12 @@ dependencies: declared
 workshop_required_items: n/a, not released yet (private prepublication 0.1.0 only; owner 2026-11-10: decided at 1.0.0; set by hand on the Steam page at the end of writeReleaseDocs or at publish)
 upstream_synced: 2026-11-12 AnimalTurretPacks@c1c9852; animal-equipment@532e91a
 showcase:     partial
-tested_on:    2026-10-29 (tickets b86c settings French and f655 load audit French green on 1257b7e; EN and earlier runs in Tests/Pickle/Evidence)
+tested_on:    2026-11-17 pickle 488a4a0 (tickets 54d5 settings restart, ca83 Odyssey and Giddy-Up 2, 8931 without Odyssey green on 488a4a0; earlier 2026-11-16/17 greens on e9e40b6 and 5cebdca; runs in Tests/Pickle/Evidence, one line per run in Docs/runs/README.md)
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
-code_review_sha: 257f13e193592cb108c03c3c9dbfdb9e902b3683
+code_review_sha: cbefc26dd9573602635f91942d3b1449946c82dc
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
+  - "2026-11-17: done: 8.m code review (Opus sub-agent, diff 257f13e..HEAD of Mod and Source): CLEAN, no defect (VEF DefInjected move complete in 7 languages under the same IfModActive gate, CE patch xpaths valid, About and LoadFolders correct, Source unchanged); code_review_sha set. 8.j, 8.k, 8.l settled (tickets 54d5, ca83, 8931 green on 488a4a0, tested_on set). 8.n: workflow_stage writeShotlist[1.0.0]. Next: sync-nsb-npt then write-shotlist (nsb-sync WARN, NSB changed 2026-11-17)"
   - "2026-11-17: read: tickets ca83 and 8931 green (488a4a0): ca83 (avec-animaux) passed 2 skipped 0 failed 0 (load clean with Giddy-Up 2, with Odyssey the missing gorilla raises no reference error, Evidence/odyssey-giddyup-488a4a0); 8931 (avec-animaux-sans-odyssey) passed 1 skipped 0 failed 0 (VAE gorilla diaper tag raises no reference error without Odyssey, Evidence/sans-odyssey-488a4a0). All three tickets of 8.j and 8.k read green, Inbox empty. Next: judge 8.j and 8.k checked, tested_on, 8.l; then 8.m (code_review_sha 257f13e stale, Opus sub-agent), 8.n"
   - "2026-11-17: read: ticket 54d5 green 3 of 3 (488a4a0, set avec-vef, exit 0, -Then chain, 0 skipped 0 failed, Evidence/settings-restart-488a4a0 seq1 and seq2): option disabling universal apparel written (seq1), read after restart and removes its defs, then options reset to defaults (seq2). Still waiting: ca83 (Odyssey plus Giddy-Up 2), 8931 (without Odyssey); then 8.j, 8.k, tested_on, 8.l, 8.m, 8.n"
   - "2026-11-17: waiting: 8.j, 8.k gaps filed on 488a4a0, tree frozen for Mod/ until RUN_DONE: ticket 54d5 (15-settings-restart, avec-vef, -NoBatch, Then read after restart and reset, Inbox settings-restart-488a4a0), ticket ca83 (08 with Odyssey plus 06 load audit with Giddy-Up 2, avec-animaux, Inbox odyssey-giddyup-488a4a0), ticket 8931 (08 without Odyssey, avec-animaux-sans-odyssey, Inbox sans-odyssey-488a4a0). At RUN_DONE: summary.json (read skipped: Odyssey scenario needs @requires ludeon.rimworld.odyssey, a skip is not a pass), junit.xml, then 8.j and 8.k, tested_on, 8.l; then 8.m (code_review_sha 257f13e stale), 8.n"
@@ -73,7 +74,7 @@ remaining:
   - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
   - "2026-10-13: defect: Check-CiTemplate.ps1 shows drift in .github (steam-page.mjs, steam-publish.mjs, steam-page.test.mjs +1): regenerate at the CI/CD template stamp before publish."
 updated:      2026-11-16, replay-audit (playTests 8.a), earlier: 2026-10-29 replay-audit (writeTests 7.g)
-protocols_read_sha: f2087a01b9b3d5ce3e0ec68580f7716eab3ccc81
+protocols_read_sha: 9ebf2b1b4d24bcaff85d6df40ffc4df751b24a48
 ---
 # Animal Apparel: Collars and Kit Renew: status
 
