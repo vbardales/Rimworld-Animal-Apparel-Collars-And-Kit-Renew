@@ -7,7 +7,7 @@
 #
 # THE STORY. One clear market morning at the Sanctuary. Nelim dressed at dawn and keeps ONE outfit all morning (GALLERY.md d,
 # 2026-10-23): mustard shirt (214, 168, 64), brown trousers (96, 72, 48), olive jacket (92, 110, 70), her validated roster hair Roo_HD_Hair_Highpony (no override, NSB 2026-11-17)
-# no hat. Expressions: a written smile per scene (GALLERY.md d, owner 2026-10-25; NSB VALIDE 2026-11-06 scene expression is free; her chat of 2026-11-05 withdrew it, answer pending, the mouth lines stay the one place to flip). Only her expression and what she holds change. She gets her troop ready for the market parade:
+# no hat. Expressions: a written smile per scene (GALLERY.md d, owner 2026-10-25; NSB VALIDE 2026-11-06 scene expression is free; her chat of 2026-11-05 withdrew it, validated by the owner 2026-11-17, the mouth lines stay the one place to flip). Only her expression and what she holds change. She gets her troop ready for the market parade:
 # 08:00 in the barn the fox's collar; 08:05 among the statues the horse; 08:10 in the hall the grizzly asleep by the sofa;
 # 08:15 in the clearing the goat's mail; 08:20 in the enclosure the husky trots to her in armour; 08:25 the troop follows her out.
 # Time: start hour 8 in every scenario, then a cumulative wait (setup 60 ticks, then +208 per image: 60, 268, 477, 685, 833,
