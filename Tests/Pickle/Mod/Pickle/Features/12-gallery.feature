@@ -8,32 +8,37 @@
 # THE STORY. One clear market morning at the Sanctuary. Nelim dressed at dawn and keeps ONE outfit all morning (GALLERY.md d,
 # 2026-10-23): mustard shirt (214, 168, 64), brown trousers (96, 72, 48), olive jacket (92, 110, 70), her validated roster hair Roo_HD_Hair_Highpony (no override, NSB 2026-11-17)
 # no hat. Expressions: a written smile per scene (GALLERY.md d, owner 2026-10-25; NSB VALIDE 2026-11-06 scene expression is free; her chat of 2026-11-05 withdrew it, validated by the owner 2026-11-17, the mouth lines stay the one place to flip). Only her expression and what she holds change. She gets her troop ready for the market parade:
-# 08:00 in the barn the fox's collar; 08:05 among the statues the horse; 08:10 in the hall the grizzly asleep by the sofa;
-# 08:15 in the clearing the goat's mail; 08:20 in the enclosure the husky trots to her in armour; 08:25 the troop follows her out.
+# 08:00 in the barn the fox's collar; 08:05 in the daylily garden the horse; 08:10 in the hall the grizzly waits by the sofa;
+# 08:15 in the clearing the goat's mail; 08:20 in the enclosure the husky waits for its treat in armour; 08:25 the troop follows her out.
 # Time: start hour 8 in every scenario, then a cumulative wait (setup 60 ticks, then +208 per image: 60, 268, 477, 685, 833,
 # 1042; 2,500 ticks per game hour), weather Clear. Day animals only. Each scenario reloads the save, so decor is placed for
 # one image and removed after it.
 # THE INSTANT (GALLERY.md e: the image looks like a game paused mid-play). Each scene starts a real job or move, lets the game
 # run N ticks (`I let N ticks pass`), THEN pauses (`time is paused for the capture`), then sets the face and frames. Nothing
 # stands still facing the camera. Steps used: forced to haul (Nelim walks with the item), animal forced to walk / follows / lies down (NPT, 2026-10-23, compiled, NOT PLAYED before this run).
-# Shot sizes: 1 wide (opening), 2 medium, 3 tight, 4 tight, 5 medium, 6 wide (closing). Fronts: fox 1, husky 5.
+# Shot widths (cells, v7b): 1 = 8, 2 = 9, 3 = 10, 4 = 7, 5 = 9, 6 = 19; only 6 is wide, the others are tight on purpose (animal readable at 268 px). Fronts: fox 1, husky 5.
 #
 #  1. BARN 08:00, instant: Nelim walks to the fox with the blue helmet (Apparel_SmallAnimalPowerArmorHelmet) to fit on it, one step before she kneels. fox South, red
-#        collar (#c8202a) and no helmet yet (the helmet is the item she carries, shot 6 shows it worn, #1f6fb5), grass x2 for straw. Nelim: MouthSmile, LidCheerful. rectangle (197,233)-(207,239),
+#        collar (#c8202a) and no helmet yet (the helmet is the item she carries, shot 6 shows it worn, #1f6fb5), grass x2 for straw. Nelim: MouthSmile, LidCheerful. rectangle (199,234)-(206,238),
 #        decor v7: lit TorchLamp (204,238), Plant_Bush (199,238) with the grass and the barn wall, light in frame.
-#        wide opening: barn wall behind, yellow grass in the foreground, fox off-centre left of the middle, low morning sun from
-#        the east. j: collar, helmet; at 268 px the fox is small (about 1 cell of 14), the wide shot is for the place, the collar
-#        reads in shots 4 to 6. 40 ticks.
+#        v7b (2026-11-17, after ticket 8cd5: fox small, collar unreadable at 11 cells wide): frame tightened to 8 cells wide (about
+#        216 px per cell instead of 175), fox South toward the camera in the middle, Nelim left of it carrying the helmet, the barn's own braziers
+#        stay (furniture, cannot be removed), yellow grass in the foreground, low morning sun from the east. j: collar, helmet;
+#        the red collar must read at 268 px (to confirm on the capture). 25 ticks (three cells of haul, still walking at the pause).
 #  2. STATUE-GARDEN 08:05, instant: Nelim walks up with the bridle's leather (Leather_Camel) towards the horse's head, one step
 #        before she buckles it on, next she leads it out; obtained by a haul of Leather_Camel to the horse's head (the job Train
-#        decor v7: lit TorchLamp (157,104), Plant_Bush (150,106) among the statues and daylilies.
 #        was refused in ticket b7f7: RopeToPen), 30 ticks, then pause. pale horse East, purple barding, gold chanfron, green saddle,
-#        daylilies. MouthLipsSmallSmile, LidNormal. rectangle (150,100)-(162,108), about zoom 5 (the horse fills about a quarter of the frame height, readable at
-#        268 px), horse in the left third, Nelim on its right facing it, statues behind, daylilies in the foreground, low morning
-#        sun from the east. j: barding, chanfron, saddle.
-#  3. SOFA-CORNER 08:10, instant: the grizzly lies asleep in its diaper, Nelim tiptoes up with a spare one (haul of Cloth).
-#        MouthLittleGrin, LidNormal. zoom 4, two lit torches. j: diaper; the bear fills most of the frame at zoom 4, the diaper
-#        reads at 268 px (to confirm on the capture). Risk: LayDown may end early; 60 ticks.
+#        daylilies. MouthLipsSmallSmile, LidNormal. decor v7: lit TorchLamp (157,104), Plant_Bush (150,106), daylilies (151,103) (156,102) (154,106).
+#        v7b (2026-11-17, after ticket f6a9: horse 200 px, chanfron unreadable, Nelim north of the horse, statues only at the bottom edge):
+#        rectangle (151,102)-(159,106), 9 cells wide (about 213 px per cell instead of 148, 10 ticks (one cell of haul)), horse at (153,104) in the left third facing East,
+#        Nelim stands at (156,104) and hauls the leather to (155,104), so she ends on its right, in front of its head, facing it; the statues leave the frame
+#        (a tight frame beats the statues, the place is named by the daylily garden and the torch), low morning sun from the east. j: barding, chanfron, saddle.
+#  3. SOFA-CORNER 08:10, instant: the grizzly stands in its pale blue diaper, Nelim brings a spare one (haul of Cloth).
+#        MouthLittleGrin, LidNormal. rectangle (184,125)-(193,129), two lit torches (184,127) (193,127) at its edges. j: diaper.
+#        v7b (2026-11-17, after ticket 8cd5: the bear lay down, brown on the brown plank floor, a flat silhouette, no diaper drawn, 200 px at zoom 4):
+#        no LayDown (the diaper does not show on a lying animal and brown on brown has no contrast): the bear stands East at (189,127),
+#        the pale blue diaper (#9ad0f0) is the one light spot on the dark floor; the bear faces West toward Nelim, who hauls the cloth to (187,126), the diaper on its east flank by the torch;
+#        10 cells wide (about 192 px per cell instead of 135), the bear fills about a third of the frame height. 30 ticks.
 #  4. BARE-CLEARING 08:15, instant (reworked 2026-10-25 after b7f7: goat 12 % of the frame, Nelim out of frame, bare ground):
 #        the mail is fitted, the goat steps off West toward the flower border and Nelim follows at its flank with a bale of hay, one
 #        decor v7: lit TorchLamp (196,151), Plant_Bush (190,151) with the daylilies and tall grass, the thin-decor fix of 2026-11-07.
@@ -43,12 +48,14 @@
 #        grass (191,153) (193,153) and the natural flower border at x 190; goat at the middle, Nelim right of it, low morning sun from
 #        the east (shadows West). j: goat mail; the goat fills about a fifth of the frame width (about 55 px at 268 px), mail read
 #        by its dark grey against the cream coat (weak, kept). Tight.
-#  5. ENCLOSURE-SOUTH 08:20, instant: the husky trots South toward the camera in power armour and shield collar (no helmet:
-#        the small power helmet has no husky tag, ticket b7f7), Nelim left with a pemmican treat. dandelions in the foreground, enclosure
-#        decor v7: lit TorchLamp (150,213), Plant_Bush (144,219) beside the dandelions, so the ground is not bare.
-#        fence behind, low morning sun from the east. MouthLipsSmirk, LidNormal (the roster mouth, one scene without the smile of 4, so the series is not one repeated face). the animal framed at zoom 4, husky centre,
-#        Nelim left. j: armour and AnimalNeck slot; the husky fills about a fifth of the frame height at zoom 4 (to confirm on the
-#        capture). 40 ticks.
+#  5. ENCLOSURE-SOUTH 08:20, instant: the husky stands South toward the camera in power armour and shield collar (no helmet:
+#        the small power helmet has no husky tag, ticket b7f7), Nelim left with a pemmican treat. dandelions (146,213) (151,213) in the foreground, enclosure
+#        decor v7: lit TorchLamp (150,213), Plant_Bush (151,217) beside the dandelions, so the ground is not bare.
+#        fence behind, low morning sun from the east. MouthLipsSmirk, LidNormal (the roster mouth, one scene without the smile of 4, so the series is not one repeated face).
+#        v7b (2026-11-17, after ticket 40fd: Nelim overlapped the husky head, the shield collar unreadable, husky 140 px): the husky no longer walks
+#        (the walk to (148,220) drew it onto Nelim): it stands at (148,214) facing South, Nelim at (144,216) four cells to its left facing East, no overlap;
+#        rectangle (143,213)-(151,217), 9 cells wide (about 213 px per cell instead of 135 at zoom 4), husky in the centre, front view, armour on its back and
+#        shield collar at its neck. j: armour and AnimalNeck slot (to confirm on the capture). Nelim hauls the pemmican to (146,215) (unverified cell, a red replays the scene), 15 ticks.
 #  6. ENCLOSURE-SOUTH 08:25, instant: Nelim hauls twenty silver East, the troop (fox, husky in its scene-5 set, goat in its mail, horse in its
 #        set) follows her. daylilies in the foreground, fence behind, low morning sun from the east, the troop in a line from left
 #        decor v7: lit TorchLamp (160,212), Plant_Bush (146,212) for light and cover on the wide closing shot.
@@ -85,19 +92,19 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" stands at (198, 236) facing East
     Then Animal Apparel Collars: the render tree of "GalleryFox" draws "Apparel_leatherdogcollar"
     When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Apparel_SmallAnimalPowerArmorHelmet" to (201, 236)
-    And Nelim's Pickle Tools: I let 40 ticks pass
+    And Nelim's Pickle Tools: I let 25 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
-    And Nelim's Pickle Tools: I frame the rectangle from (197, 233) to (207, 239)
+    And Nelim's Pickle Tools: I frame the rectangle from (199, 234) to (206, 238)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-1-fox"
     And Nelim's Pickle Tools: the decor is removed
     And Nelim's Pickle Tools: the interface is shown again
     Then no errors were logged
 
-  Scenario: Animal Apparel Collars: gallery 2, Nelim brings bridle leather to the horse in its full set among the statues
+  Scenario: Animal Apparel Collars: gallery 2, Nelim brings bridle leather to the horse in its full set in the daylily garden
     Given I set the hour to 8
     And I set the weather to "Clear"
     And Nelim's Sanctuary: I am at the sanctuary "statue-garden"
@@ -123,20 +130,20 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     Then Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorsePlate"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseHelmet"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseSaddle"
-    When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Leather_Camel" to (154, 104)
-    And Nelim's Pickle Tools: I let 30 ticks pass
+    When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Leather_Camel" to (155, 104)
+    And Nelim's Pickle Tools: I let 10 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
-    And Nelim's Pickle Tools: I frame the rectangle from (150, 100) to (162, 108)
+    And Nelim's Pickle Tools: I frame the rectangle from (151, 102) to (159, 106)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-2-horse"
     And Nelim's Pickle Tools: the decor is removed
     And Nelim's Pickle Tools: the interface is shown again
     Then no errors were logged
 
-  Scenario: Animal Apparel Collars: gallery 3, the grizzly asleep in its diaper while Nelim tiptoes up with a spare
+  Scenario: Animal Apparel Collars: gallery 3, the grizzly in its diaper while Nelim brings a spare
     Given I set the hour to 8
     And I set the weather to "Clear"
     And Nelim's Sanctuary: I am at the sanctuary "sofa-corner"
@@ -148,7 +155,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (193, 127)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (193, 127) is lit
     And Animal Apparel Collars: a tame "Bear_Grizzly" named "GalleryBear" stands at (189, 127)
-    And Nelim's Pickle Tools: "GalleryBear" faces East
+    And Nelim's Pickle Tools: "GalleryBear" faces West
     And Animal Apparel Collars: "GalleryBear" is dressed in "diaper" dyed "#9ad0f0"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
@@ -156,14 +163,13 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: "Nelim" stands at (184, 126) facing East
     Then Animal Apparel Collars: the render tree of "GalleryBear" draws "diaper"
-    When Nelim's Pickle Tools: "GalleryBear" lies down
-    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Cloth" to (187, 126)
-    And Nelim's Pickle Tools: I let 60 ticks pass
+    When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Cloth" to (187, 126)
+    And Nelim's Pickle Tools: I let 30 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLittleGrin"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
-    And Nelim's Pickle Tools: I frame the animal "GalleryBear" at zoom 4
+    And Nelim's Pickle Tools: I frame the rectangle from (184, 125) to (193, 129)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-3-bear"
     And Nelim's Pickle Tools: the decor is removed
@@ -207,16 +213,16 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: the interface is shown again
     Then no errors were logged
 
-  Scenario: Animal Apparel Collars: gallery 5, the husky trots toward the camera in armour with a shield collar
+  Scenario: Animal Apparel Collars: gallery 5, the husky in armour with a shield collar faces the camera while Nelim holds a treat
     Given I set the hour to 8
     And I set the weather to "Clear"
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 833 ticks pass
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (146, 218) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (152, 218) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (144, 219) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (146, 213) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (151, 213) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (151, 217) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (150, 213)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (150, 213) is lit
     And Animal Apparel Collars: a tame "Husky" named "GalleryHusky" stands at (148, 214)
@@ -230,13 +236,13 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" stands at (144, 216) facing East
     Then Animal Apparel Collars: the render tree of "GalleryHusky" draws "Apparel_SmallAnimalPowerArmor"
     And Animal Apparel Collars: the render tree of "GalleryHusky" draws "Apparel_shielddogcollar"
-    When Nelim's Pickle Tools: "GalleryHusky" is forced to walk to (148, 220)
-    And Nelim's Pickle Tools: I let 40 ticks pass
+    When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Pemmican" to (146, 215)
+    And Nelim's Pickle Tools: I let 15 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
-    And Nelim's Pickle Tools: I frame the animal "GalleryHusky" at zoom 4
+    And Nelim's Pickle Tools: I frame the rectangle from (143, 213) to (151, 217)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-husky"
     And Nelim's Pickle Tools: the decor is removed
