@@ -19,7 +19,7 @@
 # Shot widths (cells, v7b): 1 = 8, 2 = 9, 3 = 10, 4 = 7, 5 = 9, 6 = 19; only 6 is wide, the others are tight on purpose (animal readable at 268 px). Fronts: fox 1, husky 5.
 #
 #  1. BARN 08:00, instant: Nelim walks to the fox with the blue helmet (Apparel_SmallAnimalPowerArmorHelmet) to fit on it, one step before she kneels. fox South, red
-#        collar (#c8202a) and no helmet yet (the helmet is the item she carries, shot 6 shows it worn, #1f6fb5), grass x2 for straw. Nelim: MouthSmile, LidCheerful. rectangle (199,234)-(206,238),
+#        collar (#c8202a) and no helmet yet (the helmet is the item she carries, shot 6 shows it worn, #1f6fb5), grass x2 for straw. Nelim: MouthSmile, LidCheerful. frame the cell (202,236) at zoom 2 (270 px per cell, 7 cells wide, v7c: NPT 2026-11-17, the rectangle step adds a margin and the height decides, 150 px per cell),
 #        decor v7: lit TorchLamp (204,238), Plant_Bush (199,238) with the grass and the barn wall, light in frame.
 #        v7b (2026-11-17, after ticket 8cd5: fox small, collar unreadable at 11 cells wide): frame tightened to 8 cells wide (about
 #        216 px per cell instead of 175), fox South toward the camera in the middle, Nelim left of it carrying the helmet, the barn's own braziers
@@ -30,7 +30,7 @@
 #        was refused in ticket b7f7: RopeToPen), 30 ticks, then pause. pale horse East, purple barding, gold chanfron, green saddle,
 #        daylilies. MouthLipsSmallSmile, LidNormal. decor v7: lit TorchLamp (157,104), Plant_Bush (150,106), daylilies (151,103) (156,102) (154,106).
 #        v7b (2026-11-17, after ticket f6a9: horse 200 px, chanfron unreadable, Nelim north of the horse, statues only at the bottom edge):
-#        rectangle (151,102)-(159,106), 9 cells wide (about 213 px per cell instead of 148, 10 ticks (one cell of haul)), horse at (153,104) in the left third facing East,
+#        frame the cell (154,104) at zoom 2 (270 px per cell, 7 cells wide, 10 ticks, one cell of haul), horse at (153,104) in the left third facing East,
 #        Nelim stands at (156,104) and hauls the leather to (155,104), so she ends on its right, in front of its head, facing it; the statues leave the frame
 #        (a tight frame beats the statues, the place is named by the daylily garden and the torch), low morning sun from the east. j: barding, chanfron, saddle.
 #  3. SOFA-CORNER 08:10, instant: the grizzly stands in its pale blue diaper, Nelim brings a spare one (haul of Cloth).
@@ -43,7 +43,7 @@
 #        the mail is fitted, the goat steps off West toward the flower border and Nelim follows at its flank with a bale of hay, one
 #        decor v7: lit TorchLamp (196,151), Plant_Bush (190,151) with the daylilies and tall grass, the thin-decor fix of 2026-11-07.
 #        step behind it. goat West (walk to (191,152) from (194,152), 40 ticks), goat mail; Nelim walks (198,153) to (194,153) facing
-#        West. MouthSmirkSmile, BrowRaised. Fixed frame (not the animal, which drifts): rectangle (190,150)-(196,153), 7 x 4 cells, so
+#        West. MouthSmirkSmile, BrowRaised. Fixed frame (not the animal, which drifts): frame the cell (193,152) at zoom 2.2 (245 px per cell, 7.8 cells wide), so
 #        both stay in. Foreground (south edge z 150): two daylilies (192,150) (195,150); background (north, z 153): two tall yellow
 #        grass (191,153) (193,153) and the natural flower border at x 190; goat at the middle, Nelim right of it, low morning sun from
 #        the east (shadows West). j: goat mail; the goat fills about a fifth of the frame width (about 55 px at 268 px), mail read
@@ -54,12 +54,12 @@
 #        fence behind, low morning sun from the east. MouthLipsSmirk, LidNormal (the roster mouth, one scene without the smile of 4, so the series is not one repeated face).
 #        v7b (2026-11-17, after ticket 40fd: Nelim overlapped the husky head, the shield collar unreadable, husky 140 px): the husky no longer walks
 #        (the walk to (148,220) drew it onto Nelim): it stands at (148,214) facing South, Nelim at (144,216) four cells to its left facing East, no overlap;
-#        rectangle (143,213)-(151,217), 9 cells wide (about 213 px per cell instead of 135 at zoom 4), husky in the centre, front view, armour on its back and
+#        frame the cell (146,215) at zoom 2.2 (245 px per cell, 7.8 cells wide, v7e: the rectangle step gave 150 px per cell), husky in the centre, front view, armour on its back and
 #        shield collar at its neck. j: armour and AnimalNeck slot (to confirm on the capture). Nelim hauls the pemmican to (146,215) (unverified cell, a red replays the scene), 15 ticks.
 #  6. ENCLOSURE-SOUTH 08:25, instant: Nelim hauls twenty silver East, the troop (fox, husky in its scene-5 set, goat in its mail, horse in its
 #        set) follows her. daylilies in the foreground, fence behind, low morning sun from the east, the troop in a line from left
 #        decor v7: lit TorchLamp (160,212), Plant_Bush (146,212) for light and cover on the wide closing shot.
-#        to right. MouthClassicSmile, LidCheerful. rectangle (144,211)-(162,219), Nelim ahead of the troop at (156,213), wide closing. j: every piece; at 268 px the
+#        to right. MouthClassicSmile, LidCheerful. frame the cell (153,215) at zoom 3 (180 px per cell, 10.7 cells wide), Nelim ahead of the troop at (156,213), wide closing. j: every piece; at 268 px the
 #        animals are small (about 11 px per cell), the shot is the closing summary, each piece reads in shots 1 to 5. Risk:
 #        FollowClose on animals unverified; 60 ticks.
 #  7. interface, window-backdrop-for-height: the Mod options page, set aside from the estimate, no subtitle, cropped.
@@ -97,7 +97,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
-    And Nelim's Pickle Tools: I frame the rectangle from (199, 234) to (206, 238)
+    And Nelim's Pickle Tools: I frame the cell (202, 236) at zoom 2
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-1-fox"
     And Nelim's Pickle Tools: the decor is removed
@@ -136,7 +136,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
-    And Nelim's Pickle Tools: I frame the rectangle from (151, 102) to (159, 106)
+    And Nelim's Pickle Tools: I frame the cell (154, 104) at zoom 2
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-2-horse"
     And Nelim's Pickle Tools: the decor is removed
@@ -206,7 +206,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
-    And Nelim's Pickle Tools: I frame the rectangle from (190, 150) to (196, 153)
+    And Nelim's Pickle Tools: I frame the cell (193, 152) at zoom 2.2
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-4-goat"
     And Nelim's Pickle Tools: the decor is removed
@@ -242,7 +242,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
-    And Nelim's Pickle Tools: I frame the rectangle from (143, 213) to (151, 217)
+    And Nelim's Pickle Tools: I frame the cell (146, 215) at zoom 2.2
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-husky"
     And Nelim's Pickle Tools: the decor is removed
@@ -297,7 +297,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthClassicSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
-    And Nelim's Pickle Tools: I frame the rectangle from (144, 211) to (162, 219)
+    And Nelim's Pickle Tools: I frame the cell (153, 215) at zoom 3
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-parade"
     And Nelim's Pickle Tools: the decor is removed
