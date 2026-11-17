@@ -99,34 +99,38 @@ Remaining entries of 2026-11-05 to 2026-11-09 (tickets, SaveSteps chains, review
 
 ## NSB
 
-Sync 2026-11-05 (skill sync-nsb, stage playTests: nothing in the shotlist or scenarios changed, only what would change is noted). Owner rules of 2026-11-05: NSB places, colonists and domestic animals are free; a colonist or domestic animal outside NSB needs her express validation; any change to a colonist's properties needs it too; every outfit is free.
+Sync 2026-11-17 (skill sync-nsb-npt, stage writeShotlist: only noted here, the shotlist and `12-gallery.feature` are rewritten by write-shotlist). Replaces the two NSB sections of 2026-11-05. Owner rules (2026-11-05, 2026-11-07): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs her express validation, except an animal the mod adds or whose items address it (authorized by default, 2026-11-07); a colonist's properties change only with her validation; every outfit is free; every animal the mod includes must be in the gallery.
 
-What changed in NSB since the last note: the barn grew (interior x 188-204, z 230-244) and its east extension (x 199-204) is now furnished (12 beds, 4 braziers); Nelim's wardrobe was reviewed on 2026-11-04/05 (daily outfit LTS_Tunika emerald, others validated). `git log` of the NSB Docs returned nothing, so no other date is known. Opened: SANCTUAIRE-LIEUX (lines of the six places only), CATALOGUE-ANIMAUX, NELIM-PROFIL, GALERIE-COLONS. Not opened: SANCTUAIRE-CASES, EMBELLISSEMENT-LIEUX, NSB-ROSTER, APPARENCES-CANON, LOOKS-VALIDATION, the animal sheets.
+What changed in NSB since 2026-11-05 (VALIDE.md, `git log` of Docs): the hold of 2026-11-05 is lifted. Every place is validated (barn 2026-11-06 and 2026-11-09, statue-garden 2026-11-06 and 2026-11-07, sofa-corner 2026-11-07, bare-clearing 2026-11-07 among the free zones, enclosure-south 2026-11-08: "Nelim" flower logo, zones 3 to 15, nothing standing on it, a few flowers missing, accepted). Nelim validated (appearance incl. hair `Roo_HD_Hair_Highpony`, outfits). Colonists validated since: Soren, Blue (date to redo after VTW), Jiro, Emi, Quill, Celeste, Quo, Quaren, Ada, Lyra. The 2026-11-17 commits are body, sex and VTW work: nothing touches the gallery places or animals.
 
-Places read: 2026-11-05 (partial). Tribe read: 2026-11-05 (partial).
+Not NSB-validated for gallery: Nelim's per-scene smile. NSB VALIDE.md ("Liberté de scène", owner quote 2026-11-06) says a scene expression is free, but her chat message of 2026-11-05 here withdrew it and no later chat quote reached this session: PENDING, asked at the end of this sync.
+
+Reads: Places read: 2026-11-17 (partial: VALIDE.md places table and the "Pas encore validés" section; SANCTUAIRE-LIEUX.md "Qui une galerie peut utiliser" and "La faune de la sauvegarde"; CASES and EMBELLISSEMENT not opened). Tribe read: 2026-11-17 (partial: VALIDE.md characters and animals sections, CATALOGUE-ANIMAUX; NELIM-PROFIL, ROSTER, APPARENCES-CANON, animal sheets not reopened, no Nelim change in the Docs log since 2026-11-05). Steps read: 2026-11-17 (partial: PickleTools commit list since 2026-11-05, the entry "the main bar, the speed controls and the mouse-over readout are hidden" of Docs/steps.md; other new steps (decor, floors, filth, work givers, sex, vanilla face) serve no shot).
+
+NPT: new step for the review captures: `Nelim's Pickle Tools: the main bar, the speed controls and the mouse-over readout are hidden` (Given, ScreenshotStudio), no description yet in steps.md: use it for the gallery (no HUD, no tooltip), played status unknown, ask PiT before relying on it.
 
 | Place | Shots | Changes for the gallery | Last read |
 | --- | --- | --- | --- |
-| barn (193,237) | 1 | tall grass (201,238) (202,238) now falls in the furnished east extension (x 199-204): check at refile, scene 1 was played before | 2026-11-05 |
-| statue-garden (155,97) | 2 | daylilies x3 | 2026-11-05 |
-| sofa-corner (187,123) | 3 | two lit torches | 2026-11-05 |
-| bare-clearing (195,152) | 4 | daylilies, tall grass, x 190 flower border (as NSB describes it) | 2026-11-05 |
-| enclosure-south (149,214) | 5, 6 | dandelions, daylilies | 2026-11-05 |
+| barn (196, 237) | 1 | tall grass (201,238) (202,238) falls in the furnished east extension (x 199-204): check at refile | 2026-11-17 |
+| statue-garden (155, 99) | 2 | daylilies x3 | 2026-11-17 |
+| sofa-corner | 3 | two lit torches | 2026-11-17 |
+| bare-clearing | 4 | daylilies, tall grass | 2026-11-17 |
+| enclosure-south | 5, 6 | dandelions, daylilies; nothing on the flower logo cells | 2026-11-17 |
 
 | Colonist | Shots | Outfit per shot | Last read | Exceptions |
 | --- | --- | --- | --- | --- |
-| Nelim | 1 to 6 | one outfit all day, mustard shirt, brown trousers, olive jacket (a market morning she dressed at dawn; NSB daily is LTS_Tunika emerald, outfits are free) | 2026-11-05 | PENDING (rule 3): hairstyle "Ponytails" and colour rgb (90,58,32) in 12-gallery.feature, the roster says Roo_HD_Hair_Highpony and Hair_DarkSaturatedReddish #382412; no quoted validation. Mouths: smile on default scenes, owner 2026-10-25 (quoted above); each scene's smile variant is the session's call within it |
+| Nelim | 1 to 6 | one outfit all day (a free outfit, the story says which; the daily `LTS_Tunika` emerald and earrings are validated) | 2026-11-17 (VALIDE.md) | hair: roster `Roo_HD_Hair_Highpony` validated, the shotlist v6 `Ponytails` (90,58,32) is outside the roster: drop it at write-shotlist. Smile per scene: PENDING |
 
 | Animal | Shots | Outfit | Last read | Exceptions |
 | --- | --- | --- | --- | --- |
-| arctic fox (GalleryFox) | 1 | red collar, blue helmet | 2026-11-05 (not in the catalogue) | outside NSB, tamed wildlife: not covered by rule 2 (session call); NSB has Pecan, a FoxSquirrel, only if its mod is loaded |
-| horse | 2 | purple barding, gold chanfron, green saddle | 2026-11-05 (not in the catalogue) | outside NSB, domestic: PENDING |
-| grizzly bear | 3 | pale blue diaper | 2026-11-05 (not in the catalogue) | outside NSB, tamed wildlife: session call |
-| goat | 4 | goat mail | 2026-11-05 (not in the catalogue) | outside NSB, domestic: PENDING |
-| husky (GalleryHusky, ParadeHusky) | 5, 6 | Apparel_SmallAnimalPowerArmor, Apparel_shielddogcollar | 2026-11-05 (CATALOGUE-ANIMAUX) | outside NSB, domestic: PENDING. Yuki is the NSB husky and wears only Apparel_leatherdogcollar by default (another garment allowed when the story says so, owner 2026-10-25), so an armoured husky stays a non-Yuki one unless she says otherwise |
-| cow | 6 | per feature 12 | 2026-11-05 (not in the catalogue) | outside NSB, domestic: PENDING |
+| arctic fox "GalleryFox" | 1, 6 | red collar, blue helmet | 2026-11-17 (not in NSB) | outside NSB; owner 2026-11-05 "je valide le renard arctique" (chat) and authorized by default (mod items address it) |
+| horse | 2, 6 | purple barding, gold chanfron, green saddle | 2026-11-17 (save fauna, anonymous) | none: 13 horses in the save, free as a species |
+| grizzly | 3 | pale blue diaper | 2026-11-17 (save fauna, 1) | none |
+| goat | 4, 6 | goat mail | 2026-11-17 (not in NSB) | outside NSB; owner 2026-11-05 "je valide pour la chèvre" (chat) and authorized by default |
+| husky "GalleryHusky" | 5, 6 | armour, helmet, shield collar | 2026-11-17 (save fauna, 3) | not Yuki (Yuki wears only the leather collar, her wardrobe was validated 2026-11-06 for the NSB set) |
+| cow | 6 | scarf | 2026-11-17 (save fauna, 4) | none |
 
-Would change at shootGallery if she says no: Nelim back to the roster hair; horse, goat, cow dropped or replaced by Shogun and Yuki (NSB) in garments the story justifies; scene 1 grass cells moved out of the extension.
+Included animals (rule 5): the mod adds no animal (no PawnKindDef, no race def: apparel, collars, turret packs, patches for other mods' animals; the BunRace folder is textures and a patch). No row, no MISSING.
 
 ## Shotlist v6, 2026-10-23 (skill write-shotlist, GALLERY.md a to k as of 2026-10-23, feature `12-gallery`, pass `wsl-deps.sanctuary.map` with VEF)
 
@@ -151,57 +155,6 @@ Self-check: series score 3 (scenes 3, 5, 6 below 4 until the animal steps exist)
 2026-10-23: NPT wrote the three animal steps (walk to, follows, lies down; compiled, not played). Feature rewritten and committed at 2f858fd (one outfit, an instant per scene); scenes 3, 5, 6 now 4/5 (steps exist), series 4. Tickets filed: 52f8 (scenes 1 to 3, Tests/Pickle/Inbox/gallery-v6a) and b7f7 (scenes 4 to 6, gallery-v6b), pass wsl-deps.sanctuary.map. Unverified: haul of a carried item, Train gesture, LayDown held by forceSleep, FollowClose on tame animals. At RUN_DONE read each capture against its line (instant, outfit continuity); scene 7 stays Art/Gallery candidate; stale old files Art/Gallery/1-fox.png, 2-horse.png, 3-husky.png to delete at reindex.
 
 2026-10-25: NPT answered via TM: fix in ColonistRace/Source/LookSteps.cs (compiled, not played, not deployed): `the animal "X" stands at (x, z) facing D` now forces a Wait job, the animal holds its cell during `I let N ticks pass`; `X faces D` holds rotation. Use once per animal, no re-apply (fox of scene 1: `the animal "GalleryFox" stands at (x, z) facing South`). Needs the new DLL deployed: ef32 must wait for it. No recipe for an animal mid-stride facing the camera. `is forced to walk to`, `follows ... within N cells`, `lies down`: never played (compiled 2026-10-23), no proof; scenes 3, 5, 6 rest on them.
-
-## NSB
-
-Sync 2026-11-05 (skill sync-nsb, owner request: redo the shotlist with NSB). Stage is `playTests`, so nothing is rewritten yet: the shotlist, `12-gallery.feature` and the sanctuary map change at `shootGallery` (`write-shotlist`). Rules of the owner (2026-11-05): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs her express validation; a colonist's properties change only with it; every outfit is free.
-
-Reads: Places read: 2026-11-05 (partial: SANCTUAIRE-LIEUX.md sections "Qui vit", "La faune", "Les cadres nommés", "Animaux mis en scène"; CASES, EMBELLISSEMENT not opened). Tribe read: 2026-11-05 (partial: NELIM-PROFIL, CATALOGUE-ANIMAUX, HUMAINS-PROFILS, GALERIE-COLONS, LOOKS-VALIDATION; ROSTER, APPARENCES-CANON, animal sheets not opened).
-
-What the v6 shotlist (2026-10-23) gets wrong against NSB:
-- Nelim: it invents an outfit (mustard shirt, brown trousers, olive jacket), hair "Ponytails dark brown" and a smile per scene. NSB canon: hair `Roo_HD_Hair_Highpony` (a hair change needs the owner), mouth `MouthLipsSmirk`, `LidCheerful`, `BrowNormal`; validated daily outfit robe `LTS_Tunika` emerald (#1F7A5C) + `Apparel_PAESmallEarrings`, validated 2026-11-04. The per-scene smiles were withdrawn by the owner on 2026-11-05 (chat). Outfit is free, so the daily outfit (or another validated one per story) can be chosen; the face stays as the roster says.
-- Animals: fox (`Fox_Arctic`, scene 1) and goat (scene 4) are not in the NSB fauna (list: cat, labrador, thrumbo, panda, otter, swan, duck, sparrow, squirrel, ... horse 13, donkey 8, sheep 8, pig 5, cow 4, husky 3, yorkshire 4, boomalope 4, grizzly 1, lynx 1, ibex 1, alpaca 3, bison 4, mastodon 3). Horse, cow, husky, grizzly are in the save. The husky "GalleryHusky" is a non-Yuki husky (Yuki wears only `Apparel_leatherdogcollar`, canon): Yuki itself is NSB.
-- Canon animals with a role: Rain (thrumbo) wears `Apparel_LargeAnimalScarf` blue-green as canon (a piece of this mod); Atticus never wears gear; Shogun and Yuki wear `Apparel_leatherdogcollar`, another garment allowed if the shotlist says why; Tama and Kuru: no compatible apparel; `Apparel_dogbow` excluded.
-
-Proposal for `shootGallery` (not applied):
-
-| Scene | Today | With NSB |
-| --- | --- | --- |
-| 1 collar and helmet on the smallest | arctic fox | PENDING owner: keep the fox (outside NSB) or use a small NSB animal that wears the pieces (Pécan the FoxSquirrel, Labrador Shogun with collar) |
-| 2 full set for the biggest | horse | NSB horse of the save (statue-garden) or Rain with her scarf as the canon big animal |
-| 3 diaper on the big ones | grizzly | the NSB grizzly (1 in the save), sofa-corner |
-| 4 goat mail | goat | goat kept, outside NSB, validated by the owner 2026-11-05 ("je valide pour la chèvre", chat) |
-| 5 armour and shield collar | non-Yuki husky | Yuki (NSB) with armour only if the owner agrees (canon: collar only), else an NSB save husky |
-| 6 parade | fox, husky, cow, horse, goat, bear | NSB animals only |
-
-| Place | Shots that use it | Changes made for the gallery | Last read |
-| --- | --- | --- | --- |
-| barn (193, 237) | 1 | none (poker table, billiard, animal beds in NSB) | 2026-11-05 |
-| statue-garden (155, 97) | 2 | none | 2026-11-05 |
-| sofa-corner (187, 123) | 3 | none | 2026-11-05 |
-| bare-clearing (195, 152) | 4 | none (bare earth, flower border x 190) | 2026-11-05 |
-| enclosure-south (149, 214) | 5, 6 | none | 2026-11-05 |
-
-| Colonist | Shots | Outfit per shot | Last read of its profile | Exceptions |
-| --- | --- | --- | --- | --- |
-| Nelim | 1 to 6 | today invented (mustard, brown, olive); to replace by the validated daily `LTS_Tunika` + `Apparel_PAESmallEarrings` (or another validated one the story justifies) | 2026-11-05 (NELIM-PROFIL) | today: hair `Ponytails` and smile per scene, both outside the roster and not validated (smile withdrawn 2026-11-05); to drop |
-
-| Animal | Shots | Outfit chosen | Last read of its sheet | Exceptions |
-| --- | --- | --- | --- | --- |
-| arctic fox "GalleryFox" | 1, 6 | collar, small helmet | not in NSB | outside NSB, validated by the owner 2026-11-05 ("je valide le renard arctique", chat), this mod, the arctic fox only |
-| horse | 2, 6 | barding, chanfron, saddle | species in the save (CATALOGUE not a sheet) | none |
-| grizzly | 3 | diaper | species in the save | none |
-| goat | 4, 6 | goat mail | not in NSB | outside NSB, validated by the owner 2026-11-05 ("je valide pour la chèvre", chat), this mod, the goat only |
-| husky "GalleryHusky" | 5, 6 | armour, helmet, shield collar | Yuki sheet not opened | non-Yuki husky: species is in the save (3); Yuki armour not canon |
-| cow | 6 | scarf | species in the save | none |
-
-Update 2026-11-05 after NSB re-documented itself (SANCTUAIRE-LIEUX.md "Qui une galerie peut utiliser", dated 2026-11-05; CATALOGUE-ANIMAUX and NELIM-PROFIL got dated headers; read: that section, Places read and Tribe read dates above stay):
-- Colonists: only Nelim is in the save (I wrongly read this as NSB's whole cast, owner correction 2026-11-05). Every other NSB colonist is created by step (`a colonist "X" of kind "Y" exists`, templates `sanctuary-daily*.feature`): kind `Colonist` = Miel, Soren, Ryu, Daichi, Emi, Haru, Celeste, Iori, Quill, Quo, Quaren; kind `OL_SerenColonist` = Ada, Jiro, Lyra, Dalia, Vesper. All free to use. Which colonists the gallery uses: PENDING owner.
-- Named animals in the save: Atticus, Rain (thrumbos, in the house), Shogun (labrador), Yuki (husky). Tama, Kuru, Ottawa, Onigiri, Pecan, Wren, Wrille, Ulysse, Ursule, Xylo are NOT in the save (NSB gives the steps on request). Other save fauna is anonymous decor, free as a plain animal of its species, no NSB name or role.
-- No goat, no arctic fox, no FoxSquirrel in the save; Erin's FoxSquirrel mod is in no NSB pass map. Goat: validated by the owner (above). Arctic fox / FoxSquirrel for scene 1: replace by a species of the save (Shogun with his leather collar, or an anonymous small animal of the save such as a Yorkshire) unless the owner validates the fox.
-
-Owner rule 2026-11-05 (chat, quoted): "je suis en train de redécorer NSB. Donc je valide la redécoration lieu par lieu. Je viens de valider ces lieux, tu peux donc commencer tes prises de vues là-bas. De la même manière, Nelim et certaines de ses tenues sont validées, tu peux les travailler sans risque que je les change. Mais les autres lieux aussi (et les autres colons/animaux et les autres tenues aussi) seront validés, mais pas encore là maintenant, donc il faut attendre pour les utiliser". Validated now: places `cloister` (179, 130), `terrace` (197, 123), `infirmary-pawns` (202, 52) (via NPT too); Nelim and the outfits marked validated in NELIM-PROFIL (daily LTS_Tunika, underwear, ceremony FCA2_OrangeScarfDress, party LTS_LacedDress, sleep Apparel_PonpecoPajamaB, soignante LisaWork scrubs, formal LTS_RegalCloth, date LTS_SummerSundress, combat). NOT yet: every other place (barn, statue-garden, sofa-corner, bare-clearing, enclosure-south are on hold), other colonists (Soren), other animals, other outfits: wait, do not shoot with them. Consequence: the six-scene plan above is on hold except what fits the three places and Nelim; animals to use now: PENDING owner.
-Animals usable now (2026-11-05): goat and arctic fox, both outside NSB and validated by the owner (quotes above and in the animals table). Other animals wait for her validation. Places usable now: cloister, terrace, infirmary-pawns; colonist: Nelim.
 
 ## Settings audit
 
