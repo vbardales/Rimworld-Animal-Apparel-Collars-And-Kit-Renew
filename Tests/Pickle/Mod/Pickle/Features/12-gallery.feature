@@ -119,7 +119,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
     And Nelim's Pickle Tools: "Nelim" carries the item "Leather_Camel"
-    And Nelim's Pickle Tools: "Nelim" stands at (157, 104) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (156, 104) facing West
     Then Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorsePlate"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseHelmet"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseSaddle"
