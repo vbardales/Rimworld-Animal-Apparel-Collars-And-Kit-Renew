@@ -1,4 +1,4 @@
-@animal-apparel-collars @gallery @review @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace @requires:OskarPotocki.VanillaFactionsExpanded.Core
+@animal-apparel-collars @gallery @review @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.camerazoom @requires:OskarPotocki.VanillaFactionsExpanded.Core
 
 # Staged photographs for the Steam page (PUBLISHING.md, GALLERY.md "Shotlist : critères d'une scène à 4/5", rules of 2026-10-23).
 # Pass: wsl-deps.sanctuary.map (Sanctuaire de Nelim, fixture Nelims-tribe) with Vanilla Expanded Framework (settings page).
@@ -17,6 +17,10 @@
 # run N ticks (`I let N ticks pass`), THEN pauses (`time is paused for the capture`), then sets the face and frames. Nothing
 # stands still facing the camera. Steps used: forced to haul (Nelim walks with the item), animal forced to walk / follows / lies down (NPT, 2026-10-23, compiled, NOT PLAYED before this run).
 # Shot widths (cells, v7b): 1 = 8, 2 = 9, 3 = 10, 4 = 7, 5 = 9, 6 = 19; only 6 is wide, the others are tight on purpose (animal readable at 268 px). Fronts: fox 1, husky 5.
+# v7i (2026-11-18, after v7h: every animal drifted 1 to 1.5 cells from its cell, so it was cut by an edge or far from Nelim, and animals were 35 to 60 px at 268 px): each animal is now
+# held by the NPT step `the animal "X" stands at (x, z) facing D` (Wait job, holds the cell while ticks pass) instead of `faces`; frames at zoom 1.6 (337 px per cell, 5.7 cells wide, 3.2 tall)
+# for 1, 2, 4, 5 with the animal and Nelim two cells apart on the same row and the decor inside the visible rows; scene 6 at zoom 2.6 (208 px per cell, 9.2 wide) with the troop placed
+# in a column behind Nelim (held, no `follows`: the follow drift scattered it), Nelim mid-haul ahead. Scene 4: goat walks 2 cells, Nelim 3 cells, 30 ticks.
 #
 #  1. BARN 08:00, instant (v7h, 2026-11-17, after v7g: the helmet Nelim carried was unreadable at 268 px, the barn floor read as bare straw): the fox already wears its red collar
 #        (Apparel_leatherdogcollar, #c8202a) and the blue helmet (Apparel_SmallAnimalPowerArmorHelmet, #1f6fb5), the blue head is the readable spot at 268 px (as in shot 6);
@@ -75,16 +79,16 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (202, 238) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (201, 238) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (199, 238) fully grown
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 238)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 238) is lit
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (203, 234) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (198, 234) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (204, 236) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (200, 237) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (201, 237) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (203, 237) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (203, 236)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (203, 236) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 235) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (203, 235) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (198, 237) fully grown
     And Animal Apparel Collars: a tame "Fox_Arctic" named "GalleryFox" stands at (202, 236)
-    And Nelim's Pickle Tools: "GalleryFox" faces West
+    And Nelim's Pickle Tools: the animal "GalleryFox" stands at (202, 236) facing West
     And Animal Apparel Collars: "GalleryFox" is dressed in "Apparel_leatherdogcollar" dyed "#c8202a"
     And Animal Apparel Collars: "GalleryFox" is dressed in "Apparel_SmallAnimalPowerArmorHelmet" dyed "#1f6fb5"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
@@ -100,7 +104,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
-    And Nelim's Pickle Tools: I frame the cell (201, 236) at zoom 2
+    And Nelim's Pickle Tools: I frame the cell (201, 236) at zoom 1.6
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-1-fox"
     And Nelim's Pickle Tools: the decor is removed
@@ -115,13 +119,13 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I let 268 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (193, 155) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 155) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (199, 155) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (197, 155) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (197, 157) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (193, 157) fully grown
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (198, 155)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (198, 155) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (198, 157)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (198, 157) is lit
     And Animal Apparel Collars: a tame "Horse" named "GalleryHorse" stands at (195, 156)
-    And Nelim's Pickle Tools: "GalleryHorse" faces East
+    And Nelim's Pickle Tools: the animal "GalleryHorse" stands at (195, 156) facing East
     And Animal Apparel Collars: "GalleryHorse" is dressed in "Apparel_MedievalHorsePlate" dyed "#7a1fa2"
     And Animal Apparel Collars: "GalleryHorse" is dressed in "Apparel_MedievalHorseHelmet" dyed "#e0b020"
     And Animal Apparel Collars: "GalleryHorse" is dressed in "Apparel_MedievalHorseSaddle" dyed "#2e8b57"
@@ -129,17 +133,17 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
     And Nelim's Pickle Tools: "Nelim" carries the item "Leather_Camel"
-    And Nelim's Pickle Tools: "Nelim" stands at (199, 157) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (199, 156) facing West
     Then Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorsePlate"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseHelmet"
     And Animal Apparel Collars: the render tree of "GalleryHorse" draws "Apparel_MedievalHorseSaddle"
-    When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Leather_Camel" to (197, 157)
-    And Nelim's Pickle Tools: I let 10 ticks pass
+    When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Leather_Camel" to (197, 156)
+    And Nelim's Pickle Tools: I let 25 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
-    And Nelim's Pickle Tools: I frame the cell (195, 156) at zoom 2
+    And Nelim's Pickle Tools: I frame the cell (196, 156) at zoom 1.6
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-2-horse"
     And Nelim's Pickle Tools: the decor is removed
@@ -186,30 +190,30 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 685 ticks pass
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (192, 150) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 150) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (191, 153) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (193, 151) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 151) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (192, 153) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (193, 153) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (190, 151) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (191, 151) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 151)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 151) is lit
     And Animal Apparel Collars: a tame "Goat" named "GalleryGoat" stands at (194, 152)
-    And Nelim's Pickle Tools: "GalleryGoat" faces West
+    And Nelim's Pickle Tools: the animal "GalleryGoat" stands at (194, 152) facing West
     And Animal Apparel Collars: "GalleryGoat" is dressed in "Apparel_GoatMail" dyed "#1f9d8f"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
     And Nelim's Pickle Tools: "Nelim" carries the item "Hay"
-    And Nelim's Pickle Tools: "Nelim" stands at (198, 153) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (197, 153) facing West
     Then Animal Apparel Collars: the render tree of "GalleryGoat" draws "Apparel_GoatMail"
-    When Nelim's Pickle Tools: "GalleryGoat" is forced to walk to (191, 152)
+    When Nelim's Pickle Tools: "GalleryGoat" is forced to walk to (192, 152)
     And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Hay" to (194, 153)
-    And Nelim's Pickle Tools: I let 40 ticks pass
+    And Nelim's Pickle Tools: I let 30 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
-    And Nelim's Pickle Tools: I frame the cell (193, 152) at zoom 2
+    And Nelim's Pickle Tools: I frame the cell (194, 152) at zoom 1.6
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-4-goat"
     And Nelim's Pickle Tools: the decor is removed
@@ -225,27 +229,27 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (145, 213) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Dandelion" at (148, 213) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (143, 215) fully grown
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (149, 215)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (149, 215) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (144, 215) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (148, 215)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (148, 215) is lit
     And Animal Apparel Collars: a tame "Husky" named "GalleryHusky" stands at (147, 214)
-    And Nelim's Pickle Tools: "GalleryHusky" faces South
+    And Nelim's Pickle Tools: the animal "GalleryHusky" stands at (147, 214) facing South
     And Animal Apparel Collars: "GalleryHusky" is dressed in "Apparel_SmallAnimalPowerArmor" dyed "#8a949e"
     And Animal Apparel Collars: "GalleryHusky" is dressed in "Apparel_shielddogcollar" dyed "#c8202a"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
     And Nelim's Pickle Tools: "Nelim" carries the item "Pemmican"
-    And Nelim's Pickle Tools: "Nelim" stands at (144, 214) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (143, 214) facing East
     Then Animal Apparel Collars: the render tree of "GalleryHusky" draws "Apparel_SmallAnimalPowerArmor"
     And Animal Apparel Collars: the render tree of "GalleryHusky" draws "Apparel_shielddogcollar"
     When Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Pemmican" to (145, 214)
-    And Nelim's Pickle Tools: I let 15 ticks pass
+    And Nelim's Pickle Tools: I let 25 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
-    And Nelim's Pickle Tools: I frame the cell (146, 215) at zoom 2
+    And Nelim's Pickle Tools: I frame the cell (146, 214) at zoom 1.6
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-husky"
     And Nelim's Pickle Tools: the decor is removed
@@ -259,19 +263,20 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 1042 ticks pass
     And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 150) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 150) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (202, 150) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (198, 154) fully grown
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (201, 154)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (201, 154) is lit
-    And Animal Apparel Collars: a tame "Fox_Arctic" named "ParadeFox" stands at (195, 152)
-    And Animal Apparel Collars: a tame "Husky" named "ParadeHusky" stands at (196, 150)
-    And Animal Apparel Collars: a tame "Goat" named "ParadeGoat" stands at (194, 152)
-    And Animal Apparel Collars: a tame "Horse" named "ParadeHorse" stands at (193, 151)
-    And Nelim's Pickle Tools: "ParadeFox" faces East
-    And Nelim's Pickle Tools: "ParadeHusky" faces East
-    And Nelim's Pickle Tools: "ParadeGoat" faces East
-    And Nelim's Pickle Tools: "ParadeHorse" faces East
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 154) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (196, 154) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (202, 153)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (202, 153) is lit
+    And Animal Apparel Collars: a tame "Fox_Arctic" named "ParadeFox" stands at (199, 152)
+    And Animal Apparel Collars: a tame "Husky" named "ParadeHusky" stands at (197, 153)
+    And Animal Apparel Collars: a tame "Goat" named "ParadeGoat" stands at (197, 151)
+    And Animal Apparel Collars: a tame "Horse" named "ParadeHorse" stands at (195, 152)
+    And Nelim's Pickle Tools: the animal "ParadeFox" stands at (199, 152) facing East
+    And Nelim's Pickle Tools: the animal "ParadeHusky" stands at (197, 153) facing East
+    And Nelim's Pickle Tools: the animal "ParadeGoat" stands at (197, 151) facing East
+    And Nelim's Pickle Tools: the animal "ParadeHorse" stands at (195, 152) facing East
     And Animal Apparel Collars: "ParadeFox" is dressed in "Apparel_leatherdogcollar" dyed "#c8202a"
     And Animal Apparel Collars: "ParadeFox" is dressed in "Apparel_SmallAnimalPowerArmorHelmet" dyed "#1f6fb5"
     And Animal Apparel Collars: "ParadeHusky" is dressed in "Apparel_SmallAnimalPowerArmor" dyed "#8a949e"
@@ -284,23 +289,19 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
     And Nelim's Pickle Tools: "Nelim" carries 20 of the item "Silver"
-    And Nelim's Pickle Tools: "Nelim" stands at (199, 152) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 152) facing East
     Then Animal Apparel Collars: the render tree of "ParadeFox" draws "Apparel_leatherdogcollar"
     And Animal Apparel Collars: the render tree of "ParadeHusky" draws "Apparel_shielddogcollar"
     And Animal Apparel Collars: the render tree of "ParadeGoat" draws "Apparel_GoatMail"
     And Animal Apparel Collars: the render tree of "ParadeHorse" draws "Apparel_MedievalHorsePlate"
-    When Nelim's Pickle Tools: "ParadeFox" follows "Nelim" within 4 cells
-    And Nelim's Pickle Tools: "ParadeHusky" follows "Nelim" within 4 cells
-    And Nelim's Pickle Tools: "ParadeGoat" follows "Nelim" within 4 cells
-    And Nelim's Pickle Tools: "ParadeHorse" follows "Nelim" within 4 cells
-    And Nelim's Pickle Tools: "Nelim" is forced to haul 20 of the item "Silver" to (201, 152)
-    And Nelim's Pickle Tools: I let 60 ticks pass
+    When Nelim's Pickle Tools: "Nelim" is forced to haul 20 of the item "Silver" to (201, 152)
+    And Nelim's Pickle Tools: I let 12 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthClassicSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
-    And Nelim's Pickle Tools: I frame the cell (197, 152) at zoom 3
+    And Nelim's Pickle Tools: I frame the cell (198, 152) at zoom 2.6
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-parade"
     And Nelim's Pickle Tools: the decor is removed
