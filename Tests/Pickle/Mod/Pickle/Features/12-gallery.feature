@@ -204,10 +204,10 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
     And Nelim's Pickle Tools: "Nelim" carries the item "Hay"
-    And Nelim's Pickle Tools: "Nelim" stands at (197, 153) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (197, 152) facing West
     Then Animal Apparel Collars: the render tree of "GalleryGoat" draws "Apparel_GoatMail"
     When Nelim's Pickle Tools: "GalleryGoat" is forced to walk to (192, 152)
-    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Hay" to (194, 153)
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Hay" to (195, 152)
     And Nelim's Pickle Tools: I let 30 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
