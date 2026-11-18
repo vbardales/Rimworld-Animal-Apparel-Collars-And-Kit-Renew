@@ -104,7 +104,7 @@ remaining:
   - "2026-10-10: unverified: review captures are present but unreadable as images (camera bound at root size 11, a muffalo one with HUD and tooltip); proof rests on the passing render-tree assertions."
   - "2026-10-13: defect: Check-CiTemplate.ps1 shows drift in .github (steam-page.mjs, steam-publish.mjs, steam-page.test.mjs +1): regenerate at the CI/CD template stamp before publish."
 updated:      2026-11-16, replay-audit (playTests 8.a), earlier: 2026-10-29 replay-audit (writeTests 7.g)
-protocols_read_sha: f8fee9ce3e84db4584ec0256dddb91ff50a3b435
+protocols_read_sha: 9338d8dcb0ab58bd06f914cc97073e4eb6c611c9
 ---
 # Animal Apparel: Collars and Kit Renew: status
 
