@@ -87,12 +87,12 @@ indexed contiguously, with `0-` as the byte-for-byte copy of `Mod/About/Preview.
 | Index | File | Shows |
 |---|---|---|
 | 0 | `0-preview.png` | The Preview (copy of `Mod/About/Preview.png`) |
-| 1 | `1-fox.png` | A fox wearing a collar and a helmet amid the barn straw (two frames, one kept) |
-| 2 | `2-horse.png` | The horse set: barding, chanfron, saddle, bridle, among the statues (two frames, one kept) |
-| 3 | `3-bear.png` | A grizzly in profile in a diaper |
-| 4 | `4-goat.png` | A goat in goat mail in the clearing |
-| 5 | `5-husky.png` | A husky in power armour with a shield collar over it |
-| 6 | `6-parade.png` | The parade of the dressed troop |
+| 1 | `1-fox.jpg` | A fox wearing a collar and a helmet amid the barn straw (two frames, one kept) |
+| 2 | `2-horse.jpg` | The horse set: barding, chanfron, saddle, bridle, among the statues (two frames, one kept) |
+| 3 | `3-bear.jpg` | A grizzly in profile in a diaper |
+| 4 | `4-goat.jpg` | A goat in goat mail in the clearing |
+| 5 | `5-husky.jpg` | A husky in power armour with a shield collar over it |
+| 6 | `6-parade.jpg` | The parade of the dressed troop |
 | 7 | `7-settings.png` | The Mod options page (interface, cropped, no subtitle) |
 
 ### Gallery subtitles
@@ -104,12 +104,12 @@ captures are accepted and reindexed. Originals go to `Art/Gallery-clean/`, subti
 
 | Index | File | Line |
 |---|---|---|
-| 1 | `1-fox.png` | Nelim picks the next collar for the smallest of her companions. |
-| 2 | `2-horse.png` | A full set for the biggest one: barding, chanfron, saddle and bridle. |
-| 3 | `3-bear.png` | A spare diaper for the big ones too. |
-| 4 | `4-goat.png` | Goat mail for the toughest climber. |
-| 5 | `5-husky.png` | Collars have their own slot, on top of the armour. |
-| 6 | `6-parade.png` | Market morning: the whole troop heads out. |
+| 1 | `1-fox.jpg` | Nelim brings a spare helmet to the smallest of her companions. |
+| 2 | `2-horse.jpg` | A full set for the biggest one: barding, chanfron, saddle and bridle. |
+| 3 | `3-bear.jpg` | A spare diaper for the big ones too. |
+| 4 | `4-goat.jpg` | Goat mail for the toughest climber. |
+| 5 | `5-husky.jpg` | Collars have their own slot, on top of the armour. |
+| 6 | `6-parade.jpg` | Market morning: the whole troop heads out. |
 
 The turret packs are `AnimalInvisible` by design (drawn by MVCF), so no capture shows them (a run of 2026-10-18 confirmed it); image 5 shows the neck slot instead. Staged gallery: feature `12-gallery`, pass `wsl-deps.sanctuary.map`; the table above is realigned once the captures are accepted. Each image is opened before upload.
 
