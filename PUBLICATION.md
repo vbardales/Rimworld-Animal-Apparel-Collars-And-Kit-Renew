@@ -93,7 +93,7 @@ indexed contiguously, with `0-` as the byte-for-byte copy of `Mod/About/Preview.
 | 4 | `4-goat.jpg` | A goat in goat mail in the clearing |
 | 5 | `5-husky.jpg` | A husky in power armour with a shield collar over it |
 | 6 | `6-parade.jpg` | The parade of the dressed troop |
-| 7 | `7-settings.png` | The Mod options page (interface, cropped, no subtitle) |
+| 7 | `7-settings.jpg` | The Mod options page (interface, cropped, no subtitle) |
 
 ### Gallery subtitles
 
