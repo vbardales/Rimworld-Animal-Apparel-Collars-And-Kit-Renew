@@ -28,16 +28,16 @@
 #        Nelim starts at (198,236) and hauls the helmet to (200,236), 25 ticks, still moving at the pause; frame the cell (201,236) at zoom 2 (270 px per cell, 7 cells wide, the closest
 #        the camera goes: NPT 2026-11-17), both in the middle. decor v7h: lit TorchLamp (204,238), Plant_Bush (199,238), Plant_YellowTallGrass (201,238) (202,238), and new Plant_Daylily
 #        (203,234) (198,234), Plant_Dandelion (204,236) so the barn floor is not bare, the barn's own braziers stay (furniture, cannot be removed), low morning sun from the east.
-#        Nelim: MouthSmile, LidCheerful. j: blue helmet and red collar on a white fox.
+#        Nelim: MouthLipsSmirk, LidCheerful. j: blue helmet and red collar on a white fox.
 #  2. BARE-CLEARING (north half of the free square A) 08:05, instant: Nelim walks up with the bridle's leather (Leather_Camel) towards the horse's head, one step
 #        before she buckles it on, next she leads it out; obtained by a haul of Leather_Camel in front of the horse's head (the job Train
-#        was refused in ticket b7f7: RopeToPen), 10 ticks, then pause. pale horse East, purple barding, gold chanfron, green saddle. MouthLipsSmallSmile, LidNormal.
+#        was refused in ticket b7f7: RopeToPen), 10 ticks, then pause. pale horse East, purple barding, gold chanfron, green saddle. MouthLipsSmirk, LidNormal.
 #        v7h (2026-11-17, after v7g: the game drifted the horse about 1.5 cells West of its spawn, so it was cut by the left edge and Nelim stood alone at the right): the horse
 #        at (195,156) facing East, Nelim one row south at (199,157) facing West hauls the leather to (197,157), in front of its head, never on its row; frame the cell (195,156) at zoom 2
 #        (270 px per cell, 7 cells wide) so the horse drifted West stays in the left third and Nelim in the right third. decor: Plant_Daylily (193,155) (195,155),
 #        Plant_YellowTallGrass (199,155), Plant_Bush (193,157), lit TorchLamp (198,155), low morning sun from the east. j: barding, chanfron, saddle.
 #  3. SOFA-CORNER 08:10, instant: the grizzly stands in its pale blue diaper, Nelim brings a spare one (haul of Cloth).
-#        MouthLittleGrin, LidNormal. rectangle (184,125)-(193,129), two lit torches (184,127) (193,127) at its edges. j: diaper.
+#        MouthLipsSmirk, LidNormal. rectangle (184,125)-(193,129), two lit torches (184,127) (193,127) at its edges. j: diaper.
 #        v7b (2026-11-17, after ticket 8cd5: the bear lay down, brown on the brown plank floor, a flat silhouette, no diaper drawn, 200 px at zoom 4):
 #        no LayDown (the diaper does not show on a lying animal and brown on brown has no contrast): the bear stands East at (189,127),
 #        the pale blue diaper (#9ad0f0) is the one light spot on the dark floor; the bear faces West toward Nelim, who hauls the cloth to (187,126), the diaper on its east flank by the torch;
@@ -45,7 +45,7 @@
 #  4. BARE-CLEARING 08:15, instant (reworked 2026-10-25 after b7f7: goat 12 % of the frame, Nelim out of frame, bare ground):
 #        the mail is fitted, the goat steps off West toward the flower border and Nelim follows at its flank with a bale of hay, one
 #        step behind it. goat West (walk to (191,152) from (194,152), 40 ticks), goat mail Apparel_GoatMail now dyed teal #1f9d8f (v7h, 2026-11-17: the undyed dark mail
-#        was barely readable on the cream coat at 268 px); Nelim walks (198,153) to (194,153) facing West. MouthSmirkSmile, BrowRaised.
+#        was barely readable on the cream coat at 268 px); Nelim walks (198,153) to (194,153) facing West. MouthLipsSmirk, BrowRaised.
 #        Fixed frame (not the animal, which drifts): frame the cell (193,152) at zoom 2 (270 px per cell, 7 cells wide), so both stay in.
 #        decor v7: lit TorchLamp (196,151), Plant_Bush (190,151), foreground (south edge z 150): two daylilies (192,150) (195,150); background (north, z 153): two tall yellow
 #        grass (191,153) (193,153) and the natural flower border at x 190; goat at the middle, Nelim right of it, low morning sun from
@@ -57,7 +57,7 @@
 #        7 cells wide, 4 cells tall), front view, armour on its back and shield collar at its neck, both in the middle. decor: dandelions (145,213) (148,213),
 #        lit TorchLamp (149,215), Plant_Bush (143,215) so the ground is not bare, fence behind, low morning sun from the east. j: armour and AnimalNeck slot.
 #  6. BARE-CLEARING (free square A) 08:25, instant: Nelim hauls twenty silver East, the troop (fox, husky in its scene-5 set, goat in its mail, horse in its
-#        set) follows her. MouthClassicSmile, LidCheerful.
+#        set) follows her. MouthLipsSmirk, LidCheerful.
 #        v7h (2026-11-17, after v7g: the troop lagged four cells behind Nelim and sat at the left edge, the goat drifted to the top edge): played on the free square A
 #        (bare ground, all standable), the troop starts in four rows behind her: husky (196,150), horse (193,151), fox (195,152), goat (194,152), all facing East;
 #        Nelim starts at (199,152) and hauls the silver to (201,152), 60 ticks (two cells of walk), the animals follow within 4 cells; frame the cell (197,152) at zoom 3
@@ -91,6 +91,9 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: the animal "GalleryFox" stands at (202, 236) facing West
     And Animal Apparel Collars: "GalleryFox" is dressed in "Apparel_leatherdogcollar" dyed "#c8202a"
     And Animal Apparel Collars: "GalleryFox" is dressed in "Apparel_SmallAnimalPowerArmorHelmet" dyed "#1f6fb5"
+    And Nelim's Pickle Tools: "Nelim" has the gene "Eyes_DarkBrown"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
@@ -102,7 +105,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I let 25 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: I frame the cell (201, 236) at zoom 1.6
     And Nelim's Pickle Tools: the map is shown alone for a capture
@@ -129,6 +132,9 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: "GalleryHorse" is dressed in "Apparel_MedievalHorsePlate" dyed "#7a1fa2"
     And Animal Apparel Collars: "GalleryHorse" is dressed in "Apparel_MedievalHorseHelmet" dyed "#e0b020"
     And Animal Apparel Collars: "GalleryHorse" is dressed in "Apparel_MedievalHorseSaddle" dyed "#2e8b57"
+    And Nelim's Pickle Tools: "Nelim" has the gene "Eyes_DarkBrown"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
@@ -141,7 +147,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I let 25 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
     And Nelim's Pickle Tools: I frame the cell (196, 156) at zoom 1.6
     And Nelim's Pickle Tools: the map is shown alone for a capture
@@ -164,6 +170,9 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: a tame "Bear_Grizzly" named "GalleryBear" stands at (189, 127)
     And Nelim's Pickle Tools: "GalleryBear" faces West
     And Animal Apparel Collars: "GalleryBear" is dressed in "diaper" dyed "#9ad0f0"
+    And Nelim's Pickle Tools: "Nelim" has the gene "Eyes_DarkBrown"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
@@ -174,7 +183,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I let 30 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLittleGrin"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
     And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
     And Nelim's Pickle Tools: I frame the rectangle from (184, 125) to (193, 129)
     And Nelim's Pickle Tools: the map is shown alone for a capture
@@ -200,6 +209,9 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: a tame "Goat" named "GalleryGoat" stands at (194, 152)
     And Nelim's Pickle Tools: the animal "GalleryGoat" stands at (194, 152) facing West
     And Animal Apparel Collars: "GalleryGoat" is dressed in "Apparel_GoatMail" dyed "#1f9d8f"
+    And Nelim's Pickle Tools: "Nelim" has the gene "Eyes_DarkBrown"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
@@ -211,7 +223,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I let 30 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
     And Nelim's Pickle Tools: I frame the cell (194, 152) at zoom 1.6
     And Nelim's Pickle Tools: the map is shown alone for a capture
@@ -236,6 +248,9 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: the animal "GalleryHusky" stands at (147, 214) facing South
     And Animal Apparel Collars: "GalleryHusky" is dressed in "Apparel_SmallAnimalPowerArmor" dyed "#8a949e"
     And Animal Apparel Collars: "GalleryHusky" is dressed in "Apparel_shielddogcollar" dyed "#c8202a"
+    And Nelim's Pickle Tools: "Nelim" has the gene "Eyes_DarkBrown"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
@@ -285,6 +300,9 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Animal Apparel Collars: "ParadeHorse" is dressed in "Apparel_MedievalHorsePlate" dyed "#7a1fa2"
     And Animal Apparel Collars: "ParadeHorse" is dressed in "Apparel_MedievalHorseHelmet" dyed "#e0b020"
     And Animal Apparel Collars: "ParadeHorse" is dressed in "Apparel_MedievalHorseSaddle" dyed "#2e8b57"
+    And Nelim's Pickle Tools: "Nelim" has the gene "Eyes_DarkBrown"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 72, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (214, 168, 64)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (92, 110, 70)
@@ -298,7 +316,7 @@ Feature: Animal Apparel Collars and Kit Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I let 12 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthClassicSmile"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmirk"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
     And Nelim's Pickle Tools: I frame the cell (198, 152) at zoom 2.6
