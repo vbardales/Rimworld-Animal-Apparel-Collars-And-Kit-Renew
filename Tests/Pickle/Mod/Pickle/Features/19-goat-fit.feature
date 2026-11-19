@@ -1,4 +1,4 @@
-@animal-apparel-collars @review @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.camerazoom
+@animal-apparel-collars @review @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.colonistrace
 # Diagnostic, 2026-11-18 (goat mail sprite sits too high on the vanilla goat, found on gallery 4 and 6): two bare goats and two goats in
 # the undyed Apparel_GoatMail side by side in the same frame, seen from the side (West), the front (South) and the back (North), to
 # measure the offset between the mail sprite and the vanilla goat body and to see whether male and female goats differ. Pass wsl-deps.sanctuary.map.
