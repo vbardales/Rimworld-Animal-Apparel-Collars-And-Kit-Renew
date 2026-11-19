@@ -10,6 +10,8 @@
   for this mod with Claude after the Animal Gear translations of Nevelian and kaiza were found: those share no def with this mod,
   so nothing is copied from them.
 - Goat mail description: "interlocking metal rings" instead of "armor plates" (mail is made of rings), in every language.
+- Redraw the goat mail sprites (east, south, north and their masks): the mail now covers the neck, shoulders and torso of the
+  vanilla goat instead of floating above it.
 - Add a `MVCF.ModDef` (`Mods/VEF/Defs/MVCFDefs/AACK_MVCF.xml`) enabling MVCF's `ApparelVerbs` and `Drawing` features
   when VEF is active: without it the turret packs registered no verbs and the turret was never drawn on the animal.
 

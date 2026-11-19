@@ -14,7 +14,7 @@ repo:         Rimworld-Animal-Apparel-Collars-And-Kit-Renew
 remote:       https://github.com/vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: code[1.0.0]
+workflow_stage: playTests[1.0.0]
 social_preview_sha256: 07bf3e5a8a0333c0c2bf823e920ddf02b1b140a6ae9b9cd404ec3e3e170dbb7d
 licence:      silent
 licence_at:   MIT limited to own contributions and Animal Equipment; six other sources classified silent from documented inactive maintenance; no reuse permission inferred; see ATTRIBUTION visibility decision 2026-09-13
@@ -36,7 +36,7 @@ code_review_sha: cbefc26dd9573602635f91942d3b1449946c82dc
 echo_review_sha: e3efdd3ca41cc0c5b88e4fe45e47a6e22058a9db
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
-  - "2026-11-19: read: ticket 5f6a green 3 of 3 (c26894e, exit 0, skipped 0, set sanctuary), three captures opened (west, south, north; 2 bare goats bottom row, 2 mailed goats top row): the mail now covers head, neck, shoulders and torso on white and grey goats, helmet on the head, rump bare (accepted, plates sit on the body outline). Proof: Tests/Pickle/Evidence/goat-fit-c26894e (summary, junit, 3 jpg at 1000 px); Inbox and Parked/goat-fit-58510b8 deleted. Stage is code[1.0.0]: NO gallery capture now (AGENTS.md: none before shootGallery). Next: finish code (goat sprites done, c26894e), walk the chain forward (replay-audit to set the stage; Mod/ changed since the tested sha, so small Pickle tickets and 8.m review on HEAD), then at writeShotlist and shootGallery: gallery 4 (goat) and 6 (parade) redo on the new sprites, score-gallery, rate-gallery by the session, then the Preview prompt (lighter, no icon corner) and the new Art/Preview-source.png (1555b49, not rendered, not checked for the goat mail). Owed: sync-nsb-npt NPT part (WARN 2026-11-19), code_review_sha stale (only the goat sprites changed)"
+  - "2026-11-19: read: ticket 5f6a green 3 of 3 (c26894e, exit 0, skipped 0, set sanctuary), three captures opened (west, south, north; 2 bare goats bottom row, 2 mailed goats top row): the mail now covers head, neck, shoulders and torso on white and grey goats, helmet on the head, rump bare (accepted, plates sit on the body outline). Proof: Tests/Pickle/Evidence/goat-fit-c26894e (summary, junit, 3 jpg at 1000 px); Inbox and Parked/goat-fit-58510b8 deleted. Replay 2026-11-19 (ledger .replays/AnimalApparelCollarsAndKitRenew-20261119.tsv): sections 1 to 7 done, first open 8.a: Mod/ changed after the tested sha 488a4a0 (c26894e, five goat mail PNG), so 8.c, 8.l, 8.m reopen (8.d, 8.f to 8.k to re-prove by small tickets on HEAD). NO gallery capture now (none before shootGallery). Next at playTests: small Pickle tickets on HEAD for the suites the goat sprites touch (ticket 5f6a 19-goat-fit already green on c26894e), 8.m review of the diff cbefc26..HEAD (five PNG, then code_review_sha), tested_on, 8.n; then at writeShotlist and shootGallery: gallery 4 (goat) and 6 (parade) redo on the new sprites, score-gallery, rate-gallery by the session, then the Preview prompt (lighter, no icon corner) and the new Art/Preview-source.png (1555b49, not rendered, not checked for the goat mail). Owed: sync-nsb-npt NPT part (WARN 2026-11-19), code_review_sha stale (only the goat sprites changed)"
   - "2026-11-18: note: goat mail sprites rebuilt offline (scale and shift per view, masks eastm and southm transformed the same way, no Goat_northm exists): Goat_east x1.25 mirrored, Goat_south and Goat_north x1.5, commit c26894e"
   - "2026-11-18: note: gallery 1 to 7 captured and subtitled (Art/Gallery-clean originals, Art/Gallery subtitled, 7-settings no subtitle, owner accepted 2026-11-18); 4 and 6 to redo for the goat mail only; workflow_stage stays code[1.0.0] while the sprite defect is fixed"
   - "2026-11-17: done: 8.m code review CLEAN (cbefc26); 8.j, 8.k, 8.l settled (tickets 54d5, ca83, 8931 green on 488a4a0, tested_on set)"
@@ -44,8 +44,8 @@ remaining:
   - "2026-11-13: defect: Check-CiTemplate.ps1 drift in .github before publish (regenerate at the CI/CD template stamp)"
   - "2026-10-13: unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, Steam Deck layout"
   - "social_preview_sha256 stale: upload Mod/About/Preview.png again at publish, then record the sha256"
-updated:      2026-11-16, replay-audit (playTests 8.a), earlier: 2026-10-29 replay-audit (writeTests 7.g)
-protocols_read_sha: 60c3a8c58f3935f53a1e9cd8f5fc08c81602a822
+updated:      2026-11-19, replay-audit (playTests 8.a)
+protocols_read_sha: 3bb48c1f417e80f0fa01883f8d127e493e768833
 ---
 # Animal Apparel: Collars and Kit Renew: status
 
