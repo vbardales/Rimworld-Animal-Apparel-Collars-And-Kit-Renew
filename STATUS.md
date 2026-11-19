@@ -30,6 +30,7 @@ dependencies: declared
 workshop_required_items: n/a, not released yet (private prepublication 0.1.0 only; owner 2026-11-10: decided at 1.0.0; set by hand on the Steam page at the end of writeReleaseDocs or at publish)
 upstream_synced: 2026-11-12 AnimalTurretPacks@c1c9852; animal-equipment@532e91a
 showcase:     partial
+ecosystem_line: 1.0
 tested_on:    2026-11-17 pickle 488a4a0 (tickets 54d5 settings restart, ca83 Odyssey and Giddy-Up 2, 8931 without Odyssey green on 488a4a0; earlier 2026-11-16/17 greens on e9e40b6 and 5cebdca; runs in Tests/Pickle/Evidence, one line per run in Docs/runs/README.md)
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 code_review_sha: cbefc26dd9573602635f91942d3b1449946c82dc
@@ -45,7 +46,7 @@ remaining:
   - "2026-10-13: unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, Steam Deck layout"
   - "social_preview_sha256 stale: upload Mod/About/Preview.png again at publish, then record the sha256"
 updated:      2026-11-19, replay-audit (playTests 8.a)
-protocols_read_sha: 3bb48c1f417e80f0fa01883f8d127e493e768833
+protocols_read_sha: 3791816069262e8ccd25932d115531ab5abc9350
 ---
 # Animal Apparel: Collars and Kit Renew: status
 
