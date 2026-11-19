@@ -19,15 +19,15 @@
   <li><packageId>rtp.bordercollies</packageId><workshopId>2261957667</workshopId><kind>texture</kind></li>
   <li><packageId>rtp.rhodesianridgebacks</packageId><workshopId>2076237940</workshopId><kind>texture</kind></li>
   <li><packageId>sarg.alphaanimals</packageId><workshopId>1541721856</workshopId><kind>texture</kind></li>
-  <!-- sarg.magicalmenagerie: no Workshop page found by title search 2026-11-07, left without workshopId -->
-  <li><packageId>sarg.magicalmenagerie</packageId><workshopId></workshopId><kind>texture</kind></li>
+  <!-- sarg.magicalmenagerie: Alpha Mythology, Workshop 1821617793 (PiI 2026-11-19, on disk) -->
+  <li><packageId>sarg.magicalmenagerie</packageId><workshopId>1821617793</workshopId><kind>texture</kind></li>
   <li><packageId>SpankyH.BunRace.bundogs</packageId><workshopId>3784817124</workshopId><kind>texture</kind></li>
   <li><packageId>SpankyH.BunRace.core</packageId><workshopId>2108324996</workshopId><kind>texture</kind></li>
   <li><packageId>VanillaExpanded.VAEAS</packageId><workshopId>1836900626</workshopId><kind>texture</kind></li>
   <li><packageId>VanillaExpanded.VAEBF</packageId><workshopId>1895364938</workshopId><kind>texture</kind></li>
   <li><packageId>VanillaExpanded.VAECD</packageId><workshopId>1823540489</workshopId><kind>texture</kind></li>
-  <!-- VanillaExpanded.VAED: no separate Workshop page found 2026-11-07, merged mod is VanillaExpanded.VanillaAnimalsExpanded 2871933948 -->
-  <li><packageId>VanillaExpanded.VAED</packageId><workshopId></workshopId><kind>texture</kind></li>
+  <!-- VanillaExpanded.VAED: most likely [1.3] Vanilla Animals Expanded - Desert 1849183875 (PiI 2026-11-19, dead 1.3, packageId unconfirmed; merged mod is VanillaExpanded.VanillaAnimalsExpanded 2871933948) -->
+  <li><packageId>VanillaExpanded.VAED</packageId><workshopId>1849183875</workshopId><kind>texture</kind></li>
   <li><packageId>VanillaExpanded.VAEEndAndExt</packageId><workshopId>2366589898</workshopId><kind>texture</kind></li>
   <li><packageId>VanillaExpanded.VAETR</packageId><workshopId>1907283872</workshopId><kind>texture</kind></li>
   <li><packageId>VanillaExpanded.VanillaAnimalsExpanded</packageId><workshopId>2871933948</workshopId><kind>texture</kind></li>
