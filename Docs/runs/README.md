@@ -94,3 +94,4 @@
 2026-11-17 488a4a0 avec-animaux (ticket ca83), 2 scenarios: passed 2 skipped 0 failed 0, load clean with Giddy-Up 2, with Odyssey the missing gorilla raises no reference error. Kept: Evidence/odyssey-giddyup-488a4a0.
 2026-11-17 488a4a0 avec-animaux-sans-odyssey (ticket 8931), 1 scenario: passed 1 skipped 0 failed 0, VAE gorilla diaper tag raises no reference error without Odyssey. Kept: Evidence/sans-odyssey-488a4a0.
 2026-11-19 dc152c1 avec-vef load audit English (ticket 1f7b), 1 scenario: passed 1 skipped 0 failed 0, 695 log lines, 0 finding. Kept: Evidence/loadaudit-goat-dc152c1.
+2026-11-22 2378b1b avec-vef suites 01 02 03 06 07 09 10 English (ticket 638b, refile of 6666), 13 scenarios: passed 13 skipped 0 failed 0. Kept: Evidence/suites-avec-vef-2378b1b.
