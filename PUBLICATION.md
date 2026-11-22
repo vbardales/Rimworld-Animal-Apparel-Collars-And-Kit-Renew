@@ -3,13 +3,13 @@
 Workshop item `3806765840` (private, created for the 0.1.0 prepublication on 2026-09-23). Package
 `nelim.animalapparelcollarsandkit`. Repository
 `vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew`. Status: not publishable yet, see
-STATUS.md (Pickle runs since 2026-10-10 are listed in `Docs/runs/README.md`; the item is private, never public, and not publishable yet).
+STATUS.md (Pickle runs since 2026-10-10 are listed in `Docs/runs/pickle.md`; the item is private, never public, and not publishable yet).
 
 ## Steam description
 
 Single source, Markdown. The CI derives the Steam BBCode and the plain-text `<description>` of
 `About.xml` from it (`OPERATIONS.md`, "Changing where the Steam description comes from"). No code
-fence inside. Nothing here claims more in-game testing than the runs in `Docs/runs/README.md`.
+fence inside. Nothing here claims more in-game testing than the runs in `Docs/runs/pickle.md`.
 `About.xml` still holds a hand-written BBCode description and is not synced yet: migrate with the
 generator's `--about-from-description`, read the diff, before the first CI publish.
 
@@ -121,7 +121,7 @@ The turret packs are `AnimalInvisible` by design (drawn by MVCF), so no capture 
   (`MemeGoddess.GiddyUp`), Combat Extended (`CETeam.CombatExtended`), and the 21 animal mods gating the art
   folders. Details and hashes: DEPENDENCIES.md.
 - **DLC**: none required. Odyssey changes the VAE gorilla and is handled by a patch (scenario F).
-- Verified against sources on 2026-09-13; combinations played in Pickle runs are listed in `Docs/runs/README.md`.
+- Verified against sources on 2026-09-13; combinations played in Pickle runs are listed in `Docs/runs/pickle.md`.
 
 ## Adult content
 

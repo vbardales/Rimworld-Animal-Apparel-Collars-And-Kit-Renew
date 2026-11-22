@@ -49,8 +49,8 @@ first run decides; a failure there is a suite defect, not a mod defect.
 | avec-animaux | VEF, Basic Armor, Giddy-Up 2, merged VAE and 16 animal mods, LoadAudit | dependencies of the animal mods not resolved: read the staged list |
 | avec-animaux-vae-separes | same with the four separate VAE packs | exclusive with the merged pack |
 | avec-ce | VEF, Combat Extended, LoadAudit | armour values would be CE's |
-| avec-rimeffect, avec-rimeffect-renegade | Rim-Effect Core / Renegade | exclusive; packageIds unverified |
-| avec-sos2, avec-androidtiers, avec-bunrace-core | one mod each | packageIds unverified, dependencies not resolved |
+| avec-rimeffect, avec-rimeffect-renegade | Rim-Effect Core / Renegade | exclusive; packageIds verified 2026-11-23 |
+| avec-sos2, avec-androidtiers, avec-bunrace-core | one mod each | packageIds verified 2026-11-23 (Android Tiers Continued is MaiconNeri.AndroidTiersContinued, not Atlas.AndroidTiers), dependencies not resolved |
 | incompat-\<name\> (7) | one declared-incompatible source mod each | feature 05, "Adding duplicate" symptom confirmed by decompile (`Verse.DefDatabase<T>.Add`), not yet run |
 
 Feature 06 (LoadAudit) plays in every pass whose map stages the tool. Run each pass in English and in French.

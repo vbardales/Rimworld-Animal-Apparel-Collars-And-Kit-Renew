@@ -31,13 +31,14 @@ workshop_required_items: n/a, not released yet (private prepublication 0.1.0 onl
 upstream_synced: 2026-11-12 AnimalTurretPacks@c1c9852; animal-equipment@532e91a
 showcase:     partial
 ecosystem_line: 1.0
-tested_on:    2026-11-22 pickle 2378b1b (ticket 638b, avec-vef suites 01 02 03 06 07 09 10 English green 13 of 13, Evidence/suites-avec-vef-2378b1b); 2026-11-19 pickle dc152c1 (ticket 1f7b load audit English green, Evidence/loadaudit-goat-dc152c1); 2026-11-17 pickle 488a4a0 (tickets 54d5 settings restart, ca83 Odyssey and Giddy-Up 2, 8931 without Odyssey green on 488a4a0; earlier 2026-11-16/17 greens on e9e40b6 and 5cebdca; runs in Tests/Pickle/Evidence, one line per run in Docs/runs/README.md)
+tested_on:    2026-11-22 pickle 2378b1b (ticket 638b, avec-vef suites 01 02 03 06 07 09 10 English green 13 of 13, Evidence/suites-avec-vef-2378b1b); 2026-11-19 pickle dc152c1 (ticket 1f7b load audit English green, Evidence/loadaudit-goat-dc152c1); 2026-11-17 pickle 488a4a0 (tickets 54d5 settings restart, ca83 Odyssey and Giddy-Up 2, 8931 without Odyssey green on 488a4a0; earlier 2026-11-16/17 greens on e9e40b6 and 5cebdca; runs in Tests/Pickle/Evidence, one line per run in Docs/runs/pickle.md)
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 code_review_sha: dc152c1e47984a1db531a4e21e55eb7ca3319cfc
 echo_review_sha: e3efdd3ca41cc0c5b88e4fe45e47a6e22058a9db
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
-  - "2026-11-22: read: ticket 638b green (2378b1b, set avec-vef, English, exit passed, 13 of 13, skipped 0; suites 01 02 03 06 07 09 10). Proof: Tests/Pickle/Evidence/suites-avec-vef-2378b1b (summary, junit); Inbox folder deleted; runs line added. 8.c avec-vef part settled. Next: 8.c avec-animaux decision, 8.f (verify packageIds of the per-mod pass maps), 8.g, 8.i, spidercampsdogpack WARN, hygiene migration (Docs/PROTOCOLS-READ.md, *-status-fold.md), then replay-audit"
+  - "2026-11-23: defect: avec-androidtiers map staged Atlas.AndroidTiers but Workshop 3711019495 (Android Tiers Continued) has packageId MaiconNeri.AndroidTiersContinued; Mod/LoadFolders.xml (Mods/Atlas.AndroidTiers) and OptionalCompat.xml gate on Atlas.AndroidTiers only (2026-11-23 check of About.xml), so the folder does not load with the Continued mod. Map fixed; Mod gate to decide (add the Continued id to IfModActive, then a small avec-androidtiers ticket). 8.f packageIds of sos2, bunrace core and bundogs, rimeffect, renegade, CE verified OK, maps not yet played"
+  - "2026-11-22: read: ticket 638b green (2378b1b, set avec-vef, English, exit passed, 13 of 13, skipped 0; suites 01 02 03 06 07 09 10). Proof: Tests/Pickle/Evidence/suites-avec-vef-2378b1b (summary, junit); Inbox folder deleted; runs line added. 8.c avec-vef part settled. Next: 8.c avec-animaux decision, 8.f (verify packageIds of the per-mod pass maps), 8.g, 8.i, spidercampsdogpack WARN, hygiene migration rest (merge Docs/TEST_SCENARIOS.md into Tests/Pickle/README.md; PROTOCOLS-READ and status-fold files deleted 2026-11-23), then replay-audit"
   - "2026-11-22: replay 74 rows (ledger .replays/AnimalApparelCollarsAndKitRenew-20261122.tsv): 1 to 7 done, 8.m done (code_review_sha dc152c1 is the last Mod commit), stage stays playTests. Open: 8.c ? (suites untouched by the goat PNG last green on 488a4a0 or older: decide a small combined ticket on HEAD for features 01 02 07 09 10, avec-vef and avec-animaux, or accept the older proofs by a written reason), 8.f open (per-mod passes avec-ce, avec-sos2, avec-androidtiers, avec-bunrace-core, avec-rimeffect(-renegade), avec-animaux-vae-separes marked not yet played in TESTING.md; packageIds unverified in Tests/Pickle/README.md), 8.g open (TEST_SCENARIOS B to D, F, K unexecuted), 8.i ? (runtime text, generated bills, MVCF tooltips, Steam Deck layout), 8.k open. Warn to settle: spidercampsdogpack replaced by 3549460027 (Check-OptionalCompat). Then 8.n needs the owner OK"
   - "2026-11-19: read: ticket 1f7b green (dc152c1, set avec-vef, exit 0, passed 1 skipped 0 failed 0): load audit 695 log lines, 7 types, 74 defs, 0 finding, 0 translation problem. Proof: Tests/Pickle/Evidence/loadaudit-goat-dc152c1 (summary, junit); Inbox folder deleted, Mod/ tree unfrozen. Next: sleep, then replay-audit to decide the stage. Replay 8.d, 8.f to 8.k rest on older runs (488a4a0, e9e40b6): decide at the replay whether a wider ticket is needed before runNoRegression"
   - "2026-11-19: read: ticket 5f6a green 3 of 3 (c26894e, exit 0, skipped 0, set sanctuary), three captures opened (west, south, north; 2 bare goats bottom row, 2 mailed goats top row): the mail now covers head, neck, shoulders and torso on white and grey goats, helmet on the head, rump bare (accepted, plates sit on the body outline). Proof: Tests/Pickle/Evidence/goat-fit-c26894e (summary, junit, 3 jpg at 1000 px); Inbox and Parked/goat-fit-58510b8 deleted. Replay 2026-11-19 (ledger .replays/AnimalApparelCollarsAndKitRenew-20261119.tsv): sections 1 to 7 done, first open 8.a: Mod/ changed after the tested sha 488a4a0 (c26894e, five goat mail PNG), so 8.c, 8.l, 8.m reopen (8.d, 8.f to 8.k to re-prove by small tickets on HEAD). NO gallery capture now (none before shootGallery). Next at playTests: small Pickle tickets on HEAD for the suites the goat sprites touch (ticket 5f6a 19-goat-fit already green on c26894e), 8.m review of the diff cbefc26..HEAD (five PNG, then code_review_sha), tested_on, 8.n; then at writeShotlist and shootGallery: gallery 4 (goat) and 6 (parade) redo on the new sprites, score-gallery, rate-gallery by the session, then the Preview prompt (lighter, no icon corner) and the new Art/Preview-source.png (1555b49, not rendered, not checked for the goat mail). Owed: sync-nsb-npt NPT part (WARN 2026-11-19), code_review_sha stale (only the goat sprites changed)"
@@ -54,7 +55,7 @@ protocols_read_sha: bf98fb75fbf9176ef5d4d97359edaf48c12cd8a1
 # Animal Apparel: Collars and Kit Renew: status
 
 File tracked in Git, kept outside shipped Mod/ folder. Current state only: dated
-journal 2026-09-13 to 2026-10-05 folded into `docs/runs/README.md` (one line per section; full
+journal 2026-09-13 to 2026-10-05 folded into `Docs/runs/pickle.md` (one line per section; full
 text stays in git history before commit of 2026-10-10).
 
 - **`workflow_stage`**: state of chain in AUDIT.md (fifteen states, camelCase). Old `stage` field
@@ -68,8 +69,6 @@ text stays in git history before commit of 2026-10-10).
   Equipment (Owlchemist, after jptrrs) are MIT within scope of `LICENSE`; no licence or permission
   established for six other sources (Dipsy offered to update Animal Diapers on 2025-06-14). See ATTRIBUTION.md.
 
-Journal of 2026-10-10 to 2026-10-29 (audit, protocol reads, settings restart, shotlist v6 notes) folded into `docs/runs/2026-11-09-status-fold.md`.
-Remaining entries of 2026-11-05 to 2026-11-09 (tickets, SaveSteps chains, review captures) folded into `Docs/runs/2026-11-16-status-fold.md`.
 
 
 ## NSB
@@ -126,13 +125,13 @@ k (series): ok. Opening wide (1), closing wide (6), medium (2, 5), tight (3, 4),
 
 ## Settings audit
 
-Re-read 2026-11-16 at b2839b0 (the C# code last changed 2026-09-13, 7060c62; since then only texts changed). Evidence: Source/*.cs and Mod/Languages/*/Keyed/Settings.xml read now; Run-UnitTests 30 assertions PASS now; Pickle results in Docs/runs/README.md and Tests/Pickle/Evidence/settings-fr-e9e40b6.
+Re-read 2026-11-16 at b2839b0 (the C# code last changed 2026-09-13, 7060c62; since then only texts changed). Evidence: Source/*.cs and Mod/Languages/*/Keyed/Settings.xml read now; Run-UnitTests 30 assertions PASS now; Pickle results in Docs/runs/pickle.md and Tests/Pickle/Evidence/settings-fr-e9e40b6.
 - Inventory: two toggles stored in VEF's own `toggablePatch` dictionary (`VFEGlobal.settings`): "Disable universal animal apparel" (default off, removes the five universal pieces) and "Exclude animal apparel from relics" (default on, effective only with Vanilla Ideology Expanded - Relics and Artifacts, grey help text otherwise), plus "Restore defaults". No other setting.
 - Decision: both are useful and concrete (placeholder art; relic selection). Settings need VEF, so the assembly, page and shortcut sit in the VEF-gated folder Mods/VEF; without VEF the mod has no setting and shows no empty page.
 - Access: Mod options, then the mod name (`SettingsCategory` = mod name), no XML edit, no RIMMSQOL needed. Shortcut: MainButtonDef AA_CK_Settings, hidden by default (feature 04, Rule-OwnValues hidden-shortcut fact, PASS now).
 - Timing: global to all saves, applied after restarting RimWorld (help text says so, key AA_CK_SettingsScope); VEF choices preserved.
 - Texts: English and French keys AA_CK_*, plus Japanese and Simplified Chinese; scroll and text-height-aware rows for French.
-- Tests: Settings.Tests 30 assertions on the real RimWorld and VEF assemblies (PASS 2026-11-16); Pickle feature 14 primary access, English 5190 and French 171c PASSED 2026-10-11; feature 15 restart round trip 3/3 PASSED 2026-10-12; French settings page run settings-fr-e9e40b6 green 2026-10-29. Expected and observed are in Docs/runs/README.md.
+- Tests: Settings.Tests 30 assertions on the real RimWorld and VEF assemblies (PASS 2026-11-16); Pickle feature 14 primary access, English 5190 and French 171c PASSED 2026-10-11; feature 15 restart round trip 3/3 PASSED 2026-10-12; French settings page run settings-fr-e9e40b6 green 2026-10-29. Expected and observed are in Docs/runs/pickle.md.
 - Not verified: layout and clipping as an image (opening only was asserted), RIMMSQOL integration, Steam Deck layout. Listed in `remaining` as unverified. `settings_audit` stays `complete`; `passed` needs the French and English replay at 8.h.
 
 ## Translation audit

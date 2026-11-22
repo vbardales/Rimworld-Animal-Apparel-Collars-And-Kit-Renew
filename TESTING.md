@@ -1,6 +1,6 @@
 # Testing
 
-The mod has been loaded by RimWorld in Pickle runs (list in `Docs/runs/README.md`). The manual scenarios below are played by those runs where a feature covers them; the rest stay unexecuted.
+The mod has been loaded by RimWorld in Pickle runs (list in `Docs/runs/pickle.md`). The manual scenarios below are played by those runs where a feature covers them; the rest stay unexecuted.
 
 ## Automated offline checks
 
@@ -140,4 +140,4 @@ feature 13 and the `incompat-horse-plate` map are retired. Dylan's Animal Gear h
 (the framework's own restriction, "on ne teste pas le jeu"). Replayed when the other mod moves, not at each publication.
 
 E (turret pack fires and deals damage, feature 03) and J (armour takes less damage over 200 cuts, feature 09) are automated and were green on bf865a3 (avec-vef) and ce65944 (avec-animaux). G (restart with gear worn): in-process half feature 10, real restart feature 16 (pass `restart`), written 2026-10-13, not played yet.
-Played results: `docs/runs/README.md`.
+Played results: `Docs/runs/pickle.md`.
