@@ -31,13 +31,13 @@ workshop_required_items: n/a, not released yet (private prepublication 0.1.0 onl
 upstream_synced: 2026-11-12 AnimalTurretPacks@c1c9852; animal-equipment@532e91a
 showcase:     partial
 ecosystem_line: 1.0
-tested_on:    2026-11-17 pickle 488a4a0 (tickets 54d5 settings restart, ca83 Odyssey and Giddy-Up 2, 8931 without Odyssey green on 488a4a0; earlier 2026-11-16/17 greens on e9e40b6 and 5cebdca; runs in Tests/Pickle/Evidence, one line per run in Docs/runs/README.md)
+tested_on:    2026-11-19 pickle dc152c1 (ticket 1f7b load audit English green, Evidence/loadaudit-goat-dc152c1); 2026-11-17 pickle 488a4a0 (tickets 54d5 settings restart, ca83 Odyssey and Giddy-Up 2, 8931 without Odyssey green on 488a4a0; earlier 2026-11-16/17 greens on e9e40b6 and 5cebdca; runs in Tests/Pickle/Evidence, one line per run in Docs/runs/README.md)
 workshop:     3806765840 (private 0.1.0 prepublication, 2026-09-23, from the game's upload button)
 code_review_sha: dc152c1e47984a1db531a4e21e55eb7ca3319cfc
 echo_review_sha: e3efdd3ca41cc0c5b88e4fe45e47a6e22058a9db
   - "2026-10-12: unverified: Preview re-rendered with Art/echo-source.png (preSized, panelWidth 34, panelTop 8): the echo no longer crosses the title block, it touches the end of the word turret in the copy; Mod/About/Preview.png and Art/Gallery/0-preview.png identical; Preview 268 px reading and echo_review_sha stay for mountPreview"
 remaining:
-  - "2026-11-19: waiting: ticket 1f7b (06-load-audit English, wsl-deps.avec-vef.map, dc152c1, Inbox loadaudit-goat-dc152c1), tree frozen for Mod/ until RUN_DONE. At RUN_DONE: summary.json, junit.xml, then 8.c and 8.l proofs (tested_on), minify to Evidence, delete Inbox folder, sleep, then replay-audit to decide the stage. Replay 8.d, 8.f to 8.k rest on older runs (488a4a0, e9e40b6): decide at the replay whether a wider ticket is needed before runNoRegression"
+  - "2026-11-19: read: ticket 1f7b green (dc152c1, set avec-vef, exit 0, passed 1 skipped 0 failed 0): load audit 695 log lines, 7 types, 74 defs, 0 finding, 0 translation problem. Proof: Tests/Pickle/Evidence/loadaudit-goat-dc152c1 (summary, junit); Inbox folder deleted, Mod/ tree unfrozen. Next: sleep, then replay-audit to decide the stage. Replay 8.d, 8.f to 8.k rest on older runs (488a4a0, e9e40b6): decide at the replay whether a wider ticket is needed before runNoRegression"
   - "2026-11-19: read: ticket 5f6a green 3 of 3 (c26894e, exit 0, skipped 0, set sanctuary), three captures opened (west, south, north; 2 bare goats bottom row, 2 mailed goats top row): the mail now covers head, neck, shoulders and torso on white and grey goats, helmet on the head, rump bare (accepted, plates sit on the body outline). Proof: Tests/Pickle/Evidence/goat-fit-c26894e (summary, junit, 3 jpg at 1000 px); Inbox and Parked/goat-fit-58510b8 deleted. Replay 2026-11-19 (ledger .replays/AnimalApparelCollarsAndKitRenew-20261119.tsv): sections 1 to 7 done, first open 8.a: Mod/ changed after the tested sha 488a4a0 (c26894e, five goat mail PNG), so 8.c, 8.l, 8.m reopen (8.d, 8.f to 8.k to re-prove by small tickets on HEAD). NO gallery capture now (none before shootGallery). Next at playTests: small Pickle tickets on HEAD for the suites the goat sprites touch (ticket 5f6a 19-goat-fit already green on c26894e), 8.m review of the diff cbefc26..HEAD (five PNG, then code_review_sha), tested_on, 8.n; then at writeShotlist and shootGallery: gallery 4 (goat) and 6 (parade) redo on the new sprites, score-gallery, rate-gallery by the session, then the Preview prompt (lighter, no icon corner) and the new Art/Preview-source.png (1555b49, not rendered, not checked for the goat mail). Owed: sync-nsb-npt NPT part (WARN 2026-11-19), code_review_sha stale (only the goat sprites changed)"
   - "2026-11-18: note: goat mail sprites rebuilt offline (scale and shift per view, masks eastm and southm transformed the same way, no Goat_northm exists): Goat_east x1.25 mirrored, Goat_south and Goat_north x1.5, commit c26894e"
   - "2026-11-18: note: gallery 1 to 7 captured and subtitled (Art/Gallery-clean originals, Art/Gallery subtitled, 7-settings no subtitle, owner accepted 2026-11-18); 4 and 6 to redo for the goat mail only; workflow_stage stays code[1.0.0] while the sprite defect is fixed"
@@ -47,7 +47,7 @@ remaining:
   - "2026-10-13: unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, Steam Deck layout"
   - "social_preview_sha256 stale: upload Mod/About/Preview.png again at publish, then record the sha256"
 updated:      2026-11-19, replay-audit (playTests 8.a)
-protocols_read_sha: 3791816069262e8ccd25932d115531ab5abc9350
+protocols_read_sha: 9076dc7ed32ed99800d4f0026157da2053469dd4
 ---
 # Animal Apparel: Collars and Kit Renew: status
 
