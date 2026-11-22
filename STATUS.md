@@ -49,7 +49,7 @@ remaining:
   - "2026-10-13: unverified: English and French runtime text, generated bills, MVCF commands and tooltips, optional integrations, Steam Deck layout"
   - "social_preview_sha256 stale: upload Mod/About/Preview.png again at publish, then record the sha256"
 updated:      2026-11-22, replay-audit (playTests 8.c)
-protocols_read_sha: 9076dc7ed32ed99800d4f0026157da2053469dd4
+protocols_read_sha: dcfd14ae14dea5b3901b3582d8de41847d15a96d
 ---
 # Animal Apparel: Collars and Kit Renew: status
 
