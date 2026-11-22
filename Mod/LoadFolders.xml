@@ -54,7 +54,7 @@
 
     <!-- Still published under the id they always had. -->
     <li IfModActive="Annabelesca.Malinois">Mods/Annabelesca.Malinois</li>
-    <li IfModActive="Atlas.AndroidTiers">Mods/Atlas.AndroidTiers</li>
+    <li IfModActive="Atlas.AndroidTiers,MaiconNeri.AndroidTiersContinued">Mods/Atlas.AndroidTiers</li>
     <li IfModActive="Erin.LizzardDoggo">Mods/Erin.LizzardDoggo</li>
     <li IfModActive="Erin.MountainDog">Mods/Erin.MountainDog</li>
     <li IfModActive="Erin.Palamutes">Mods/Erin.Palamutes</li>
