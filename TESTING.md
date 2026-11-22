@@ -55,7 +55,7 @@ scenario K below covers actual game behavior. Remote CI currently runs XML check
 
 ## Functional scenarios
 
-The manual scenarios A to K, with preconditions, actions and expected results, are in [TEST_SCENARIOS.md](TEST_SCENARIOS.md).
+The manual scenarios A to K, with preconditions, actions and expected results, are in [Tests/Pickle/README.md](Tests/Pickle/README.md), section "Manual scenarios A to K".
 
 ## Load order
 
